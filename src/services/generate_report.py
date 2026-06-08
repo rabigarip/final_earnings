@@ -244,8 +244,17 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
     # trailing "Earnings Preview" / "Earnings Update" suffix and replace
     # with "Earnings Expectations" so the cover and the estimates section
     # frame the same quarter.
+    # Pull the quarter token out of period_label in EITHER format —
+    # "Q2 2026 Earnings Preview" or "Earnings Preview — 1Q26" — so the
+    # slide-2 estimate-column header always carries the quarter (the missing
+    # quarter is what made 2010.SR's header read "EARNINGS EXPECTATIONS").
     period_heading = "Earnings Expectations"
-    if period_label and " Earnings " in period_label:
+    import re as _re_ph2
+    _qm = _re_ph2.search(r"\bQ[1-4]\s*'?\d{2,4}\b|\b[1-4]Q\s*'?\d{2,4}\b",
+                          period_label or "")
+    if _qm:
+        period_heading = f"{_qm.group(0)} Earnings Expectations"
+    elif period_label and " Earnings " in period_label:
         _q_prefix = period_label.split(" Earnings ", 1)[0]   # "Q2 2026"
         period_heading = f"{_q_prefix} Earnings Expectations"
     is_bank = bool(getattr(payload.company, "is_bank", False))

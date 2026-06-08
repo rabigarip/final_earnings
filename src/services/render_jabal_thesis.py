@@ -1602,15 +1602,22 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     watch_list = _norm_bullets(watch_list) if watch_list else watch_list
 
     # Derive the Jabal-estimate column header (e.g. "Q2 2026E") from the
-    # period_heading parameter ("Q2 2026 Earnings Expectations" → "Q2 2026E").
+    # period_heading. Handles both "Q2 2026 Earnings Expectations" and the
+    # quarter-first "1Q26"/"1Q 2026" forms used by some names. When no quarter
+    # can be parsed, fall back to a clean "ESTIMATE" — NEVER the section title
+    # (which produced the "EARNINGS EXPECTATIONS" column-header bug on 2010.SR).
     estimates_period_label = "ESTIMATE"
     if period_heading:
         import re as _re_ph
-        m = _re_ph.match(r"(Q\d\s+\d{4})\b", period_heading)
-        if m:
-            estimates_period_label = f"{m.group(1)}E"
-        else:
-            estimates_period_label = period_heading.upper()
+        ph = period_heading.strip()
+        m = _re_ph.search(r"\bQ([1-4])\s*'?(\d{2,4})\b", ph)        # Q2 2026 / Q2 '26
+        m2 = _re_ph.search(r"\b([1-4])Q\s*'?(\d{2,4})\b", ph)        # 1Q26 / 1Q 2026
+        hit = m or m2
+        if hit:
+            q = hit.group(1)
+            yr = hit.group(2)
+            yr = ("20" + yr) if len(yr) == 2 else yr
+            estimates_period_label = f"Q{q} {yr}E"
     # Subtitle line under the section heading.
     subtitle_unit_phrase = (
         f"{(deck_currency or '').upper()} {('trillions' if unit_suffix.endswith('T') else 'billions' if unit_suffix.endswith('B') else 'millions' if unit_suffix.endswith('M') else 'units')} unless stated".strip()

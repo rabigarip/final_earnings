@@ -293,11 +293,26 @@ class YahooProvider(Provider):
     def _fetch_dividend_yield(self, ticker: str):
         info = self._t(ticker).info or {}
         raw_id = persist_raw(self.name, ticker, "dividend_yield", info)
-        # yfinance returns this as a decimal (0.048 = 4.8%). Normalise to %.
-        y = _safe(info, "dividendYield") or _safe(info, "trailingAnnualDividendYield")
-        if y is None:
+        # SCALE TRAP: the pinned yfinance (>=0.2.40) returns `dividendYield`
+        # ALREADY AS A PERCENT (5.38 == 5.38%, 0.84 == 0.84%). The old code
+        # multiplied by 100 → the "538%"/"84%" bugs. `trailingAnnualDividendYield`
+        # is a fraction but is INCONSISTENT across tickers (for 9988.HK it
+        # implies 5.9% when the real yield is 0.84%), so it is NOT a reliable
+        # cross-check — use `dividendYield` as the percent directly, and only
+        # fall back to the fraction field when `dividendYield` is missing.
+        dy = _safe(info, "dividendYield")                  # percent (current yfinance)
+        taty = _safe(info, "trailingAnnualDividendYield")  # fraction, fallback only
+        pct = None
+        if dy is not None:
+            pct = float(dy)
+        elif taty is not None:
+            pct = float(taty) * 100.0
+        if pct is None:
             raise ValueError("no dividend yield")
-        return (round(float(y) * 100, 3), "%", "", raw_id)
+        # Sanity bound: listed-equity trailing yields live in ~0–40%.
+        if pct < 0 or pct > 40:
+            raise ValueError(f"dividend yield {pct:.2f}% out of sane range")
+        return (round(pct, 3), "%", "", raw_id)
 
     def _fetch_valuation_forward(self, ticker: str):
         """yfinance gives us TWO sources for forward consensus:
