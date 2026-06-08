@@ -667,7 +667,20 @@ def _load_ms_calendar_from_snapshot(ticker: str) -> dict | None:
         f"ms_{t_safe}_calendar",                    # legacy ticker-only prefix
     ]
     snapshot_path = None
-    for cache_slug in candidates:
+    # First: the committed ticker-named snapshots `ms_<TICKER>_calendar*.html`
+    # (no slug/isin in the name). These are the lean, deduplicated fallback
+    # fixtures; the slug-based candidates below would build a doubled
+    # `ms_ms_<TICKER>_calendar.html` and miss them. Prefer the _quarterly
+    # page (it carries the quarterly-results table the chart needs).
+    for direct in (f"ms_{t_safe}_calendar_quarterly.html",
+                   f"ms_{t_safe}_calendar.html"):
+        dpath = ms_dir / direct
+        if dpath.exists():
+            snapshot_path = dpath
+            print(f"[snapshot-loader] {ticker}: matched ticker-named snapshot {dpath.name}",
+                  flush=True)
+            break
+    for cache_slug in (candidates if snapshot_path is None else []):
         safe = _re_load.sub(r"[^a-zA-Z0-9-]", "_", cache_slug)[:80]
         candidate = ms_dir / f"ms_{safe}.html"
         if candidate.exists():
