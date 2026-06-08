@@ -243,6 +243,41 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
     except Exception:
         pass
 
+    # 0c. Live source verification — re-fetch the headline numbers from
+    #     Investing.com (curl_cffi) + Yahoo right now and confirm the rendered
+    #     (canonical) value matches, within tolerance. This is the analyst's
+    #     trust gate: proof the deck agrees with the live sites, not a stale
+    #     snapshot. Best-effort; a slow/blocked source just yields WARN rows.
+    try:
+        from src.services.verify_sources import verify_ticker as _vt
+        _vrep = _vt(ticker)
+        _vs = _vrep["summary"]
+        rows.append([
+            "All Slides", "Source Verification",
+            "Live cross-check (Investing + Yahoo)",
+            f"{_vs['pass']} pass · {_vs['warn']} warn · {_vs['fail']} fail",
+            "Derived", "src/services/verify_sources.py", "",
+            datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            "Re-fetched live and compared to the rendered value",
+        ])
+        for _c in _vrep["checks"]:
+            _live = []
+            if _c.get("investing") is not None:
+                _live.append(f"Investing {_c['investing']}")
+            if _c.get("yahoo") is not None:
+                _live.append(f"Yahoo {_c['yahoo']}")
+            rows.append([
+                "All Slides", "Source Verification", _c["field"],
+                ("—" if _c["deck"] is None else _c["deck"]),
+                "Investing+Yahoo (live)", "src/services/verify_sources.py", "",
+                datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+                f"{_c['verdict']}"
+                + (f" — live: {', '.join(_live)}" if _live else "")
+                + (f"; {_c['note']}" if _c.get("note") else ""),
+            ])
+    except Exception:
+        pass
+
     # 1. Every canonical_store cell for the ticker — parent summary row
     #    plus per-sub-key explosion for dict-valued cells so every number
     #    on the deck is individually traceable.

@@ -1572,20 +1572,35 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
 
     # LLM output, when present, replaces every default bullet list too —
     # otherwise the deck mixes a fresh LLM thesis with stale boilerplate.
+    def _dict_to_str(d: dict) -> str:
+        return (d.get("catalyst") or d.get("risk") or d.get("question")
+                or d.get("watch") or d.get("text") or d.get("value") or d.get("bullet")
+                or next((v for v in d.values() if isinstance(v, str)), ""))
+
     def _norm_bullets(items) -> list[str]:
-        """Coerce bullet items to plain strings. Different upstreams hand us
-        either a list[str] (Gemini thesis) or a list[dict] like
-        {'catalyst': '...'} / {'risk': '...'} / {'text': '...'} (the cached
-        draft path). Without this the deck rendered the literal dict repr —
-        "{'catalyst': '...'}" — straight onto the slide."""
+        """Coerce bullet items to plain strings. Upstreams hand us a list[str]
+        (Gemini thesis), a list[dict] like {'catalyst': '...'} / {'bullet': '...'},
+        OR — from the cached-draft path — a STRING that already contains a dict
+        repr ("{'bullet': '...'}"). All three must collapse to the inner text;
+        otherwise the deck renders the literal dict repr on the slide."""
+        import ast as _ast
         out = []
         for it in (items or []):
-            if isinstance(it, str):
-                s = it
-            elif isinstance(it, dict):
-                s = (it.get("catalyst") or it.get("risk") or it.get("question")
-                     or it.get("watch") or it.get("text") or it.get("value")
-                     or next((v for v in it.values() if isinstance(v, str)), ""))
+            s = ""
+            if isinstance(it, dict):
+                s = _dict_to_str(it)
+            elif isinstance(it, str):
+                t = it.strip()
+                # Stringified dict? Parse it and pull the inner value.
+                if (t.startswith("{") and t.endswith("}")
+                        and ("'" in t or '"' in t) and ":" in t):
+                    try:
+                        parsed = _ast.literal_eval(t)
+                        s = _dict_to_str(parsed) if isinstance(parsed, dict) else t
+                    except (ValueError, SyntaxError):
+                        s = t
+                else:
+                    s = it
             else:
                 s = str(it)
             s = (s or "").strip()
