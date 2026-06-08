@@ -180,20 +180,69 @@ def _write_disk_cache(cache_slug: str, text: str) -> None:
         pass
 
 
+# Known MarketScreener page-type suffixes — longest first so e.g.
+# "calendar_quarterly" matches before "calendar".
+_MS_PAGE_TYPES = (
+    "calendar_quarterly", "valuation_dividend", "income_statement",
+    "calendar", "finances", "valuation", "consensus", "ratings",
+    "summary", "sector", "perf", "recommendations",
+)
+
+
+def _short_snapshot_paths(cache_slug: str):
+    """Map a long cache_slug (ms_<ticker>_<isin>_<slug>_<page>) to the LEAN
+    committed-snapshot name ms_<ticker>_<page>.html.
+
+    The committed fallback fixtures are stored under the ticker-only name to
+    keep the repo small; the live-fetch cache_slug carries isin+slug, so the
+    primary path misses them. Without this, a blocked live MS fetch (common
+    on Render's datacenter IPs) leaves the slide-2 expectations table and the
+    MS performance block EMPTY for Yahoo-blind names like BKMB.OM."""
+    import re as _r
+    out = []
+    try:
+        from src.config import root
+        ms_dir = root() / "data" / "marketscreener"
+    except Exception:
+        return out
+    for page in _MS_PAGE_TYPES:
+        if cache_slug.endswith("_" + page):
+            body = cache_slug[len("ms_"):-(len(page) + 1)]   # ticker_isin_slug
+            toks = body.split("_")
+            tick = []
+            for tk in toks:
+                # ISIN (2 letters + 9–10 alnum) or the literal 'noisin' ends
+                # the ticker portion.
+                if tk == "noisin" or _r.fullmatch(r"[A-Z]{2}[A-Z0-9]{9,10}", tk):
+                    break
+                tick.append(tk)
+            if tick:
+                out.append(ms_dir / f"ms_{'_'.join(tick)}_{page}.html")
+            break
+    return out
+
+
 def _read_snapshot(cache_slug: str) -> str | None:
     """Return the snapshot HTML for a cache_slug, or None if absent /
     blocked-content / unreadable. Used as the fallback when live fetch
-    fails with 403 / captcha."""
+    fails with 403 / captcha. Tries the exact long-form name first, then the
+    lean ticker-only committed name."""
+    candidates = []
     p = _snapshot_path_for(cache_slug)
-    if p is None or not p.exists():
-        return None
-    try:
-        text = p.read_text(encoding="utf-8")
-    except Exception:
-        return None
-    if _is_blocked_response(text):
-        return None
-    return text
+    if p is not None:
+        candidates.append(p)
+    candidates.extend(_short_snapshot_paths(cache_slug))
+    for path in candidates:
+        if path is None or not path.exists():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if _is_blocked_response(text):
+            continue
+        return text
+    return None
 
 
 def _write_snapshot(cache_slug: str, html: str) -> bool:
