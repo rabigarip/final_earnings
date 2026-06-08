@@ -1,0 +1,22 @@
+{
+  "ticker": "ADCB.AE",
+  "company": "Abu Dhabi Commercial Bank PJSC",
+  "currency": "AED",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema). Source: ADCB FY2025 results (adcb.com / ADX), Jan 2026, confirmed by TradeArabia / AGBI / earnings call. Net profit after tax AED 11.445bn (+22% YoY; profit-before-tax AED 12.843bn +21%, 18 consecutive quarters of PBT growth). NII AED 12.0bn (+9%); operating income +14%; cost-income 28.2% (record low). Net loans AED 406bn (+16%); customer deposits AED 500bn (+19%); total assets AED 774bn (+19%). ROE 15.3%; CET1 13.82%; LCR 124.2%. Recommended cash dividend 63 fils/sh (AED 4.985bn, ~44% payout). EPS and non-interest-income omitted (full-year ordinary EPS / FY non-interest split not cleanly disclosed in the release).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "AED",
+    "net_profit_mn": 11445,
+    "net_profit_growth_pct": 22.0,
+    "nii_mn": 12000,
+    "nii_growth_pct": 9.0,
+    "net_loans_mn": 406000,
+    "net_loans_growth_pct": 16.0,
+    "customer_deposits_mn": 500000,
+    "customer_deposits_growth_pct": 19.0,
+    "roe_pct": 15.3,
+    "dps": 0.63,
+    "source": "ADCB FY2025 results (adcb.com / ADX); TradeArabia / AGBI, Jan 2026"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "2899.HK",
+  "company_name": "Zijin Mining Group Company Limited",
+  "sector": "Basic Materials",
+  "currency": "CNY",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 7,
+    "Low": 7
+  },
+  "sources": [
+    "investing",
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-14T17:33:18.153898+00:00",
+  "pptx_bytes": 47868,
+  "pptx_filename": "2899.HK.pptx"
+}

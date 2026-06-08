@@ -1,0 +1,20 @@
+{
+  "ticker": "JINDALSTEL.NS",
+  "company_name": "Jindal Steel & Power Limited",
+  "sector": "Materials",
+  "currency": "INR",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 7,
+    "Low": 7
+  },
+  "sources": [
+    "investing",
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-14T17:33:17.979248+00:00",
+  "pptx_bytes": 47801,
+  "pptx_filename": "JINDALSTEL.NS.pptx"
+}

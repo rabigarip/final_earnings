@@ -1,0 +1,197 @@
+[general]
+app_name = "earnings-research"
+version = "0.1.0"
+
+[scraping]
+timeout_seconds = 10
+min_delay_seconds = 0.5
+max_delay_seconds = 1.5
+cache_html = true
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+
+[thresholds]
+revenue_warn_pct = 5.0
+revenue_alert_pct = 15.0
+eps_warn_pct = 10.0
+
+[validation]
+# Automated data validation thresholds (adjust per market if needed)
+pe_max = 500                    # P/E above this triggers warning
+ps_max = 200                    # Price/Sales above this triggers warning
+target_price_max_ratio = 5.0    # Target / price ratio above this = flag
+target_price_min_ratio = 0.2    # Target / price ratio below this = flag
+yoy_extreme_pct = 500           # YoY growth above this = flag as extreme
+analyst_count_max = 100         # More than this = suspicious
+ms_yahoo_divergence_ratio = 3.0 # MS vs Yahoo target divergence ratio threshold
+
+[news]
+# Recent context window for memo (extended to 60 days for broader coverage)
+recent_days = 60
+lookback_months = 6
+max_per_source = 50
+# Optional: NewsAPI key for SCMP (China). If set, SCMP uses API instead of browser/scraping. Get key at https://newsapi.org
+# Can also set env NEWSAPI_KEY (e.g. in .env)
+newsapi_key = ""
+# Provider-based: allowlist of provider ids for Recent Context (from context_providers)
+recent_context_sources = ["reuters", "zawya", "scmp", "newsapi", "google_news", "business_standard", "economic_times", "business_day", "daily_investor", "moneyweb"]
+recent_context_enrichment_max_fetch = 20
+
+# Context provider registry: each provider implements search + parse + enrich.
+# Optional "countries" = [ISO codes]: use this provider only for those countries; omit or [] = global.
+[[news.context_providers]]
+provider_name = "reuters"
+enabled = true
+countries = []  # global: used for every country
+domain_patterns = ["reuters.com"]
+source_priority = 1
+source_type = "wire"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+[[news.context_providers]]
+provider_name = "zawya"
+enabled = true
+countries = ["SA", "AE", "BH", "KW", "OM", "QA", "EG"]  # MENA
+domain_patterns = ["zawya.com"]
+source_priority = 2
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# China – South China Morning Post (via NewsAPI when key set; else scrape/browser)
+[[news.context_providers]]
+provider_name = "scmp"
+enabled = true
+countries = ["CN"]
+domain_patterns = ["scmp.com"]
+source_priority = 3
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# Google News RSS — universal, reliable, no auth required
+[[news.context_providers]]
+provider_name = "google_news"
+enabled = true
+countries = []
+domain_patterns = []
+source_priority = 2
+source_type = "aggregator"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# NewsAPI — global fallback when regional providers return 0 results
+[[news.context_providers]]
+provider_name = "newsapi"
+enabled = true
+countries = []
+domain_patterns = []
+source_priority = 5
+source_type = "wire"
+allowed_for_company_facts = true
+allowed_for_sector_context = false
+date_confidence_policy = "from_source"
+
+# India – Business Standard
+[[news.context_providers]]
+provider_name = "business_standard"
+enabled = true
+countries = ["IN"]
+domain_patterns = ["business-standard.com"]
+source_priority = 5
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# India – Economic Times
+[[news.context_providers]]
+provider_name = "economic_times"
+enabled = true
+countries = ["IN"]
+domain_patterns = ["economictimes.indiatimes.com"]
+source_priority = 6
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# South Africa – Business Day (businesslive.co.za)
+[[news.context_providers]]
+provider_name = "business_day"
+enabled = true
+countries = ["ZA"]
+domain_patterns = ["businesslive.co.za"]
+source_priority = 7
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# South Africa – Daily Investor
+[[news.context_providers]]
+provider_name = "daily_investor"
+enabled = true
+countries = ["ZA"]
+domain_patterns = ["dailyinvestor.com"]
+source_priority = 8
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+# South Africa – Moneyweb
+[[news.context_providers]]
+provider_name = "moneyweb"
+enabled = true
+countries = ["ZA"]
+domain_patterns = ["moneyweb.co.za"]
+source_priority = 9
+source_type = "regional"
+allowed_for_company_facts = true
+allowed_for_sector_context = true
+date_confidence_policy = "from_source"
+
+[gemini]
+# Default model: used for any LLM call when a dedicated model is not set (e.g. future summarization/classification)
+model = "gemini-2.5-flash"
+# Investment View: more capable model for the memo's two-paragraph IV (evidence-based, sector-specific)
+investment_view_model = "gemini-2.5-pro"
+# gemini-2.5-pro is a THINKING model — reasoning tokens count against this
+# budget. At 8192 a long think occasionally truncated the JSON before the
+# final sections (catalysts/risks/watch), which then fell back to the
+# deterministic templates. Raised so the full response always fits.
+max_tokens = 24576
+temperature = 0.2
+# IV validation word bounds (optional; defaults in src/constants/iv_quality.py)
+iv_min_total_words = 80
+iv_max_total_words = 280
+iv_min_paragraph_words = 25
+
+[database]
+path = "data/earnings.db"
+
+[report]
+output_dir = "outputs"
+# readiness_mode: strict = block thin Yahoo+MS decks; permissive = only hard pipeline failures (mapping, quote, build, QA).
+# Override on deploy: REPORT_READINESS_MODE=permissive
+readiness_mode = "permissive"
+# Set to true to also write QA audit as JSON (for debugging). Primary review format is QA .docx.
+qa_audit_json = false
+
+[calendar]
+# Tunables for `src/services/fetch_calendar.refresh_calendar`.
+max_workers = 6
+per_request_min_seconds = 0.25      # global rate-limit between MS/Yahoo calls
+refresh_stale_hours = 12            # skip a ticker if its NEXT event was checked within this window
+http_timeout_seconds = 15
+# Daily auto-refresh: when true, the host process should call
+# `refresh_calendar()` once per day for the seeded universe. Wire this to a
+# cron / Render scheduled job — the service itself does NOT spawn its own
+# scheduler, so it stays a no-op until the scheduler invokes it.
+auto_refresh_enabled = true
+auto_refresh_utc_hour = 6           # 06:00 UTC (≈ 09:00 GST / pre-MENA market open)

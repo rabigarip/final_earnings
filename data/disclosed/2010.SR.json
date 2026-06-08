@@ -1,0 +1,18 @@
+{
+  "ticker": "2010.SR",
+  "company": "Saudi Basic Industries Corporation (SABIC)",
+  "currency": "SAR",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (materials/petrochemicals). Source: SABIC FY2025 results, Feb 2026 (sabic.com), confirmed by Argaam / Investing.com. Revenue SAR 116.53bn (-1% YoY). REPORTED net loss SAR 25.78bn (vs SAR 1.5bn net profit in 2024) — the loss is driven by large NON-CASH impairments and Q1-2025 strategic-restructuring one-offs plus fair-value finance costs, NOT operating collapse: net ADJUSTED income (ex one-offs) was +SAR 2.1bn, and free cash flow rose 17% to SAR 7.2bn. SABIC declared SAR 4.5bn interim dividends for 2H2025. net_profit_mn carries the reported IFRS loss; growth omitted (swing from profit to loss is out of sanity bounds). EPS/ROE/EBITDA not used (loss-distorted / not cleanly disclosed).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "revenue_mn": 116530,
+    "revenue_growth_pct": -1.0,
+    "net_profit_mn": -25780,
+    "net_adjusted_income_mn": 2100,
+    "free_cash_flow_mn": 7200,
+    "free_cash_flow_growth_pct": 17.0,
+    "source": "SABIC FY2025 results, Feb 2026 (sabic.com); Argaam"
+  }
+}

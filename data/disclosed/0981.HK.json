@@ -1,0 +1,17 @@
+{
+  "ticker": "0981.HK",
+  "company": "Semiconductor Manufacturing International Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (tech/semiconductor). SMIC reports in USD (HK/Shanghai-listed). Source: SMIC FY2025 results, Feb 2026 (smics.com), confirmed by TrendForce / C114 / Futu. Revenue US$9.327bn (+16.2% YoY, record); net profit attributable to listed-company shareholders US$685mn (~RMB 4.95bn, +39% YoY); gross margin 21.0% (+3pp). SMIC skipped the annual dividend to fund capacity expansion (7nm). EPS / operating margin / FCF not cleanly disclosed in USD here. (Note: one widely-cited source mis-stated revenue as $93.27bn — the correct figure is $9.327bn.)",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "revenue_mn": 9327,
+    "revenue_growth_pct": 16.2,
+    "net_profit_mn": 685,
+    "net_profit_growth_pct": 39.0,
+    "gross_margin_pct": 21.0,
+    "source": "SMIC FY2025 results, Feb 2026 (smics.com); TrendForce / C114"
+  }
+}

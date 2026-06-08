@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# Generated at runtime
+data/earnings.db
+outputs/
+logs/
+cache/
+/tmp/
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archives (local review bundles)
+*.zip
+
+# Frontend (build output in static/ is committed for one-site Render deploy)
+frontend/node_modules/
+frontend/dist/
+
+# Auto-grounding extractor candidates (regeneratable; promote individually after review)
+data/disclosed/_staging/

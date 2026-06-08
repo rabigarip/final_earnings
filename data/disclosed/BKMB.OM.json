@@ -1,0 +1,82 @@
+{
+  "ticker": "BKMB.OM",
+  "company": "Bank Muscat SAOG",
+  "currency": "OMR",
+  "units": "thousands",
+  "_comment": "Standalone-quarter values pulled directly from Bank Muscat IR-portal interim financial statements. The interim PDFs publish cumulative 3M/6M/9M figures AND a standalone-quarter column on the right of the income statement; we take the standalone column. Units are RO'000 as printed in the statements. Q4 2025 will populate once FY25 publishes (Bank Muscat typically releases in early March).",
+  "_source_documents": {
+    "Q1 2025": "https://www.bankmuscat.om/en/investorrelations/QuarterlyReports/MSM_0325.pdf",
+    "Q2 2025": "https://www.bankmuscat.om/en/investorrelations/QuarterlyReports/MSM_0625.pdf",
+    "Q3 2025": "https://www.bankmuscat.om/en/investorrelations/QuarterlyReports/MSM_0925.pdf",
+    "Q1 2026": "https://www.bankmuscat.om/en/investorrelations/QuarterlyReports/MSM_0326.pdf"
+  },
+  "quarterly": [
+    {
+      "period": "Q1 2025",
+      "interest_income": 148740,
+      "net_interest_income": 93019,
+      "net_interest_islamic_combined": 102003,
+      "fee_income_net": 23480,
+      "other_operating_income": 15192,
+      "operating_income": 140675,
+      "net_income": 58561,
+      "eps": 0.008,
+      "source_doc": "MSM_0325.pdf"
+    },
+    {
+      "period": "Q2 2025",
+      "interest_income": 148900,
+      "net_interest_income": 95106,
+      "net_interest_islamic_combined": 104440,
+      "fee_income_net": 24035,
+      "other_operating_income": 19127,
+      "operating_income": 147602,
+      "net_income": 67257,
+      "eps": 0.006,
+      "source_doc": "MSM_0625.pdf"
+    },
+    {
+      "period": "Q3 2025",
+      "interest_income": 146531,
+      "net_interest_income": 94576,
+      "net_interest_islamic_combined": 104454,
+      "fee_income_net": 25217,
+      "other_operating_income": 16519,
+      "operating_income": 146190,
+      "net_income": 65754,
+      "eps": 0.015,
+      "source_doc": "MSM_0925.pdf"
+    },
+    {
+      "period": "Q1 2026",
+      "interest_income": 150073,
+      "net_interest_income": 94921,
+      "net_interest_islamic_combined": 104141,
+      "fee_income_net": 23738,
+      "other_operating_income": 17396,
+      "operating_income": 145275,
+      "net_income": 63945,
+      "eps": 0.009,
+      "source_doc": "MSM_0326.pdf"
+    }
+  ],
+  "_fy_highlights_comment": "Full-year FY2025 audited results from the Annual Report 2025 (and confirmed by Muscat Daily / Zawya results coverage, 18 Jan 2026). Values in OMR millions unless noted (percentages and per-share as-is). These supply the bank balance-sheet + ratio metrics the income-statement quarters don't carry (loans, deposits, CAR, ROE) and give an IR-sourced FY2025 cross-check for the MarketScreener actuals.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "net_profit_mn": 255.54,
+    "net_profit_growth_pct": 13.3,
+    "nii_mn": 413.01,
+    "nii_growth_pct": 3.8,
+    "non_interest_income_mn": 174.18,
+    "non_interest_income_growth_pct": 20.1,
+    "eps": 0.031,
+    "net_loans_mn": 10731,
+    "net_loans_growth_pct": 4.8,
+    "customer_deposits_mn": 10430,
+    "customer_deposits_growth_pct": 6.7,
+    "car_pct": 19.66,
+    "roe_pct": 13.57,
+    "dps": 0.018,
+    "source": "Annual Report 2025 (bankmuscat.om); Muscat Daily / Zawya 18-Jan-2026"
+  }
+}

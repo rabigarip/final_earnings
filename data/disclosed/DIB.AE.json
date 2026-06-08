@@ -1,0 +1,21 @@
+{
+  "ticker": "DIB.AE",
+  "company": "Dubai Islamic Bank PJSC",
+  "currency": "AED",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema; Islamic bank, so net_loans = net financing assets and there is no conventional NII). Source: DIB FY2025 group results (dib.ae), confirmed by Khaleej Times / MarketScreener, Feb 2026. Net profit AED 7.8bn (-4.5% YoY from AED 8.165bn) DESPITE pre-tax profit +20% to AED 9.0bn — the decline is purely the first-year impact of the UAE 9% corporate tax, not an operating deterioration. Total income AED 23.8bn (vs 23.3bn); operating revenue AED 13.3bn. Net financing assets AED 262bn (+23%); customer deposits AED 320bn (+29%); total assets AED 416bn (+21%). Pre-tax RoTE 22%; CAR 17.3%, CET1 13.4%; NPF ratio 2.65% (-135bps). Basic EPS AED 0.98 (vs 1.04). Cash dividend 35 fils/sh (AED 2.53bn). Post-tax ROE omitted (only pre-tax RoTE disclosed).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "AED",
+    "net_profit_mn": 7800,
+    "net_profit_growth_pct": -4.5,
+    "net_loans_mn": 262000,
+    "net_loans_growth_pct": 23.0,
+    "customer_deposits_mn": 320000,
+    "customer_deposits_growth_pct": 29.0,
+    "car_pct": 17.3,
+    "eps": 0.98,
+    "dps": 0.35,
+    "source": "DIB FY2025 group results (dib.ae); Khaleej Times / MarketScreener, Feb 2026"
+  }
+}

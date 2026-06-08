@@ -1,0 +1,16 @@
+{
+  "ticker": "1398.HK",
+  "company": "Industrial and Commercial Bank of China (ICBC)",
+  "currency": "HKD",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema). Source: ICBC 2025 Annual Results; BigGo Finance / ICBC announcements, Mar 2026. Financials reported in RMB; trades in HKD. Net profit CNY 370.77bn (+1%); CAR 19.54%; ROE ~9.3% (annualized from 9M, full-year approx). Domestic RMB loans +8%, deposits +CNY 3.1trn.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "RMB",
+    "net_profit_mn": 370770,
+    "net_profit_growth_pct": 1.0,
+    "car_pct": 19.54,
+    "roe_pct": 9.3,
+    "source": "ICBC 2025 Annual Results; BigGo Finance, 2026"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "9988.HK",
+  "company": "Alibaba Group Holding Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_comment": "Fiscal-year-2026 grounded actuals — Alibaba's fiscal year ENDS 31 MARCH, so FY2026 = year ended 31-Mar-2026 (reported 12-May-2026; the latest reported FY). Reports in RMB (CNY), HK/NYSE-listed. Source: Alibaba FY2026 results (alibabagroup.com / Businesswire / SEC 6-K). Total revenue RMB 1,023,670mn (US$148.4bn), +2.7% YoY (vs RMB 996,347mn FY2025). Net income RMB 102,127mn (-19% YoY); net income attributable to ordinary shareholders RMB 105,904mn. Non-GAAP net income RMB 60,658mn (-62% YoY) — the profit decline reflects heavy AI/cloud capex and strategic reinvestment, NOT demand weakness. EPS omitted (ADS-vs-ordinary share basis); operating margin / FCF not cleanly captured here.",
+  "fy_highlights": {
+    "period": "FY 2026 (ended Mar-2026)",
+    "reporting_currency": "CNY",
+    "revenue_mn": 1023670,
+    "revenue_growth_pct": 2.7,
+    "net_profit_mn": 102127,
+    "net_profit_growth_pct": -19.0,
+    "source": "Alibaba FY2026 results, 12-May-2026 (alibabagroup.com / SEC 6-K)"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "panel_size": 5,
+  "rendered_at": "2026-05-17T11:53:13.634128+00:00",
+  "decks": [
+    {
+      "ticker": "2010.SR",
+      "company_name": "Saudi Basic Industries Corp.",
+      "sector": "Basic Materials",
+      "currency": "SAR",
+      "cells_in_canonical_store": 14,
+      "by_confidence": {
+        "High": 0,
+        "Medium": 7,
+        "Low": 7
+      },
+      "sources": [
+        "marketscreener",
+        "yahoo"
+      ],
+      "rendered_at": "2026-05-17T11:51:43.558827+00:00",
+      "pptx_bytes": 46377,
+      "pptx_filename": "2010.SR.pptx"
+    },
+    {
+      "ticker": "BKMB.OM",
+      "company_name": "Bank Muscat",
+      "sector": "Financials",
+      "currency": "OMR",
+      "cells_in_canonical_store": 10,
+      "by_confidence": {
+        "High": 0,
+        "Medium": 5,
+        "Low": 5
+      },
+      "sources": [
+        "investing",
+        "ishares",
+        "marketscreener"
+      ],
+      "rendered_at": "2026-05-17T11:52:09.388950+00:00",
+      "pptx_bytes": 38725,
+      "pptx_filename": "BKMB.OM.pptx"
+    },
+    {
+      "ticker": "2222.SR",
+      "company_name": "Saudi Arabian Oil Co.",
+      "sector": "Energy",
+      "currency": "SAR",
+      "cells_in_canonical_store": 14,
+      "by_confidence": {
+        "High": 1,
+        "Medium": 9,
+        "Low": 4
+      },
+      "sources": [
+        "investing",
+        "marketscreener",
+        "yahoo"
+      ],
+      "rendered_at": "2026-05-17T11:52:31.052766+00:00",
+      "pptx_bytes": 46980,
+      "pptx_filename": "2222.SR.pptx"
+    },
+    {
+      "ticker": "0700.HK",
+      "company_name": "TENCENT",
+      "sector": "Communication Services",
+      "currency": "HKD",
+      "cells_in_canonical_store": 14,
+      "by_confidence": {
+        "High": 0,
+        "Medium": 10,
+        "Low": 4
+      },
+      "sources": [
+        "investing",
+        "marketscreener",
+        "yahoo"
+      ],
+      "rendered_at": "2026-05-17T11:52:51.342482+00:00",
+      "pptx_bytes": 46769,
+      "pptx_filename": "0700.HK.pptx"
+    },
+    {
+      "ticker": "ICICIBANK.BO",
+      "company_name": "ICICI BANK LTD.",
+      "sector": "Financial Services",
+      "currency": "INR",
+      "cells_in_canonical_store": 14,
+      "by_confidence": {
+        "High": 0,
+        "Medium": 9,
+        "Low": 5
+      },
+      "sources": [
+        "investing",
+        "marketscreener",
+        "yahoo"
+      ],
+      "rendered_at": "2026-05-17T11:53:13.633913+00:00",
+      "pptx_bytes": 46247,
+      "pptx_filename": "ICICIBANK.BO.pptx"
+    }
+  ]
+}

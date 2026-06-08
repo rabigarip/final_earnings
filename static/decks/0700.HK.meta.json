@@ -1,0 +1,20 @@
+{
+  "ticker": "0700.HK",
+  "company_name": "TENCENT",
+  "sector": "Communication Services",
+  "currency": "HKD",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 10,
+    "Low": 4
+  },
+  "sources": [
+    "investing",
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-17T11:52:51.342482+00:00",
+  "pptx_bytes": 46769,
+  "pptx_filename": "0700.HK.pptx"
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "1398.HK",
+  "company_name": "Industrial and Commercial Bank of China Limited",
+  "sector": "Financials",
+  "currency": "CNY",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 7,
+    "Low": 7
+  },
+  "sources": [
+    "investing",
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-14T17:33:18.210792+00:00",
+  "pptx_bytes": 47737,
+  "pptx_filename": "1398.HK.pptx"
+}

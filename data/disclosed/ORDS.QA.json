@@ -1,0 +1,22 @@
+{
+  "ticker": "ORDS.QA",
+  "company": "Ooredoo Q.P.S.C.",
+  "currency": "QAR",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (telco; uses the tech schema — revenue/net profit/margins/FCF/EPS — plus EBITDA which telcos lead on). Source: Ooredoo Group FY2025 earnings release, Feb 2026 (ooredoo.com), confirmed by Economy Middle East / Qatar Tribune / Investing.com. Revenue QAR 24.6bn (+4% reported, +6% ex-Myanmar); reported net profit QAR 3.9bn (+12%, record); EBITDA QAR 10.5bn (+5%, margin 42.6%); capex QAR 4.6bn; free cash flow QAR 5.9bn (-13%); customer base 147.1m incl. IOH. Proposed cash dividend QAR 0.75/sh (+15%, historic high; 50-70% payout policy). EPS omitted — group net profit includes large minority interests (IOH), so a shares-based EPS would overstate the attributable figure.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "QAR",
+    "revenue_mn": 24600,
+    "revenue_growth_pct": 4.0,
+    "net_profit_mn": 3900,
+    "net_profit_growth_pct": 12.0,
+    "ebitda_mn": 10500,
+    "ebitda_growth_pct": 5.0,
+    "ebitda_margin_pct": 42.6,
+    "free_cash_flow_mn": 5900,
+    "free_cash_flow_growth_pct": -13.0,
+    "dps": 0.75,
+    "source": "Ooredoo Group FY2025 earnings release, Feb 2026 (ooredoo.com); Economy Middle East"
+  }
+}

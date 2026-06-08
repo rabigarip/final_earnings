@@ -1,0 +1,24 @@
+{
+  "ticker": "FAB.AE",
+  "company": "First Abu Dhabi Bank PJSC",
+  "currency": "AED",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema). Source: FAB FY2025 results, 28-Jan-2026 (bankfab.com), confirmed by The National / Aletihad / The Asian Banker. Record group net profit AED 21.11bn (+24% YoY; profit-before-tax AED 25.20bn +27%). Operating income AED 36.68bn (+16%): NII AED 20.32bn (+4%), non-interest income AED 16.35bn (+36%). Loans & advances AED 616bn (+17%); customer deposits AED 841bn (+7%). Return on tangible equity 19.2% (recorded in roe_pct); CET1 13.3%; NPL 2.2% (from 3.4%), coverage 108%. Highest-ever cash dividend 80 fils/sh (AED 8.84bn). EPS omitted (AT1-coupon adjustment to ordinary EPS not cleanly disclosed).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "AED",
+    "net_profit_mn": 21110,
+    "net_profit_growth_pct": 24.0,
+    "nii_mn": 20320,
+    "nii_growth_pct": 4.0,
+    "non_interest_income_mn": 16350,
+    "non_interest_income_growth_pct": 36.0,
+    "net_loans_mn": 616000,
+    "net_loans_growth_pct": 17.0,
+    "customer_deposits_mn": 841000,
+    "customer_deposits_growth_pct": 7.0,
+    "roe_pct": 19.2,
+    "dps": 0.80,
+    "source": "FAB FY2025 results, 28-Jan-2026 (bankfab.com); The National / Aletihad, Jan 2026"
+  }
+}

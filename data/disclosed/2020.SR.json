@@ -1,0 +1,17 @@
+{
+  "ticker": "2020.SR",
+  "company": "SABIC Agri-Nutrients Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (materials schema). Source: SABIC Agri-Nutrients FY2025 results; Arab News / Saudi Times, Mar 2026. Net profit SAR 4.32bn (+29.9%, on +16% avg selling prices / +2% volumes); revenue SAR 13.07bn (+18.2%). ROE derived from net profit 4.32 / shareholders' equity 21.20 = 20.4%.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "revenue_mn": 13070,
+    "revenue_growth_pct": 18.2,
+    "net_profit_mn": 4320,
+    "net_profit_growth_pct": 29.9,
+    "roe_pct": 20.4,
+    "source": "SABIC Agri-Nutrients FY2025 results; Arab News / Saudi Times, 2026"
+  }
+}

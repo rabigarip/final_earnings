@@ -1,0 +1,21 @@
+{
+  "ticker": "1180.SR",
+  "company": "The Saudi National Bank",
+  "currency": "SAR",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema). Source: SNB FY2025 results, 27-Jan-2026 (alahli.com / Saudi Exchange), confirmed by Sahm Capital / Saudi Standard. Net profit attributable to shareholders SAR 25.013bn (+18.0% YoY from 21.193bn); EPS SAR 4.04 (vs 3.44). Total operating income SAR 39.195bn (+8.8%); net special commission income (NII) SAR 29.155bn (financing 27.541 + investment 1.614); non-interest income derived as op income - NII = 10.040bn. Customer deposits SAR 636.094bn (+9.7%); total assets SAR 1.210trn (+9.6%); financing+investment portfolio SAR 729.311bn (+11.5%, combined — not pure net loans, so omitted). ROE / CAR / DPS not in the results announcement.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "net_profit_mn": 25013,
+    "net_profit_growth_pct": 18.0,
+    "nii_mn": 29155,
+    "nii_growth_pct": 5.2,
+    "non_interest_income_mn": 10040,
+    "non_interest_income_growth_pct": 20.8,
+    "customer_deposits_mn": 636094,
+    "customer_deposits_growth_pct": 9.7,
+    "eps": 4.04,
+    "source": "SNB FY2025 results, 27-Jan-2026 (alahli.com / Saudi Exchange); Sahm Capital"
+  }
+}

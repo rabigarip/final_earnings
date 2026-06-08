@@ -1,0 +1,501 @@
+ticker,country,company_name,exchange,market_cap,currency,source_priority,as_of_date
+601398.SS,China,Industrial and Commercial Bank of China Limited,SHH,2548304707584,CNY,1,2026-03-12
+601939.SS,China,China Construction Bank Corporation,SHH,2385795350528,CNY,1,2026-03-12
+601288.SS,China,Agricultural Bank of China Limited,SHH,2323887423488,CNY,1,2026-03-12
+601857.SS,China,PetroChina Company Limited,SHH,2245667586048,CNY,1,2026-03-12
+600941.SS,China,China Mobile Limited,SHH,2084002201600,CNY,1,2026-03-12
+600938.SS,China,CNOOC Limited,SHH,2045213933568,CNY,1,2026-03-12
+300750.SZ,China,"Contemporary Amperex Technology Co., Limited",SHZ,1802545790976,CNY,1,2026-03-12
+600519.SS,China,"Kweichow Moutai Co., Ltd.",SHH,1746127945728,CNY,1,2026-03-12
+601988.SS,China,Bank of China Limited,SHH,1730280554496,CNY,1,2026-03-12
+601628.SS,China,China Life Insurance Company Limited,SHH,1194183753728,CNY,1,2026-03-12
+601318.SS,China,"Ping An Insurance (Group) Company of China, Ltd.",SHH,1115068563456,CNY,1,2026-03-12
+601138.SS,China,"Foxconn Industrial Internet Co., Ltd.",SHH,1045534081024,CNY,1,2026-03-12
+600036.SS,China,"China Merchants Bank Co., Ltd.",SHH,1012133855232,CNY,1,2026-03-12
+601088.SS,China,China Shenhua Energy Company Limited,SHH,982498344960,CNY,1,2026-03-12
+601899.SS,China,Zijin Mining Group Company Limited,SHH,971322884096,CNY,1,2026-03-12
+002594.SZ,China,BYD Company Limited,SHZ,924150988800,CNY,1,2026-03-12
+688981.SS,China,Semiconductor Manufacturing International Corporation,SHH,844145491968,CNY,1,2026-03-12
+600028.SS,China,China Petroleum & Chemical Corporation,SHH,785125343232,CNY,1,2026-03-12
+600900.SS,China,"China Yangtze Power Co., Ltd.",SHH,671652577280,CNY,1,2026-03-12
+601658.SS,China,"Postal Savings Bank of China Co., Ltd.",SHH,607680987136,CNY,1,2026-03-12
+601328.SS,China,"Bank of Communications Co., Ltd.",SHH,602641006592,CNY,1,2026-03-12
+300308.SZ,China,"Zhongji Innolight Co., Ltd.",SHZ,592237166592,CNY,1,2026-03-12
+000333.SZ,China,"Midea Group Co., Ltd.",SHZ,588299960320,CNY,1,2026-03-12
+688041.SS,China,"Hygon Information Technology Co., Ltd.",SHH,561327702016,CNY,1,2026-03-12
+601728.SS,China,China Telecom Corporation Limited,SHH,547212689408,CNY,1,2026-03-12
+688256.SS,China,Cambricon Technologies Corporation Limited,SHH,459721179136,CNY,1,2026-03-12
+603993.SS,China,CMOC Group Limited,SHH,441164431360,CNY,1,2026-03-12
+002379.SZ,China,Shandong Hongqiao Aluminum Industry Holding Company Limited,SHZ,422599163904,CNY,1,2026-03-12
+601998.SS,China,China CITIC Bank Corporation Limited,SHH,411774222336,CNY,1,2026-03-12
+601166.SS,China,"Industrial Bank Co., Ltd.",SHH,398284947456,CNY,1,2026-03-12
+000858.SZ,China,"Wuliangye Yibin Co.,Ltd.",SHZ,395729928192,CNY,1,2026-03-12
+600030.SS,China,CITIC Securities Company Limited,SHH,383407554560,CNY,1,2026-03-12
+601601.SS,China,"China Pacific Insurance (Group) Co., Ltd.",SHH,381254139904,CNY,1,2026-03-12
+601319.SS,China,The People's Insurance Company (Group) of China Limited,SHH,377672892416,CNY,1,2026-03-12
+300502.SZ,China,"Eoptolink Technology Inc., Ltd.",SHZ,376023810048,CNY,1,2026-03-12
+600276.SS,China,"Jiangsu Hengrui Pharmaceuticals Co.,Ltd",SHH,368099098624,CNY,1,2026-03-12
+002475.SZ,China,"Luxshare Precision Industry Co., Ltd.",SHZ,361457713152,CNY,1,2026-03-12
+300274.SZ,China,"Sungrow Power Supply Co., Ltd.",SHZ,357546065920,CNY,1,2026-03-12
+600000.SS,China,"Shanghai Pudong Development Bank Co., Ltd.",SHH,339053445120,CNY,1,2026-03-12
+300059.SZ,China,"East Money Information Co.,Ltd.",SHZ,337100144640,CNY,1,2026-03-12
+688235.SS,China,BeOne Medicines AG,SHH,336666689536,CNY,1,2026-03-12
+002371.SZ,China,"NAURA Technology Group Co., Ltd.",SHZ,330269982720,CNY,1,2026-03-12
+601211.SS,China,"Guotai Haitong Securities Co., Ltd.",SHH,318378377216,CNY,1,2026-03-12
+002714.SZ,China,"Muyuan Foods Co., Ltd.",SHZ,290092974080,CNY,1,2026-03-12
+002415.SZ,China,"Hangzhou Hikvision Digital Technology Co., Ltd.",SHZ,289884897280,CNY,1,2026-03-12
+603259.SS,China,"WuXi AppTec Co., Ltd.",SHH,274147590144,CNY,1,2026-03-12
+600309.SS,China,"Wanhua Chemical Group Co., Ltd.",SHH,271756247040,CNY,1,2026-03-12
+600150.SS,China,China CSSC Holdings Limited,SHH,270245052416,CNY,1,2026-03-12
+600930.SS,China,Huadian New Energy Group Corporation Limited,SHH,267805720576,CNY,1,2026-03-12
+688795.SS,China,MOORE THREADS TECH CO LTD,SHH,261359190016,CNY,1,2026-03-12
+601225.SS,China,Shaanxi Coal Industry Company Limited,SHH,257886994432,CNY,1,2026-03-12
+601898.SS,China,China Coal Energy Company Limited,SHH,257350647808,CNY,1,2026-03-12
+601600.SS,China,Aluminum Corporation of China Limited,SHH,252006531072,CNY,1,2026-03-12
+300394.SZ,China,"Suzhou TFC Optical Communication Co., Ltd.",SHZ,251494039552,CNY,1,2026-03-12
+601816.SS,China,"Beijing-Shanghai High-Speed Railway Co., Ltd.",SHH,250010222592,CNY,1,2026-03-12
+600989.SS,China,"Ningxia Baofeng Energy Group Co., Ltd.",SHH,247867572224,CNY,1,2026-03-12
+601919.SS,China,"COSCO SHIPPING Holdings Co., Ltd.",SHH,244520730624,CNY,1,2026-03-12
+600406.SS,China,"NARI Technology Co., Ltd.",SHH,242318082048,CNY,1,2026-03-12
+300476.SZ,China,"Victory Giant Technology (HuiZhou)Co.,Ltd.",SHZ,240947986432,CNY,1,2026-03-12
+600690.SS,China,"Haier Smart Home Co., Ltd.",SHH,236878921728,CNY,1,2026-03-12
+601336.SS,China,New China Life Insurance Company Ltd.,SHH,224544980992,CNY,1,2026-03-12
+600188.SS,China,Yankuang Energy Group Company Limited,SHH,222530945024,CNY,1,2026-03-12
+003816.SZ,China,"CGN Power Co., Ltd.",SHZ,220678914048,CNY,1,2026-03-12
+000338.SZ,China,"Weichai Power Co., Ltd.",SHZ,219146567680,CNY,1,2026-03-12
+603288.SS,China,Foshan Haitian Flavouring and Food Company Ltd.,SHH,217336774656,CNY,1,2026-03-12
+688347.SS,China,Hua Hong Semiconductor Limited,SHH,217059360768,CNY,1,2026-03-12
+300760.SZ,China,"Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",SHZ,216348033024,CNY,1,2026-03-12
+600547.SS,China,"Shandong Gold Mining Co., Ltd.",SHH,215283728384,CNY,1,2026-03-12
+601668.SS,China,China State Construction Engineering Corporation Limited,SHH,212386807808,CNY,1,2026-03-12
+000001.SZ,China,"Ping An Bank Co., Ltd.",SHZ,212300742656,CNY,1,2026-03-12
+000651.SZ,China,"Gree Electric Appliances, Inc. of Zhuhai",SHZ,211957202944,CNY,1,2026-03-12
+688802.SS,China,METAX INTEGRATED CIRCUITS SHANG,SHH,207803940864,CNY,1,2026-03-12
+002142.SZ,China,"Bank of Ningbo Co., Ltd.",SHZ,207352741888,CNY,1,2026-03-12
+002050.SZ,China,"Zhejiang Sanhua Intelligent Controls Co.,Ltd",SHZ,204172836864,CNY,1,2026-03-12
+000792.SZ,China,"Qinghai Salt Lake Industry Co.,Ltd",SHZ,201767682048,CNY,1,2026-03-12
+302132.SZ,China,AVIC Chengdu Aircraft Company Limited,SHZ,198402785280,CNY,1,2026-03-12
+600031.SS,China,"Sany Heavy Industry Co.,Ltd",SHH,197692604416,CNY,1,2026-03-12
+600025.SS,China,Huaneng Lancang River Hydropower Inc.,SHH,197489606656,CNY,1,2026-03-12
+688012.SS,China,Advanced Micro-Fabrication Equipment Inc. China,SHH,197235769344,CNY,1,2026-03-12
+601818.SS,China,China Everbright Bank Company Limited,SHH,196754882560,CNY,1,2026-03-12
+200725.SZ,China,BOE Technology Group Company Limited,SHZ,196464377856,HKD,1,2026-03-12
+600919.SS,China,"Bank of Jiangsu Co., Ltd.",SHH,195808641024,CNY,1,2026-03-12
+603986.SS,China,GigaDevice Semiconductor Inc.,SHH,192620888064,CNY,1,2026-03-12
+300124.SZ,China,"Shenzhen Inovance Technology Co.,Ltd",SHZ,192483950592,CNY,1,2026-03-12
+600809.SS,China,"Shanxi Xinghuacun Fen Wine Factory Co.,Ltd.",SHH,190973181952,CNY,1,2026-03-12
+002384.SZ,China,"Suzhou Dongshan Precision Manufacturing Co., Ltd.",SHZ,190395596800,CNY,1,2026-03-12
+002352.SZ,China,"S.F. Holding Co., Ltd.",SHZ,188338864128,CNY,1,2026-03-12
+601985.SS,China,"China National Nuclear Power Co., Ltd.",SHH,188197208064,CNY,1,2026-03-12
+600111.SS,China,"China Northern Rare Earth (Group) High-Tech Co.,Ltd",SHH,186320502784,CNY,1,2026-03-12
+601869.SS,China,Yangtze Optical Fibre And Cable Joint Stock Limited Company,SHH,186231848960,CNY,1,2026-03-12
+601766.SS,China,CRRC Corporation Limited,SHH,184820678656,CNY,1,2026-03-12
+688008.SS,China,"Montage Technology Co., Ltd.",SHH,180335624192,CNY,1,2026-03-12
+601688.SS,China,"Huatai Securities Co., Ltd.",SHH,178912444416,CNY,1,2026-03-12
+601066.SS,China,"CSC Financial Co., Ltd.",SHH,178093703168,CNY,1,2026-03-12
+000063.SZ,China,ZTE Corporation,SHZ,177660493824,CNY,1,2026-03-12
+600362.SS,China,Jiangxi Copper Company Limited,SHH,177534140416,CNY,1,2026-03-12
+601633.SS,China,Great Wall Motor Company Limited,SHH,176283533312,CNY,1,2026-03-12
+600016.SS,China,"China Minsheng Banking Corp., Ltd.",SHH,175129673728,CNY,1,2026-03-12
+300033.SZ,China,"Hithink RoyalFlush Information Network Co., Ltd.",SHZ,174999552000,CNY,1,2026-03-12
+601127.SS,China,"Seres Group Co.,Ltd",SHH,174024310784,CNY,1,2026-03-12
+0700.HK,Hong Kong,Tencent Holdings Limited,HKG,4889485246464,HKD,1,2026-03-12
+1398.HK,Hong Kong,Industrial and Commercial Bank of China Limited,HKG,2815017615360,HKD,1,2026-03-12
+3750.HK,Hong Kong,"Contemporary Amperex Technology Co., Limited",HKG,2772550549504,HKD,1,2026-03-12
+0857.HK,Hong Kong,PetroChina Company Limited,HKG,2642114772992,HKD,1,2026-03-12
+9988.HK,Hong Kong,Alibaba Group Holding Limited,HKG,2494368841728,HKD,1,2026-03-12
+0005.HK,Hong Kong,HSBC Holdings plc,HKG,2252889653248,HKD,1,2026-03-12
+0939.HK,Hong Kong,China Construction Bank Corporation,HKG,2117577605120,HKD,1,2026-03-12
+1288.HK,Hong Kong,ABC,HKG,2051456106496,HKD,1,2026-03-12
+3988.HK,Hong Kong,Bank of China Limited,HKG,1840585768960,HKD,1,2026-03-12
+4335.HK,Hong Kong,Intel Corporation,HKG,1825278656512,HKD,1,2026-03-12
+0941.HK,Hong Kong,China Mobile Limited,HKG,1726117445632,HKD,1,2026-03-12
+2628.HK,Hong Kong,China Life Insurance Company Limited,HKG,1621682814976,HKD,1,2026-03-12
+0883.HK,Hong Kong,CNOOC Limited,HKG,1447272906752,HKD,1,2026-03-12
+1088.HK,Hong Kong,China Shenhua Energy Company Limited,HKG,1318149292032,HKD,1,2026-03-12
+3968.HK,Hong Kong,"China Merchants Bank Co., Ltd.",HKG,1243338375168,HKD,1,2026-03-12
+2318.HK,Hong Kong,"Ping An Insurance (Group) Company of China, Ltd.",HKG,1214402265088,HKD,1,2026-03-12
+2899.HK,Hong Kong,Zijin Mining Group Company Limited,HKG,1042317574144,HKD,1,2026-03-12
+6288.HK,Hong Kong,"Fast Retailing Co., Ltd.",HKG,948103938048,HKD,1,2026-03-12
+1211.HK,Hong Kong,BYD Company Limited,HKG,892117712896,HKD,1,2026-03-12
+1299.HK,Hong Kong,AIA Group Limited,HKG,878772682752,HKD,1,2026-03-12
+1810.HK,Hong Kong,Xiaomi Corporation,HKG,857194168320,HKD,1,2026-03-12
+0386.HK,Hong Kong,China Petroleum & Chemical Corporation,HKG,823374315520,HKD,1,2026-03-12
+3328.HK,Hong Kong,"Bank of Communications Co., Ltd.",HKG,675150364672,HKD,1,2026-03-12
+1658.HK,Hong Kong,"Postal Savings Bank of China Co., Ltd.",HKG,672234668032,HKD,1,2026-03-12
+0300.HK,Hong Kong,"Midea Group Co., Ltd.",HKG,659411238912,HKD,1,2026-03-12
+0981.HK,Hong Kong,Semiconductor Manufacturing International Corporation,HKG,623708143616,HKD,1,2026-03-12
+0728.HK,Hong Kong,China Telecom Corporation Limited,HKG,600391221248,HKD,1,2026-03-12
+9999.HK,Hong Kong,"NetEase, Inc.",HKG,588100534272,HKD,1,2026-03-12
+2259.HK,Hong Kong,Zijin Gold International Company Limited,HKG,533662007296,HKD,1,2026-03-12
+0388.HK,Hong Kong,Hong Kong Exchanges and Clearing Limited,HKG,510365761536,HKD,1,2026-03-12
+9633.HK,Hong Kong,"Nongfu Spring Co., Ltd.",HKG,486522093568,HKD,1,2026-03-12
+3993.HK,Hong Kong,CMOC Group Limited,HKG,472280170496,HKD,1,2026-03-12
+3690.HK,Hong Kong,Meituan,HKG,463816589312,HKD,1,2026-03-12
+0998.HK,Hong Kong,China CITIC Bank Corporation Limited,HKG,460983730176,HKD,1,2026-03-12
+1276.HK,Hong Kong,"Jiangsu Hengrui Pharmaceuticals Co.,Ltd",HKG,453111971840,HKD,1,2026-03-12
+6030.HK,Hong Kong,CITIC Securities Company Limited,HKG,449770717184,HKD,1,2026-03-12
+2601.HK,Hong Kong,"China Pacific Insurance (Group) Co., Ltd.",HKG,449104707584,HKD,1,2026-03-12
+0945.HK,Hong Kong,Manulife Financial Corporation,HKG,440513331200,HKD,1,2026-03-12
+2388.HK,Hong Kong,BOC Hong Kong (Holdings) Limited,HKG,434541264896,HKD,1,2026-03-12
+1378.HK,Hong Kong,China Hongqiao Group Limited,HKG,396181274624,HKD,1,2026-03-12
+2888.HK,Hong Kong,Standard Chartered PLC,HKG,385665761280,HKD,1,2026-03-12
+0016.HK,Hong Kong,Sun Hung Kai Properties Limited,HKG,383376326656,HKD,1,2026-03-12
+2328.HK,Hong Kong,PICC Property and Casualty Company Limited,HKG,343205871616,HKD,1,2026-03-12
+0100.HK,Hong Kong,MiniMax Group Inc,HKG,342803382272,HKD,1,2026-03-12
+9618.HK,Hong Kong,"JD.com, Inc.",HKG,336408182784,HKD,1,2026-03-12
+9888.HK,Hong Kong,"Baidu, Inc.",HKG,334943256576,HKD,1,2026-03-12
+0267.HK,Hong Kong,CITIC Limited,HKG,327556366336,HKD,1,2026-03-12
+1339.HK,Hong Kong,The People's Insurance Company (Group) of China Limited,HKG,326670647296,HKD,1,2026-03-12
+2359.HK,Hong Kong,"WuXi AppTec Co., Ltd.",HKG,325574426624,HKD,1,2026-03-12
+2714.HK,Hong Kong,MUYUAN,HKG,323574956032,HKD,1,2026-03-12
+2611.HK,Hong Kong,"Guotai Haitong Securities Co., Ltd.",HKG,303946039296,HKD,1,2026-03-12
+0019.HK,Hong Kong,Swire Pacific Limited,HKG,293861556224,HKD,1,2026-03-12
+1919.HK,Hong Kong,"COSCO SHIPPING Holdings Co., Ltd.",HKG,283989966848,HKD,1,2026-03-12
+2378.HK,Hong Kong,Prudential plc,HKG,282999521280,HKD,1,2026-03-12
+9992.HK,Hong Kong,Pop Mart International Group Limited,HKG,273596366848,HKD,1,2026-03-12
+9961.HK,Hong Kong,Trip.com Group Limited,HKG,264840134656,HKD,1,2026-03-12
+2600.HK,Hong Kong,Aluminum Corporation of China Limited,HKG,261302550528,HKD,1,2026-03-12
+6160.HK,Hong Kong,BeOne Medicines AG,HKG,261282971648,HKD,1,2026-03-12
+1024.HK,Hong Kong,Kuaishou Technology,HKG,259618668544,HKD,1,2026-03-12
+6690.HK,Hong Kong,"Haier Smart Home Co., Ltd.",HKG,254393909248,HKD,1,2026-03-12
+3986.HK,Hong Kong,GIGADEVICE,HKG,253799088128,HKD,1,2026-03-12
+2338.HK,Hong Kong,"Weichai Power Co., Ltd.",HKG,250951139328,HKD,1,2026-03-12
+2513.HK,Hong Kong,Knowledge Atlas Tech Joint,HKG,249226297344,HKD,1,2026-03-12
+1766.HK,Hong Kong,CRRC Corporation Limited,HKG,245908701184,HKD,1,2026-03-12
+1898.HK,Hong Kong,China Coal Energy Company Limited,HKG,240502751232,HKD,1,2026-03-12
+1171.HK,Hong Kong,Yankuang Energy Group Company Limited,HKG,237561004032,HKD,1,2026-03-12
+0762.HK,Hong Kong,China Unicom (Hong Kong) Limited,HKG,237440499712,HKD,1,2026-03-12
+6809.HK,Hong Kong,MONTAGE TECH,HKG,231443218432,HKD,1,2026-03-12
+3288.HK,Hong Kong,Foshan Haitian Flavouring and Food Company Ltd.,HKG,228503388160,HKD,1,2026-03-12
+1816.HK,Hong Kong,"CGN Power Co., Ltd.",HKG,228244455424,HKD,1,2026-03-12
+6031.HK,Hong Kong,"Sany Heavy Industry Co.,Ltd",HKG,226084421632,HKD,1,2026-03-12
+0001.HK,Hong Kong,CK Hutchison Holdings Limited,HKG,224823607296,HKD,1,2026-03-12
+2020.HK,Hong Kong,ANTA Sports Products Limited,HKG,219700625408,HKD,1,2026-03-12
+6818.HK,Hong Kong,China Everbright Bank Company Limited,HKG,218598621184,HKD,1,2026-03-12
+1336.HK,Hong Kong,New China Life Insurance Company Ltd.,HKG,216584552448,HKD,1,2026-03-12
+1109.HK,Hong Kong,China Resources Land Limited,HKG,215354376192,HKD,1,2026-03-12
+6869.HK,Hong Kong,Yangtze Optical Fibre And Cable Joint Stock Limited Company,HKG,214972170240,HKD,1,2026-03-12
+1787.HK,Hong Kong,"Shandong Gold Mining Co., Ltd.",HKG,212167032832,HKD,1,2026-03-12
+0066.HK,Hong Kong,MTR Corporation Limited,HKG,211439222784,HKD,1,2026-03-12
+0669.HK,Hong Kong,Techtronic Industries Company Limited,HKG,208895770624,HKD,1,2026-03-12
+6936.HK,Hong Kong,"S.F. Holding Co., Ltd.",HKG,205791395840,HKD,1,2026-03-12
+0788.HK,Hong Kong,China Tower Corporation Limited,HKG,199285669888,HKD,1,2026-03-12
+3692.HK,Hong Kong,Hansoh Pharmaceutical Group Company Limited,HKG,199189495808,HKD,1,2026-03-12
+1988.HK,Hong Kong,"China Minsheng Banking Corp., Ltd.",HKG,197484494848,HKD,1,2026-03-12
+0358.HK,Hong Kong,Jiangxi Copper Company Limited,HKG,196524720128,HKD,1,2026-03-12
+1347.HK,Hong Kong,Hua Hong Semiconductor Limited,HKG,191598166016,HKD,1,2026-03-12
+0175.HK,Hong Kong,Geely Automobile Holdings Limited,HKG,188878405632,HKD,1,2026-03-12
+9927.HK,Hong Kong,"Seres Group Co.,Ltd",HKG,186842185728,HKD,1,2026-03-12
+0002.HK,Hong Kong,CLP Holdings Limited,HKG,184430903296,HKD,1,2026-03-12
+1880.HK,Hong Kong,China Tourism Group Duty Free Corporation Limited,HKG,182392750080,HKD,1,2026-03-12
+0763.HK,Hong Kong,ZTE Corporation,HKG,178072158208,HKD,1,2026-03-12
+2050.HK,Hong Kong,"Zhejiang Sanhua Intelligent Controls Co.,Ltd",HKG,177341956096,HKD,1,2026-03-12
+1698.HK,Hong Kong,Tencent Music Entertainment Group,HKG,176734666752,HKD,1,2026-03-12
+2635.HK,Hong Kong,Nuobikan Artificial,HKG,175701016576,HKD,1,2026-03-12
+6613.HK,Hong Kong,"Lens Technology Co., Ltd.",HKG,173931675648,HKD,1,2026-03-12
+6881.HK,Hong Kong,"China Galaxy Securities Co., Ltd.",HKG,172543721472,HKD,1,2026-03-12
+3606.HK,Hong Kong,"Fuyao Glass Industry Group Co., Ltd.",HKG,172160401408,HKD,1,2026-03-12
+1072.HK,Hong Kong,Dongfang Electric Corporation Limited,HKG,171500879872,HKD,1,2026-03-12
+0390.HK,Hong Kong,China Railway Group Limited,HKG,166702956544,HKD,1,2026-03-12
+6886.HK,Hong Kong,"Huatai Securities Co., Ltd.",HKG,164938448896,HKD,1,2026-03-12
+RELIANCE.NS,India,Reliance Industries Limited,NSI,19075371630592,INR,1,2026-03-12
+RELIANCE.BO,India,Reliance Industries Limited,BSE,19022531788800,INR,1,2026-03-12
+HDFCBANK.NS,India,HDFC Bank Limited,NSI,12857811927040,INR,1,2026-03-12
+HDFCBANK.BO,India,HDFC Bank Limited,BSE,12795904000000,INR,1,2026-03-12
+BHARTIARTL.NS,India,Bharti Airtel Limited,NSI,10998152953856,INR,1,2026-03-12
+BHARTIARTL.BO,India,Bharti Airtel Limited,BSE,10967389831168,INR,1,2026-03-12
+SBIN.NS,India,State Bank of India,NSI,9919221727232,INR,1,2026-03-12
+SBIN.BO,India,State Bank of India,BSE,9903991160832,INR,1,2026-03-12
+ICICIBANK.NS,India,ICICI Bank Limited,NSI,9115629780992,INR,1,2026-03-12
+ICICIBANK.BO,India,ICICI Bank Limited,BSE,9088930938880,INR,1,2026-03-12
+TCS.NS,India,Tata Consultancy Services Limited,NSI,8937399123968,INR,1,2026-03-12
+TCS.BO,India,Tata Consultancy Services Limited,BSE,8925084647424,INR,1,2026-03-12
+BAJFINANCE.NS,India,Bajaj Finance Limited,NSI,5449870475264,INR,1,2026-03-12
+BAJFINANCE.BO,India,Bajaj Finance Limited,BSE,5433396822016,INR,1,2026-03-12
+LT.NS,India,Larsen & Toubro Limited,NSI,5223197179904,INR,1,2026-03-12
+LT.BO,India,Larsen & Toubro Limited,BSE,5220927537152,INR,1,2026-03-12
+INFY.NS,India,Infosys Limited,NSI,5167665643520,INR,1,2026-03-12
+INFY.BO,India,Infosys Limited,BSE,5160674263040,INR,1,2026-03-12
+LICI.NS,India,Life Insurance Corporation of India,NSI,5075810385920,INR,1,2026-03-12
+LICI.BO,India,Life Insurance Corporation of India,BSE,5059997859840,INR,1,2026-03-12
+HINDUNILVR.NS,India,Hindustan Unilever Limited,NSI,5001831251968,INR,1,2026-03-12
+HINDUNILVR.BO,India,Hindustan Unilever Limited,BSE,4998990659584,INR,1,2026-03-12
+SUNPHARMA.NS,India,Sun Pharmaceutical Industries Limited,NSI,4390062915584,INR,1,2026-03-12
+SUNPHARMA.BO,India,Sun Pharmaceutical Industries Limited,BSE,4380945547264,INR,1,2026-03-12
+MARUTI.BO,India,Maruti Suzuki India Limited,BSE,4135965687808,INR,1,2026-03-12
+MARUTI.NS,India,Maruti Suzuki India Limited,NSI,4132507222016,INR,1,2026-03-12
+AXISBANK.NS,India,Axis Bank Limited,NSI,3851100356608,INR,1,2026-03-12
+ITC.NS,India,ITC Limited,NSI,3847099777024,INR,1,2026-03-12
+AXISBANK.BO,India,Axis Bank Limited,BSE,3840225050624,INR,1,2026-03-12
+ITC.BO,India,ITC Limited,BSE,3837702963200,INR,1,2026-03-12
+NTPC.NS,India,NTPC Limited,NSI,3761337008128,INR,1,2026-03-12
+KOTAKBANK.NS,India,Kotak Mahindra Bank Limited,NSI,3758899068928,INR,1,2026-03-12
+KOTAKBANK.BO,India,Kotak Mahindra Bank Limited,BSE,3750445187072,INR,1,2026-03-12
+NTPC.BO,India,NTPC Limited,BSE,3747761618944,INR,1,2026-03-12
+HCLTECH.NS,India,HCL Technologies Limited,NSI,3682933932032,INR,1,2026-03-12
+HCLTECH.BO,India,HCL Technologies Limited,BSE,3680904675328,INR,1,2026-03-12
+M&M.NS,India,Mahindra & Mahindra Limited,NSI,3679089065984,INR,1,2026-03-12
+M&M.BO,India,Mahindra & Mahindra Limited,BSE,3677348429824,INR,1,2026-03-12
+TITAN.NS,India,Titan Company Limited,NSI,3650900721664,INR,1,2026-03-12
+TITAN.BO,India,Titan Company Limited,BSE,3637116403712,INR,1,2026-03-12
+ONGC.NS,India,Oil and Natural Gas Corporation Limited,NSI,3391014043648,INR,1,2026-03-12
+ONGC.BO,India,Oil and Natural Gas Corporation Limited,BSE,3376546840576,INR,1,2026-03-12
+BEL.NS,India,Bharat Electronics Limited,NSI,3307309629440,INR,1,2026-03-12
+BEL.BO,India,Bharat Electronics Limited,BSE,3304019984384,INR,1,2026-03-12
+ULTRACEMCO.NS,India,UltraTech Cement Limited,NSI,3303866892288,INR,1,2026-03-12
+ULTRACEMCO.BO,India,UltraTech Cement Limited,BSE,3294062706688,INR,1,2026-03-12
+ADANIPORTS.NS,India,Adani Ports and Special Economic Zone Limited,NSI,3238905774080,INR,1,2026-03-12
+ADANIPORTS.BO,India,Adani Ports and Special Economic Zone Limited,BSE,3230150688768,INR,1,2026-03-12
+COALINDIA.BO,India,Coal India Limited,BSE,2876145401856,INR,1,2026-03-12
+ADANIPOWER.NS,India,Adani Power Limited,NSI,2875549024256,INR,1,2026-03-12
+COALINDIA.NS,India,Coal India Limited,NSI,2873064161280,INR,1,2026-03-12
+JSWSTEEL.NS,India,JSW Steel Limited,NSI,2864011280384,INR,1,2026-03-12
+JSWSTEEL.BO,India,JSW Steel Limited,BSE,2860222775296,INR,1,2026-03-12
+BAJAJFINSV.NS,India,Bajaj Finserv Ltd.,NSI,2838592749568,INR,1,2026-03-12
+BAJAJFINSV.BO,India,Bajaj Finserv Ltd.,BSE,2834598985728,INR,1,2026-03-12
+ADANIPOWER.BO,India,Adani Power Limited,BSE,2827136532480,INR,1,2026-03-12
+POWERGRID.NS,India,Power Grid Corporation of India Limited,NSI,2820408082432,INR,1,2026-03-12
+POWERGRID.BO,India,Power Grid Corporation of India Limited,BSE,2807852171264,INR,1,2026-03-12
+VEDL.NS,India,Vedanta Limited,NSI,2794928472064,INR,1,2026-03-12
+VEDL.BO,India,Vedanta Limited,BSE,2792192737280,INR,1,2026-03-12
+ADANIENT.NS,India,Adani Enterprises Limited,NSI,2741980364800,INR,1,2026-03-12
+ADANIENT.BO,India,Adani Enterprises Limited,BSE,2737145380864,INR,1,2026-03-12
+HAL.NS,India,Hindustan Aeronautics Limited,NSI,2683392753664,INR,1,2026-03-12
+HAL.BO,India,Hindustan Aeronautics Limited,BSE,2681887784960,INR,1,2026-03-12
+BAJAJ-AUTO.NS,India,Bajaj Auto Limited,NSI,2568006402048,INR,1,2026-03-12
+DMART.NS,India,Avenue Supermarts Limited,NSI,2567987789824,INR,1,2026-03-12
+DMART.BO,India,Avenue Supermarts Limited,BSE,2560276561920,INR,1,2026-03-12
+BAJAJ-AUTO.BO,India,Bajaj Auto Limited,BSE,2557996171264,INR,1,2026-03-12
+HINDZINC.BO,India,Hindustan Zinc Limited,BSE,2427445837824,INR,1,2026-03-12
+HINDZINC.NS,India,Hindustan Zinc Limited,NSI,2424065490944,INR,1,2026-03-12
+TATASTEEL.NS,India,Tata Steel Limited,NSI,2401204961280,INR,1,2026-03-12
+TATASTEEL.BO,India,Tata Steel Limited,BSE,2399359729664,INR,1,2026-03-12
+NESTLEIND.NS,India,Nestlé India Limited,NSI,2362570702848,INR,1,2026-03-12
+NESTLEIND.BO,India,Nestlé India Limited,BSE,2357937831936,INR,1,2026-03-12
+IOC.NS,India,Indian Oil Corporation Limited,NSI,2268576874496,INR,1,2026-03-12
+IOC.BO,India,Indian Oil Corporation Limited,BSE,2250354458624,INR,1,2026-03-12
+ASIANPAINT.BO,India,Asian Paints Limited,BSE,2142602002432,INR,1,2026-03-12
+ASIANPAINT.NS,India,Asian Paints Limited,NSI,2142170644480,INR,1,2026-03-12
+WIPRO.NS,India,Wipro Limited,NSI,2127167094784,INR,1,2026-03-12
+WIPRO.BO,India,Wipro Limited,BSE,2124120981504,INR,1,2026-03-12
+HINDALCO.NS,India,Hindalco Industries Limited,NSI,2121175007232,INR,1,2026-03-12
+HINDALCO.BO,India,Hindalco Industries Limited,BSE,2119903215616,INR,1,2026-03-12
+ETERNAL.NS,India,Eternal Limited,NSI,2039207034880,INR,1,2026-03-12
+ETERNAL.BO,India,Eternal Limited,BSE,2021985091584,INR,1,2026-03-12
+SHRIRAMFIN.NS,India,Shriram Finance Limited,NSI,1947946057728,INR,1,2026-03-12
+SHRIRAMFIN.BO,India,Shriram Finance Limited,BSE,1944157028352,INR,1,2026-03-12
+SBILIFE.NS,India,SBI Life Insurance Company Limited,NSI,1928600748032,INR,1,2026-03-12
+EICHERMOT.BO,India,Eicher Motors Limited,BSE,1924314169344,INR,1,2026-03-12
+EICHERMOT.NS,India,Eicher Motors Limited,NSI,1923079733248,INR,1,2026-03-12
+SBILIFE.BO,India,SBI Life Insurance Company Limited,BSE,1919623626752,INR,1,2026-03-12
+GRASIM.NS,India,Grasim Industries Limited,NSI,1826510602240,INR,1,2026-03-12
+GRASIM.BO,India,Grasim Industries Limited,BSE,1822198464512,INR,1,2026-03-12
+DIVISLAB.NS,India,Divi's Laboratories Limited,NSI,1671124746240,INR,1,2026-03-12
+DIVISLAB.BO,India,Divi's Laboratories Limited,BSE,1665961295872,INR,1,2026-03-12
+INDIGO.NS,India,InterGlobe Aviation Limited,NSI,1648594386944,INR,1,2026-03-12
+INDIGO.BO,India,InterGlobe Aviation Limited,BSE,1644650823680,INR,1,2026-03-12
+TVSMOTOR.BO,India,TVS Motor Company Limited,BSE,1638612336640,INR,1,2026-03-12
+TVSMOTOR.NS,India,TVS Motor Company Limited,NSI,1637662457856,INR,1,2026-03-12
+HYUNDAI.NS,India,HYUNDAI MOTOR INDIA LTD,NSI,1617769398272,INR,1,2026-03-12
+TMCV.NS,India,TATA MOTORS LIMITED,NSI,1616543481856,INR,1,2026-03-12
+NVDC34.SA,Brazil,NVIDIA Corporation,SAO,23423377997824,BRL,1,2026-03-12
+AAPL34.SA,Brazil,Apple Inc.,SAO,19759787671552,BRL,1,2026-03-12
+GOGL34.SA,Brazil,Alphabet Inc.,SAO,19219720699904,BRL,1,2026-03-12
+GOGL35.SA,Brazil,Alphabet Inc.,SAO,19212464553984,BRL,1,2026-03-12
+MSFT34.SA,Brazil,Microsoft Corporation,SAO,15664062398464,BRL,1,2026-03-12
+AMZO34.SA,Brazil,"Amazon.com, Inc.",SAO,11741855481856,BRL,1,2026-03-12
+TSMC34.SA,Brazil,Taiwan Semiconductor Manufacturing Company Limited,SAO,9485079805952,BRL,1,2026-03-12
+M1TA34.SA,Brazil,"Meta Platforms, Inc.",SAO,8539605041152,BRL,1,2026-03-12
+AVGO34.SA,Brazil,Broadcom Inc.,SAO,8454827671552,BRL,1,2026-03-12
+TSLA34.SA,Brazil,"Tesla, Inc.",SAO,7869900521472,BRL,1,2026-03-12
+BERK34.SA,Brazil,Berkshire Hathaway Inc.,SAO,5455899262976,BRL,1,2026-03-12
+WALM34.SA,Brazil,Walmart Inc.,SAO,5108522287104,BRL,1,2026-03-12
+LILY34.SA,Brazil,Eli Lilly and Company,SAO,4621314555904,BRL,1,2026-03-12
+JPMC34.SA,Brazil,JPMorgan Chase & Co.,SAO,3999699042304,BRL,1,2026-03-12
+EXXO34.SA,Brazil,Exxon Mobil Corporation,SAO,3239075119104,BRL,1,2026-03-12
+A1ZN34.SA,Brazil,AstraZeneca PLC,SAO,3107469393920,BRL,1,2026-03-12
+VISA34.SA,Brazil,Visa Inc.,SAO,3069543186432,BRL,1,2026-03-12
+JNJB34.SA,Brazil,Johnson & Johnson,SAO,3050636312576,BRL,1,2026-03-12
+ASML34.SA,Brazil,ASML Holding N.V.,SAO,2732206587904,BRL,1,2026-03-12
+MUTC34.SA,Brazil,"Micron Technology, Inc.",SAO,2454735814656,BRL,1,2026-03-12
+ORCL34.SA,Brazil,Oracle Corporation,SAO,2411649826816,BRL,1,2026-03-12
+MSCD34.SA,Brazil,Mastercard Incorporated,SAO,2370086633472,BRL,1,2026-03-12
+COWC34.SA,Brazil,Costco Wholesale Corporation,SAO,2266556006400,BRL,1,2026-03-12
+ABBV34.SA,Brazil,AbbVie Inc.,SAO,2111192170496,BRL,1,2026-03-12
+NFLX34.SA,Brazil,"Netflix, Inc.",SAO,2068859453440,BRL,1,2026-03-12
+CHVX34.SA,Brazil,Chevron Corporation,SAO,2015757860864,BRL,1,2026-03-12
+P2LT34.SA,Brazil,Palantir Technologies Inc.,SAO,1856673021952,BRL,1,2026-03-12
+BOAC34.SA,Brazil,Bank of America Corporation,SAO,1838618771456,BRL,1,2026-03-12
+PGCO34.SA,Brazil,The Procter & Gamble Company,SAO,1834380296192,BRL,1,2026-03-12
+HOME34.SA,Brazil,"The Home Depot, Inc.",SAO,1793991245824,BRL,1,2026-03-12
+BHG.JO,South Africa,BHP Group Limited,JNB,3147033214976,ZAc,1,2026-03-12
+ANH.JO,South Africa,Anheuser-Busch InBev SA/NV,JNB,2331473608704,ZAc,1,2026-03-12
+BTI.JO,South Africa,British American Tobacco p.l.c.,JNB,2088189296640,ZAc,1,2026-03-12
+PRX.JO,South Africa,Prosus N.V.,JNB,1886116118528,ZAc,1,2026-03-12
+CFR.JO,South Africa,Compagnie Financière Richemont SA,JNB,1775296184320,ZAc,1,2026-03-12
+GLN.JO,South Africa,Glencore plc,JNB,1347687677952,ZAc,1,2026-03-12
+ANG.JO,South Africa,AngloGold Ashanti plc,JNB,890616479744,ZAc,1,2026-03-12
+AGL.JO,South Africa,Anglo American plc,JNB,783289810944,ZAc,1,2026-03-12
+GFI.JO,South Africa,Gold Fields Limited,JNB,717335101440,ZAc,1,2026-03-12
+NPN.JO,South Africa,Naspers Limited,JNB,716401803264,ZAc,1,2026-03-12
+FSR.JO,South Africa,FirstRand Limited,JNB,504270553088,ZAc,1,2026-03-12
+CPI.JO,South Africa,Capitec Bank Holdings Limited,JNB,496980688896,ZAc,1,2026-03-12
+SBK.JO,South Africa,Standard Bank Group Limited,JNB,477255794688,ZAc,1,2026-03-12
+VAL.JO,South Africa,Valterra Platinum Limited,JNB,415481331712,ZAc,1,2026-03-12
+MTN.JO,South Africa,MTN Group Limited,JNB,337115086848,ZAc,1,2026-03-12
+VOD.JO,South Africa,Vodacom Group Limited,JNB,287572164608,ZAc,1,2026-03-12
+IMP.JO,South Africa,Impala Platinum Holdings Limited,JNB,245372862464,ZAc,1,2026-03-12
+S32.JO,South Africa,South32 Limited,JNB,231173799936,ZAc,1,2026-03-12
+SLM.JO,South Africa,Sanlam Limited,JNB,199162183680,ZAc,1,2026-03-12
+ABG.JO,South Africa,Absa Group Limited,JNB,197850710016,ZAc,1,2026-03-12
+HAR.JO,South Africa,Harmony Gold Mining Company Limited,JNB,173634191360,ZAc,1,2026-03-12
+DSY.JO,South Africa,Discovery Limited,JNB,169559179264,ZAc,1,2026-03-12
+SSW.JO,South Africa,Sibanye Stillwater Limited,JNB,159530762240,ZAc,1,2026-03-12
+NPH.JO,South Africa,Northam Platinum Holdings Limited,JNB,152548589568,ZAc,1,2026-03-12
+SHP.JO,South Africa,Shoprite Holdings Ltd,JNB,141814022144,ZAc,1,2026-03-12
+BID.JO,South Africa,Bid Corporation Limited,JNB,139433689088,ZAc,1,2026-03-12
+NED.JO,South Africa,Nedbank Group Limited,JNB,127472787456,ZAc,1,2026-03-12
+OUT.JO,South Africa,OUTsurance Group Limited,JNB,111722700800,ZAc,1,2026-03-12
+SOL.JO,South Africa,Sasol Limited,JNB,103567998976,ZAc,1,2026-03-12
+KIO.JO,South Africa,Kumba Iron Ore Limited,JNB,103221567488,ZAc,1,2026-03-12
+NVDA.MX,Mexico,NVIDIA Corporation,MEX,80409320751104,MXN,1,2026-03-12
+AAPL.MX,Mexico,Apple Inc.,MEX,67871191334912,MXN,1,2026-03-12
+GOOGL.MX,Mexico,Alphabet Inc.,MEX,65837805338624,MXN,1,2026-03-12
+GOOG.MX,Mexico,Alphabet Inc.,MEX,65795946184704,MXN,1,2026-03-12
+MSFT.MX,Mexico,Microsoft Corporation,MEX,53305828966400,MXN,1,2026-03-12
+2222.SR,Saudi Arabia,Saudi Arabian Oil Company,SAU,6568773419008,SAR,1,2026-03-12
+1120.SR,Saudi Arabia,Al Rajhi Banking and Investment Corporation,SAU,404000014336,SAR,1,2026-03-12
+1211.SR,Saudi Arabia,Saudi Arabian Mining Company (Maaden),SAU,268946161664,SAR,1,2026-03-12
+1180.SR,Saudi Arabia,The Saudi National Bank,SAU,239814410240,SAR,1,2026-03-12
+7010.SR,Saudi Arabia,Saudi Telecom Company,SAU,211367837696,SAR,1,2026-03-12
+2010.SR,Saudi Arabia,Saudi Basic Industries Corporation,SAU,172499992576,SAR,1,2026-03-12
+2082.SR,Saudi Arabia,ACWA Power Company,SAU,128321634304,SAR,1,2026-03-12
+4013.SR,Saudi Arabia,Dr. Sulaiman Al Habib Medical Services Group Company,SAU,86625001472,SAR,1,2026-03-12
+1010.SR,Saudi Arabia,Riyad Bank,SAU,86220046336,SAR,1,2026-03-12
+1060.SR,Saudi Arabia,Saudi Awwal Bank,SAU,73561645056,SAR,1,2026-03-12
+1150.SR,Saudi Arabia,Alinma Bank,SAU,71193665536,SAR,1,2026-03-12
+2020.SR,Saudi Arabia,SABIC Agri-Nutrients Company,SAU,64502796288,SAR,1,2026-03-12
+5110.SR,Saudi Arabia,Saudi Energy Company,SAU,60332277760,SAR,1,2026-03-12
+7020.SR,Saudi Arabia,Etihad Etisalat Company,SAU,50347999232,SAR,1,2026-03-12
+1050.SR,Saudi Arabia,Banque Saudi Fransi,SAU,48585736192,SAR,1,2026-03-12
+2280.SR,Saudi Arabia,Almarai Company,SAU,42940420096,SAR,1,2026-03-12
+7203.SR,Saudi Arabia,Elm Company,SAU,42662821888,SAR,1,2026-03-12
+1080.SR,Saudi Arabia,Arab National Bank,SAU,41685000192,SAR,1,2026-03-12
+1140.SR,Saudi Arabia,Bank Albilad,SAU,40170000384,SAR,1,2026-03-12
+4280.SR,Saudi Arabia,Kingdom Holding Company,SAU,33131636736,SAR,1,2026-03-12
+4030.SR,Saudi Arabia,The National Shipping Company of Saudi Arabia,SAU,29531250688,SAR,1,2026-03-12
+8210.SR,Saudi Arabia,Bupa Arabia for Cooperative Insurance Company,SAU,26445000704,SAR,1,2026-03-12
+4325.SR,Saudi Arabia,Umm Al Qura for Development and,SAU,23406796800,SAR,1,2026-03-12
+7202.SR,Saudi Arabia,Arabian Internet and Communication Services Company,SAU,21415448576,SAR,1,2026-03-12
+4300.SR,Saudi Arabia,Dar Al Arkan Real Estate Development Company,SAU,20843999232,SAR,1,2026-03-12
+2380.SR,Saudi Arabia,Rabigh Refining and Petrochemical Company,SAU,19424706560,SAR,1,2026-03-12
+8010.SR,Saudi Arabia,The Company for Cooperative Insurance,SAU,19211880448,SAR,1,2026-03-12
+2382.SR,Saudi Arabia,ADES Holding Company,SAU,18385625088,SAR,1,2026-03-12
+4250.SR,Saudi Arabia,Jabal Omar Development Company,SAU,18089752576,SAR,1,2026-03-12
+2290.SR,Saudi Arabia,Yanbu National Petrochemical Company,SAU,17954998272,SAR,1,2026-03-12
+1303.SR,Saudi Arabia,Electrical Industries Company,SAU,17499623424,SAR,1,2026-03-12
+4142.SR,Saudi Arabia,Riyadh Cables Group Company,SAU,17007907840,SAR,1,2026-03-12
+4100.SR,Saudi Arabia,Makkah Construction and Development Company,SAU,16899999744,SAR,1,2026-03-12
+1111.SR,Saudi Arabia,Saudi Tadawul Group Holding Company,SAU,16847998976,SAR,1,2026-03-12
+4190.SR,Saudi Arabia,Jarir Marketing Company,SAU,16716000256,SAR,1,2026-03-12
+1030.SR,Saudi Arabia,The Saudi Investment Bank,SAU,16163010560,SAR,1,2026-03-12
+6015.SR,Saudi Arabia,Americana Restaurants International PLC,SAU,15957402624,SAR,1,2026-03-12
+2223.SR,Saudi Arabia,Saudi Aramco Base Oil Company - Luberef,SAU,15791263744,SAR,1,2026-03-12
+1020.SR,Saudi Arabia,Bank AlJazira,SAU,14390134784,SAR,1,2026-03-12
+4164.SR,Saudi Arabia,Nahdi Medical Company,SAU,13909999616,SAR,1,2026-03-12
+4002.SR,Saudi Arabia,Mouwasat Medical Services Company,SAU,12860000256,SAR,1,2026-03-12
+4263.SR,Saudi Arabia,SAL Saudi Logistics Services Co,SAU,12615999488,SAR,1,2026-03-12
+4200.SR,Saudi Arabia,Aldrees Petroleum and Transport Services Company,SAU,11880000512,SAR,1,2026-03-12
+4004.SR,Saudi Arabia,Dallah Healthcare Company,SAU,11475764224,SAR,1,2026-03-12
+1212.SR,Saudi Arabia,Astra Industrial Group Company,SAU,10960000000,SAR,1,2026-03-12
+2310.SR,Saudi Arabia,Sahara International Petrochemical Company,SAU,10655332352,SAR,1,2026-03-12
+7030.SR,Saudi Arabia,Mobile Telecommunications Company Saudi Arabia,SAU,10263487488,SAR,1,2026-03-12
+8313.SR,Saudi Arabia,Rasan Information Technology Company,SAU,10207671296,SAR,1,2026-03-12
+8230.SR,Saudi Arabia,Al Rajhi Company for Cooperative Insurance,SAU,10099999744,SAR,1,2026-03-12
+4015.SR,Saudi Arabia,Jamjoom Pharmaceuticals Factory Company,SAU,9471000576,SAR,1,2026-03-12
+4090.SR,Saudi Arabia,Taiba Investment Company,SAU,9449397248,SAR,1,2026-03-12
+4072.SR,Saudi Arabia,MBC Group Co.,SAU,9024050176,SAR,1,2026-03-12
+4264.SR,Saudi Arabia,Flynas Company,SAU,8628025344,SAR,1,2026-03-12
+2250.SR,Saudi Arabia,Saudi Industrial Investment Group,SAU,8423319552,SAR,1,2026-03-12
+1322.SR,Saudi Arabia,Al Masane Al Kobra Mining Company,SAU,8253584384,SAR,1,2026-03-12
+4220.SR,Saudi Arabia,Emaar The Economic City,SAU,8105296896,SAR,1,2026-03-12
+4321.SR,Saudi Arabia,Arabian Centres Company,SAU,8050273280,SAR,1,2026-03-12
+2381.SR,Saudi Arabia,Arabian Drilling Company,SAU,7551649792,SAR,1,2026-03-12
+2083.SR,Saudi Arabia,Power and Water Utility Company for Jubail and Yanbu,SAU,7480000000,SAR,1,2026-03-12
+2350.SR,Saudi Arabia,Saudi Kayan Petrochemical Company,SAU,7424999936,SAR,1,2026-03-12
+4017.SR,Saudi Arabia,Dr. Soliman Abdel Kader Fakeeh,SAU,7240399872,SAR,1,2026-03-12
+2050.SR,Saudi Arabia,Savola Group Company,SAU,7217742848,SAR,1,2026-03-12
+4322.SR,Saudi Arabia,Retal Urban Development Company,SAU,6954473472,SAR,1,2026-03-12
+4210.SR,Saudi Arabia,Saudi Research and Media Group,SAU,6880000000,SAR,1,2026-03-12
+2270.SR,Saudi Arabia,Saudia Dairy & Foodstuff Company,SAU,6753724416,SAR,1,2026-03-12
+4003.SR,Saudi Arabia,United Electronics Company,SAU,6205011456,SAR,1,2026-03-12
+4018.SR,Saudi Arabia,Almoosa Health Company,SAU,6105033216,SAR,1,2026-03-12
+4071.SR,Saudi Arabia,Arabian Contracting Services Company,SAU,6088499712,SAR,1,2026-03-12
+4031.SR,Saudi Arabia,Saudi Ground Services Company,SAU,6004720128,SAR,1,2026-03-12
+2060.SR,Saudi Arabia,National Industrialization Company,SAU,5893132288,SAR,1,2026-03-12
+4005.SR,Saudi Arabia,National Medical Care Company,SAU,5818637824,SAR,1,2026-03-12
+2230.SR,Saudi Arabia,Saudi Chemical Holding Company,SAU,5818080256,SAR,1,2026-03-12
+2080.SR,Saudi Arabia,National Gas and Industrialization Company,SAU,5793750016,SAR,1,2026-03-12
+2330.SR,Saudi Arabia,Advanced Petrochemical Company,SAU,5792800256,SAR,1,2026-03-12
+6004.SR,Saudi Arabia,CATRION Catering Holding Company,SAU,5731800064,SAR,1,2026-03-12
+1810.SR,Saudi Arabia,Seera Holding Group,SAU,5722615296,SAR,1,2026-03-12
+4001.SR,Saudi Arabia,Abdullah Al-Othaim Markets Company,SAU,5597999616,SAR,1,2026-03-12
+4084.SR,Saudi Arabia,Derayah Financial Company,SAU,5454107136,SAR,1,2026-03-12
+4161.SR,Saudi Arabia,BinDawood Holding Company,SAU,5372100096,SAR,1,2026-03-12
+3030.SR,Saudi Arabia,Saudi Cement Company,SAU,5128560128,SAR,1,2026-03-12
+6010.SR,Saudi Arabia,The National Agricultural Development Company,SAU,5127880192,SAR,1,2026-03-12
+4020.SR,Saudi Arabia,Saudi Real Estate Company,SAU,4863750144,SAR,1,2026-03-12
+3020.SR,Saudi Arabia,YAMAMA Cement Company,SAU,4738500096,SAR,1,2026-03-12
+4291.SR,Saudi Arabia,National Company for Learning and Education,SAU,4729999872,SAR,1,2026-03-12
+3040.SR,Saudi Arabia,Qassim Cement Company,SAU,4706536448,SAR,1,2026-03-12
+7200.SR,Saudi Arabia,Al Moammar Information Systems Company,SAU,4661999616,SAR,1,2026-03-12
+4019.SR,Saudi Arabia,Specialized Medical Company,SAU,4560000000,SAR,1,2026-03-12
+8200.SR,Saudi Arabia,Saudi Reinsurance Company,SAU,4445625856,SAR,1,2026-03-12
+1830.SR,Saudi Arabia,Leejam Sports Company,SAU,4313843712,SAR,1,2026-03-12
+4150.SR,Saudi Arabia,Arriyadh Development Co.,SAU,4269237504,SAR,1,2026-03-12
+1321.SR,Saudi Arabia,East Pipes Integrated Company for Industry,SAU,4252499968,SAR,1,2026-03-12
+2320.SR,Saudi Arabia,Al-Babtain Power and Telecommunications Company,SAU,4233288960,SAR,1,2026-03-12
+4163.SR,Saudi Arabia,Al-Dawaa Medical Services Company,SAU,4180300032,SAR,1,2026-03-12
+4260.SR,Saudi Arabia,United International Transportation Company,SAU,4139872000,SAR,1,2026-03-12
+4007.SR,Saudi Arabia,Al Hammadi Holding Company,SAU,4128000000,SAR,1,2026-03-12
+2081.SR,Saudi Arabia,Alkhorayef Water and Power Technologies Company,SAU,4007500032,SAR,1,2026-03-12
+4165.SR,Saudi Arabia,Al Majed Oud Co.,SAU,3954999808,SAR,1,2026-03-12
+4310.SR,Saudi Arabia,Knowledge Economic City Company,SAU,3796766976,SAR,1,2026-03-12
+4050.SR,Saudi Arabia,Saudi Automotive Services Company,SAU,3671500032,SAR,1,2026-03-12
+4083.SR,Saudi Arabia,United International Holding Company,SAU,3287500032,SAR,1,2026-03-12
+2070.SR,Saudi Arabia,Saudi Pharmaceutical Industries and Medical Appliances Corporation,SAU,3258391296,SAR,1,2026-03-12
+3050.SR,Saudi Arabia,Southern Province Cement Company,SAU,3134599936,SAR,1,2026-03-12
+4162.SR,Saudi Arabia,Almunajem Foods Company,SAU,2940000000,SAR,1,2026-03-12
+2283.SR,Saudi Arabia,The First Milling Company,SAU,2899875072,SAR,1,2026-03-12
+4009.SR,Saudi Arabia,Middle East Healthcare Company,SAU,2899259904,SAR,1,2026-03-12
+7040.SR,Saudi Arabia,Etihad GO Telecom Co.,SAU,2835591680,SAR,1,2026-03-12
+3092.SR,Saudi Arabia,Riyadh Cement Company,SAU,2779200000,SAR,1,2026-03-12
+2040.SR,Saudi Arabia,Saudi Ceramic Company,SAU,2709302528,SAR,1,2026-03-12
+1831.SR,Saudi Arabia,Maharah for Human Resources Company,SAU,2623500032,SAR,1,2026-03-12
+2190.SR,Saudi Arabia,Sustained Infrastructure Holding Company,SAU,2589722112,SAR,1,2026-03-12
+1302.SR,Saudi Arabia,Bawan Company,SAU,2570400000,SAR,1,2026-03-12
+4326.SR,Saudi Arabia,Dar Al Majed Real Estate Company,SAU,2511000064,SAR,1,2026-03-12
+2084.SR,Saudi Arabia,Miahona Company Limited,SAU,2399399680,SAR,1,2026-03-12
+6017.SR,Saudi Arabia,Jahez International Company for Information Systems Technology,SAU,2394336512,SAR,1,2026-03-12
+2284.SR,Saudi Arabia,Modern Mills for Food Products,SAU,2368839936,SAR,1,2026-03-12
+4327.SR,Saudi Arabia,Alramz Real Estate Co.,SAU,2361428480,SAR,1,2026-03-12
+3060.SR,Saudi Arabia,Yanbu Cement Company,SAU,2297925120,SAR,1,2026-03-12
+4292.SR,Saudi Arabia,Ataa Educational Company,SAU,2293753344,SAR,1,2026-03-12
+3010.SR,Saudi Arabia,Arabian Cement Company,SAU,2268000000,SAR,1,2026-03-12
+6019.SR,Saudi Arabia,Al Masar Al Shamil Education Co,SAU,2232348928,SAR,1,2026-03-12
+4192.SR,Saudi Arabia,Al-Saif Stores for Development & Investment Company,SAU,2226000128,SAR,1,2026-03-12
+QNBK.QA,Qatar,Qatar National Bank (Q.P.S.C.),DOH,167577059328,QAR,1,2026-03-12
+IQCD.QA,Qatar,Industries Qatar Q.P.S.C.,DOH,67881000960,QAR,1,2026-03-12
+QIBK.QA,Qatar,Qatar Islamic Bank (Q.P.S.C.),DOH,53402263552,QAR,1,2026-03-12
+ORDS.QA,Qatar,Ooredoo Q.P.S.C.,DOH,41641598976,QAR,1,2026-03-12
+QGTS.QA,Qatar,Qatar Gas Transport Company Limited (Nakilat) (QPSC),DOH,25152796672,QAR,1,2026-03-12
+ERES.QA,Qatar,Ezdan Holding Group Q.P.S.C.,DOH,22174873600,QAR,1,2026-03-12
+MARK.QA,Qatar,AlRayan Bank Q.P.S.C.,DOH,21575999488,QAR,1,2026-03-12
+CBQK.QA,Qatar,The Commercial Bank (P.S.Q.C.),DOH,19163746304,QAR,1,2026-03-12
+KFH.KW,Kuwait,Kuwait Finance House K.S.C.P.,KUW,13987568640,KWF,1,2026-03-12
+AMZN.MX,Mexico,"Amazon.com, Inc.",MEX,40363301535744,MXN,1,2026-03-12
+TSMN.MX,Mexico,Taiwan Semiconductor Manufacturing Company Limited,MEX,32477892575232,MXN,1,2026-03-12
+META.MX,Mexico,"Meta Platforms, Inc.",MEX,29199230304256,MXN,1,2026-03-12
+TSLA.MX,Mexico,"Tesla, Inc.",MEX,26909175971840,MXN,1,2026-03-12
+BRKB.MX,Mexico,Berkshire Hathaway Inc.,MEX,18770558976000,MXN,1,2026-03-12

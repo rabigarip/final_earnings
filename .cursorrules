@@ -1,0 +1,167 @@
+# Earnings Research Pipeline — Cursor Implementation Guide
+
+## How to use this file
+
+Place this as `.cursorrules` in Cursor’s repo root (this file is already placed for you). Then ask Cursor to implement any sprint/task by referencing the task number (for example: "Implement Task 1.1").
+
+---
+
+## PROJECT CONTEXT
+
+You are working on `earnings-research`, a Python pipeline that generates institutional-quality earnings preview notes for Jabal Asset Management. The pipeline fetches financial data from Yahoo Finance, MarketScreener, Zawya, and Reuters, reconciles it, optionally summarizes news with Google Gemini, and generates a branded output presentation.
+
+### Repository Structure
+
+- `config/settings.toml` - Thresholds, timeouts, model version (pinned)
+- `data/` - Company seeds and KPI memory
+- `src/` - API, pipeline, providers, services, models, storage
+- `docs/` - Design and ops notes
+- `templates/` - PPTX master template (to be created)
+
+---
+
+## GOVERNANCE RULES (NEVER VIOLATE)
+
+1. **LLM NEVER touches numbers.** Gemini is for text summarization/drafting only. All financial figures come from data providers or computed deterministically.
+2. **Every step returns a `StepResult`.**
+3. **No silent fallbacks.** If a source fails, log which one failed and which fallback was used.
+4. **Company mappings are curated**, not auto-discovered.
+5. **Model version is pinned** in `config/settings.toml`.
+
+---
+
+## TARGET OUTPUT FORMAT
+
+Deliverable is a branded Jabal Asset Management Earnings Preview presentation with 4 slides:
+
+### Slide 1 - Cover
+- Company Name, Ticker, Sector/Industry
+- Market Cap (formatted like `$XX.XB`)
+- Report Date (next earnings date)
+- RATING: OVERWEIGHT / NEUTRAL / UNDERWEIGHT (analyst input)
+- TARGET PRICE: analyst input or consensus
+- UPSIDE: `+XX%` (computed from target_price/current_price - 1)
+- Jabal branding and color scheme (gold/tan + dark geometric theme)
+
+### Slide 2 - Executive Summary
+- Investment Thesis (2-3 sentences; mark draft as `[DRAFT]` when using LLM)
+- Revenue expectation: `$X.XB` and YoY `%`
+- EBITDA Margin expectation: `XX.X%`
+- "Things to Watch" (exactly 4 bullets; mark draft as `[DRAFT]` when using LLM)
+- Confidential footer
+
+### Slide 3 - Financial Snapshot & Valuation Summary
+- P/E (FY26E): `XX.Xx` and `vs. X% sector avg`
+- EV/EBITDA: `XX.Xx`
+- Div. Yield: `X.X%`
+- Source line:
+  - `Source: Jabal Research estimates, Bloomberg consensus as of [Date]`
+
+### Slide 4 - Important Disclosures
+- Static legal boilerplate (hardcoded)
+
+---
+
+## IMPLEMENTATION TASKS
+
+Implement tasks in order within each sprint. Always run:
+
+- `pytest tests/ -v`
+
+after each task and fix any regressions.
+
+### SPRINT 1 - Core Output & Data Foundation
+
+#### TASK 1.1: Add `python-pptx` Output Engine
+
+Goal: Replace `.docx` output with branded `.pptx`.
+
+Steps:
+1. Add `python-pptx>=0.6.23` to `requirements.txt`.
+2. Create `templates/jabal_earnings_template.pptx` with named placeholder shapes (or programmatically create the clean template).
+3. Create `src/services/generate_pptx.py` to fill the template by placeholder shape names.
+4. Update `src/services/generate_report.py` to call `generate_pptx` (optionally keep docx as fallback behind a CLI flag).
+5. Update `src/pipeline.py` and `src/main.py` to pass/accept `--format pptx|docx` (default pptx).
+6. Add tests for `generate_pptx`.
+
+#### TASK 1.2: Create Presentation Payload Models
+
+Goal: Define Pydantic models mapping 1:1 to template placeholder fields.
+
+File: `src/models/presentation_payload.py`
+
+#### TASK 1.3: Implement MarketScreener Consensus Scraper
+
+Goal: Replace MarketScreener stub with working scraper.
+
+Reference:
+- `docs/DATA_SOURCE_AND_URL_REFERENCE.md`
+
+#### TASK 1.4: Expand Derived Metrics in `reconcile.py`
+
+Goal: Automatically compute and format valuation ratios and display values.
+
+#### TASK 1.5: Wire Presentation Payload Assembly
+
+Goal: Update `build_report_payload.py` to build the typed `EarningsPreviewPayload`.
+
+---
+
+### SPRINT 2 - Intelligence & Operations
+
+#### TASK 2.1: LLM-Powered Investment Thesis Drafter
+
+Goal: Add a step that uses Gemini to draft investment thesis and "Things to Watch" (LLM only drafts text, never numbers).
+
+---
+
+#### TASK 2.2: Data Quality Flags System
+
+Propagate quality warnings through the pipeline and display them in PPTX.
+
+---
+
+#### TASK 2.3: Currency Conversion Utility
+
+Handle SAR <-> USD conversion (avoid inventing rates; use Yahoo or fallback with clear notes).
+
+---
+
+#### TASK 2.4: Batch / Calendar Mode
+
+Allow running previews for multiple tickers or upcoming earnings within N days.
+
+---
+
+#### TASK 2.5: Earnings Date Fetching
+
+Automatically fetch the next earnings date for the cover slide.
+
+---
+
+### SPRINT 3 - Enrichment & Robustness
+
+#### TASK 3.1: Peer Group Sector Comparison
+
+Compute "vs. sector avg" for multiples.
+
+#### TASK 3.2: Prior-Period Actuals Storage
+
+Persist actuals in SQLite to support trend/YoY analysis.
+
+#### TASK 3.3: Implement Zawya News Adapter
+
+Replace stub with functional adapter.
+
+#### TASK 3.4: Implement Reuters News Adapter
+
+Replace stub with functional adapter.
+
+---
+
+## TESTING REQUIREMENTS (PER TASK)
+
+1. Unit tests for new functions (mock external calls).
+2. Integration test for full pipeline for at least 1-2 known tickers.
+3. Data accuracy tests for deterministic computations.
+

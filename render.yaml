@@ -1,0 +1,82 @@
+# Render Blueprint — Jabal earnings-preview deck generator
+# Docs: https://render.com/docs/blueprint-spec
+#
+# Architecture (see README.md):
+#   • Yahoo Finance (yfinance) is the always-available data backbone — price,
+#     market cap, 52-week, performance, trailing+forward P/E, analyst rating /
+#     target / # analysts, forward EPS & revenue estimates, and EPS earnings
+#     history. Yahoo is NOT Cloudflare-blocked, so it works from Render's
+#     datacenter IPs (this is what makes on-demand single-ticker generation
+#     fill correctly).
+#   • Investing.com / MarketScreener run as live enrichment via curl_cffi
+#     (Chrome-TLS impersonation, the Cloudflare bypass) AND as the fallback
+#     for Yahoo-blind names (e.g. Oman MSX: BKMB.OM). Committed snapshots
+#     under data/investing + data/marketscreener are the last-resort fallback.
+#   • data/disclosed/*.json provides verified full-year actuals (grounding).
+#   • Gemini writes the analyst prose (sector-specific playbooks per family).
+#
+# IMPORTANT — plan: a full deck (with Gemini prose) takes ~60–100s. Render's
+# FREE web tier hard-caps requests at ~30s and will 502. Use a paid instance
+# (Starter or higher) for the LLM path, OR call the API with skip_llm=true for
+# a fast (~30–60s) numbers-only deck. The blueprint requests `starter`.
+services:
+  - type: web
+    name: final-earnings-api
+    runtime: python
+    region: oregon
+    plan: starter            # paid: no 30s request cap (LLM path needs ~60-100s)
+
+    buildCommand: chmod +x scripts/render_build.sh && bash scripts/render_build.sh
+    startCommand: uvicorn src.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      # Writable paths (Render's project dir is read-only; /tmp is writable).
+      - key: DATABASE_PATH
+        value: /tmp/earnings-data/earnings.db
+      - key: REPORT_OUTPUT_DIR
+        value: /tmp/earnings-outputs
+      # Refresh the requested ticker from Yahoo (+ best-effort Investing/MS)
+      # on every render so the canonical store is never stale. Set to 0 only
+      # for offline fixture tests.
+      - key: REFRESH_ON_RENDER
+        value: "1"
+      # Allow previews when a name is thin (maximize ticker coverage); the deck
+      # degrades gracefully to "—" + a readiness flag rather than crashing.
+      - key: REPORT_READINESS_MODE
+        value: permissive
+      # Route blocked-source fetches through the hardened curl_cffi path.
+      - key: MS_USE_CURL_CFFI
+        value: "1"
+      # ── Gemini (analyst prose). REQUIRED for the LLM path. Set the value in
+      #    the Render dashboard (Environment tab) — never commit the key. ──
+      - key: GEMINI_API_KEY
+        sync: false
+      # Optional: restrict CORS to your frontend origin(s), comma-separated.
+      # - key: CORS_ORIGINS
+      #   value: https://final-earnings-api.onrender.com
+
+  # ─── Optional cron: nightly canonical-store + panel-deck warm ─────────────
+  # On-demand generation does NOT require this. It pre-warms canonical_store
+  # and renders the panel tickers' decks to static/decks/<ticker>.pptx for
+  # instant download. Remove this block if you only want pure on-demand.
+  - type: cron
+    name: final-earnings-refresh
+    runtime: python
+    region: oregon
+    schedule: "0 4 * * *"
+    buildCommand: bash scripts/render_build.sh
+    startCommand: python -m scripts.render_panel_decks
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: DATABASE_PATH
+        value: /tmp/earnings-data/earnings.db
+      - key: REPORT_OUTPUT_DIR
+        value: /tmp/earnings-outputs
+      - key: MS_USE_CURL_CFFI
+        value: "1"
+      - key: GEMINI_API_KEY
+        sync: false

@@ -1,0 +1,20 @@
+{
+  "ticker": "ICICIBANK.BO",
+  "company_name": "ICICI BANK LTD.",
+  "sector": "Financial Services",
+  "currency": "INR",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 9,
+    "Low": 5
+  },
+  "sources": [
+    "investing",
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-17T11:53:13.633913+00:00",
+  "pptx_bytes": 46247,
+  "pptx_filename": "ICICIBANK.BO.pptx"
+}

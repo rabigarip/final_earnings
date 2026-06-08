@@ -1,0 +1,83 @@
+# ─────────────────────────────────────────────────────────────────────────
+# GitHub Actions: grow grounding coverage automatically.
+#
+# HOW TO INSTALL: this file lives under ops/ because the deploy PAT can't push
+# to .github/workflows/. Copy its contents into
+#     .github/workflows/grow-grounding.yml
+# via the GitHub web UI (Add file → Create new file), then commit on main.
+#
+# WHAT IT DOES: after the MarketScreener snapshot refresh has run, it extracts
+# FY actuals from every cached ticker and auto-promotes the candidates that
+# pass the promotion gate (period-current, sanity-clean, December-FYE). These
+# land as `reviewed=false` groundings — MS-sourced and gate-validated, clearly
+# labeled unverified in each file's _provenance. A human review pass can flip
+# them to reviewed=true or correct them. This grows coverage hands-free while
+# keeping the trust posture explicit.
+#
+# PREREQUISITE FOR REAL SCALE: the refresh only snapshots tickers with a
+# curated MarketScreener slug (~17 today). Widen slug coverage first — see
+# ops/grounding-coverage.md "the bottleneck".
+# ─────────────────────────────────────────────────────────────────────────
+name: Grow grounding coverage
+
+on:
+  # Run after the MarketScreener cache refresh finishes.
+  workflow_run:
+    workflows: ["Refresh MarketScreener cache"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      auto_promote:
+        description: "Auto-promote gate-passing candidates (reviewed=false)"
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grow-grounding
+  cancel-in-progress: true
+
+jobs:
+  grow:
+    runs-on: ubuntu-latest
+    # Only run if the upstream refresh succeeded (or on manual dispatch).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 1 }
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml pydantic openpyxl
+
+      - name: Extract grounding from all cached snapshots
+        run: python3 scripts/extract_grounding.py --all-cached
+
+      - name: Coverage report (log only)
+        run: python3 scripts/coverage_report.py || true
+
+      - name: Auto-promote gate-passing candidates
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.auto_promote == 'true' }}
+        run: python3 scripts/promote_grounding.py --auto
+
+      - name: Commit new groundings if changed
+        run: |
+          if [ -z "$(git status --porcelain data/disclosed/)" ]; then
+            echo "No new groundings — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "grounding-bot"
+          git config user.email "grounding-bot@users.noreply.github.com"
+          git add data/disclosed/*.json
+          n=$(git diff --staged --name-only | wc -l | tr -d ' ')
+          git commit -m "Auto-grow grounding: ${n} ticker file(s) (reviewed=false)"
+          git push origin main

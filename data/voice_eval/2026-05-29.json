@@ -1,0 +1,59 @@
+{
+  "results": {
+    "002594.SZ": {
+      "ticker": "002594.SZ",
+      "word_count": 50,
+      "sentence_count": 4,
+      "has_opening_marker": false,
+      "has_drivers_marker": false,
+      "has_watch_marker": false,
+      "has_setup_marker": false,
+      "setup_label": null,
+      "qualitative_ratio": 0.16,
+      "numeric_density": 0.16,
+      "structural_score": 0.425,
+      "lexical_score": 0.6,
+      "style_score": 0.4,
+      "composite_score": 0.481,
+      "grade": "diverges",
+      "notes": [
+        "Missing opener 'enters earnings with focus on …' — S1 marker",
+        "Missing drivers marker (S2)",
+        "Missing watch-list marker (S3)",
+        "Missing setup-verdict marker (S4)",
+        "Numeric density 16.00% above target 6% — voice is too quantitative"
+      ]
+    },
+    "BKMB.OM": {
+      "ticker": "BKMB.OM",
+      "word_count": 64,
+      "sentence_count": 5,
+      "has_opening_marker": false,
+      "has_drivers_marker": false,
+      "has_watch_marker": false,
+      "has_setup_marker": false,
+      "setup_label": null,
+      "qualitative_ratio": 0.141,
+      "numeric_density": 0.141,
+      "structural_score": 0.5,
+      "lexical_score": 0.6,
+      "style_score": 0.4,
+      "composite_score": 0.515,
+      "grade": "diverges",
+      "notes": [
+        "Missing opener 'enters earnings with focus on …' — S1 marker",
+        "Missing drivers marker (S2)",
+        "Missing watch-list marker (S3)",
+        "Missing setup-verdict marker (S4)",
+        "Numeric density 14.10% above target 6% — voice is too quantitative"
+      ]
+    }
+  },
+  "aggregate": {
+    "n_decks": 2,
+    "avg_composite": 0.498,
+    "n_matches": 0,
+    "n_close": 0,
+    "n_diverges": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "ADCB.AE",
+  "company_name": "Abu Dhabi Commercial Bank P.J.S.C.",
+  "sector": "Financials",
+  "currency": "AED",
+  "cells_in_canonical_store": 12,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 5,
+    "Low": 7
+  },
+  "sources": [
+    "investing",
+    "ishares",
+    "marketscreener"
+  ],
+  "rendered_at": "2026-05-14T17:33:17.812239+00:00",
+  "pptx_bytes": 39639,
+  "pptx_filename": "ADCB.AE.pptx"
+}

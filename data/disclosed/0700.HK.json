@@ -1,0 +1,17 @@
+{
+  "ticker": "0700.HK",
+  "company": "Tencent Holdings Limited",
+  "currency": "HKD",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (tech schema). Source: Tencent 2025 Annual Results (IFRS), 18-Mar-2026. Financials reported in RMB; trades in HKD — reporting_currency flags this. Revenue RMB 751.8bn (+14%); IFRS net profit RMB 229.8bn (+17%); operating margin 32%.",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "RMB",
+    "revenue_mn": 751800,
+    "revenue_growth_pct": 14.0,
+    "net_profit_mn": 229800,
+    "net_profit_growth_pct": 17.0,
+    "operating_margin_pct": 32.0,
+    "source": "Tencent 2025 Annual Results (IFRS), 18-Mar-2026"
+  }
+}

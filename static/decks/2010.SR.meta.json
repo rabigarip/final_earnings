@@ -1,0 +1,19 @@
+{
+  "ticker": "2010.SR",
+  "company_name": "Saudi Basic Industries Corp.",
+  "sector": "Basic Materials",
+  "currency": "SAR",
+  "cells_in_canonical_store": 14,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 7,
+    "Low": 7
+  },
+  "sources": [
+    "marketscreener",
+    "yahoo"
+  ],
+  "rendered_at": "2026-05-17T11:51:43.558827+00:00",
+  "pptx_bytes": 46377,
+  "pptx_filename": "2010.SR.pptx"
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "ADNOCDRILL.AE",
+  "company_name": "ADNOC Drilling Company P.J.S.C.",
+  "sector": "Energy",
+  "currency": "USD",
+  "cells_in_canonical_store": 12,
+  "by_confidence": {
+    "High": 0,
+    "Medium": 5,
+    "Low": 7
+  },
+  "sources": [
+    "investing",
+    "ishares",
+    "marketscreener"
+  ],
+  "rendered_at": "2026-05-14T17:33:17.742523+00:00",
+  "pptx_bytes": 39767,
+  "pptx_filename": "ADNOCDRILL.AE.pptx"
+}

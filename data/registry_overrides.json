@@ -1,0 +1,54 @@
+{
+  "_comment": "Hand-curated registry overrides/additions, merged ONTO the auto-built tickers.json by ticker_registry._registry_index (so they survive a rebuild). Each entry is a PARTIAL record — only the fields being set/fixed. Use for (a) fixing a misclassification, or (b) adding a peer/slug ticker that the auto-build's name-pattern classifier couldn't identify (e.g. UAE bank rows that arrived with no company name → defaulted to sector 'other').",
+
+  "ENBD.AE": {
+    "company_name": "Emirates NBD Bank PJSC",
+    "exchange": "DFM", "exchange_country": "United Arab Emirates",
+    "currency": "AED", "reporting_currency": "AED",
+    "sector": "Financials", "industry": "Banks", "template_family": "bank",
+    "fiscal_year_end_month": 12,
+    "peer_set": ["FAB.AE", "ADCB.AE", "DIB.AE", "QNBK.QA", "1180.SR", "BKMB.OM"],
+    "providers": {"yfinance": "partial", "marketscreener": "supported", "investing": "supported", "bloomberg_ticker": null},
+    "notes": "registry_overrides: UAE bank; name-less source row defaulted to 'other'."
+  },
+  "FAB.AE": {
+    "company_name": "First Abu Dhabi Bank PJSC",
+    "exchange": "ADX", "exchange_country": "United Arab Emirates",
+    "currency": "AED", "reporting_currency": "AED",
+    "sector": "Financials", "industry": "Banks", "template_family": "bank",
+    "fiscal_year_end_month": 12,
+    "peer_set": ["ENBD.AE", "ADCB.AE", "DIB.AE", "QNBK.QA", "1180.SR", "BKMB.OM"],
+    "providers": {"yfinance": "partial", "marketscreener": "supported", "investing": "supported", "bloomberg_ticker": null},
+    "notes": "registry_overrides: UAE bank; name-less source row defaulted to 'other'."
+  },
+  "ADCB.AE": {
+    "company_name": "Abu Dhabi Commercial Bank PJSC",
+    "exchange": "ADX", "exchange_country": "United Arab Emirates",
+    "currency": "AED", "reporting_currency": "AED",
+    "sector": "Financials", "industry": "Banks", "template_family": "bank",
+    "fiscal_year_end_month": 12,
+    "peer_set": ["ENBD.AE", "FAB.AE", "DIB.AE", "QNBK.QA", "1180.SR", "BKMB.OM"],
+    "providers": {"yfinance": "partial", "marketscreener": "supported", "investing": "supported", "bloomberg_ticker": null},
+    "notes": "registry_overrides: UAE bank; name-less source row defaulted to 'other'."
+  },
+  "DIB.AE": {
+    "company_name": "Dubai Islamic Bank PJSC",
+    "exchange": "DFM", "exchange_country": "United Arab Emirates",
+    "currency": "AED", "reporting_currency": "AED",
+    "sector": "Financials", "industry": "Banks", "template_family": "bank",
+    "fiscal_year_end_month": 12,
+    "peer_set": ["ENBD.AE", "FAB.AE", "ADCB.AE", "QNBK.QA", "1180.SR", "BKMB.OM"],
+    "providers": {"yfinance": "partial", "marketscreener": "supported", "investing": "supported", "bloomberg_ticker": null},
+    "notes": "registry_overrides: UAE bank; name-less source row defaulted to 'other'."
+  },
+
+  "9988.HK": {
+    "reporting_currency": "CNY",
+    "fiscal_year_end_month": 3,
+    "notes": "registry_overrides: Alibaba reports in RMB (CNY) and its fiscal year ENDS 31 March (registry default Dec/HKD was wrong, breaking grounding-currency staleness checks)."
+  },
+  "0981.HK": {
+    "reporting_currency": "USD",
+    "notes": "registry_overrides: SMIC reports its financials in USD (registry defaulted to HKD)."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ticker": "ENBD.AE",
+  "company": "Emirates NBD Bank PJSC",
+  "currency": "AED",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (bank schema). Source: Emirates NBD FY2025 results announcement (emiratesnbd.com), confirmed by Khaleej Times / TradeArabia, Jan 2026. Net profit AED 24.0bn (+4% YoY; profit-before-tax AED 29.8bn +10%, the gap reflecting UAE corporate tax). Total income AED 49.3bn (+12%): NII AED 35.5bn (+10%), non-funded income AED 13.8bn (+18%). Total assets AED 1.164trn (+17%); customer deposits AED 786bn (+18%, +AED 119bn). ROE 18.83%; CET1 14.4%; NPL 2.4%; cost-income 30.5%. Proposed dividend 100 fils/sh. EPS and total CAR omitted (post-split share-count / total-CAR not cleanly disclosed in the release — grounding stays on firmly-sourced figures).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "AED",
+    "net_profit_mn": 24000,
+    "net_profit_growth_pct": 4.0,
+    "nii_mn": 35500,
+    "nii_growth_pct": 10.0,
+    "non_interest_income_mn": 13800,
+    "non_interest_income_growth_pct": 18.0,
+    "customer_deposits_mn": 786000,
+    "customer_deposits_growth_pct": 18.0,
+    "roe_pct": 18.83,
+    "dps": 1.00,
+    "source": "Emirates NBD FY2025 results (emiratesnbd.com); Khaleej Times / TradeArabia, Jan 2026"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "ticker": "ICICIBANK.NS",
+  "company": "ICICI Bank Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_comment": "FY2026 grounded actuals (bank schema; March fiscal year, year ended 31-Mar-2026). Source: ICICI Bank Performance Review Q4/FY2026, 18-Apr-2026 (icici.bank.in) + StockTitan / Trade Brains coverage. Crore converted to millions (1 crore = 10mn). Standalone net profit INR 50,146.6 crore (+6.2%); advances INR 15,53,893 crore (+15.8%); deposits INR 17,94,625 crore (+11.4%); dividend INR 12/share; NIM 4.32%; GNPA 1.40%.",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "net_profit_mn": 501466,
+    "net_profit_growth_pct": 6.2,
+    "net_loans_mn": 15538930,
+    "net_loans_growth_pct": 15.8,
+    "customer_deposits_mn": 17946250,
+    "customer_deposits_growth_pct": 11.4,
+    "dps": 12,
+    "source": "ICICI Bank Performance Review Q4/FY2026, 18-Apr-2026 (icici.bank.in)"
+  }
+}

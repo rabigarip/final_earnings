@@ -1,0 +1,16 @@
+{
+  "ticker": "2222.SR",
+  "company": "Saudi Arabian Oil Company (Aramco)",
+  "currency": "SAR",
+  "units": "millions",
+  "_comment": "FY2025 grounded actuals (energy schema). Source: Aramco Q4/FY2025 results press release (aramco.com) + Arabian Business / Saudi Gazette coverage, 8-Mar-2026. Money in SAR millions. Net profit SAR 392.5bn ($104.7bn, -1.5% YoY); FCF SAR 320.4bn ($85.4bn); capex SAR 195.9bn ($52.2bn).",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "net_profit_mn": 392500,
+    "net_profit_growth_pct": -1.5,
+    "free_cash_flow_mn": 320400,
+    "capex_mn": 195900,
+    "source": "Aramco FY2025 results press release (aramco.com); Arabian Business / Saudi Gazette, 08-Mar-2026"
+  }
+}
