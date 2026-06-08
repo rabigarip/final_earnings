@@ -110,6 +110,29 @@ Writable paths (`DATABASE_PATH`, `REPORT_OUTPUT_DIR`) point at `/tmp` because
 Render's project dir is read-only; the DB is re-seeded from
 `data/company_master.json` on boot.
 
+### Keeping Investing/MarketScreener data fresh on Render (the Cloudflare fix)
+
+Cloudflare **403-blocks Render's datacenter IPs** from Investing.com and
+MarketScreener, so the runtime cannot scrape them live in production. Yahoo
+(the backbone) is unaffected and stays live. For the Investing/MS-only data —
+**recent-performance**, the **annual earnings-expectations table**, and
+consensus for **Yahoo-blind names (e.g. BKMB.OM)** — the runtime falls back to
+committed snapshots under `data/investing/` + `data/marketscreener/`.
+
+To keep those snapshots *fresh* (not stale), `.github/workflows/` ships three
+**scheduled GitHub Actions** that run on GitHub's runners (residential-class
+IPs that Cloudflare does **not** block), re-fetch the pages nightly via
+curl_cffi, and commit the refreshed HTML/JSON back to the repo:
+
+- `refresh-investing-cache.yml` — Investing prices/consensus/performance
+- `refresh-marketscreener-cache.yml` — MS forecasts/calendar/valuation
+- `build-earnings-calendar.yml` — upcoming-earnings calendar
+
+Enable Actions on your fork (Settings ▸ Actions ▸ Allow), and they keep the
+fallback data ≤1 day old. You can also trigger any of them manually
+(workflow_dispatch) for specific tickers. Locally (residential IP) the live
+fetch usually succeeds, so snapshots are only the resilience layer.
+
 ---
 
 ## Quality bar (enforced)

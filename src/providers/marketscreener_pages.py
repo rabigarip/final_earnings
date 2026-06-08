@@ -249,8 +249,15 @@ def _write_snapshot(cache_slug: str, html: str) -> bool:
     """Persist the live HTML to the repo-tracked snapshot location.
     Only invoked when `MS_TRACKED_REFRESH=1` is set (refresh-script
     mode) so production deck runs don't accidentally commit data.
+
+    Writes the LEAN ticker-form name (ms_<ticker>_<page>.html) that the
+    runtime loader reads, so the scheduled GitHub Actions refresh keeps the
+    committed fixtures fresh under one consistent, small filename grammar
+    (no slug/isin in the name, no ms_ms_ duplication). Falls back to the
+    long-form path only if a short name can't be derived.
     Returns True on write success."""
-    p = _snapshot_path_for(cache_slug)
+    shorts = _short_snapshot_paths(cache_slug)
+    p = shorts[0] if shorts else _snapshot_path_for(cache_slug)
     if p is None:
         return False
     try:
