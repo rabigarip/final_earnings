@@ -295,11 +295,52 @@ def render_thesis_slide(prs, data: ThesisData):
 
 # ── Data adapter ──────────────────────────────────────────────
 
+# Per-sector operating levers for the LLM-absent fallback. The OPENING names
+# these (instead of the generic "sector-specific operating levers") so the
+# scaffold reads like a specialist wrote it even when Gemini is unavailable.
+_SECTOR_LEVERS = {
+    "bank": "net interest income, loan growth, fee income, and credit quality",
+    "energy": "production volumes, realized prices, and lifting costs",
+    "materials": "product spreads, sales volumes, and feedstock costs",
+    "tech": "revenue mix, margin trajectory, and forward guidance",
+    "telco": "service revenue, subscriber/ARPU trends, and capex intensity",
+    "industrial": "order intake, margin trajectory, and input costs",
+    "consumer": "volume/price mix, gross margin, and demand trends",
+    "healthcare": "revenue growth, margin trajectory, and pipeline progress",
+    "utility": "tariff/volume trends, fuel costs, and capex execution",
+}
+
+
+def _sector_key(sector_l: str, industry_l: str) -> str:
+    s = f"{sector_l} {industry_l}"
+    if "bank" in s or "financ" in s or "insur" in s:
+        return "bank"
+    if "oil" in s or "gas" in s or "energy" in s:
+        return "energy"
+    if "chemical" in s or "materi" in s or "mining" in s or "metal" in s:
+        return "materials"
+    if "internet" in s or "software" in s or "semic" in s or "technolog" in s:
+        return "tech"
+    if "telecom" in s or "communicat" in s:
+        return "telco"
+    if "industrial" in s or "machin" in s or "aerospace" in s:
+        return "industrial"
+    if "consumer" in s or "retail" in s or "food" in s or "bever" in s:
+        return "consumer"
+    if "health" in s or "pharma" in s or "medic" in s:
+        return "healthcare"
+    if "utilit" in s or "power" in s or "electric" in s:
+        return "utility"
+    return ""
+
+
 def _template_exec_summary(cv: dict, commodities: dict,
-                              macro_obs: dict) -> str:
-    """Compose a 4–6 sentence thesis paragraph from canonical data.
-    This is a generic template; for a polished deck the analyst rewrites
-    it, but the data-driven scaffold means it's never blank."""
+                              macro_obs: dict, ticker: str = "") -> str:
+    """Compose a 4-sentence thesis paragraph from canonical data + grounded
+    FY actuals. This is the deterministic fallback used when the LLM is
+    unavailable (e.g. Gemini billing/quota); it names the sector's operating
+    levers and cites a verified full-year actual so it reads like a specialist
+    wrote it, not a blank template."""
     name = "the company"
     sector = industry = "—"
     profile = cv.get("company_profile")
@@ -418,13 +459,45 @@ def _template_exec_summary(cv: dict, commodities: dict,
             "guidance; management's tone on forward demand is the swing factor."
         )
 
+    # Name the sector's operating levers in the opening (no "sector-specific
+    # operating levers" placeholder).
+    sk = _sector_key(sector_l, industry_l)
+    levers = _SECTOR_LEVERS.get(sk, "revenue growth, margin trajectory, and guidance")
+    opening = (f"{name} enters the upcoming print with the Street focused on "
+               f"{levers}.")
+
+    # Cite a VERIFIED full-year actual from the grounding store so the
+    # fallback is grounded, not generic ("supported by FY2025's +13.3% net
+    # profit growth, with a 13.57% ROE").
+    grounded_text = ""
+    try:
+        from src.services.disclosed_loader import load_disclosed
+        fy = (load_disclosed(ticker) or {}).get("fy_highlights") or {} if ticker else {}
+        if fy:
+            period = fy.get("period") or "the prior year"
+            npg = fy.get("net_profit_growth_pct")
+            roe = fy.get("roe_pct")
+            rev_g = fy.get("revenue_growth_pct") or fy.get("total_income_growth_pct")
+            bits = []
+            if isinstance(npg, (int, float)):
+                bits.append(f"{period}'s {npg:+.1f}% net-profit growth")
+            elif isinstance(rev_g, (int, float)):
+                bits.append(f"{period}'s {rev_g:+.1f}% revenue growth")
+            if isinstance(roe, (int, float)):
+                bits.append(f"a {roe:.1f}% ROE")
+            if bits:
+                grounded_text = (" Recent delivery is anchored by "
+                                 + " and ".join(bits) + ".")
+    except Exception:
+        grounded_text = ""
+
     body = (
-        f"{name} enters the upcoming print with the Street watching "
-        f"sector-specific operating levers."
-        f"{rating_line}"
-        f"{pe_text}"
-        f"{commodity_text}"
-        f"{macro_text}"
+        opening
+        + grounded_text
+        + rating_line
+        + pe_text
+        + commodity_text
+        + macro_text
         + closing
     )
     return body
@@ -1436,7 +1509,7 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     except Exception:
         llm = None
     summary = (llm or {}).get("thesis_paragraph") or _template_exec_summary(
-        cv, commodities_obs, macro_obs)
+        cv, commodities_obs, macro_obs, ticker=ticker)
     # Look up listing currency from company_master so the table can label
     # values "Revenue (SARM)" / "(AEDM)" etc. Falls back to canonical
     # profile currency when DB lookup misses.
