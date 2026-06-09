@@ -1232,11 +1232,22 @@ def build_snapshot_data(ticker: str, *, analyst_name: str = "Jabal Research",
     elif isinstance(hist_prices, dict):
         low = hist_prices.get("range_52w_low")
         high = hist_prices.get("range_52w_high")
-    # Displayed price = the trust-laddered canonical price (no regression for
-    # names where Yahoo is fresher than the Investing series, e.g. 1180.SR).
-    # The perf row is the series' internal ratio (matches the source site);
-    # the 52-week range comes from the full series.
+    # Displayed price = the trust-laddered canonical price, EXCEPT when that
+    # price comes from a laggy source (Investing's current_price can trail its
+    # own dated close — BKMB canonical was 0.412 while the real latest close
+    # was 0.400) and the series' dated last close disagrees by >1.5%. Then the
+    # dated series close is the fresher truth. We never override a price that
+    # came from Yahoo / yfinance-live (the freshest live source), so names where
+    # Yahoo leads the Investing series (1180.SR) keep their live price.
     current = _live_price
+    _cp_src = ((cv.get("current_price").canonical_source or "").lower()
+               if cv.get("current_price") else "")
+    _series_close = _live_perf.get("latest_close")
+    if (isinstance(_series_close, (int, float)) and _series_close > 0
+            and isinstance(_live_price, (int, float)) and _live_price > 0
+            and "yahoo" not in _cp_src and "yfinance" not in _cp_src
+            and abs(_series_close - _live_price) / _live_price > 0.015):
+        current = _series_close
     if low is None or high is None or current is None:
         # Fallback: if we have only current, plot a degenerate range
         if current is not None:
