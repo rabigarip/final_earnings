@@ -299,10 +299,13 @@ def _peer_table(slide, top: float, peers: list[dict], *, is_bank: bool = False,
     """
     if is_bank:
         headers = ["COMPANY", "TICKER", "MCAP (USD)", "P/E", "P/TBV", "DIV YIELD", "1Y RETURN"]
-        col_w   = [1.85, 1.00, 1.05, 0.65, 0.70, 0.85, 0.85]
+        # Must sum to CONTENT_W (6.60") or the last column (1Y RETURN) spills
+        # off the right edge. 1.75+0.95+1.00+0.62+0.66+0.80+0.82 = 6.60.
+        col_w   = [1.75, 0.95, 1.00, 0.62, 0.66, 0.80, 0.82]
     else:
         headers = ["COMPANY", "TICKER", "MCAP (USD)", "P/E", "P/B", "EV/EBITDA", "DIV YIELD", "1Y RETURN"]
-        col_w   = [1.65, 0.95, 0.95, 0.55, 0.55, 0.75, 0.70, 0.70]
+        # Must sum to CONTENT_W (6.60"). 1.60+0.92+0.92+0.52+0.52+0.72+0.68+0.72 = 6.60.
+        col_w   = [1.60, 0.92, 0.92, 0.52, 0.52, 0.72, 0.68, 0.72]
     row_h   = 0.28
     # Header
     x = MARGIN_L

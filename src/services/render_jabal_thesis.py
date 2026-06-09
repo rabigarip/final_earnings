@@ -136,8 +136,9 @@ def _annual_estimates_table(slide, top: float, rows: list[dict],
     fy = list(fy_labels) + ["—"] * (3 - len(fy_labels))
     headers = ["METRIC", fy[0].upper(), fy[1].upper(), fy[2].upper(),
                 f"YoY {fy[0]}", f"3Y CAGR"]
-    # Slightly tighter columns so the 6th column fits inside CONTENT_W.
-    col_w   = [1.90, 1.00, 1.00, 1.00, 1.10, 1.10]
+    # Columns MUST sum to CONTENT_W (6.60") or the 6th column (3Y CAGR)
+    # runs off the right edge. 1.80 + 0.88·3 + 1.08·2 = 6.60.
+    col_w   = [1.80, 0.88, 0.88, 0.88, 1.08, 1.08]
     row_h   = 0.30
     header_top = top
     x = MARGIN_L

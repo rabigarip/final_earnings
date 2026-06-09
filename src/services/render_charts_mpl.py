@@ -476,13 +476,22 @@ def render_earnings_history_chart(
         # EPS stays as a 2dp decimal (typical range 0.x to 5.x).
         # Revenue / Net Income / Net Sales use compact M/B suffix:
         # '133,000,000.0' is harder to scan than '133.0M'.
-        y_off = 12 if act >= est else -16
+        y_off = 11 if act >= est else -15
         annot = f"{act:.2f}" if is_eps_metric else _fmt_compact_money(act)
         ax_top.annotate(annot,
                           xy=(d, act),
                           xytext=(0, y_off), textcoords="offset points",
                           fontsize=7, color=_BLACK, ha="center",
                           weight="bold")
+
+    # Headroom so the value labels (offset ±11–15pt) and the title strip
+    # never clip the top/bottom of the panel or collide with each other.
+    # Extra room at the TOP for the title + legend that sit above the data.
+    _allv = [float(v) for v in (actuals + estimates) if isinstance(v, (int, float))]
+    if _allv:
+        _lo, _hi = min(_allv), max(_allv)
+        _rng = (_hi - _lo) or abs(_hi) or 1.0
+        ax_top.set_ylim(_lo - 0.28 * _rng, _hi + 0.42 * _rng)
 
     # Metric varies: EPS, Net Income (M currency), or Net Sales (M currency).
     # Pick a y-axis formatter that fits the range — EPS is sub-1 typically,
@@ -511,12 +520,15 @@ def render_earnings_history_chart(
     ))
 
     # Title strip — kept short so it doesn't compete with the slide section label.
+    # Keep the title short (just ticker + metric) — the slide section header
+    # already says "ACTUAL VS ESTIMATE" and the legend spells out beat/miss/
+    # estimate, so repeating it here only crowds the top-right legend.
     title_bits = []
     if ticker:
         title_bits.append(ticker)
-    title_bits.append(f"{metric_label} Actual vs Estimate")
+    title_bits.append(metric_label)
     ax_top.set_title("  ·  ".join(title_bits), fontsize=10, color=_BLACK,
-                       loc="left", pad=4, weight="bold")
+                       loc="left", pad=10, weight="bold")
 
     # Legend handles for the scatter pair.
     from matplotlib.lines import Line2D
@@ -528,7 +540,12 @@ def render_earnings_history_chart(
         Line2D([0], [0], marker="o", color="w", markerfacecolor="white",
                  markeredgecolor=_RING, markersize=8, label="Estimate"),
     ]
-    ax_top.legend(handles=legend_items, loc="upper left", fontsize=7,
+    # Legend sits ABOVE the panel, right-aligned — opposite the left-aligned
+    # title strip — so it never collides with data points or value labels
+    # (the price line peak and the high/low value labels both live inside the
+    # axes; the legend is above the top spine).
+    ax_top.legend(handles=legend_items, loc="lower right",
+                    bbox_to_anchor=(1.0, 1.0), fontsize=7,
                     frameon=False, ncol=3, handletextpad=0.4,
                     columnspacing=1.2)
     fig.tight_layout(pad=0.4)
