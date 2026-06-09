@@ -709,6 +709,83 @@ def _derive_highlights(*, cv: dict, currency: str, current_price,
 
 # ── Data adapter: canonical_store → SnapshotData ──────────────
 
+def _perf_and_range_from_series(close_series, live_price) -> dict:
+    """Compute recent-performance %s and the 52-week range the way the
+    Investing/MarketScreener WEBSITE does: the live price vs the close N
+    calendar days back, and the min/max of a full-year close series.
+
+    WHY: Investing's historical-data *API* returns perf fields that are
+    pre-computed and lag its live quote (its `perf_updated_at` trails the
+    site by days), so the deck's 1D/1W/… diverged from what the analyst sees
+    on the site. Anchoring on the live price reproduces the site's numbers
+    (verified: 1D/1W/1M/3M match to the basis point on BKMB.OM). The 52-week
+    range is taken from the series min/max ONLY when the series actually
+    spans ~a year — a truncated series can't fabricate a wrong range
+    (the "0.37–0.45 instead of 0.27–0.49" bug)."""
+    out: dict = {}
+    if not (isinstance(close_series, list) and len(close_series) > 5
+            and isinstance(live_price, (int, float)) and live_price > 0):
+        return out
+    from datetime import datetime as _dt, timedelta as _td, date as _date
+    series = []
+    for p in close_series:
+        try:
+            series.append((_dt.strptime(p["date"], "%Y-%m-%d").date(), float(p["close"])))
+        except (KeyError, TypeError, ValueError):
+            continue
+    if len(series) < 5:
+        return out
+    series.sort()
+    last_date, last_close = series[-1]
+    span_days = (last_date - series[0][0]).days
+
+    # PERF anchor (numerator) = the series' OWN last close. This makes the
+    # performance the series' internal ratio (last_close / close_N_ago), which
+    # is exactly what the source website shows — and is INDEPENDENT of the
+    # (possibly stale or differently-sourced) canonical price used for display.
+    # BKMB's canonical price was 0.41 while its real latest close was 0.400;
+    # anchoring on the series fixes the perf without touching the display.
+    anchor = last_close
+    out["latest_close"] = last_close
+
+    # Granularity: only RECOMPUTE perf when the series is daily. Yahoo stores a
+    # DOWNSAMPLED WEEKLY close-series (but computes its own accurate daily
+    # perf_*), so recomputing 1D/1W from weekly points grabs a week-old anchor
+    # and is wrong (9988.HK 1D came out -4.6% vs the real -1.4%). For coarse
+    # series we leave perf to the source's pre-computed fields and only take
+    # the 52-week range from the span. Investing's series is daily → recompute
+    # (its pre-computed perf lags, the BKMB case).
+    gaps = sorted((series[i + 1][0] - series[i][0]).days for i in range(len(series) - 1))
+    median_gap = gaps[len(gaps) // 2] if gaps else 99
+    is_daily = median_gap <= 2
+
+    def _base(n):
+        target = last_date - _td(days=n)
+        # Reject an anchor that is far older than the target (coarse series):
+        cand = [(d, c) for d, c in series if d <= target]
+        if not cand:
+            return None
+        bd, bc = cand[-1]
+        return bc if (target - bd).days <= max(4, n * 0.5) else None
+
+    if is_daily:
+        for key, n in (("perf_1d", 1), ("perf_1w", 7), ("perf_1m", 30),
+                        ("perf_3m", 91), ("perf_6m", 182)):
+            if span_days >= n:
+                b = _base(n)
+                if b:
+                    out[key] = round((anchor / b - 1.0) * 100, 2)
+        jan1 = _date(last_date.year, 1, 1)
+        ytd = [c for d, c in series if d <= jan1]
+        if ytd and span_days >= (last_date - jan1).days:
+            out["perf_ytd"] = round((anchor / ytd[-1] - 1.0) * 100, 2)
+    if span_days >= 330:                       # trust the range only on a full year
+        out["range_52w_low"] = min(c for _, c in series)
+        out["range_52w_high"] = max(c for _, c in series)
+    out["_span_days"] = span_days
+    return out
+
+
 def _price_asof_from_history(hist_prices: dict | None) -> "datetime | None":
     """The true as-of date of the price = the last dated close in the
     historical series. This is dated source data we can trust, unlike the
@@ -1120,26 +1197,46 @@ def build_snapshot_data(ticker: str, *, analyst_name: str = "Jabal Research",
         "perf_ytd": "perf_ytd_pct",
     }
 
+    # Website-style perf + range from the LIVE price vs the close series —
+    # this matches what the analyst sees on Investing/MS (their pre-computed
+    # perf API lags the live quote).
+    try:
+        _live_price = float(last_price) if last_price is not None else None
+    except (TypeError, ValueError):
+        _live_price = None
+    _series = hist_prices.get("close_series") if isinstance(hist_prices, dict) else None
+    _live_perf = _perf_and_range_from_series(_series, _live_price)
+
     def _perf(key):
+        # 1) website-style computation from the live price + series (matches the site)
+        if isinstance(_live_perf.get(key), (int, float)):
+            return float(_live_perf[key])
+        # 2) the source's pre-computed perf (can lag the site)
         if isinstance(hist_prices, dict):
             v = hist_prices.get(key)
             if v is not None:
                 try: return float(v)
                 except (TypeError, ValueError): pass
+        # 3) MarketScreener perf block
         ms_key = _ms_perf_keymap.get(key)
         if ms_key and isinstance(_ms_perf.get(ms_key), (int, float)):
             return float(_ms_perf[ms_key])
         return None
 
-    # 52-week range
+    # 52-week range — prefer the full-year series min/max computed above;
+    # fall back to the source's explicit 52w fields only when the series
+    # didn't span a year.
     low = high = current = None
-    if isinstance(hist_prices, dict):
+    if _live_perf.get("range_52w_low") is not None:
+        low, high = _live_perf["range_52w_low"], _live_perf["range_52w_high"]
+    elif isinstance(hist_prices, dict):
         low = hist_prices.get("range_52w_low")
         high = hist_prices.get("range_52w_high")
-    try:
-        current = float(last_price) if last_price is not None else None
-    except (TypeError, ValueError):
-        current = None
+    # Displayed price = the trust-laddered canonical price (no regression for
+    # names where Yahoo is fresher than the Investing series, e.g. 1180.SR).
+    # The perf row is the series' internal ratio (matches the source site);
+    # the 52-week range comes from the full series.
+    current = _live_price
     if low is None or high is None or current is None:
         # Fallback: if we have only current, plot a degenerate range
         if current is not None:
