@@ -111,6 +111,10 @@ def _estimates_table(slide, top: float, rows: list[dict],
                 # Margin row: render in basis points. Other rows: percent.
                 if is_margin:
                     val = f"{val * 100:+.0f} bps"   # input value is in pp; ×100 → bps
+                elif abs(val) > 300:
+                    # Off a near-zero base (e.g. loss → profit) the % is real
+                    # but not meaningful; institutional notation is "n/m".
+                    val = "n/m"; color = BLACK
                 else:
                     val = f"{val:+.1f}%"
             elif val is None:
@@ -163,7 +167,9 @@ def _annual_estimates_table(slide, top: float, rows: list[dict],
             color = BLACK
             if key in ("yoy", "cagr") and isinstance(val, (int, float)):
                 color = signed_color(val)
-                val = f"{val:+.1f}%"
+                val = "n/m" if abs(val) > 300 else f"{val:+.1f}%"
+                if val == "n/m":
+                    color = BLACK
             elif val is None:
                 val = "—"
             _text(slide, x, y, col_w[i] - 0.05, row_h, str(val),

@@ -217,9 +217,13 @@ def _peer_row_from_investing(ticker: str) -> dict | None:
     mcap_usd, mcap_fmt = _mcap_usd_fields(mcap, currency)
     pe = fund.get("ratio") if isinstance(fund.get("ratio"), (int, float)) else None
     pe_fmt = f"{pe:.1f}x" if pe else "—"
+    import math as _m
     div = fund.get("yield")
-    div_fmt = f"{float(div):.2f}%" if isinstance(div, (int, float)) and div > 0 else "—"
-    ret_1y = fund.get("oneYearReturn") if isinstance(fund.get("oneYearReturn"), (int, float)) else None
+    div_fmt = (f"{float(div):.2f}%"
+               if isinstance(div, (int, float)) and div > 0 and not _m.isnan(div) and div <= 40
+               else "—")
+    _r1 = fund.get("oneYearReturn")
+    ret_1y = _r1 if isinstance(_r1, (int, float)) and not _m.isnan(_r1) else None
     ret_1y_fmt = f"{ret_1y:+.1f}%" if isinstance(ret_1y, (int, float)) else "—"
     pb = fund.get("priceToBook") if isinstance(fund.get("priceToBook"), (int, float)) else None
     pb_fmt = f"{pb:.1f}x" if pb else "—"
@@ -295,13 +299,17 @@ def fetch_peer_rows(peer_tickers: list[str]) -> list[dict]:
         pe = info.get("trailingPE") or info.get("forwardPE")
         pe_val = float(pe) if isinstance(pe, (int, float)) and pe > 0 else None
         pe_fmt = f"{pe_val:.1f}x" if pe_val else "—"
+        import math as _math
         div_y = info.get("dividendYield")
         div_fmt = "—"
-        if isinstance(div_y, (int, float)) and div_y > 0:
-            # Yahoo gives dividendYield as a decimal (0.0472) for some,
-            # but as a percentage (4.72) for others. Heuristic: <1 → decimal.
-            div_pct = div_y * 100 if div_y < 1 else div_y
-            div_fmt = f"{div_pct:.2f}%"
+        if isinstance(div_y, (int, float)) and div_y > 0 and not _math.isnan(div_y):
+            # SCALE TRAP: current yfinance returns dividendYield ALREADY as a
+            # percent (5.38, 0.55). The old "<1 → decimal ×100" heuristic turned
+            # CATL's real 0.55% into 55% (and Alibaba 0.91% → 91%). Treat it as
+            # a percent and sanity-bound; only ×100 a genuinely tiny fraction.
+            div_pct = float(div_y) * 100.0 if div_y < 0.05 else float(div_y)
+            if 0 < div_pct <= 40:
+                div_fmt = f"{div_pct:.2f}%"
         # 1Y return: derive from 52w high/low if not in info, or use history
         ret_1y = None
         try:
@@ -309,11 +317,13 @@ def fetch_peer_rows(peer_tickers: list[str]) -> list[dict]:
             if not hist.empty and "Close" in hist.columns:
                 first = float(hist["Close"].iloc[0])
                 last = float(hist["Close"].iloc[-1])
-                if first > 0:
+                if first > 0 and not _math.isnan(first) and not _math.isnan(last):
                     ret_1y = (last / first - 1.0) * 100
         except Exception:
             ret_1y = None
-        ret_1y_fmt = f"{ret_1y:+.1f}%" if isinstance(ret_1y, (int, float)) else "—"
+        ret_1y_fmt = (f"{ret_1y:+.1f}%"
+                      if isinstance(ret_1y, (int, float)) and not _math.isnan(ret_1y)
+                      else "—")
         # P/B (Yahoo: priceToBook). For banks this doubles as our P/TBV
         # proxy — yfinance doesn't expose tangibleBookValue separately, so
         # bank decks render P/B in the P/TBV column with that caveat.

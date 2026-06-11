@@ -241,9 +241,11 @@ def _peer_avg_row(peers: list[dict], *, is_bank: bool) -> dict:
     because every peer's cap is unified to USD upstream, so the mean is a
     meaningful size gauge for the subject vs the comp set."""
     import re as _re_avg
+    import math as _math_avg
     from src.services.fetch_peers import _fmt_mcap_usd as _fmt_mc
     def _vals(key):
-        return [p.get(key) for p in peers if isinstance(p.get(key), (int, float))]
+        return [p.get(key) for p in peers
+                if isinstance(p.get(key), (int, float)) and not _math_avg.isnan(p.get(key))]
     def _mean(xs):
         return (sum(xs) / len(xs)) if xs else None
     def _fmt_x(v):
@@ -260,7 +262,10 @@ def _peer_avg_row(peers: list[dict], *, is_bank: bool) -> dict:
             if not s or s == "—": continue
             m = _re_avg.search(r"([+\-]?\d+(?:\.\d+)?)", s)
             if m:
-                try: ys.append(float(m.group(1)))
+                try:
+                    _y = float(m.group(1))
+                    if 0 <= _y <= 40:           # ignore scale artifacts
+                        ys.append(_y)
                 except ValueError: pass
         return _mean(ys)
 
