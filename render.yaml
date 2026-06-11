@@ -50,8 +50,15 @@ services:
       # Route blocked-source fetches through the hardened curl_cffi path.
       - key: MS_USE_CURL_CFFI
         value: "1"
-      # ── Gemini (analyst prose). REQUIRED for the LLM path. Set the value in
-      #    the Render dashboard (Environment tab) — never commit the key. ──
+      # ── LLM-off mode (default) ──────────────────────────────────────────
+      # Run number-first with the deterministic, grounded, sector-voiced
+      # template prose — no Gemini key or billing required. To turn ON the
+      # richer Gemini commentary later: set DISABLE_LLM=0 here AND add a
+      # GEMINI_API_KEY in the dashboard (a free-tier key works).
+      - key: DISABLE_LLM
+        value: "1"
+      # ── Gemini (analyst prose). Only used when DISABLE_LLM=0. Set the value
+      #    in the Render dashboard (Environment tab) — never commit the key. ──
       - key: GEMINI_API_KEY
         sync: false
       # Optional: restrict CORS to your frontend origin(s), comma-separated.

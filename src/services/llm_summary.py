@@ -1433,6 +1433,11 @@ def generate_summary(ticker: str, *, force_refresh: bool = False) -> Optional[di
 
     Cached by (ticker, context_hash) — re-rendering the deck without
     refreshing canonical_store is a free hit."""
+    # Explicit LLM-off mode: deterministic template prose, no Gemini call,
+    # and ignore any stale cached LLM output. Set DISABLE_LLM=1 to run the
+    # whole product number-first without a Gemini key/billing.
+    if os.environ.get("DISABLE_LLM", "").strip().lower() in ("1", "true", "yes", "on"):
+        return None
     ctx = build_context(ticker)
     key = _cache_key(ctx)
     path = _cache_path(ticker, key)
