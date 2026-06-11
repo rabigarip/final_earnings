@@ -664,7 +664,14 @@
     "sector": "Technology",
     "industry": "Semiconductors",
     "is_bank": false,
-    "notes": ""
+    "notes": "",
+    "peer_group": [
+      "1347.HK",
+      "002371.SZ",
+      "688041.SS",
+      "603986.SS",
+      "688256.SS"
+    ]
   },
   {
     "ticker": "0998.HK",
@@ -4817,7 +4824,14 @@
     "sector": "Consumer Discretionary",
     "industry": "Internet Retail",
     "is_bank": false,
-    "notes": ""
+    "notes": "",
+    "peer_group": [
+      "9618.HK",
+      "3690.HK",
+      "9888.HK",
+      "9999.HK",
+      "0700.HK"
+    ]
   },
   {
     "ticker": "9992.HK",
