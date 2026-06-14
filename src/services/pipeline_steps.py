@@ -195,19 +195,28 @@ def fetch_consensus(ticker: str, company: CompanyMaster) -> StepResult:
                 message=f"MarketScreener {ms_reason} → Yahoo fallback: {len(yest)} estimate periods",
                 record_count=len(yest), data=yest, elapsed_seconds=t.elapsed,
             )
-        # The canonical_store-driven deck takes consensus from Investing
-        # (curl_cffi) / MarketScreener snapshots, which this legacy payload-path
-        # step doesn't see. For Yahoo-blind names that's the normal route, so
-        # don't raise a scary FAILED — flag it as a payload-path gap.
-        from src.providers._yahoo_blind import is_yahoo_blind
-        _blind = is_yahoo_blind(ticker)
+        # The deck reads consensus from the canonical_store (Investing /
+        # MarketScreener / Yahoo, populated by daily_refresh), which this legacy
+        # payload-path step doesn't see. If canonical already HAS consensus,
+        # an empty payload-path result is not a failure — flag it SKIPPED.
+        # Only a genuine absence (canonical empty too) stays FAILED.
+        _canon_has_consensus = False
+        try:
+            from src.services.canonical_store import get_all_fields
+            _cv = get_all_fields(ticker)
+            _canon_has_consensus = bool(
+                (_cv.get("rating_split") and getattr(_cv["rating_split"], "value", None))
+                or (_cv.get("target_price") and getattr(_cv["target_price"], "value", None))
+            )
+        except Exception:
+            pass
         return StepResult(
             step_name="fetch_consensus",
-            status=Status.SKIPPED if _blind else Status.FAILED,
+            status=Status.SKIPPED if _canon_has_consensus else Status.FAILED,
             source="none", fallback_used=True,
             message=(f"Payload-path consensus empty for {ticker} — deck uses "
-                     f"Investing/MarketScreener consensus from canonical_store"
-                     if _blind else
+                     f"canonical_store consensus (Investing/MarketScreener/Yahoo)"
+                     if _canon_has_consensus else
                      f"Consensus unavailable (MarketScreener {ms_reason}, Yahoo failed)"),
             data=[], elapsed_seconds=t.elapsed,
         )
