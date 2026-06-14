@@ -55,6 +55,17 @@ def validate_ticker(ticker: str) -> StepResult:
                 error_detail="yfinance returned no name or quoteType",
                 elapsed_seconds=t.elapsed,
             )
+        # Region-gated exchanges (e.g. Oman MSX) simply aren't on Yahoo — that's
+        # expected, not an error, so report it cleanly without an error_detail.
+        from src.providers._yahoo_blind import is_yahoo_blind
+        if is_yahoo_blind(ticker):
+            return StepResult(
+                step_name="validate_ticker", status=Status.PARTIAL, source="local",
+                message=(f"{ticker} validated via local mapping (Yahoo does not cover "
+                         f"this exchange; using Investing/MarketScreener)"),
+                data={"name": "", "exchange": "", "currency": "", "market_cap": None, "quote_type": ""},
+                elapsed_seconds=t.elapsed,
+            )
         return StepResult(
             step_name="validate_ticker", status=Status.PARTIAL, source="yahoo",
             message=f"Yahoo identity lookup failed for {ticker} (continuing with local mapping)",
@@ -102,6 +113,17 @@ def fetch_financials(ticker: str, company: CompanyMaster) -> StepResult:
     a_count = len(data["annual"])
     total = q_count + a_count
     if total == 0:
+        # Yahoo-blind exchanges have no yfinance financials by design; the deck
+        # sources financials from disclosed/MarketScreener instead. Report this
+        # as an expected skip, not a failure.
+        from src.providers._yahoo_blind import is_yahoo_blind
+        if is_yahoo_blind(ticker):
+            return StepResult(
+                step_name="fetch_financials", status=Status.SKIPPED, source="local",
+                message=(f"Yahoo does not cover {ticker} — financials sourced from "
+                         f"disclosed/MarketScreener downstream"),
+                data=data, elapsed_seconds=t.elapsed,
+            )
         return StepResult(
             step_name="fetch_financials", status=Status.FAILED, source="yahoo",
             message=f"No financial data returned for {ticker}",
@@ -173,10 +195,20 @@ def fetch_consensus(ticker: str, company: CompanyMaster) -> StepResult:
                 message=f"MarketScreener {ms_reason} → Yahoo fallback: {len(yest)} estimate periods",
                 record_count=len(yest), data=yest, elapsed_seconds=t.elapsed,
             )
+        # The canonical_store-driven deck takes consensus from Investing
+        # (curl_cffi) / MarketScreener snapshots, which this legacy payload-path
+        # step doesn't see. For Yahoo-blind names that's the normal route, so
+        # don't raise a scary FAILED — flag it as a payload-path gap.
+        from src.providers._yahoo_blind import is_yahoo_blind
+        _blind = is_yahoo_blind(ticker)
         return StepResult(
-            step_name="fetch_consensus", status=Status.FAILED,
+            step_name="fetch_consensus",
+            status=Status.SKIPPED if _blind else Status.FAILED,
             source="none", fallback_used=True,
-            message=f"Consensus unavailable (MarketScreener {ms_reason}, Yahoo failed)",
+            message=(f"Payload-path consensus empty for {ticker} — deck uses "
+                     f"Investing/MarketScreener consensus from canonical_store"
+                     if _blind else
+                     f"Consensus unavailable (MarketScreener {ms_reason}, Yahoo failed)"),
             data=[], elapsed_seconds=t.elapsed,
         )
 
