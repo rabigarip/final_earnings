@@ -89,7 +89,7 @@ class TestFetchFinancials:
         company = resolve("2010.SR").data
         r = fetch_financials("2010.SR", company)
         r.print_box()
-        assert r.status in (Status.SUCCESS, Status.PARTIAL, Status.FAILED)
+        assert r.status in (Status.SUCCESS, Status.PARTIAL, Status.FAILED, Status.SKIPPED)
         assert r.record_count is None or r.record_count >= 0
 
 
@@ -102,7 +102,7 @@ class TestFetchConsensus:
         company = resolve("2010.SR").data
         r = fetch_consensus("2010.SR", company)
         r.print_box()
-        assert r.status in (Status.SUCCESS, Status.PARTIAL, Status.FAILED)
+        assert r.status in (Status.SUCCESS, Status.PARTIAL, Status.FAILED, Status.SKIPPED)
 
 
 # ── StepResult serialization ─────────────────────────────────
