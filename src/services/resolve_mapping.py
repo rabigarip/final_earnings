@@ -31,7 +31,7 @@ def _auto_discover(ticker: str) -> dict | None:
     """Use yfinance to discover company metadata and insert into DB.
     Returns the new DB row dict or None on failure."""
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
         yt = yf.Ticker(ticker)
         info = yt.info or {}
         name = info.get("shortName") or info.get("longName")

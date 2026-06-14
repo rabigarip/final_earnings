@@ -6,7 +6,7 @@ import json
 import logging
 import statistics
 from pathlib import Path
-import yfinance as yf
+from src.providers._yf import yf
 
 logger = logging.getLogger(__name__)
 

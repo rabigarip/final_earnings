@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from typing import Any, Optional
 
 try:
-    import yfinance as yf
+    from src.providers._yf import yf
 except ImportError:  # pragma: no cover — yfinance is a hard dep, but tolerate
     yf = None  # type: ignore
 
@@ -68,6 +68,20 @@ class YahooProvider(Provider):
         if yf is None:
             raise RuntimeError("yfinance is not installed")
         self._ticker_cache: dict[str, Any] = {}
+
+    def fetch(self, ticker: str, field: str):
+        # Short-circuit region-gated tickers (e.g. Oman .OM) so we don't fire a
+        # 404 for every field. The reconciler treats this like any empty probe.
+        from src.providers._yahoo_blind import is_yahoo_blind
+        from src.services.probe_harness import ProbeCell
+        from datetime import datetime, timezone
+        if is_yahoo_blind(ticker):
+            return ProbeCell(
+                ticker=ticker, provider=self.name, field=field,
+                fetched_at=datetime.now(timezone.utc).isoformat(),
+                error="yahoo_not_covered",
+            )
+        return super().fetch(ticker, field)
 
     def _t(self, ticker: str):
         """Memoise the yfinance Ticker object across fields of one probe."""

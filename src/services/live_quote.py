@@ -86,7 +86,7 @@ def fetch_live_quote(ticker: str, *, timeout_s: float = 5.0) -> LiveQuote:
     least logged loudly."""
     started = _now_utc()
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
     except ImportError:
         return LiveQuote(ticker=ticker, ok=False, fetched_at=started,
                          warnings=["yfinance not installed"])

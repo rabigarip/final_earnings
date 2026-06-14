@@ -60,7 +60,7 @@ def _live_yahoo(ticker: str) -> dict:
     """Live Yahoo via yfinance (not Cloudflare-blocked)."""
     out: dict = {}
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
         info = yf.Ticker(ticker).info or {}
         out["current_price"] = info.get("currentPrice") or info.get("regularMarketPrice")
         out["target_mean"] = info.get("targetMeanPrice")

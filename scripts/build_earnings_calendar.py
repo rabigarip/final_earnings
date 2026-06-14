@@ -124,7 +124,7 @@ def _next_earnings_from_yfinance(ticker: str) -> Optional[str]:
     snapshot is stale). yfinance's `earnings_dates` attribute contains
     1-2 forward dates for most names."""
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
     except ImportError:
         return None
     try:

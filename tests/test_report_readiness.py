@@ -11,6 +11,17 @@ from src.models.report_payload import ReportPayload
 from src.models.step_result import Status, StepResult
 from src.services.report_readiness import run_readiness_check
 
+import pytest
+
+
+@pytest.fixture(autouse=True)
+def _force_strict_readiness(monkeypatch):
+    """These are unit tests for the STRICT readiness gate (block thin decks).
+    The product DEFAULT is permissive (settings.toml / Render), so force strict
+    here so the strict-mode blocking logic stays under test regardless of the
+    deployed default."""
+    monkeypatch.setenv("REPORT_READINESS_MODE", "strict")
+
 
 def _payload(
     *,

@@ -23,8 +23,11 @@ SEQUENCE = [
 
 
 def _payload_from_results(results):
-    """Extract ReportPayload from build_report_payload step."""
-    for s in results:
+    """Extract ReportPayload from the build_report_payload step.
+    run_preview returns (run_id, [StepResult]); accept either the tuple or a
+    bare step list."""
+    steps = results[1] if isinstance(results, tuple) and len(results) == 2 else results
+    for s in steps:
         if getattr(s, "step_name", None) == "build_report_payload" and getattr(s, "data", None):
             return s.data
     return None

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from types import SimpleNamespace
 
 
@@ -38,18 +39,23 @@ def test_generate_report_does_not_overwrite_previous_runs(tmp_path, monkeypatch)
     p1 = _payload("2222.SR", "runA1234")
     p2 = _payload("2222.SR", "runB5678")
 
+    # Current naming is "<ticker>_<timestamp(µs)>_earnings_preview.pptx" — the
+    # run_id-based "_preview_balanced" scheme was replaced. The regression we
+    # guard is unchanged: two runs of the same ticker must not overwrite.
     r1 = gr.run(p1, memo_data={}, qa_audit={})
     assert r1.status.value.lower() == "success"
-    f1 = tmp_path / "2222.SR_runA1234_preview_balanced.pptx"
+    f1 = Path(r1.data)
     assert f1.is_file()
 
     r2 = gr.run(p2, memo_data={}, qa_audit={})
     assert r2.status.value.lower() == "success"
-    f2 = tmp_path / "2222.SR_runB5678_preview_balanced.pptx"
+    f2 = Path(r2.data)
     assert f2.is_file()
 
-    # Critical: first file must still exist and must not be replaced by second run.
-    assert f1.is_file()
-    assert f1.read_bytes() != b""
+    # Critical: distinct files, first still present and non-empty after second run.
+    assert f1 != f2
+    files = sorted(tmp_path.glob("2222.SR_*_earnings_preview.pptx"))
+    assert len(files) == 2
+    assert f1.is_file() and f1.read_bytes() != b""
     assert f2.read_bytes() != b""
 

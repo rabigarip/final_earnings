@@ -114,7 +114,7 @@ def _is_fresh(ticker: str, stale_hours: int) -> bool:
 def _fetch_yahoo(ticker: str, timeout: int) -> dict | None:
     """Return a dict with parsed next-earnings info, or None if unavailable."""
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
     except ImportError:
         log.warning("yfinance not installed; calendar fetch disabled")
         return None

@@ -749,7 +749,7 @@ def _surprise_history_from_yahoo(ticker: str) -> tuple[list[dict], str]:
     MS/disclosed fallbacks still get their turn.
     """
     try:
-        import yfinance as yf
+        from src.providers._yf import yf
         import pandas as pd
         df = yf.Ticker(ticker).earnings_dates
     except Exception:

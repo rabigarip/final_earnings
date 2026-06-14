@@ -419,7 +419,9 @@ def run(payload: ReportPayload, memo_data: dict | None = None, qa_audit: dict | 
         try:
             ticker = payload.company.ticker
             out_dir = report_output_dir()
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # Microsecond precision guarantees two same-second runs for the
+            # same ticker never collide / overwrite each other.
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
             suffix = f"{ticker}_{ts}_earnings_preview.pptx"
             out_path = out_dir / suffix
             quality_flags: list[str] = []

@@ -39,13 +39,15 @@ def test_marketscreener_parsers_match_saved_html(monkeypatch):
 
     monkeypatch.setattr(mp, "_fetch_page", fake_fetch_page)
 
-    # Consensus module uses requests.get directly; patch it to return fixture HTML.
+    # The consensus summary now fetches via the hardened curl_cffi path
+    # (_fetch_consensus_page), NOT requests.get — patch that so the parser runs
+    # against the committed fixture. Returns (soup, final_url, errors).
     consensus_html = (fix / "consensus.html").read_text(encoding="utf-8")
 
-    def fake_requests_get(url, headers=None, timeout=None):
-        return SimpleNamespace(status_code=200, text=consensus_html)
+    def fake_fetch_consensus_page(url, cache_key_prefix=None):
+        return BeautifulSoup(consensus_html, "lxml"), url, []
 
-    monkeypatch.setattr(mc.requests, "get", fake_requests_get)
+    monkeypatch.setattr(mc, "_fetch_consensus_page", fake_fetch_consensus_page)
 
     summary, st_s = mp.fetch_summary_page(base, cache_key_prefix="x")
     assert st_s.status in ("success", "partial")

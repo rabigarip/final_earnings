@@ -7,7 +7,7 @@ and let callers decide how to display / warn.
 from __future__ import annotations
 
 from functools import lru_cache
-import yfinance as yf
+from src.providers._yf import yf
 
 
 @lru_cache(maxsize=32)

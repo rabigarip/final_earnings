@@ -15,7 +15,7 @@ Yahoo may rate-limit (429). Retries with backoff and explicit warnings.
 from __future__ import annotations
 import time
 import pandas as pd
-import yfinance as yf
+from src.providers._yf import yf
 from src.models.financials import FinancialPeriod, QuoteSnapshot
 
 # Retry config for Yahoo rate-limit / transient errors
@@ -30,11 +30,15 @@ def validate_ticker(ticker: str) -> dict | None:
     Hit Yahoo for ticker identity. Returns dict with basic info or None.
     This is the source-of-truth for "does this ticker exist?".
     """
+    from src.providers._yahoo_blind import is_yahoo_blind, mark_yahoo_blind
+    if is_yahoo_blind(ticker):
+        return None
     try:
         yt = yf.Ticker(ticker)
         info = yt.info or {}
         name = info.get("shortName") or info.get("longName")
         if not name:
+            mark_yahoo_blind(ticker)
             return None
         return {
             "name":       name,
@@ -75,6 +79,9 @@ def fetch_quote(ticker: str) -> QuoteSnapshot | None:
     price_history_dates/prices stay empty if yfinance doesn't return a
     valid DataFrame (common for illiquid frontier-market tickers).
     """
+    from src.providers._yahoo_blind import is_yahoo_blind
+    if is_yahoo_blind(ticker):
+        return None
     def _get():
         try:
             t = yf.Ticker(ticker)
@@ -195,6 +202,9 @@ def fetch_financials(ticker: str, currency: str, is_bank: bool
     Returns {"quarterly": [...], "annual": [...]}.
     Each list contains FinancialPeriod objects or is empty.
     """
+    from src.providers._yahoo_blind import is_yahoo_blind
+    if is_yahoo_blind(ticker):
+        return {"quarterly": [], "annual": []}
     currency = (currency or "").strip() or "USD"
     try:
         yt = yf.Ticker(ticker)
@@ -213,6 +223,9 @@ def fetch_analyst_estimates(ticker: str, currency: str) -> list[FinancialPeriod]
     Yahoo analyst estimates — used as consensus fallback when
     MarketScreener is unavailable.
     """
+    from src.providers._yahoo_blind import is_yahoo_blind
+    if is_yahoo_blind(ticker):
+        return []
     try:
         yt = yf.Ticker(ticker)
         out: list[FinancialPeriod] = []
@@ -263,6 +276,9 @@ def fetch_next_earnings_date(ticker: str) -> str | None:
     Best-effort next earnings date from Yahoo (yfinance).
     Returns ISO date string 'YYYY-MM-DD' when available, else None.
     """
+    from src.providers._yahoo_blind import is_yahoo_blind
+    if is_yahoo_blind(ticker):
+        return None
     try:
         yt = yf.Ticker(ticker)
         cal = getattr(yt, "calendar", None)
