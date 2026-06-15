@@ -240,6 +240,26 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
                 _cur.get("disclosed_annual") or "", "",
                 _cur.get("status") or "",
             ])
+        # Confidence of the grounding source: hand-verified IR vs auto-extracted.
+        try:
+            from src.services.disclosed_loader import load_disclosed as _ld
+            _gd = _ld(ticker) or {}
+            _is_auto = bool(_gd.get("_auto_grounding"))
+            rows.append([
+                "All Slides", "Deck Readiness", "Grounding confidence",
+                ("AUTO (unverified)" if _is_auto else "HAND-VERIFIED"),
+                "Derived",
+                ("src/services/yahoo_grounding.py" if _is_auto
+                 else "data/disclosed/ (IR-checked)"),
+                (_gd.get("fy_highlights", {}) or {}).get("period", "") if isinstance(_gd.get("fy_highlights"), dict) else "",
+                "",
+                ("Auto-extracted from Yahoo annual income statement — figures "
+                 "may differ from the headline IR definition; review before "
+                 "relying on the cited growth." if _is_auto else
+                 "Full-year actuals web-checked against the IR release."),
+            ])
+        except Exception:
+            pass
     except Exception:
         pass
 

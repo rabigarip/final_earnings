@@ -50,8 +50,19 @@ def load_disclosed(ticker: str) -> dict | None:
     unconditionally — every call site treats None as "no override".
     """
     p = _root() / "data" / "disclosed" / f"{ticker}.json"
+    _auto = False
     if not p.is_file():
-        return None
+        # Fall back to auto-extracted grounding (Yahoo income statement), staged
+        # under _staging/ by scripts/stage_yahoo_grounding.py. Flagged
+        # auto_unverified so the deck/provenance present it as model-derived —
+        # lower-confidence than a hand-checked IR figure, but it gives the
+        # other ~485 names a grounded FY figure to cite instead of nothing.
+        sp = _root() / "data" / "disclosed" / "_staging" / f"{ticker}.json"
+        if sp.is_file():
+            p = sp
+            _auto = True
+        else:
+            return None
     try:
         raw = json.loads(p.read_text())
     except (json.JSONDecodeError, OSError) as exc:
@@ -59,6 +70,9 @@ def load_disclosed(ticker: str) -> dict | None:
         return None
     if not isinstance(raw, dict):
         return None
+    if _auto or str(raw.get("_status", "")).startswith("auto"):
+        raw = dict(raw)
+        raw["_auto_grounding"] = True
     unit_mult = _UNIT_MULT.get((raw.get("units") or "").lower().strip(), 1.0)
     out = dict(raw)
     quarters = []

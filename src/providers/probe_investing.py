@@ -54,8 +54,85 @@ _SLUGS: dict[str, str] = {
 }
 
 
+from functools import lru_cache as _lru_cache
+
+
+@_lru_cache(maxsize=1)
+def _resolved_slugs() -> dict[str, str]:
+    """Auto-resolved Investing slugs committed by scripts/resolve_investing_slugs.py.
+
+    Investing's search API is Cloudflare-blocked from Render's datacenter IP,
+    so slugs are resolved offline (locally / GitHub Actions) and committed to
+    data/investing_slugs.json; the runtime just reads them here.
+    """
+    try:
+        from src.config import root
+        p = root() / "data" / "investing_slugs.json"
+        if p.is_file():
+            return {k.upper(): v for k, v in json.loads(p.read_text(encoding="utf-8")).items() if v}
+    except Exception:
+        pass
+    return {}
+
+
 def _slug(ticker: str) -> Optional[str]:
-    return _SLUGS.get(ticker.upper())
+    t = ticker.upper()
+    # Hand-curated _SLUGS win (highest trust); then the auto-resolved cache.
+    return _SLUGS.get(t) or _resolved_slugs().get(t)
+
+
+# Investing labels exchange/country by full name; map our exchange suffixes to
+# the country string the search returns so we can require BOTH symbol AND
+# country to match (numeric tickers collide across markets — 2010 is SABIC on
+# Tadawul AND a Taiwan steel co; 1211 is Maaden AND BYD in HK).
+_SUFFIX_COUNTRY = {
+    "SR": "saudi arabia", "QA": "qatar", "AE": "united arab emirates",
+    "OM": "oman", "KW": "kuwait", "BH": "bahrain",
+    "HK": "hong kong", "SS": "china", "SZ": "china",
+    "NS": "india", "BO": "india", "JO": "south africa",
+    "SA": "brazil", "MX": "mexico",
+}
+
+
+def resolve_investing_slug(ticker: str, company_name: str | None = None,
+                            country: str | None = None) -> Optional[str]:
+    """Resolve an Investing.com slug via the search API, gated on an entity
+    match: the result's numeric symbol must equal the ticker's base AND its
+    exchange/country must match the ticker's market — so we never bind to a
+    same-numbered stock on another exchange. Network call — used by the offline
+    resolver script, not the Render runtime. Returns the slug or None.
+    """
+    base = ticker.split(".")[0].upper()
+    base_nz = base.lstrip("0") or base
+    suffix = ticker.split(".")[-1].upper() if "." in ticker else ""
+    want = (country or "").strip().lower() or _SUFFIX_COUNTRY.get(suffix, "")
+    queries = [q for q in (company_name, base) if q]
+    try:
+        from curl_cffi import requests as cr
+        from urllib.parse import quote as _q
+    except Exception:
+        return None
+    for query in queries:
+        try:
+            r = cr.get(
+                f"https://api.investing.com/api/search/v2/search?q={_q(str(query))}",
+                impersonate="chrome120", timeout=12, headers={"domain-id": "www"},
+            )
+            for item in (r.json().get("quotes") or []):
+                url = (item.get("url") or "")
+                if not url.startswith("/equities/"):
+                    continue
+                sym = str(item.get("symbol") or "").upper()
+                exch = (item.get("exchange") or "").strip().lower()
+                sym_ok = sym == base or (sym.lstrip("0") or sym) == base_nz
+                # Require the market to match (when we know it). This is the
+                # gate that rejects the cross-exchange numeric collisions.
+                country_ok = (not want) or (want in exch) or (exch and exch in want)
+                if sym_ok and country_ok:
+                    return url.rsplit("/equities/", 1)[-1].strip("/")
+        except Exception:
+            continue
+    return None
 
 
 # ── HTTP layer (curl_cffi) ───────────────────────────────────────────────
