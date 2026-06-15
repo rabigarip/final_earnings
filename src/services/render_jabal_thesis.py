@@ -1548,13 +1548,25 @@ def _build_annual_rows_from_yahoo(cv: dict, *, is_bank: bool, currency: str,
     base_ni = _mn("net_profit_mn")
     base_eps = fyh.get("eps") if isinstance(fyh.get("eps"), (int, float)) else None
 
-    # Net income tracks EPS growth off the grounded base (consistent YoY).
+    # China A-shares etc. expose REVENUE estimates but no EPS — imply EPS from
+    # the grounded base scaled by revenue growth (constant-margin) so the table
+    # isn't a single Revenue row.
+    if eps1 is None and isinstance(rev1, (int, float)) and base_rev and base_eps:
+        eps1 = base_eps * (rev1 / base_rev)
+        if isinstance(rev2, (int, float)):
+            eps2 = base_eps * (rev2 / base_rev)
+
+    # Net income tracks EPS growth off the grounded base (consistent YoY), or
+    # revenue growth when EPS itself was implied above.
     ni1 = ni2 = None
-    if base_ni and base_eps:
-        if isinstance(eps1, (int, float)):
-            ni1 = base_ni * (eps1 / base_eps)
+    if base_ni and base_eps and isinstance(eps1, (int, float)):
+        ni1 = base_ni * (eps1 / base_eps)
         if isinstance(eps2, (int, float)):
             ni2 = base_ni * (eps2 / base_eps)
+    elif base_ni and base_rev and isinstance(rev1, (int, float)):
+        ni1 = base_ni * (rev1 / base_rev)
+        if isinstance(rev2, (int, float)):
+            ni2 = base_ni * (rev2 / base_rev)
 
     nums = [abs(x) for x in (rev1, rev2, ni1, ni2) if isinstance(x, (int, float))]
     biggest = max(nums) if nums else 0
