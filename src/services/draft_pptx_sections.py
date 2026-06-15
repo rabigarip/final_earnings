@@ -9,9 +9,19 @@ Hard rule: the LLM must not introduce or compute financial numbers.
 
 from __future__ import annotations
 
+import os
+
 from src.models.step_result import Status, StepResult, StepTimer
 
 STEP = "draft_pptx_sections"
+
+
+def _llm_disabled() -> bool:
+    """Coherent kill switch: DISABLE_LLM turns OFF every Gemini call in the
+    product, including slide drafting. Without this check the deck would
+    still call Gemini here even when llm_summary (which honors the flag) is
+    off — an inconsistent half-on state."""
+    return os.environ.get("DISABLE_LLM", "").strip().lower() in ("1", "true", "yes", "on")
 
 
 def _safe_lines(xs, limit: int) -> list[str]:
@@ -140,6 +150,14 @@ Output ONLY the JSON object — no preface, no trailing prose, no code fences.
 
 def run(company_name: str, *, ticker: str = "", sector: str = "", quarter: str = "", memo_data: dict | None = None, news_headlines: list[str] | None = None) -> StepResult:
     with StepTimer() as t:
+        if _llm_disabled():
+            return StepResult(
+                step_name=STEP,
+                status=Status.SKIPPED,
+                source="gemini",
+                message="LLM disabled (DISABLE_LLM set) — using template prose",
+                elapsed_seconds=t.elapsed,
+            )
         try:
             from src.providers.gemini import _call_gemini  # type: ignore
 
