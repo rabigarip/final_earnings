@@ -65,25 +65,9 @@ services:
       # - key: CORS_ORIGINS
       #   value: https://final-earnings-api.onrender.com
 
-  # ─── Optional cron: nightly canonical-store + panel-deck warm ─────────────
-  # On-demand generation does NOT require this. It pre-warms canonical_store
-  # and renders the panel tickers' decks to static/decks/<ticker>.pptx for
-  # instant download. Remove this block if you only want pure on-demand.
-  - type: cron
-    name: final-earnings-refresh
-    runtime: python
-    region: oregon
-    schedule: "0 4 * * *"
-    buildCommand: bash scripts/render_build.sh
-    startCommand: python -m scripts.render_panel_decks
-    envVars:
-      - key: PYTHON_VERSION
-        value: "3.12"
-      - key: DATABASE_PATH
-        value: /tmp/earnings-data/earnings.db
-      - key: REPORT_OUTPUT_DIR
-        value: /tmp/earnings-outputs
-      - key: MS_USE_CURL_CFFI
-        value: "1"
-      - key: GEMINI_API_KEY
-        sync: false
+# ─── Optional pre-warm cron (NOT deployed by default) ────────────────────────
+# On-demand generation does not need this. If you later want the panel tickers'
+# decks pre-rendered for instant download, add a `cron` service running
+# `python -m scripts.render_panel_decks` on the same env. Snapshot freshness is
+# already handled by the GitHub Actions in .github/workflows/, so a Render cron
+# is not required.
