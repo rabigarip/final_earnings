@@ -1487,6 +1487,120 @@ def _build_annual_rows(*, ms_annual_forecasts: dict | None,
     return rows, fy_disp, unit_suffix
 
 
+def _build_annual_rows_from_yahoo(cv: dict, *, is_bank: bool, currency: str,
+                                    ticker: str) -> tuple[list[dict], list[str], str]:
+    """Annual table from Yahoo's FY estimates (canonical valuation_forward) +
+    the grounded base-year actual. Used when MS/Bloomberg annual forecasts are
+    absent but Yahoo covers the name, so slide-2 shows a real FY1E/FY2F strip
+    (Total income / Revenue, Net income, EPS) instead of the sparse 3-row
+    per-quarter shell. Net income is scaled off EPS growth so its YoY stays
+    consistent with the EPS YoY.
+    """
+    import re as _re
+    vf = cv.get("valuation_forward")
+    vf = (getattr(vf, "value", None) if vf is not None else None) or {}
+    if not isinstance(vf, dict):
+        vf = {}
+
+    # Pull FY estimates straight from Yahoo (0y = current FY, +1y = next FY).
+    # The canonical valuation_forward is often Investing-sourced and carries
+    # only FY1, so go direct to get BOTH years for the strip; fall back to
+    # canonical (FY1 only) when Yahoo is unavailable (e.g. Yahoo-blind names).
+    eps1 = eps2 = rev1 = rev2 = None
+    try:
+        from src.providers._yf import yf
+        yt = yf.Ticker(ticker)
+
+        def _avg(df, period):
+            try:
+                if df is None or period not in df.index:
+                    return None
+                v = float(df.loc[period].get("avg"))
+                return v if v == v else None
+            except Exception:
+                return None
+        eps1, eps2 = _avg(yt.earnings_estimate, "0y"), _avg(yt.earnings_estimate, "+1y")
+        rev1, rev2 = _avg(yt.revenue_estimate, "0y"), _avg(yt.revenue_estimate, "+1y")
+    except Exception:
+        pass
+    if eps1 is None and rev1 is None:
+        eps1, eps2 = vf.get("eps_fy1"), vf.get("eps_fy2")
+        rev1, rev2 = vf.get("revenue_fy1"), vf.get("revenue_fy2")
+    if eps1 is None and rev1 is None:
+        return [], [], ""
+
+    from src.services.disclosed_loader import load_disclosed
+    fyh = (load_disclosed(ticker) or {}).get("fy_highlights") or {}
+    m = _re.search(r"(\d{4})", str(fyh.get("period", "")))
+    base_year = int(m.group(1)) if m else None
+    fy1_year = vf.get("fy1_year") or (base_year + 1 if base_year else None)
+    fy2_year = vf.get("fy2_year") or (base_year + 2 if base_year else None)
+    fy1_label = f"FY{fy1_year}E" if fy1_year else "FY+1E"
+    fy2_label = f"FY{fy2_year}F" if fy2_year else "FY+2F"
+
+    def _mn(k):
+        v = fyh.get(k)
+        return v * 1e6 if isinstance(v, (int, float)) else None
+    base_rev = _mn("revenue_mn") or _mn("total_income_mn")
+    if base_rev is None and is_bank:               # banks: total income = NII + non-interest
+        nii, non = _mn("nii_mn"), _mn("non_interest_income_mn")
+        base_rev = (nii or 0) + (non or 0) or None
+    base_ni = _mn("net_profit_mn")
+    base_eps = fyh.get("eps") if isinstance(fyh.get("eps"), (int, float)) else None
+
+    # Net income tracks EPS growth off the grounded base (consistent YoY).
+    ni1 = ni2 = None
+    if base_ni and base_eps:
+        if isinstance(eps1, (int, float)):
+            ni1 = base_ni * (eps1 / base_eps)
+        if isinstance(eps2, (int, float)):
+            ni2 = base_ni * (eps2 / base_eps)
+
+    nums = [abs(x) for x in (rev1, rev2, ni1, ni2) if isinstance(x, (int, float))]
+    biggest = max(nums) if nums else 0
+    if biggest >= 1e9:
+        div, suffix = 1e9, (f"{currency.upper()}B" if currency else "B")
+    else:
+        div, suffix = 1e6, (f"{currency.upper()}M" if currency else "M")
+
+    def _money(v):
+        if not isinstance(v, (int, float)):
+            return None
+        s = v / div
+        return f"{s:,.0f}" if abs(s) >= 100 else (f"{s:,.1f}" if abs(s) >= 10 else f"{s:,.2f}")
+
+    def _eps(v):
+        return f"{v:,.3f}" if isinstance(v, (int, float)) else None
+
+    def _yoy(est, base):
+        if not (isinstance(est, (int, float)) and isinstance(base, (int, float)) and base):
+            return None
+        return (est / base - 1.0) * 100.0
+
+    def _cagr(fy2v, base):
+        if not (isinstance(fy2v, (int, float)) and isinstance(base, (int, float))
+                and base > 0 and fy2v > 0):
+            return None
+        return ((fy2v / base) ** 0.5 - 1.0) * 100.0
+
+    rows: list[dict] = []
+    if isinstance(rev1, (int, float)):
+        rows.append({"metric": f"{'Total income' if is_bank else 'Revenue'} ({suffix})",
+                     "fy1": _money(rev1), "fy2": _money(rev2), "fy3": "—",
+                     "yoy": _yoy(rev1, base_rev), "cagr": _cagr(rev2, base_rev)})
+    if isinstance(ni1, (int, float)):
+        rows.append({"metric": f"Net Income ({suffix})",
+                     "fy1": _money(ni1), "fy2": _money(ni2), "fy3": "—",
+                     "yoy": _yoy(ni1, base_ni), "cagr": _cagr(ni2, base_ni)})
+    if isinstance(eps1, (int, float)):
+        rows.append({"metric": f"EPS ({currency.upper()})" if currency else "EPS",
+                     "fy1": _eps(eps1), "fy2": _eps(eps2), "fy3": "—",
+                     "yoy": _yoy(eps1, base_eps), "cagr": _cagr(eps2, base_eps)})
+    if not rows:
+        return [], [], ""
+    return rows, [fy1_label, fy2_label], suffix
+
+
 def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
                         gen_date: str = "",
                         catalysts: Optional[list[str]] = None,
@@ -1806,6 +1920,7 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     annual_rows: list[dict] = []
     annual_fy_labels: list[str] = []
     annual_unit_suffix = ""
+    _annual_from_yahoo = False
     if _use_annual and (ms_annual_forecasts or bloomberg_bundle):
         annual_rows, annual_fy_labels, annual_unit_suffix = _build_annual_rows(
             ms_annual_forecasts=ms_annual_forecasts,
@@ -1813,6 +1928,14 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
             bloomberg_bundle=bloomberg_bundle,
             is_bank=is_bank, currency=deck_currency,
         )
+    if not annual_rows and _use_annual:
+        # No MS/Bloomberg annual data, but the per-quarter table would be sparse
+        # (no quarterly forecast). Build the FY strip from Yahoo's annual
+        # estimates so the slide isn't a 3-row shell — Total income / Net income
+        # / EPS across FY+1E/FY+2F with YoY vs the grounded base year.
+        annual_rows, annual_fy_labels, annual_unit_suffix = _build_annual_rows_from_yahoo(
+            cv, is_bank=is_bank, currency=deck_currency, ticker=ticker)
+        _annual_from_yahoo = bool(annual_rows)
     if annual_rows:
         # Re-label the section heading and subtitle for annual mode.
         period_heading_final = "Annual Earnings Expectations"
@@ -1820,6 +1943,7 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
             f"{(deck_currency or '').upper()} {('trillions' if annual_unit_suffix.endswith('T') else 'billions' if annual_unit_suffix.endswith('B') else 'millions' if annual_unit_suffix.endswith('M') else 'units')} unless stated".strip()
         )
         _consensus_source_a = ("Bloomberg consensus" if _signal_bloomberg
+                                  else "Yahoo Finance annual" if _annual_from_yahoo
                                   else "MarketScreener annual")
         estimates_subtitle_a = (
             f"Annual analyst consensus  ·  {subtitle_unit_phrase_a}  ·  "
