@@ -391,6 +391,15 @@ def render_earnings_history_chart(
     if using_revenue and metric_label == "EPS":
         metric_label = "Revenue"   # auto-relabel — caller didn't know
 
+    # Restrict to rows valid for the CHOSEN metric. A row that only had a
+    # revenue pair passes the initial filter, but in EPS mode its
+    # eps_estimate/eps_actual stay None and would crash the float()
+    # conversion below (e.g. OQGN.OM: some quarters EPS, some revenue-only).
+    if not using_revenue:
+        rows = [r for r in rows if _has_eps_pair(r)]
+        if not rows:
+            return None
+
     # Promote revenue values into the eps_* slot when EPS pair is
     # missing, so the rest of the chart code can stay metric-agnostic.
     if using_revenue:
