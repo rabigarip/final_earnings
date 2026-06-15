@@ -33,7 +33,7 @@ def test_is_bank_helper():
 def test_peer_set_helper_returns_list():
     peers = registry_peer_set("BKMB.OM")
     assert isinstance(peers, list)
-    assert len(peers) == 7
+    assert 4 <= len(peers) <= 6   # spec: 4-6 peers (industry-aware selector)
     assert all(isinstance(p, str) for p in peers)
     # BKMB peers should include other GCC banks.
     assert any(p.endswith(".SR") or p.endswith(".QA") for p in peers)

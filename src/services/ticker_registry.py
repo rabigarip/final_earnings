@@ -106,9 +106,78 @@ def is_bank(ticker: str) -> bool:
     return get_ticker_info(ticker).get("template_family") == "bank"
 
 
+# Region groups for peer comparability — a Gulf bank's peers are GCC banks,
+# not US banks. Peers are drawn from the same group.
+_REGION_GROUPS = {
+    "GULF":          {"SA", "QA", "KW", "OM", "AE", "BH"},
+    "GREATER_CHINA": {"HK", "CN"},
+    "INDIA":         {"IN"},
+    "BRAZIL":        {"BR"},
+    "SOUTH_AFRICA":  {"ZA"},
+    "MEXICO":        {"MX"},
+}
+
+
+def _region_group(country: str | None) -> str:
+    c = (country or "").upper()
+    for g, members in _REGION_GROUPS.items():
+        if c in members:
+            return g
+    return c or "?"
+
+
 def registry_peer_set(ticker: str) -> list[str]:
-    """Convenience for callers that want the default peer list."""
-    return list(get_ticker_info(ticker).get("peer_set") or [])
+    """Auto peer set: same INDUSTRY within the same region group, ranked by
+    market-cap proximity (closest size = most comparable), topped up with
+    same-template-family peers when the industry pool is thin.
+
+    This fixes the cross-sector auto-pick (Alibaba's table once listed Intel
+    and CATL because the old set ranked on template_family + market cap only,
+    ignoring sub-industry). A curated company_master.peer_group overrides this
+    upstream.
+    """
+    import math
+    info = get_ticker_info(ticker)
+    fam = info.get("template_family")
+    ind = (info.get("industry") or "").strip().lower()
+    mcap = info.get("market_cap_usd")
+    grp = (info.get("company_group") or "").strip()
+    region = _region_group(info.get("exchange_country"))
+    tkr_u = ticker.upper()
+
+    def _prox(other_mcap) -> float:
+        # Higher = closer in size (negative log distance). Sentinel when missing.
+        if not (isinstance(mcap, (int, float)) and mcap > 0
+                and isinstance(other_mcap, (int, float)) and other_mcap > 0):
+            return -99.0
+        return -abs(math.log(mcap) - math.log(other_mcap))
+
+    same_industry: list[tuple[float, str]] = []
+    same_family: list[tuple[float, str]] = []
+    for t, r in _registry_index().items():
+        if t == tkr_u:
+            continue
+        if not r.get("is_canonical", True) or not r.get("active", True):
+            continue
+        if not isinstance(r.get("market_cap_usd"), (int, float)) or r["market_cap_usd"] <= 0:
+            continue
+        # Skip the subject's own dual-listings (same company on another venue).
+        if grp and (r.get("company_group") or "").strip() == grp:
+            continue
+        if _region_group(r.get("exchange_country")) != region:
+            continue
+        prox = _prox(r.get("market_cap_usd"))
+        if ind and (r.get("industry") or "").strip().lower() == ind:
+            same_industry.append((prox, t))
+        elif r.get("template_family") == fam:
+            same_family.append((prox, t))
+
+    same_industry.sort(key=lambda c: -c[0])     # closest size first
+    same_family.sort(key=lambda c: -c[0])
+    chosen = [t for _, t in same_industry[:6]]
+    if len(chosen) < 5:                          # top up from the family pool
+        chosen += [t for _, t in same_family[: (6 - len(chosen))]]
+    return chosen[:6]
 
 
 def reset_cache() -> None:

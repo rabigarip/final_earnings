@@ -96,7 +96,7 @@ def score_ticker(ticker: str) -> dict[str, Any]:
     fam = (info.get("template_family") or "other").lower()
     providers = info.get("providers") or {}
     yf = providers.get("yfinance", "supported")
-    peers = info.get("peer_set") or registry_peer_set(ticker)
+    peers = registry_peer_set(ticker)   # industry-aware; ignores stale pre-built set
 
     has_disc, has_fy, has_q_disc = _disclosed_state(ticker)
     has_slug = _has_investing_slug(ticker)

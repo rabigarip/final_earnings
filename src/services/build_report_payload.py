@@ -300,7 +300,11 @@ def _compute_memo(
     # New fields from the registry — downstream consumers pick them up.
     out["template_family"] = _tinfo.get("template_family", "other")
     out["currency_unit_scale"] = _tinfo.get("currency_unit_scale", 1)
-    out["registry_peer_set"] = _tinfo.get("peer_set", []) or []
+    try:
+        from src.services.ticker_registry import registry_peer_set as _rps
+        out["registry_peer_set"] = _rps(getattr(company, "ticker", "") or "") or []
+    except Exception:
+        out["registry_peer_set"] = _tinfo.get("peer_set", []) or []
     out["is_depositary_receipt"] = _tinfo.get("is_depositary_receipt", False)
     out["underlying_ticker"] = _tinfo.get("underlying_ticker")
     out["fiscal_year_end_month"] = _tinfo.get("fiscal_year_end_month", 12)
