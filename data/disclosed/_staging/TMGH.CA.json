@@ -1,0 +1,21 @@
+{
+  "ticker": "TMGH.CA",
+  "company": "TMGH.CA,0P0000EONG,2912080",
+  "currency": "EGP",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "EGP",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 62495.1,
+    "revenue_growth_pct": 46.5,
+    "net_profit_mn": 14383.9,
+    "net_profit_growth_pct": 59.4,
+    "net_margin_pct": 23.0,
+    "ebitda_mn": 28901.2,
+    "ebitda_margin_pct": 46.2,
+    "eps": 6.98
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "CPALL.BK",
+  "company": "CP ALL Public Company Limited",
+  "currency": "THB",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "THB",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 990662.6,
+    "revenue_growth_pct": 3.3,
+    "net_profit_mn": 28206.1,
+    "net_profit_growth_pct": 11.3,
+    "net_margin_pct": 2.8,
+    "ebitda_mn": 91589.3,
+    "ebitda_margin_pct": 9.2,
+    "eps": 3.1
+  }
+}

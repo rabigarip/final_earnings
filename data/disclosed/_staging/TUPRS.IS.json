@@ -1,0 +1,21 @@
+{
+  "ticker": "TUPRS.IS",
+  "company": "T\u00fcrkiye Petrol Rafinerileri A.S.",
+  "currency": "TRY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "TRY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 830356.1,
+    "revenue_growth_pct": -21.7,
+    "net_profit_mn": 29523.2,
+    "net_profit_growth_pct": 23.2,
+    "net_margin_pct": 3.6,
+    "ebitda_mn": 74960.7,
+    "ebitda_margin_pct": 9.0,
+    "eps": 15.32
+  }
+}

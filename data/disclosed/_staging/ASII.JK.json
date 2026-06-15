@@ -1,0 +1,21 @@
+{
+  "ticker": "ASII.JK",
+  "company": "PT Astra International Tbk",
+  "currency": "IDR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "IDR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 323392000.0,
+    "revenue_growth_pct": -1.5,
+    "net_profit_mn": 32769000.0,
+    "net_profit_growth_pct": -3.3,
+    "net_margin_pct": 10.1,
+    "ebitda_mn": 53022000.0,
+    "ebitda_margin_pct": 16.4,
+    "eps": 810.0
+  }
+}

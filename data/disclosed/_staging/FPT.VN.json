@@ -1,0 +1,21 @@
+{
+  "ticker": "FPT.VN",
+  "company": "FPT Corporation",
+  "currency": "VND",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "VND",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 70112825.1,
+    "revenue_growth_pct": 11.6,
+    "net_profit_mn": 9376127.6,
+    "net_profit_growth_pct": 19.3,
+    "net_margin_pct": 13.4,
+    "ebitda_mn": 16767570.8,
+    "ebitda_margin_pct": 23.9,
+    "eps": 5216.0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "TCS.BO",
+  "company": "Tata Consultancy Services Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2670210.0,
+    "revenue_growth_pct": 4.6,
+    "net_profit_mn": 492100.0,
+    "net_profit_growth_pct": 1.4,
+    "net_margin_pct": 18.4,
+    "ebitda_mn": 722740.0,
+    "ebitda_margin_pct": 27.1
+  }
+}

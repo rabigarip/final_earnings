@@ -1,0 +1,20 @@
+{
+  "ticker": "POWERGRID.BO",
+  "company": "Power Grid Corporation of India Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 467328.7,
+    "revenue_growth_pct": 2.1,
+    "net_profit_mn": 159279.5,
+    "net_profit_growth_pct": 2.6,
+    "net_margin_pct": 34.1,
+    "ebitda_mn": 387983.1,
+    "ebitda_margin_pct": 83.0
+  }
+}

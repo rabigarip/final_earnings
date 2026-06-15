@@ -1,0 +1,21 @@
+{
+  "ticker": "TLKM.JK",
+  "company": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
+  "currency": "IDR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "IDR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 146742000.0,
+    "revenue_growth_pct": -2.2,
+    "net_profit_mn": 17486000.0,
+    "net_profit_growth_pct": -21.8,
+    "net_margin_pct": 11.9,
+    "ebitda_mn": 73370000.0,
+    "ebitda_margin_pct": 50.0,
+    "eps": 179.83
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "ticker": "BBCA.JK",
+  "company": "PT Bank Central Asia Tbk",
+  "currency": "IDR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "IDR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 114319648.0,
+    "revenue_growth_pct": 5.1,
+    "net_profit_mn": 57537287.0,
+    "net_profit_growth_pct": 4.9,
+    "net_margin_pct": 50.3,
+    "eps": 467.0
+  }
+}

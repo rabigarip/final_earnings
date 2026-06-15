@@ -1,0 +1,21 @@
+{
+  "ticker": "MWG.VN",
+  "company": "Mobile World Investment Corporation",
+  "currency": "VND",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "VND",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 155928145.6,
+    "revenue_growth_pct": 16.1,
+    "net_profit_mn": 7033730.8,
+    "net_profit_growth_pct": 89.0,
+    "net_margin_pct": 4.5,
+    "ebitda_mn": 11994625.3,
+    "ebitda_margin_pct": 7.7,
+    "eps": 4774.0
+  }
+}

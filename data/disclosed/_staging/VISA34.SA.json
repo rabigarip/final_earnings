@@ -1,0 +1,20 @@
+{
+  "ticker": "VISA34.SA",
+  "company": "Visa Inc.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 40000.0,
+    "revenue_growth_pct": 11.3,
+    "net_profit_mn": 20058.0,
+    "net_profit_growth_pct": 1.6,
+    "net_margin_pct": 50.1,
+    "ebitda_mn": 26003.0,
+    "ebitda_margin_pct": 65.0
+  }
+}

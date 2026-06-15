@@ -1,0 +1,19 @@
+{
+  "ticker": "VCB.VN",
+  "company": "Joint Stock Commercial Bank for Foreign Trade of Vietnam",
+  "currency": "VND",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "VND",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 69054397.0,
+    "revenue_growth_pct": -0.6,
+    "net_profit_mn": 35177663.0,
+    "net_profit_growth_pct": 4.0,
+    "net_margin_pct": 50.9,
+    "eps": 3854.0
+  }
+}

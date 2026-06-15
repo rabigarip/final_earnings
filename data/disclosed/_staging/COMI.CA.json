@@ -1,0 +1,19 @@
+{
+  "ticker": "COMI.CA",
+  "company": "Commercial International Bank Egypt (CIB) S.A.E.",
+  "currency": "EGP",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "EGP",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 120662.6,
+    "revenue_growth_pct": 16.0,
+    "net_profit_mn": 82238.9,
+    "net_profit_growth_pct": 49.0,
+    "net_margin_pct": 68.2,
+    "eps": 22.1
+  }
+}

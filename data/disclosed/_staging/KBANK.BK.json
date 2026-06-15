@@ -1,0 +1,19 @@
+{
+  "ticker": "KBANK.BK",
+  "company": "Kasikornbank Public Company Limited",
+  "currency": "THB",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "THB",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 207427.2,
+    "revenue_growth_pct": -1.0,
+    "net_profit_mn": 49564.8,
+    "net_profit_growth_pct": -0.1,
+    "net_margin_pct": 23.9,
+    "eps": 20.63
+  }
+}

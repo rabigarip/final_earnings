@@ -1,0 +1,19 @@
+{
+  "ticker": "ISCTR.IS",
+  "company": "T\u00fcrkiye Is Bankasi A.S.",
+  "currency": "TRY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "TRY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 423906.6,
+    "revenue_growth_pct": 51.0,
+    "net_profit_mn": 67873.3,
+    "net_profit_growth_pct": 49.1,
+    "net_margin_pct": 16.0,
+    "eps": 2.715
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "5183.KL",
+  "company": "PETRONAS Chemicals Group Berhad",
+  "currency": "MYR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "MYR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 27480.0,
+    "revenue_growth_pct": -10.4,
+    "net_profit_mn": -2142.0,
+    "net_margin_pct": -7.8,
+    "ebitda_mn": 944.0,
+    "ebitda_margin_pct": 3.4,
+    "eps": -0.268
+  }
+}

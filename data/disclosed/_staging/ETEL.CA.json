@@ -1,0 +1,21 @@
+{
+  "ticker": "ETEL.CA",
+  "company": "ETEL.CA,0P0000AG5O,1477639",
+  "currency": "EGP",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "EGP",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 106672.9,
+    "revenue_growth_pct": 30.6,
+    "net_profit_mn": 22554.6,
+    "net_profit_growth_pct": 123.4,
+    "net_margin_pct": 21.1,
+    "ebitda_mn": 44071.9,
+    "ebitda_margin_pct": 41.3,
+    "eps": 11.93
+  }
+}

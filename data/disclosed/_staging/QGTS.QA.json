@@ -1,0 +1,21 @@
+{
+  "ticker": "QGTS.QA",
+  "company": "Qatar Gas Transport Company Limited (Nakilat) (QPSC)",
+  "currency": "QAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "QAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 4039.0,
+    "revenue_growth_pct": 10.1,
+    "net_profit_mn": 1688.5,
+    "net_profit_growth_pct": 3.1,
+    "net_margin_pct": 41.8,
+    "ebitda_mn": 3638.1,
+    "ebitda_margin_pct": 90.1,
+    "eps": 0.31
+  }
+}

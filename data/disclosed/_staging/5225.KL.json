@@ -1,0 +1,21 @@
+{
+  "ticker": "5225.KL",
+  "company": "IHH Healthcare Berhad",
+  "currency": "MYR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "MYR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 25745.0,
+    "revenue_growth_pct": 5.6,
+    "net_profit_mn": 2101.0,
+    "net_profit_growth_pct": -20.9,
+    "net_margin_pct": 8.2,
+    "ebitda_mn": 6348.0,
+    "ebitda_margin_pct": 24.7,
+    "eps": 0.238
+  }
+}

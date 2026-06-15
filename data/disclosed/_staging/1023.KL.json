@@ -1,0 +1,19 @@
+{
+  "ticker": "1023.KL",
+  "company": "CIMB Group Holdings Berhad",
+  "currency": "MYR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "MYR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 22680.2,
+    "revenue_growth_pct": 2.0,
+    "net_profit_mn": 7859.6,
+    "net_profit_growth_pct": 1.7,
+    "net_margin_pct": 34.7,
+    "eps": 0.729
+  }
+}

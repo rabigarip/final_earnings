@@ -1,0 +1,21 @@
+{
+  "ticker": "BATELCO.BH",
+  "company": "Bahrain Telecommunications Company BSC",
+  "currency": "BHD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "BHD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 496.6,
+    "revenue_growth_pct": 8.0,
+    "net_profit_mn": 71.3,
+    "net_profit_growth_pct": -2.0,
+    "net_margin_pct": 14.4,
+    "ebitda_mn": 198.1,
+    "ebitda_margin_pct": 39.9,
+    "eps": 0.043
+  }
+}

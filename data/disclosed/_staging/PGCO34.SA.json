@@ -1,0 +1,21 @@
+{
+  "ticker": "PGCO34.SA",
+  "company": "The Procter & Gamble Company",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 84284.0,
+    "revenue_growth_pct": 0.3,
+    "net_profit_mn": 15974.0,
+    "net_profit_growth_pct": 7.4,
+    "net_margin_pct": 19.0,
+    "ebitda_mn": 23921.0,
+    "ebitda_margin_pct": 28.4,
+    "eps": 0.465
+  }
+}

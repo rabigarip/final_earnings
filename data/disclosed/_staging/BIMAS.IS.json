@@ -1,0 +1,21 @@
+{
+  "ticker": "BIMAS.IS",
+  "company": "BIM Birlesik Magazalar A.S.",
+  "currency": "TRY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "TRY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 721062.5,
+    "revenue_growth_pct": 6.0,
+    "net_profit_mn": 18632.1,
+    "net_profit_growth_pct": -23.4,
+    "net_margin_pct": 2.6,
+    "ebitda_mn": 66000.1,
+    "ebitda_margin_pct": 9.2,
+    "eps": 15.56
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "RELIANCE.BO",
+  "company": "Reliance Industries Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 10572190.0,
+    "revenue_growth_pct": 9.6,
+    "net_profit_mn": 807750.0,
+    "net_profit_growth_pct": 16.0,
+    "net_margin_pct": 7.6,
+    "ebitda_mn": 2049060.0,
+    "ebitda_margin_pct": 19.4,
+    "eps": 59.69
+  }
+}

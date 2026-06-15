@@ -1,0 +1,21 @@
+{
+  "ticker": "UNVR.JK",
+  "company": "PT Unilever Indonesia Tbk",
+  "currency": "IDR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "IDR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 31943461.0,
+    "revenue_growth_pct": 4.3,
+    "net_profit_mn": 7641161.0,
+    "net_profit_growth_pct": 126.8,
+    "net_margin_pct": 23.9,
+    "ebitda_mn": 4866625.0,
+    "ebitda_margin_pct": 15.2,
+    "eps": 201.0
+  }
+}

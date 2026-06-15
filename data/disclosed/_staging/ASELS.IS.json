@@ -1,0 +1,21 @@
+{
+  "ticker": "ASELS.IS",
+  "company": "ASELSAN Elektronik Sanayi ve Ticaret Anonim Sirketi",
+  "currency": "TRY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "TRY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 180444.9,
+    "revenue_growth_pct": 14.7,
+    "net_profit_mn": 29949.5,
+    "net_profit_growth_pct": 49.6,
+    "net_margin_pct": 16.6,
+    "ebitda_mn": 38190.4,
+    "ebitda_margin_pct": 21.2,
+    "eps": 6.568
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "S32.JO",
+  "company": "South32 Limited",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 5780.0,
+    "revenue_growth_pct": 17.4,
+    "net_profit_mn": 213.0,
+    "net_margin_pct": 3.7,
+    "ebitda_mn": 1337.0,
+    "ebitda_margin_pct": 23.1,
+    "eps": 0.047
+  }
+}

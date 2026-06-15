@@ -1,0 +1,21 @@
+{
+  "ticker": "6888.KL",
+  "company": "Axiata Group Berhad",
+  "currency": "MYR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "MYR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 11758.0,
+    "revenue_growth_pct": -6.3,
+    "net_profit_mn": 364.6,
+    "net_profit_growth_pct": -61.5,
+    "net_margin_pct": 3.1,
+    "ebitda_mn": 5260.4,
+    "ebitda_margin_pct": 44.7,
+    "eps": 0.04
+  }
+}

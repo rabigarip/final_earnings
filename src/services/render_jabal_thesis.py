@@ -1964,7 +1964,11 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
         footnote_a = "  ·  ".join([
             "Estimates: Jabal Research",
             f"Consensus: {_consensus_source_a}",
-            f"YoY computed vs prior-FY actual",
+            # The Yahoo annual path derives net income (and, for revenue-only
+            # names, EPS) from consensus scaled by the grounded base, so be
+            # explicit rather than implying every line is a separate forecast.
+            ("Net income / EPS derived from consensus + last-FY margin"
+             if _annual_from_yahoo else "YoY computed vs prior-FY actual"),
         ])
         from datetime import datetime
         return ThesisData(

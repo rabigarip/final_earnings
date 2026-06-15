@@ -1,0 +1,20 @@
+{
+  "ticker": "KCHOL.IS",
+  "company": "Ko\u00e7 Holding A.S.",
+  "currency": "TRY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "TRY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2757295.0,
+    "revenue_growth_pct": -9.1,
+    "net_profit_mn": 22001.0,
+    "net_margin_pct": 0.8,
+    "ebitda_mn": 235035.0,
+    "ebitda_margin_pct": 8.5,
+    "eps": 8.679
+  }
+}

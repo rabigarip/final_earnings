@@ -1,0 +1,19 @@
+{
+  "ticker": "1295.KL",
+  "company": "Public Bank Berhad",
+  "currency": "MYR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "MYR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 14697.2,
+    "revenue_growth_pct": 4.9,
+    "net_profit_mn": 7224.4,
+    "net_profit_growth_pct": 1.1,
+    "net_margin_pct": 49.2,
+    "eps": 0.374
+  }
+}
