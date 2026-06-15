@@ -1632,14 +1632,30 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     macro_obs       = get_observations_by_provider(ticker, "macro")
     investing_obs   = get_observations_by_provider(ticker, "investing")
 
-    # Prefer the Gemini-generated summary; fall back to the auto-template
-    # when the LLM is unavailable (no API key / rate limit / parse failure).
+    # LLM prose priority:
+    #   1. pptx_sections — the pipeline's draft_pptx_sections output (single
+    #      Gemini call producing thesis + catalysts + risks + watch together,
+    #      so the four blocks stay mutually consistent and non-duplicative).
+    #      This is the richer ~110-word thesis; reuse it instead of firing a
+    #      SECOND Gemini call here.
+    #   2. generate_summary — standalone fallback (e.g. build_thesis_data
+    #      called directly without a pipeline, or for back-compat).
+    #   3. deterministic template — when the LLM is off/unavailable.
+    sections = (memo_data or {}).get("pptx_sections") or {}
     llm = None
-    try:
-        from src.services.llm_summary import generate_summary
-        llm = generate_summary(ticker)
-    except Exception:
-        llm = None
+    if isinstance(sections, dict) and (sections.get("investment_thesis") or "").strip():
+        llm = {
+            "thesis_paragraph": sections.get("investment_thesis"),
+            "catalysts": sections.get("catalysts") or [],
+            "risks": sections.get("risks") or [],
+            "watch_list": sections.get("what_to_watch") or [],
+        }
+    else:
+        try:
+            from src.services.llm_summary import generate_summary
+            llm = generate_summary(ticker)
+        except Exception:
+            llm = None
     summary = (llm or {}).get("thesis_paragraph") or _template_exec_summary(
         cv, commodities_obs, macro_obs, ticker=ticker)
     # Look up listing currency from company_master so the table can label

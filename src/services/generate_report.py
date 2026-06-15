@@ -247,6 +247,13 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
         _q_prefix = period_label.split(" Earnings ", 1)[0]   # "Q2 2026"
         period_heading = f"{_q_prefix} Earnings Expectations"
     is_bank = bool(getattr(payload.company, "is_bank", False))
+    # Pass the memo_computed shape the estimates table reads, but carry the
+    # pipeline's draft_pptx_sections output (memo_data["pptx_sections"]) so the
+    # thesis slide reuses that single grounded LLM call instead of firing a
+    # second one. Copy so we never mutate payload.memo_computed.
+    _memo_for_thesis = dict(getattr(payload, "memo_computed", None) or {})
+    if isinstance(memo_data, dict) and memo_data.get("pptx_sections"):
+        _memo_for_thesis["pptx_sections"] = memo_data["pptx_sections"]
     thesis    = build_thesis_data(ticker,
                                      quarterly=getattr(payload, "quarterly_actuals", None) or [],
                                      is_bank=is_bank,
@@ -255,7 +262,7 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
                                      ms_eps_dividend_forecasts=getattr(payload, "ms_eps_dividend_forecasts", None),
                                      bloomberg_bundle=getattr(payload, "bloomberg_bundle", None),
                                      period_heading=period_heading,
-                                     memo_data=getattr(payload, "memo_computed", None) or {})
+                                     memo_data=_memo_for_thesis)
     valuation = build_valuation_data(ticker, peers_override=peer_rows or None,
                                        historical_override=historical_override,
                                        ms_calendar_events=getattr(payload, "ms_calendar_events", None))
