@@ -62,34 +62,23 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
     import subprocess, sys, os
     cv_existing = get_all_fields(ticker)
     if os.environ.get("REFRESH_ON_RENDER", "1") != "0":
-        # 1) Yahoo backbone — fast, reliable, never Cloudflare-blocked.
-        for cadence in ("daily", "weekly", "quarterly"):
-            try:
-                subprocess.run(
-                    [sys.executable, "-m", "scripts.daily_refresh",
-                     f"--cadence={cadence}", f"--tickers={ticker}",
-                     "--only=yahoo"],
-                    timeout=60, check=False,
-                )
-            except Exception:
-                continue
-        # 2) Enrichment + Yahoo-blind fallback — Investing (curl_cffi Chrome-TLS
-        #    impersonation) and MarketScreener. These add price/target/consensus
-        #    (daily) and rating split (weekly) for names Yahoo covers thinly, and
-        #    are the PRIMARY source for Yahoo-blind names (Oman MSX: BKMB.OM,
-        #    which Yahoo 404s). Quarterly financials from these scrapers rarely
-        #    beat Yahoo, so we skip that cadence to keep render latency down.
-        #    Best-effort; failures never block a deck.
-        for cadence in ("daily", "weekly"):
-            try:
-                subprocess.run(
-                    [sys.executable, "-m", "scripts.daily_refresh",
-                     f"--cadence={cadence}", f"--tickers={ticker}",
-                     "--only=investing,marketscreener"],
-                    timeout=75, check=False,
-                )
-            except Exception:
-                continue
+        # ONE subprocess, every cadence, all three providers. Previously this
+        # spawned FIVE `daily_refresh` processes (3 Yahoo cadences + 2
+        # Investing/MS), each paying ~5s of Python startup+import — ~25s of pure
+        # overhead that pushed on-demand generation to ~46s and made the browser
+        # fetch time out ("Failed to fetch"). The reconciler's trust ladder
+        # (Investing ▸ Yahoo ▸ MarketScreener) picks the winner per field
+        # regardless of fetch order, so a single combined pass is equivalent and
+        # far faster. Best-effort; failures never block a deck.
+        try:
+            subprocess.run(
+                [sys.executable, "-m", "scripts.daily_refresh",
+                 "--cadence=all", f"--tickers={ticker}",
+                 "--only=yahoo,investing,marketscreener"],
+                timeout=110, check=False,
+            )
+        except Exception:
+            pass
 
     # Stage 2 period defaulting — caller can override via memo_data. When
     # memo_data doesn't carry an explicit period_label / report_date, derive

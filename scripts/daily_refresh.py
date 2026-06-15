@@ -179,8 +179,10 @@ def reconcile_cell(observations: dict[str, dict]) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cadence", default="daily",
-                    choices=list(CADENCE_FIELDS.keys()),
-                    help="Which fields to refresh (default: daily)")
+                    choices=list(CADENCE_FIELDS.keys()) + ["all"],
+                    help="Which fields to refresh (default: daily; 'all' = every "
+                         "cadence in ONE process — used by on-demand render to "
+                         "avoid 5x Python-startup overhead)")
     ap.add_argument("--only", help="Provider subset, comma-separated")
     ap.add_argument("--tickers", help="Ticker subset, comma-separated")
     ap.add_argument("--dry-run", action="store_true",
@@ -194,7 +196,10 @@ def main():
     try:
         init_db()
         run_id = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M")
-        cadence_fields = CADENCE_FIELDS[args.cadence]
+        if args.cadence == "all":
+            cadence_fields = set().union(*CADENCE_FIELDS.values())
+        else:
+            cadence_fields = CADENCE_FIELDS[args.cadence]
         fields = [f for f in FIELDS if f in cadence_fields]
         tickers = _ticker_universe(args.tickers)
         only = {s.strip().lower() for s in args.only.split(",")} if args.only else None
