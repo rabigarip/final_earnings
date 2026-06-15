@@ -1,0 +1,21 @@
+{
+  "ticker": "4001.SR",
+  "company": "Abdullah Al-Othaim Markets Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 11088.8,
+    "revenue_growth_pct": 3.0,
+    "net_profit_mn": 250.1,
+    "net_profit_growth_pct": -51.1,
+    "net_margin_pct": 2.3,
+    "ebitda_mn": 901.8,
+    "ebitda_margin_pct": 8.1,
+    "eps": 0.28
+  }
+}

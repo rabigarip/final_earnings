@@ -1,0 +1,21 @@
+{
+  "ticker": "ORCL34.SA",
+  "company": "Oracle Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 57399.0,
+    "revenue_growth_pct": 8.4,
+    "net_profit_mn": 12443.0,
+    "net_profit_growth_pct": 18.9,
+    "net_margin_pct": 21.7,
+    "ebitda_mn": 23912.0,
+    "ebitda_margin_pct": 41.7,
+    "eps": 0.723
+  }
+}

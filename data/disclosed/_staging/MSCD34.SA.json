@@ -1,0 +1,21 @@
+{
+  "ticker": "MSCD34.SA",
+  "company": "Mastercard Incorporated",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 32791.0,
+    "revenue_growth_pct": 16.4,
+    "net_profit_mn": 14968.0,
+    "net_profit_growth_pct": 16.3,
+    "net_margin_pct": 45.6,
+    "ebitda_mn": 20443.0,
+    "ebitda_margin_pct": 62.3,
+    "eps": 0.533
+  }
+}

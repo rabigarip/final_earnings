@@ -1,0 +1,20 @@
+{
+  "ticker": "2070.SR",
+  "company": "Saudi Pharmaceutical Industries and Medical Appliances Corporation",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1706.7,
+    "revenue_growth_pct": 1.5,
+    "net_profit_mn": 184.4,
+    "net_margin_pct": 10.8,
+    "ebitda_mn": 400.9,
+    "ebitda_margin_pct": 23.5,
+    "eps": 1.54
+  }
+}

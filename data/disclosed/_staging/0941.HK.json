@@ -1,0 +1,20 @@
+{
+  "ticker": "0941.HK",
+  "company": "China Mobile Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1050187.0,
+    "revenue_growth_pct": 0.9,
+    "net_profit_mn": 137095.0,
+    "net_profit_growth_pct": -0.9,
+    "net_margin_pct": 13.1,
+    "ebitda_mn": 368790.0,
+    "ebitda_margin_pct": 35.1
+  }
+}

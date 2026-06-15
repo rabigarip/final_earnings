@@ -1,0 +1,19 @@
+{
+  "ticker": "8210.SR",
+  "company": "Bupa Arabia for Cooperative Insurance Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 20087.1,
+    "revenue_growth_pct": 6.9,
+    "net_profit_mn": 1079.1,
+    "net_profit_growth_pct": -7.5,
+    "net_margin_pct": 5.4,
+    "eps": 7.23
+  }
+}

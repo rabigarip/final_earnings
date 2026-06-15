@@ -1,0 +1,21 @@
+{
+  "ticker": "600111.SS",
+  "company": "China Northern Rare Earth (Group) High-Tech Co.,Ltd",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 42563.1,
+    "revenue_growth_pct": 29.1,
+    "net_profit_mn": 2251.3,
+    "net_profit_growth_pct": 124.2,
+    "net_margin_pct": 5.3,
+    "ebitda_mn": 4560.1,
+    "ebitda_margin_pct": 10.7,
+    "eps": 0.623
+  }
+}

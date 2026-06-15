@@ -1,0 +1,21 @@
+{
+  "ticker": "6017.SR",
+  "company": "Jahez International Company for Information Systems Technology",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2323.6,
+    "revenue_growth_pct": 4.7,
+    "net_profit_mn": 73.0,
+    "net_profit_growth_pct": -61.2,
+    "net_margin_pct": 3.1,
+    "ebitda_mn": 159.8,
+    "ebitda_margin_pct": 6.9,
+    "eps": 0.36
+  }
+}

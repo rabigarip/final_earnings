@@ -1,0 +1,21 @@
+{
+  "ticker": "2223.SR",
+  "company": "Saudi Aramco Base Oil Company - Luberef",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 8103.4,
+    "revenue_growth_pct": -19.3,
+    "net_profit_mn": 855.3,
+    "net_profit_growth_pct": -12.0,
+    "net_margin_pct": 10.6,
+    "ebitda_mn": 1194.7,
+    "ebitda_margin_pct": 14.7,
+    "eps": 5.08
+  }
+}

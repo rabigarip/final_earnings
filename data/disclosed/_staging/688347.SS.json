@@ -1,0 +1,21 @@
+{
+  "ticker": "688347.SS",
+  "company": "Hua Hong Grace Semiconductor Limited",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2402.1,
+    "revenue_growth_pct": 19.9,
+    "net_profit_mn": 54.9,
+    "net_profit_growth_pct": -5.6,
+    "net_margin_pct": 2.3,
+    "ebitda_mn": 733.6,
+    "ebitda_margin_pct": 30.5,
+    "eps": -0.032
+  }
+}

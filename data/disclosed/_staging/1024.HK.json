@@ -1,0 +1,20 @@
+{
+  "ticker": "1024.HK",
+  "company": "Kuaishou Technology",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 142776.0,
+    "revenue_growth_pct": 12.5,
+    "net_profit_mn": 18617.0,
+    "net_profit_growth_pct": 21.4,
+    "net_margin_pct": 13.0,
+    "ebitda_mn": 28564.0,
+    "ebitda_margin_pct": 20.0
+  }
+}

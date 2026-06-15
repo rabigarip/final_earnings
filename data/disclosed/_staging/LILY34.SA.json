@@ -1,0 +1,21 @@
+{
+  "ticker": "LILY34.SA",
+  "company": "Eli Lilly and Company",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 65179.0,
+    "revenue_growth_pct": 44.7,
+    "net_profit_mn": 20640.0,
+    "net_profit_growth_pct": 94.9,
+    "net_margin_pct": 31.7,
+    "ebitda_mn": 31693.0,
+    "ebitda_margin_pct": 48.6,
+    "eps": 0.765
+  }
+}

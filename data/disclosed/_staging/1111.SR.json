@@ -1,0 +1,21 @@
+{
+  "ticker": "1111.SR",
+  "company": "Saudi Tadawul Group Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1261.2,
+    "revenue_growth_pct": -12.8,
+    "net_profit_mn": 395.6,
+    "net_profit_growth_pct": -36.4,
+    "net_margin_pct": 31.4,
+    "ebitda_mn": 613.0,
+    "ebitda_margin_pct": 48.6,
+    "eps": 3.3
+  }
+}

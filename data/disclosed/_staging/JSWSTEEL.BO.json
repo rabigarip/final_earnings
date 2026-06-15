@@ -1,0 +1,20 @@
+{
+  "ticker": "JSWSTEEL.BO",
+  "company": "JSW Steel Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1820370.0,
+    "revenue_growth_pct": 9.3,
+    "net_profit_mn": 223160.0,
+    "net_margin_pct": 12.3,
+    "ebitda_mn": 479530.0,
+    "ebitda_margin_pct": 26.3,
+    "eps": 91.25
+  }
+}

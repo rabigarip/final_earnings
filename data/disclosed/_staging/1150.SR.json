@@ -1,0 +1,19 @@
+{
+  "ticker": "1150.SR",
+  "company": "Alinma Bank",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 11841.5,
+    "revenue_growth_pct": 8.3,
+    "net_profit_mn": 6397.1,
+    "net_profit_growth_pct": 9.7,
+    "net_margin_pct": 54.0,
+    "eps": 1.975
+  }
+}

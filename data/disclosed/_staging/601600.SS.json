@@ -1,0 +1,20 @@
+{
+  "ticker": "601600.SS",
+  "company": "Aluminum Corporation of China Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 241125.2,
+    "revenue_growth_pct": 1.7,
+    "net_profit_mn": 12673.9,
+    "net_profit_growth_pct": 2.3,
+    "net_margin_pct": 5.3,
+    "ebitda_mn": 38973.0,
+    "ebitda_margin_pct": 16.2
+  }
+}

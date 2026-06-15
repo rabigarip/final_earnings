@@ -1,0 +1,21 @@
+{
+  "ticker": "3030.SR",
+  "company": "Saudi Cement Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1671.2,
+    "revenue_growth_pct": -0.3,
+    "net_profit_mn": 363.7,
+    "net_profit_growth_pct": -13.8,
+    "net_margin_pct": 21.8,
+    "ebitda_mn": 621.0,
+    "ebitda_margin_pct": 37.2,
+    "eps": 2.38
+  }
+}

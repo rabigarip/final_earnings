@@ -1,0 +1,20 @@
+{
+  "ticker": "4009.SR",
+  "company": "Middle East Healthcare Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2024",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2882.8,
+    "revenue_growth_pct": 8.7,
+    "net_profit_mn": 282.0,
+    "net_margin_pct": 9.8,
+    "ebitda_mn": 747.5,
+    "ebitda_margin_pct": 25.9,
+    "eps": 3.06
+  }
+}

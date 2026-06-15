@@ -1,0 +1,21 @@
+{
+  "ticker": "2259.HK",
+  "company": "Zijin Gold International Company Limited",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 5383.5,
+    "revenue_growth_pct": 80.1,
+    "net_profit_mn": 1601.6,
+    "net_profit_growth_pct": 232.7,
+    "net_margin_pct": 29.7,
+    "ebitda_mn": 3456.2,
+    "ebitda_margin_pct": 64.2,
+    "eps": 0.82
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "4292.SR",
+  "company": "Ataa Educational Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 640.8,
+    "revenue_growth_pct": 0.6,
+    "net_profit_mn": 82.8,
+    "net_profit_growth_pct": 30.7,
+    "net_margin_pct": 12.9,
+    "ebitda_mn": 233.8,
+    "ebitda_margin_pct": 36.5,
+    "eps": 1.97
+  }
+}

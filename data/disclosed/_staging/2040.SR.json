@@ -1,0 +1,20 @@
+{
+  "ticker": "2040.SR",
+  "company": "Saudi Ceramic Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1490.4,
+    "revenue_growth_pct": 10.5,
+    "net_profit_mn": 180.7,
+    "net_margin_pct": 12.1,
+    "ebitda_mn": 399.6,
+    "ebitda_margin_pct": 26.8,
+    "eps": 1.81
+  }
+}

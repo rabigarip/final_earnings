@@ -1,0 +1,20 @@
+{
+  "ticker": "2190.SR",
+  "company": "Sustained Infrastructure Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1605.5,
+    "revenue_growth_pct": 21.5,
+    "net_profit_mn": 96.4,
+    "net_margin_pct": 6.0,
+    "ebitda_mn": 797.4,
+    "ebitda_margin_pct": 49.7,
+    "eps": 1.19
+  }
+}

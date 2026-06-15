@@ -1,0 +1,17 @@
+{
+  "ticker": "2250.SR",
+  "company": "Saudi Industrial Investment Group",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 0.0,
+    "net_profit_mn": -103.7,
+    "ebitda_mn": -71.3,
+    "eps": -0.15
+  }
+}

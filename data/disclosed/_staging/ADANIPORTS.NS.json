@@ -1,0 +1,21 @@
+{
+  "ticker": "ADANIPORTS.NS",
+  "company": "Adani Ports and Special Economic Zone Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 387357.7,
+    "revenue_growth_pct": 27.1,
+    "net_profit_mn": 128062.1,
+    "net_profit_growth_pct": 15.5,
+    "net_margin_pct": 33.1,
+    "ebitda_mn": 241173.1,
+    "ebitda_margin_pct": 62.3,
+    "eps": 58.23
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "AMZO34.SA",
+  "company": "Amazon.com, Inc.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 716924.0,
+    "revenue_growth_pct": 12.4,
+    "net_profit_mn": 77670.0,
+    "net_profit_growth_pct": 31.1,
+    "net_margin_pct": 10.8,
+    "ebitda_mn": 165341.0,
+    "ebitda_margin_pct": 23.1,
+    "eps": 0.358
+  }
+}

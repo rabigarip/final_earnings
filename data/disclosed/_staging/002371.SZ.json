@@ -1,0 +1,21 @@
+{
+  "ticker": "002371.SZ",
+  "company": "NAURA Technology Group Co., Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 39353.1,
+    "revenue_growth_pct": 30.9,
+    "net_profit_mn": 5522.0,
+    "net_profit_growth_pct": -1.8,
+    "net_margin_pct": 14.0,
+    "ebitda_mn": 7612.2,
+    "ebitda_margin_pct": 19.3,
+    "eps": 7.64
+  }
+}

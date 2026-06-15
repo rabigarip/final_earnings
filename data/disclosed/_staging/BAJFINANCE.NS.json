@@ -1,0 +1,18 @@
+{
+  "ticker": "BAJFINANCE.NS",
+  "company": "Bajaj Finance Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 496654.5,
+    "revenue_growth_pct": 19.7,
+    "net_profit_mn": 190173.9,
+    "net_profit_growth_pct": 14.3,
+    "net_margin_pct": 38.3
+  }
+}

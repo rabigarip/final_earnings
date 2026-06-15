@@ -1,0 +1,21 @@
+{
+  "ticker": "4100.SR",
+  "company": "Makkah Construction and Development Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1072.5,
+    "revenue_growth_pct": 28.3,
+    "net_profit_mn": 474.1,
+    "net_profit_growth_pct": 15.3,
+    "net_margin_pct": 44.2,
+    "ebitda_mn": 530.7,
+    "ebitda_margin_pct": 49.5,
+    "eps": 2.37
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "600809.SS",
+  "company": "Shanxi Xinghuacun Fen Wine Factory Co.,Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 38718.3,
+    "revenue_growth_pct": 7.5,
+    "net_profit_mn": 12246.3,
+    "net_profit_growth_pct": 0.0,
+    "net_margin_pct": 31.6,
+    "ebitda_mn": 17278.2,
+    "ebitda_margin_pct": 44.6,
+    "eps": 10.038
+  }
+}

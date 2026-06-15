@@ -1,0 +1,20 @@
+{
+  "ticker": "0788.HK",
+  "company": "China Tower Corporation Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 100411.0,
+    "revenue_growth_pct": 2.7,
+    "net_profit_mn": 11630.0,
+    "net_profit_growth_pct": 8.4,
+    "net_margin_pct": 11.6,
+    "ebitda_mn": 66265.0,
+    "ebitda_margin_pct": 66.0
+  }
+}

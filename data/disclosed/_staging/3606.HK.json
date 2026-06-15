@@ -1,0 +1,21 @@
+{
+  "ticker": "3606.HK",
+  "company": "Fuyao Glass Industry Group Co., Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 45787.4,
+    "revenue_growth_pct": 16.7,
+    "net_profit_mn": 9312.3,
+    "net_profit_growth_pct": 24.2,
+    "net_margin_pct": 20.3,
+    "ebitda_mn": 14206.5,
+    "ebitda_margin_pct": 31.0,
+    "eps": 3.57
+  }
+}

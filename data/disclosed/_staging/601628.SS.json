@@ -1,0 +1,19 @@
+{
+  "ticker": "601628.SS",
+  "company": "China Life Insurance Company Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 605114.0,
+    "revenue_growth_pct": 99.8,
+    "net_profit_mn": 154078.0,
+    "net_profit_growth_pct": 44.1,
+    "net_margin_pct": 25.5,
+    "eps": 5.45
+  }
+}

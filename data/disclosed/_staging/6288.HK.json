@@ -1,0 +1,21 @@
+{
+  "ticker": "6288.HK",
+  "company": "Fast Retailing Co., Ltd.",
+  "currency": "JPY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "JPY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 3400539.0,
+    "revenue_growth_pct": 9.6,
+    "net_profit_mn": 433010.0,
+    "net_profit_growth_pct": 16.4,
+    "net_margin_pct": 12.7,
+    "ebitda_mn": 879900.0,
+    "ebitda_margin_pct": 25.9,
+    "eps": 14.093
+  }
+}

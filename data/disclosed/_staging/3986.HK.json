@@ -1,0 +1,21 @@
+{
+  "ticker": "3986.HK",
+  "company": "GIGADEVICE",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 9203.5,
+    "revenue_growth_pct": 25.1,
+    "net_profit_mn": 1648.0,
+    "net_profit_growth_pct": 49.5,
+    "net_margin_pct": 17.9,
+    "ebitda_mn": 2159.5,
+    "ebitda_margin_pct": 23.5,
+    "eps": 2.47
+  }
+}

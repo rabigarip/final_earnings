@@ -1,0 +1,21 @@
+{
+  "ticker": "3750.HK",
+  "company": "Contemporary Amperex Technology Co., Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 423701.8,
+    "revenue_growth_pct": 17.0,
+    "net_profit_mn": 72201.3,
+    "net_profit_growth_pct": 42.3,
+    "net_margin_pct": 17.0,
+    "ebitda_mn": 117432.7,
+    "ebitda_margin_pct": 27.7,
+    "eps": 16.14
+  }
+}

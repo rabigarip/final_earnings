@@ -1,0 +1,21 @@
+{
+  "ticker": "4017.SR",
+  "company": "Dr. Soliman Abdel Kader Fakeeh ",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 3090.2,
+    "revenue_growth_pct": 10.7,
+    "net_profit_mn": 290.2,
+    "net_profit_growth_pct": 0.9,
+    "net_margin_pct": 9.4,
+    "ebitda_mn": 511.6,
+    "ebitda_margin_pct": 16.6,
+    "eps": 1.26
+  }
+}

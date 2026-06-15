@@ -1,0 +1,21 @@
+{
+  "ticker": "0762.HK",
+  "company": "China Unicom (Hong Kong) Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 392223.0,
+    "revenue_growth_pct": 0.7,
+    "net_profit_mn": 20816.0,
+    "net_profit_growth_pct": 1.0,
+    "net_margin_pct": 5.3,
+    "ebitda_mn": 107595.0,
+    "ebitda_margin_pct": 27.4,
+    "eps": 0.68
+  }
+}

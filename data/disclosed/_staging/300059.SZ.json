@@ -1,0 +1,20 @@
+{
+  "ticker": "300059.SZ",
+  "company": "East Money Information Co.,Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 16067.7,
+    "revenue_growth_pct": 38.5,
+    "net_profit_mn": 12084.6,
+    "net_profit_growth_pct": 25.7,
+    "ebitda_mn": 14489.4,
+    "ebitda_margin_pct": 90.2,
+    "eps": 0.765
+  }
+}

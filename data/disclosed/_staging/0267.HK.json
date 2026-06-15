@@ -1,0 +1,21 @@
+{
+  "ticker": "0267.HK",
+  "company": "CITIC Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2024",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 942638.0,
+    "revenue_growth_pct": 6.8,
+    "net_profit_mn": 58202.0,
+    "net_profit_growth_pct": 1.1,
+    "net_margin_pct": 6.2,
+    "ebitda_mn": 173335.0,
+    "ebitda_margin_pct": 18.4,
+    "eps": 1.97
+  }
+}

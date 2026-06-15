@@ -1,0 +1,21 @@
+{
+  "ticker": "6869.HK",
+  "company": "Yangtze Optical Fibre And Cable Joint Stock Limited Company",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 14252.1,
+    "revenue_growth_pct": 16.8,
+    "net_profit_mn": 813.7,
+    "net_profit_growth_pct": 20.4,
+    "net_margin_pct": 5.7,
+    "ebitda_mn": 1705.3,
+    "ebitda_margin_pct": 12.0,
+    "eps": 1.07
+  }
+}

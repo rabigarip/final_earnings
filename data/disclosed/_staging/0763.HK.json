@@ -1,0 +1,21 @@
+{
+  "ticker": "0763.HK",
+  "company": "ZTE Corporation",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 133895.5,
+    "revenue_growth_pct": 10.4,
+    "net_profit_mn": 5617.7,
+    "net_profit_growth_pct": -33.3,
+    "net_margin_pct": 4.2,
+    "ebitda_mn": 14804.7,
+    "ebitda_margin_pct": 11.1,
+    "eps": 1.16
+  }
+}

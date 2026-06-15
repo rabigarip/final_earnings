@@ -1,0 +1,20 @@
+{
+  "ticker": "4015.SR",
+  "company": "Jamjoom Pharmaceuticals Factory Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1500.6,
+    "revenue_growth_pct": 13.8,
+    "net_profit_mn": 463.8,
+    "net_profit_growth_pct": 30.1,
+    "net_margin_pct": 30.9,
+    "ebitda_mn": 537.4,
+    "ebitda_margin_pct": 35.8
+  }
+}

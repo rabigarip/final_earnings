@@ -1,0 +1,21 @@
+{
+  "ticker": "HYUNDAI.NS",
+  "company": "HYUNDAI MOTOR INDIA LTD",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 693911.6,
+    "revenue_growth_pct": 2.1,
+    "net_profit_mn": 54315.2,
+    "net_profit_growth_pct": -3.7,
+    "net_margin_pct": 7.8,
+    "ebitda_mn": 95475.2,
+    "ebitda_margin_pct": 13.8,
+    "eps": 66.85
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "4050.SR",
+  "company": "Saudi Automotive Services Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 11804.0,
+    "revenue_growth_pct": 15.9,
+    "net_profit_mn": 64.3,
+    "net_profit_growth_pct": 45.4,
+    "net_margin_pct": 0.5,
+    "ebitda_mn": 728.5,
+    "ebitda_margin_pct": 6.2,
+    "eps": 0.92
+  }
+}

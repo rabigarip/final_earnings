@@ -1,0 +1,21 @@
+{
+  "ticker": "9961.HK",
+  "company": "Trip.com Group Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 62409.0,
+    "revenue_growth_pct": 17.1,
+    "net_profit_mn": 33294.0,
+    "net_profit_growth_pct": 95.1,
+    "net_margin_pct": 53.3,
+    "ebitda_mn": 40792.0,
+    "ebitda_margin_pct": 65.4,
+    "eps": 47.67
+  }
+}

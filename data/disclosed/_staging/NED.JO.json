@@ -1,0 +1,19 @@
+{
+  "ticker": "NED.JO",
+  "company": "Nedbank Group Limited",
+  "currency": "ZAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "ZAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 69140.0,
+    "revenue_growth_pct": 3.2,
+    "net_profit_mn": 9260.0,
+    "net_profit_growth_pct": -49.5,
+    "net_margin_pct": 13.4,
+    "eps": 16.45
+  }
+}

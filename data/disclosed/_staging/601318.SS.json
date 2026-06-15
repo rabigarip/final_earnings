@@ -1,0 +1,19 @@
+{
+  "ticker": "601318.SS",
+  "company": "Ping An Insurance (Group) Company of China, Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 927890.0,
+    "revenue_growth_pct": 1.2,
+    "net_profit_mn": 134778.0,
+    "net_profit_growth_pct": 6.5,
+    "net_margin_pct": 14.5,
+    "eps": 7.44
+  }
+}

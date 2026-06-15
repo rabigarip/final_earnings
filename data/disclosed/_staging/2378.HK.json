@@ -1,0 +1,19 @@
+{
+  "ticker": "2378.HK",
+  "company": "Prudential plc",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 27393.0,
+    "revenue_growth_pct": 69.0,
+    "net_profit_mn": 3978.0,
+    "net_profit_growth_pct": 74.1,
+    "net_margin_pct": 14.5,
+    "eps": 1.535
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "2381.SR",
+  "company": "Arabian Drilling Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 3433.3,
+    "revenue_growth_pct": -5.1,
+    "net_profit_mn": -75.3,
+    "net_margin_pct": -2.2,
+    "ebitda_mn": 1116.7,
+    "ebitda_margin_pct": 32.5,
+    "eps": -0.85
+  }
+}

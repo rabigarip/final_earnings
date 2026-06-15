@@ -1,0 +1,21 @@
+{
+  "ticker": "1378.HK",
+  "company": "China Hongqiao Group Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 162353.7,
+    "revenue_growth_pct": 4.0,
+    "net_profit_mn": 22636.1,
+    "net_profit_growth_pct": 1.2,
+    "net_margin_pct": 13.9,
+    "ebitda_mn": 43565.2,
+    "ebitda_margin_pct": 26.8,
+    "eps": 2.384
+  }
+}

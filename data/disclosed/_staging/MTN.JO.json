@@ -1,0 +1,20 @@
+{
+  "ticker": "MTN.JO",
+  "company": "MTN Group Limited",
+  "currency": "ZAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "ZAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 226707.0,
+    "revenue_growth_pct": 20.6,
+    "net_profit_mn": 20262.0,
+    "net_margin_pct": 8.9,
+    "ebitda_mn": 106429.0,
+    "ebitda_margin_pct": 46.9,
+    "eps": 11.01
+  }
+}

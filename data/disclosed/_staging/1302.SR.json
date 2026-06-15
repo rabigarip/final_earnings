@@ -1,0 +1,21 @@
+{
+  "ticker": "1302.SR",
+  "company": "Bawan Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 4069.7,
+    "revenue_growth_pct": 34.7,
+    "net_profit_mn": 218.3,
+    "net_profit_growth_pct": 105.9,
+    "net_margin_pct": 5.4,
+    "ebitda_mn": 572.2,
+    "ebitda_margin_pct": 14.1,
+    "eps": 3.64
+  }
+}

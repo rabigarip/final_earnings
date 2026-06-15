@@ -1,0 +1,19 @@
+{
+  "ticker": "CBQK.QA",
+  "company": "The Commercial Bank (P.S.Q.C.)",
+  "currency": "QAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "QAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 4744.4,
+    "revenue_growth_pct": 1.5,
+    "net_profit_mn": 2204.9,
+    "net_profit_growth_pct": -27.3,
+    "net_margin_pct": 46.5,
+    "eps": 0.5
+  }
+}

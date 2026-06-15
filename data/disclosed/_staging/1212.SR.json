@@ -1,0 +1,21 @@
+{
+  "ticker": "1212.SR",
+  "company": "Astra Industrial Group Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 3070.7,
+    "revenue_growth_pct": 0.3,
+    "net_profit_mn": 666.8,
+    "net_profit_growth_pct": 13.1,
+    "net_margin_pct": 21.7,
+    "ebitda_mn": 854.1,
+    "ebitda_margin_pct": 27.8,
+    "eps": 8.34
+  }
+}

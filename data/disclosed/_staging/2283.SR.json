@@ -1,0 +1,21 @@
+{
+  "ticker": "2283.SR",
+  "company": "The First Milling Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1146.4,
+    "revenue_growth_pct": 9.3,
+    "net_profit_mn": 277.4,
+    "net_profit_growth_pct": 10.6,
+    "net_margin_pct": 24.2,
+    "ebitda_mn": 415.5,
+    "ebitda_margin_pct": 36.2,
+    "eps": 4.97
+  }
+}

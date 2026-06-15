@@ -1,0 +1,21 @@
+{
+  "ticker": "1303.SR",
+  "company": "Electrical Industries Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2296.2,
+    "revenue_growth_pct": 15.6,
+    "net_profit_mn": 629.9,
+    "net_profit_growth_pct": 56.8,
+    "net_margin_pct": 27.4,
+    "ebitda_mn": 704.1,
+    "ebitda_margin_pct": 30.7,
+    "eps": 0.56
+  }
+}

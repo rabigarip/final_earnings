@@ -1,0 +1,21 @@
+{
+  "ticker": "DMART.NS",
+  "company": "Avenue Supermarts Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 688207.4,
+    "revenue_growth_pct": 15.9,
+    "net_profit_mn": 29704.9,
+    "net_profit_growth_pct": 9.7,
+    "net_margin_pct": 4.3,
+    "ebitda_mn": 52606.9,
+    "ebitda_margin_pct": 7.6,
+    "eps": 45.63
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "ticker": "LICI.NS",
+  "company": "Life Insurance Corporation of India",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 9785785.1,
+    "revenue_growth_pct": 9.9,
+    "net_profit_mn": 574531.5,
+    "net_profit_growth_pct": 18.9,
+    "net_margin_pct": 5.9
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "NVDA.MX",
+  "company": "NVIDIA Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 215938.0,
+    "revenue_growth_pct": 65.5,
+    "net_profit_mn": 120067.0,
+    "net_profit_growth_pct": 64.7,
+    "net_margin_pct": 55.6,
+    "ebitda_mn": 144552.0,
+    "ebitda_margin_pct": 66.9,
+    "eps": 4.9
+  }
+}

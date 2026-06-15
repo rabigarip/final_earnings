@@ -1,0 +1,21 @@
+{
+  "ticker": "EXXO34.SA",
+  "company": "Exxon Mobil Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 323905.0,
+    "revenue_growth_pct": -4.5,
+    "net_profit_mn": 28844.0,
+    "net_profit_growth_pct": -14.4,
+    "net_margin_pct": 8.9,
+    "ebitda_mn": 67864.0,
+    "ebitda_margin_pct": 21.0,
+    "eps": 0.838
+  }
+}

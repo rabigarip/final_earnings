@@ -1,0 +1,21 @@
+{
+  "ticker": "4192.SR",
+  "company": "Al-Saif Stores for Development & Investment Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 758.8,
+    "revenue_growth_pct": 3.7,
+    "net_profit_mn": 58.0,
+    "net_profit_growth_pct": 54.6,
+    "net_margin_pct": 7.6,
+    "ebitda_mn": 138.2,
+    "ebitda_margin_pct": 18.2,
+    "eps": 0.17
+  }
+}

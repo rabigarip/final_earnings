@@ -1,0 +1,21 @@
+{
+  "ticker": "A1ZN34.SA",
+  "company": "AstraZeneca PLC",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 58739.0,
+    "revenue_growth_pct": 8.6,
+    "net_profit_mn": 10225.0,
+    "net_profit_growth_pct": 45.3,
+    "net_margin_pct": 17.4,
+    "ebitda_mn": 19506.0,
+    "ebitda_margin_pct": 33.2,
+    "eps": 1.09
+  }
+}

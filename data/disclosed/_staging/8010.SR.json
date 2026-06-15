@@ -1,0 +1,19 @@
+{
+  "ticker": "8010.SR",
+  "company": "The Company for Cooperative Insurance",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 19652.8,
+    "revenue_growth_pct": 18.2,
+    "net_profit_mn": 1103.1,
+    "net_profit_growth_pct": 7.9,
+    "net_margin_pct": 5.6,
+    "eps": 7.35
+  }
+}

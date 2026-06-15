@@ -1,0 +1,21 @@
+{
+  "ticker": "1072.HK",
+  "company": "Dongfang Electric Corporation Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 78615.3,
+    "revenue_growth_pct": 12.8,
+    "net_profit_mn": 3831.3,
+    "net_profit_growth_pct": 31.1,
+    "net_margin_pct": 4.9,
+    "ebitda_mn": 6007.2,
+    "ebitda_margin_pct": 7.6,
+    "eps": 1.15
+  }
+}

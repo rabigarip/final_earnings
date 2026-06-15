@@ -1,0 +1,21 @@
+{
+  "ticker": "7020.SR",
+  "company": "Etihad Etisalat Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 19641.7,
+    "revenue_growth_pct": 7.9,
+    "net_profit_mn": 3466.4,
+    "net_profit_growth_pct": 11.6,
+    "net_margin_pct": 17.6,
+    "ebitda_mn": 7894.5,
+    "ebitda_margin_pct": 40.2,
+    "eps": 4.5
+  }
+}

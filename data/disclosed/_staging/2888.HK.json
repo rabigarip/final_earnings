@@ -1,0 +1,19 @@
+{
+  "ticker": "2888.HK",
+  "company": "Standard Chartered PLC",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 20553.0,
+    "revenue_growth_pct": 2.5,
+    "net_profit_mn": 5085.0,
+    "net_profit_growth_pct": 25.6,
+    "net_margin_pct": 24.7,
+    "eps": 1.896
+  }
+}

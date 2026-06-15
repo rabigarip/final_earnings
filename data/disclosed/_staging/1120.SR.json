@@ -1,0 +1,19 @@
+{
+  "ticker": "1120.SR",
+  "company": "Al Rajhi Banking and Investment Corporation",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 38967.2,
+    "revenue_growth_pct": 22.1,
+    "net_profit_mn": 24791.8,
+    "net_profit_growth_pct": 25.7,
+    "net_margin_pct": 63.6,
+    "eps": 3.9
+  }
+}

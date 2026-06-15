@@ -1,0 +1,21 @@
+{
+  "ticker": "KIO.JO",
+  "company": "Kumba Iron Ore Limited",
+  "currency": "ZAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "ZAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 70077.0,
+    "revenue_growth_pct": 2.3,
+    "net_profit_mn": 14611.0,
+    "net_profit_growth_pct": -0.6,
+    "net_margin_pct": 20.8,
+    "ebitda_mn": 33304.0,
+    "ebitda_margin_pct": 47.5,
+    "eps": 45.43
+  }
+}

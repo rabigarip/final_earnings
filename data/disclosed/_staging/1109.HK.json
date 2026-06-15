@@ -1,0 +1,21 @@
+{
+  "ticker": "1109.HK",
+  "company": "China Resources Land Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 281437.9,
+    "revenue_growth_pct": 0.9,
+    "net_profit_mn": 25417.5,
+    "net_profit_growth_pct": -0.5,
+    "net_margin_pct": 9.0,
+    "ebitda_mn": 57805.5,
+    "ebitda_margin_pct": 20.5,
+    "eps": 3.56
+  }
+}

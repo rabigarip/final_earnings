@@ -1,0 +1,21 @@
+{
+  "ticker": "4200.SR",
+  "company": "Aldrees Petroleum and Transport Services Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 25760.8,
+    "revenue_growth_pct": 33.6,
+    "net_profit_mn": 421.8,
+    "net_profit_growth_pct": 22.4,
+    "net_margin_pct": 1.6,
+    "ebitda_mn": 1272.7,
+    "ebitda_margin_pct": 4.9,
+    "eps": 4.22
+  }
+}

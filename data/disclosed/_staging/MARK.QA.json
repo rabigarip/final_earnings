@@ -1,0 +1,19 @@
+{
+  "ticker": "MARK.QA",
+  "company": "AlRayan Bank Q.P.S.C.",
+  "currency": "QAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "QAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2718.3,
+    "revenue_growth_pct": -12.6,
+    "net_profit_mn": 1530.3,
+    "net_profit_growth_pct": 1.5,
+    "net_margin_pct": 56.3,
+    "eps": 0.16
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "ticker": "JPMC34.SA",
+  "company": "JPMorgan Chase & Co.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 181847.0,
+    "revenue_growth_pct": 7.3,
+    "net_profit_mn": 57048.0,
+    "net_profit_growth_pct": -2.4,
+    "net_margin_pct": 31.4,
+    "eps": 2.002
+  }
+}

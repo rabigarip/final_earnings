@@ -1,0 +1,21 @@
+{
+  "ticker": "ADANIENT.NS",
+  "company": "Adani Enterprises Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1002670.2,
+    "revenue_growth_pct": 2.6,
+    "net_profit_mn": 93394.7,
+    "net_profit_growth_pct": 31.6,
+    "net_margin_pct": 9.3,
+    "ebitda_mn": 260529.1,
+    "ebitda_margin_pct": 26.0,
+    "eps": 73.59
+  }
+}

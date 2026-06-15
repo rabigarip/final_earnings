@@ -1,0 +1,21 @@
+{
+  "ticker": "1211.SR",
+  "company": "Saudi Arabian Mining Company (Maaden)",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 38577.7,
+    "revenue_growth_pct": 18.5,
+    "net_profit_mn": 7347.9,
+    "net_profit_growth_pct": 155.9,
+    "net_margin_pct": 19.0,
+    "ebitda_mn": 16295.7,
+    "ebitda_margin_pct": 42.2,
+    "eps": 1.91
+  }
+}

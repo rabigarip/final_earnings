@@ -1,0 +1,21 @@
+{
+  "ticker": "ASIANPAINT.BO",
+  "company": "Asian Paints Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 355163.7,
+    "revenue_growth_pct": 5.1,
+    "net_profit_mn": 43253.5,
+    "net_profit_growth_pct": 17.9,
+    "net_margin_pct": 12.2,
+    "ebitda_mn": 74277.0,
+    "ebitda_margin_pct": 20.9,
+    "eps": 45.11
+  }
+}

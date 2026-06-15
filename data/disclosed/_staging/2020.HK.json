@@ -1,0 +1,21 @@
+{
+  "ticker": "2020.HK",
+  "company": "ANTA Sports Products Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 80219.0,
+    "revenue_growth_pct": 13.3,
+    "net_profit_mn": 13588.0,
+    "net_profit_growth_pct": -12.9,
+    "net_margin_pct": 16.9,
+    "ebitda_mn": 28614.0,
+    "ebitda_margin_pct": 35.7,
+    "eps": 4.8
+  }
+}

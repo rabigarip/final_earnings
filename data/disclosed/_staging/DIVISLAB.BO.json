@@ -1,0 +1,20 @@
+{
+  "ticker": "DIVISLAB.BO",
+  "company": "Divi's Laboratories Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 105600.0,
+    "revenue_growth_pct": 12.8,
+    "net_profit_mn": 25680.0,
+    "net_profit_growth_pct": 17.2,
+    "net_margin_pct": 24.3,
+    "ebitda_mn": 38740.0,
+    "ebitda_margin_pct": 36.7
+  }
+}

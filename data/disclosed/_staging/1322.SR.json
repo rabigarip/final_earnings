@@ -1,0 +1,21 @@
+{
+  "ticker": "1322.SR",
+  "company": "Al Masane Al Kobra Mining Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1026.1,
+    "revenue_growth_pct": 31.4,
+    "net_profit_mn": 280.6,
+    "net_profit_growth_pct": 57.7,
+    "net_margin_pct": 27.3,
+    "ebitda_mn": 605.2,
+    "ebitda_margin_pct": 59.0,
+    "eps": 3.17
+  }
+}

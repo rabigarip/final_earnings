@@ -1,0 +1,21 @@
+{
+  "ticker": "4090.SR",
+  "company": "Taiba Investment Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1364.3,
+    "revenue_growth_pct": 3.7,
+    "net_profit_mn": 364.8,
+    "net_profit_growth_pct": 9.3,
+    "net_margin_pct": 26.7,
+    "ebitda_mn": 631.1,
+    "ebitda_margin_pct": 46.3,
+    "eps": 0.729
+  }
+}

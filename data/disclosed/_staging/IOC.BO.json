@@ -1,0 +1,21 @@
+{
+  "ticker": "IOC.BO",
+  "company": "Indian Oil Corporation Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 7844154.3,
+    "revenue_growth_pct": 3.5,
+    "net_profit_mn": 420962.6,
+    "net_profit_growth_pct": 209.6,
+    "net_margin_pct": 5.4,
+    "ebitda_mn": 842002.0,
+    "ebitda_margin_pct": 10.7,
+    "eps": 30.57
+  }
+}

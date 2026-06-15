@@ -1,0 +1,21 @@
+{
+  "ticker": "9992.HK",
+  "company": "Pop Mart International Group Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2024",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 13037.7,
+    "revenue_growth_pct": 106.9,
+    "net_profit_mn": 3125.5,
+    "net_profit_growth_pct": 188.8,
+    "net_margin_pct": 24.0,
+    "ebitda_mn": 5271.3,
+    "ebitda_margin_pct": 40.4,
+    "eps": 2.35
+  }
+}

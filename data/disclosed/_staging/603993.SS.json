@@ -1,0 +1,21 @@
+{
+  "ticker": "603993.SS",
+  "company": "CMOC Group Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 206443.0,
+    "revenue_growth_pct": -3.0,
+    "net_profit_mn": 20338.8,
+    "net_profit_growth_pct": 50.3,
+    "net_margin_pct": 9.9,
+    "ebitda_mn": 37792.1,
+    "ebitda_margin_pct": 18.3,
+    "eps": 0.95
+  }
+}

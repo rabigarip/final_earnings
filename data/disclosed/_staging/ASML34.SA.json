@@ -1,0 +1,21 @@
+{
+  "ticker": "ASML34.SA",
+  "company": "ASML Holding N.V.",
+  "currency": "EUR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "EUR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 32667.3,
+    "revenue_growth_pct": 15.6,
+    "net_profit_mn": 9609.4,
+    "net_profit_growth_pct": 26.9,
+    "net_margin_pct": 29.4,
+    "ebitda_mn": 12550.3,
+    "ebitda_margin_pct": 38.4,
+    "eps": 0.477
+  }
+}

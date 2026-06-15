@@ -1,0 +1,21 @@
+{
+  "ticker": "2080.SR",
+  "company": "National Gas and Industrialization Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 3256.1,
+    "revenue_growth_pct": 13.8,
+    "net_profit_mn": 249.1,
+    "net_profit_growth_pct": 0.2,
+    "net_margin_pct": 7.7,
+    "ebitda_mn": 321.3,
+    "ebitda_margin_pct": 9.9,
+    "eps": 3.32
+  }
+}

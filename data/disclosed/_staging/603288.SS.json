@@ -1,0 +1,21 @@
+{
+  "ticker": "603288.SS",
+  "company": "Foshan Haitian Flavouring and Food Company Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 28873.4,
+    "revenue_growth_pct": 7.3,
+    "net_profit_mn": 7038.5,
+    "net_profit_growth_pct": 11.0,
+    "net_margin_pct": 24.4,
+    "ebitda_mn": 9455.4,
+    "ebitda_margin_pct": 32.7,
+    "eps": 1.23
+  }
+}

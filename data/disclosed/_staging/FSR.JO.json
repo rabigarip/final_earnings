@@ -1,0 +1,19 @@
+{
+  "ticker": "FSR.JO",
+  "company": "FirstRand Limited",
+  "currency": "ZAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "ZAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 148468.0,
+    "revenue_growth_pct": 5.0,
+    "net_profit_mn": 43540.0,
+    "net_profit_growth_pct": 9.6,
+    "net_margin_pct": 29.3,
+    "eps": 7.479
+  }
+}

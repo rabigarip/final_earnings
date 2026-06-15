@@ -1,0 +1,21 @@
+{
+  "ticker": "601857.SS",
+  "company": "PetroChina Company Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2864469.0,
+    "revenue_growth_pct": -2.5,
+    "net_profit_mn": 157302.0,
+    "net_profit_growth_pct": -4.5,
+    "net_margin_pct": 5.5,
+    "ebitda_mn": 477517.0,
+    "ebitda_margin_pct": 16.7,
+    "eps": 0.86
+  }
+}

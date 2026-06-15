@@ -1,0 +1,19 @@
+{
+  "ticker": "0388.HK",
+  "company": "Hong Kong Exchanges and Clearing Limited",
+  "currency": "HKD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "HKD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 23745.0,
+    "revenue_growth_pct": 36.9,
+    "net_profit_mn": 17754.0,
+    "net_profit_growth_pct": 36.0,
+    "ebitda_mn": 27398.0,
+    "eps": 14.01
+  }
+}

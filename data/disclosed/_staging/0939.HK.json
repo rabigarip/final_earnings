@@ -1,0 +1,19 @@
+{
+  "ticker": "0939.HK",
+  "company": "China Construction Bank Corporation",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 760713.0,
+    "revenue_growth_pct": 1.9,
+    "net_profit_mn": 338906.0,
+    "net_profit_growth_pct": 1.0,
+    "net_margin_pct": 44.6,
+    "eps": 1.3
+  }
+}

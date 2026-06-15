@@ -1,0 +1,21 @@
+{
+  "ticker": "2084.SR",
+  "company": "Miahona Company Limited",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 699.7,
+    "revenue_growth_pct": 81.7,
+    "net_profit_mn": 72.4,
+    "net_profit_growth_pct": 77.8,
+    "net_margin_pct": 10.4,
+    "ebitda_mn": 177.7,
+    "ebitda_margin_pct": 25.4,
+    "eps": 0.45
+  }
+}

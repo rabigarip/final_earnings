@@ -1,0 +1,21 @@
+{
+  "ticker": "HINDZINC.BO",
+  "company": "Hindustan Zinc Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 391920.0,
+    "revenue_growth_pct": 18.6,
+    "net_profit_mn": 138320.0,
+    "net_profit_growth_pct": 33.6,
+    "net_margin_pct": 35.3,
+    "ebitda_mn": 230600.0,
+    "ebitda_margin_pct": 58.8,
+    "eps": 32.74
+  }
+}

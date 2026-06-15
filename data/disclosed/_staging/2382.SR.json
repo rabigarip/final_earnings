@@ -1,0 +1,21 @@
+{
+  "ticker": "2382.SR",
+  "company": "ADES Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 6689.0,
+    "revenue_growth_pct": 7.9,
+    "net_profit_mn": 818.0,
+    "net_profit_growth_pct": 1.9,
+    "net_margin_pct": 12.2,
+    "ebitda_mn": 3477.4,
+    "ebitda_margin_pct": 52.0,
+    "eps": 0.74
+  }
+}

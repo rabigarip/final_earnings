@@ -1,0 +1,21 @@
+{
+  "ticker": "601127.SS",
+  "company": "Seres Group Co.,Ltd",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 165053.6,
+    "revenue_growth_pct": 13.7,
+    "net_profit_mn": 5956.8,
+    "net_profit_growth_pct": 0.2,
+    "net_margin_pct": 3.6,
+    "ebitda_mn": 12354.5,
+    "ebitda_margin_pct": 7.5,
+    "eps": 3.67
+  }
+}

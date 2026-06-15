@@ -1,0 +1,21 @@
+{
+  "ticker": "4007.SR",
+  "company": "Al Hammadi Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1234.5,
+    "revenue_growth_pct": 7.0,
+    "net_profit_mn": 241.9,
+    "net_profit_growth_pct": -28.6,
+    "net_margin_pct": 19.6,
+    "ebitda_mn": 371.6,
+    "ebitda_margin_pct": 30.1,
+    "eps": 1.51
+  }
+}

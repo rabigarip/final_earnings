@@ -1,0 +1,19 @@
+{
+  "ticker": "601211.SS",
+  "company": "Guotai Haitong Securities Co., Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 62042.5,
+    "revenue_growth_pct": 85.9,
+    "net_profit_mn": 27809.2,
+    "net_profit_growth_pct": 113.5,
+    "net_margin_pct": 44.8,
+    "eps": 1.74
+  }
+}

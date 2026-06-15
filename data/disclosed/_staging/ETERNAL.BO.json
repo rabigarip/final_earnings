@@ -1,0 +1,21 @@
+{
+  "ticker": "ETERNAL.BO",
+  "company": "Eternal Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 543640.0,
+    "revenue_growth_pct": 168.6,
+    "net_profit_mn": 3660.0,
+    "net_profit_growth_pct": -30.6,
+    "net_margin_pct": 0.7,
+    "ebitda_mn": 26040.0,
+    "ebitda_margin_pct": 4.8,
+    "eps": 0.39
+  }
+}

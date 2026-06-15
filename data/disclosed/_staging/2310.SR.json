@@ -1,0 +1,20 @@
+{
+  "ticker": "2310.SR",
+  "company": "Sahara International Petrochemical Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 6809.7,
+    "revenue_growth_pct": -3.6,
+    "net_profit_mn": -860.5,
+    "net_margin_pct": -12.6,
+    "ebitda_mn": 420.1,
+    "ebitda_margin_pct": 6.2,
+    "eps": -1.19
+  }
+}

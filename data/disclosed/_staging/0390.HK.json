@@ -1,0 +1,21 @@
+{
+  "ticker": "0390.HK",
+  "company": "China Railway Group Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1093493.6,
+    "revenue_growth_pct": -5.8,
+    "net_profit_mn": 22891.7,
+    "net_profit_growth_pct": -17.9,
+    "net_margin_pct": 2.1,
+    "ebitda_mn": 66596.5,
+    "ebitda_margin_pct": 6.1,
+    "eps": 0.848
+  }
+}

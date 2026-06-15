@@ -1,0 +1,20 @@
+{
+  "ticker": "AAPL34.SA",
+  "company": "Apple Inc.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 416161.0,
+    "revenue_growth_pct": 6.4,
+    "net_profit_mn": 112010.0,
+    "net_profit_growth_pct": 19.5,
+    "net_margin_pct": 26.9,
+    "ebitda_mn": 144748.0,
+    "ebitda_margin_pct": 34.8
+  }
+}

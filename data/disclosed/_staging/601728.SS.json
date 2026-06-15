@@ -1,0 +1,21 @@
+{
+  "ticker": "601728.SS",
+  "company": "China Telecom Corporation Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 529559.0,
+    "revenue_growth_pct": 0.0,
+    "net_profit_mn": 33185.0,
+    "net_profit_growth_pct": 0.5,
+    "net_margin_pct": 6.3,
+    "ebitda_mn": 148932.0,
+    "ebitda_margin_pct": 28.1,
+    "eps": 0.36
+  }
+}

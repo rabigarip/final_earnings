@@ -1,0 +1,21 @@
+{
+  "ticker": "MSFT.MX",
+  "company": "Microsoft Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 281724.0,
+    "revenue_growth_pct": 14.9,
+    "net_profit_mn": 101832.0,
+    "net_profit_growth_pct": 15.5,
+    "net_margin_pct": 36.1,
+    "ebitda_mn": 160165.0,
+    "ebitda_margin_pct": 56.9,
+    "eps": 13.64
+  }
+}

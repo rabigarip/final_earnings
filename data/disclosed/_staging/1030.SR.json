@@ -1,0 +1,19 @@
+{
+  "ticker": "1030.SR",
+  "company": "The Saudi Investment Bank",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 4778.5,
+    "revenue_growth_pct": 14.8,
+    "net_profit_mn": 2431.5,
+    "net_profit_growth_pct": 24.3,
+    "net_margin_pct": 50.9,
+    "eps": 1.68
+  }
+}

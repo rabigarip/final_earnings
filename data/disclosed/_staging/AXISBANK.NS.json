@@ -1,0 +1,19 @@
+{
+  "ticker": "AXISBANK.NS",
+  "company": "Axis Bank Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 881369.6,
+    "revenue_growth_pct": 3.8,
+    "net_profit_mn": 263848.5,
+    "net_profit_growth_pct": -6.0,
+    "net_margin_pct": 29.9,
+    "eps": 84.48
+  }
+}

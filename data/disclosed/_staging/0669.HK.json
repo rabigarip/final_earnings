@@ -1,0 +1,21 @@
+{
+  "ticker": "0669.HK",
+  "company": "Techtronic Industries Company Limited",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 15259.5,
+    "revenue_growth_pct": 4.4,
+    "net_profit_mn": 1198.3,
+    "net_profit_growth_pct": 6.8,
+    "net_margin_pct": 7.9,
+    "ebitda_mn": 2268.5,
+    "ebitda_margin_pct": 14.9,
+    "eps": 0.654
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "2230.SR",
+  "company": "Saudi Chemical Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 6880.7,
+    "revenue_growth_pct": 7.9,
+    "net_profit_mn": 335.3,
+    "net_profit_growth_pct": 15.1,
+    "net_margin_pct": 4.9,
+    "ebitda_mn": 552.0,
+    "ebitda_margin_pct": 8.0,
+    "eps": 0.4
+  }
+}

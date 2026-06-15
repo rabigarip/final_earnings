@@ -1,0 +1,21 @@
+{
+  "ticker": "4020.SR",
+  "company": "Saudi Real Estate Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1880.1,
+    "revenue_growth_pct": -5.4,
+    "net_profit_mn": 296.0,
+    "net_profit_growth_pct": 37.6,
+    "net_margin_pct": 15.7,
+    "ebitda_mn": 813.5,
+    "ebitda_margin_pct": 43.3,
+    "eps": 0.79
+  }
+}

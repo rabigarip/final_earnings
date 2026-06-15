@@ -1,0 +1,21 @@
+{
+  "ticker": "BTI.JO",
+  "company": "British American Tobacco p.l.c.",
+  "currency": "GBP",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "GBP",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 25610.0,
+    "revenue_growth_pct": -1.0,
+    "net_profit_mn": 7764.0,
+    "net_profit_growth_pct": 153.1,
+    "net_margin_pct": 30.3,
+    "ebitda_mn": 14056.0,
+    "ebitda_margin_pct": 54.9,
+    "eps": 3.491
+  }
+}

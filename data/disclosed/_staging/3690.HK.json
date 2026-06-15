@@ -1,0 +1,20 @@
+{
+  "ticker": "3690.HK",
+  "company": "Meituan",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 364854.7,
+    "revenue_growth_pct": 8.1,
+    "net_profit_mn": -23355.0,
+    "net_margin_pct": -6.4,
+    "ebitda_mn": -12752.6,
+    "ebitda_margin_pct": -3.5,
+    "eps": -3.92
+  }
+}

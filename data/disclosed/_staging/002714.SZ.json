@@ -1,0 +1,21 @@
+{
+  "ticker": "002714.SZ",
+  "company": "Muyuan Foods Group Co., Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 144145.0,
+    "revenue_growth_pct": 4.5,
+    "net_profit_mn": 15486.9,
+    "net_profit_growth_pct": -13.4,
+    "net_margin_pct": 10.7,
+    "ebitda_mn": 33694.6,
+    "ebitda_margin_pct": 23.4,
+    "eps": 2.84
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "5110.SR",
+  "company": "Saudi Energy Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 102217.8,
+    "revenue_growth_pct": 15.3,
+    "net_profit_mn": 12974.8,
+    "net_profit_growth_pct": 88.9,
+    "net_margin_pct": 12.7,
+    "ebitda_mn": 41804.8,
+    "ebitda_margin_pct": 40.9,
+    "eps": 0.96
+  }
+}

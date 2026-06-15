@@ -1,0 +1,20 @@
+{
+  "ticker": "4335.HK",
+  "company": "Intel Corporation",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 52853.0,
+    "revenue_growth_pct": -0.5,
+    "net_profit_mn": -267.0,
+    "net_margin_pct": -0.5,
+    "ebitda_mn": 14354.0,
+    "ebitda_margin_pct": 27.2,
+    "eps": -0.06
+  }
+}

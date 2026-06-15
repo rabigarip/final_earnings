@@ -1,0 +1,17 @@
+{
+  "ticker": "8200.SR",
+  "company": "Saudi Reinsurance Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": -101.5,
+    "net_profit_mn": 140.0,
+    "net_profit_growth_pct": -70.5,
+    "eps": 0.84
+  }
+}

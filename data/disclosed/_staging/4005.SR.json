@@ -1,0 +1,21 @@
+{
+  "ticker": "4005.SR",
+  "company": "National Medical Care Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1600.4,
+    "revenue_growth_pct": 23.7,
+    "net_profit_mn": 318.5,
+    "net_profit_growth_pct": 8.1,
+    "net_margin_pct": 19.9,
+    "ebitda_mn": 484.0,
+    "ebitda_margin_pct": 30.2,
+    "eps": 7.13
+  }
+}

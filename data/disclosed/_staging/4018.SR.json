@@ -1,0 +1,21 @@
+{
+  "ticker": "4018.SR",
+  "company": "Almoosa Health Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1416.3,
+    "revenue_growth_pct": 17.8,
+    "net_profit_mn": 236.5,
+    "net_profit_growth_pct": 379.3,
+    "net_margin_pct": 16.7,
+    "ebitda_mn": 361.0,
+    "ebitda_margin_pct": 25.5,
+    "eps": 5.36
+  }
+}

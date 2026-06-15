@@ -1,0 +1,21 @@
+{
+  "ticker": "3010.SR",
+  "company": "Arabian Cement Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1062.2,
+    "revenue_growth_pct": 23.8,
+    "net_profit_mn": 165.0,
+    "net_profit_growth_pct": 3.1,
+    "net_margin_pct": 15.5,
+    "ebitda_mn": 352.4,
+    "ebitda_margin_pct": 33.2,
+    "eps": 1.65
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "4326.SR",
+  "company": "Dar Al Majed Real Estate Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1277.0,
+    "revenue_growth_pct": -8.9,
+    "net_profit_mn": 261.9,
+    "net_profit_growth_pct": 22.6,
+    "net_margin_pct": 20.5,
+    "ebitda_mn": 305.7,
+    "ebitda_margin_pct": 23.9,
+    "eps": 0.87
+  }
+}

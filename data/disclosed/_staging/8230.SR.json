@@ -1,0 +1,19 @@
+{
+  "ticker": "8230.SR",
+  "company": "Al Rajhi Company for Cooperative Insurance",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 4546.7,
+    "revenue_growth_pct": -12.2,
+    "net_profit_mn": 455.0,
+    "net_profit_growth_pct": 36.9,
+    "net_margin_pct": 10.0,
+    "eps": 4.55
+  }
+}

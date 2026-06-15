@@ -1,0 +1,21 @@
+{
+  "ticker": "4163.SR",
+  "company": "Al-Dawaa Medical Services Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2024",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 6450.9,
+    "revenue_growth_pct": 12.4,
+    "net_profit_mn": 370.1,
+    "net_profit_growth_pct": 12.4,
+    "net_margin_pct": 5.7,
+    "ebitda_mn": 896.7,
+    "ebitda_margin_pct": 13.9,
+    "eps": 4.35
+  }
+}

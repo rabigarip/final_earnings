@@ -1,0 +1,21 @@
+{
+  "ticker": "000651.SZ",
+  "company": "Gree Electric Appliances, Inc. of Zhuhai",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 171118.2,
+    "revenue_growth_pct": -10.0,
+    "net_profit_mn": 29003.1,
+    "net_profit_growth_pct": -9.9,
+    "net_margin_pct": 16.9,
+    "ebitda_mn": 41668.7,
+    "ebitda_margin_pct": 24.4,
+    "eps": 5.2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticker": "GOOGL.MX",
+  "company": "Alphabet Inc.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 402836.0,
+    "revenue_growth_pct": 15.1,
+    "net_profit_mn": 132170.0,
+    "net_profit_growth_pct": 32.0,
+    "net_margin_pct": 32.8,
+    "ebitda_mn": 180698.0,
+    "ebitda_margin_pct": 44.9,
+    "eps": 10.81
+  }
+}

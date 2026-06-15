@@ -1,0 +1,21 @@
+{
+  "ticker": "4310.SR",
+  "company": "Knowledge Economic City Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 319.0,
+    "revenue_growth_pct": 100.9,
+    "net_profit_mn": -34.9,
+    "net_profit_growth_pct": 66.4,
+    "net_margin_pct": -10.9,
+    "ebitda_mn": -20.3,
+    "ebitda_margin_pct": -6.4,
+    "eps": -0.103
+  }
+}

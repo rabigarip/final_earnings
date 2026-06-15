@@ -1,0 +1,21 @@
+{
+  "ticker": "4164.SR",
+  "company": "Nahdi Medical Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 10213.2,
+    "revenue_growth_pct": 8.1,
+    "net_profit_mn": 830.7,
+    "net_profit_growth_pct": 1.2,
+    "net_margin_pct": 8.1,
+    "ebitda_mn": 1728.6,
+    "ebitda_margin_pct": 16.9,
+    "eps": 6.39
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "ticker": "1060.SR",
+  "company": "Saudi Awwal Bank",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 14841.6,
+    "revenue_growth_pct": 5.0,
+    "net_profit_mn": 8452.1,
+    "net_profit_growth_pct": 4.7,
+    "net_margin_pct": 56.9,
+    "eps": 3.81
+  }
+}

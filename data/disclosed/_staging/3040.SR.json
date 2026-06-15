@@ -1,0 +1,21 @@
+{
+  "ticker": "3040.SR",
+  "company": "Qassim Cement Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1133.3,
+    "revenue_growth_pct": 17.1,
+    "net_profit_mn": 259.9,
+    "net_profit_growth_pct": -9.6,
+    "net_margin_pct": 22.9,
+    "ebitda_mn": 419.9,
+    "ebitda_margin_pct": 37.1,
+    "eps": 2.37
+  }
+}

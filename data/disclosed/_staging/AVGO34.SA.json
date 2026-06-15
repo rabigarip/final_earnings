@@ -1,0 +1,21 @@
+{
+  "ticker": "AVGO34.SA",
+  "company": "Broadcom Inc.",
+  "currency": "USD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "USD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 63887.0,
+    "revenue_growth_pct": 23.9,
+    "net_profit_mn": 23126.0,
+    "net_profit_growth_pct": 292.3,
+    "net_margin_pct": 36.2,
+    "ebitda_mn": 34714.0,
+    "ebitda_margin_pct": 54.3,
+    "eps": 0.068
+  }
+}

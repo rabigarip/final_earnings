@@ -1,0 +1,21 @@
+{
+  "ticker": "9999.HK",
+  "company": "NetEase, Inc.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 112625.8,
+    "revenue_growth_pct": 7.0,
+    "net_profit_mn": 33759.8,
+    "net_profit_growth_pct": 13.7,
+    "net_margin_pct": 30.0,
+    "ebitda_mn": 38082.3,
+    "ebitda_margin_pct": 33.8,
+    "eps": 10.48
+  }
+}

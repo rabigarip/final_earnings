@@ -1,0 +1,20 @@
+{
+  "ticker": "M&M.NS",
+  "company": "Mahindra & Mahindra Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1977927.8,
+    "revenue_growth_pct": 24.6,
+    "net_profit_mn": 170988.5,
+    "net_profit_growth_pct": 32.3,
+    "net_margin_pct": 8.6,
+    "ebitda_mn": 420976.3,
+    "ebitda_margin_pct": 21.3
+  }
+}

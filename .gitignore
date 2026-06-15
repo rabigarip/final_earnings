@@ -38,5 +38,6 @@ Thumbs.db
 frontend/node_modules/
 frontend/dist/
 
-# Auto-grounding extractor candidates (regeneratable; promote individually after review)
-data/disclosed/_staging/
+# Auto-grounding candidates are COMMITTED so Render (read-only FS) can read
+# them offline — they're flagged auto_unverified in the deck/provenance, and a
+# reviewer promotes a file into data/disclosed/ to upgrade it to hand-verified.

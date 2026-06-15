@@ -1,0 +1,19 @@
+{
+  "ticker": "601336.SS",
+  "company": "New China Life Insurance Company Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 151980.0,
+    "revenue_growth_pct": 123.5,
+    "net_profit_mn": 36284.0,
+    "net_profit_growth_pct": 38.3,
+    "net_margin_pct": 23.9,
+    "eps": 11.63
+  }
+}

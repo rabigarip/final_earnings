@@ -1,0 +1,19 @@
+{
+  "ticker": "1050.SR",
+  "company": "Banque Saudi Fransi",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 10485.9,
+    "revenue_growth_pct": 9.0,
+    "net_profit_mn": 5353.4,
+    "net_profit_growth_pct": 17.8,
+    "net_margin_pct": 51.1,
+    "eps": 1.97
+  }
+}

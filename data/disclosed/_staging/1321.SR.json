@@ -1,0 +1,20 @@
+{
+  "ticker": "1321.SR",
+  "company": "East Pipes Integrated Company for Industry",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2297.7,
+    "revenue_growth_pct": 25.4,
+    "net_profit_mn": 573.3,
+    "net_profit_growth_pct": 50.0,
+    "net_margin_pct": 24.9,
+    "ebitda_mn": 655.8,
+    "ebitda_margin_pct": 28.5
+  }
+}

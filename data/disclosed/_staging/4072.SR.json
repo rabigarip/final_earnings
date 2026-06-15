@@ -1,0 +1,21 @@
+{
+  "ticker": "4072.SR",
+  "company": "MBC Group Co.",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 5390.9,
+    "revenue_growth_pct": 28.5,
+    "net_profit_mn": 382.5,
+    "net_profit_growth_pct": -4.4,
+    "net_margin_pct": 7.1,
+    "ebitda_mn": 573.4,
+    "ebitda_margin_pct": 10.6,
+    "eps": 1.15
+  }
+}

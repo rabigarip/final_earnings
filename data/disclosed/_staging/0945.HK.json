@@ -1,0 +1,18 @@
+{
+  "ticker": "0945.HK",
+  "company": "Manulife Financial Corporation",
+  "currency": "CAD",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CAD",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 53014.0,
+    "net_profit_mn": 5782.0,
+    "net_profit_growth_pct": 2.7,
+    "net_margin_pct": 10.9,
+    "eps": 3.07
+  }
+}

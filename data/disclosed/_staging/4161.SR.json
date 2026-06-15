@@ -1,0 +1,21 @@
+{
+  "ticker": "4161.SR",
+  "company": "BinDawood Holding Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 6348.0,
+    "revenue_growth_pct": 11.8,
+    "net_profit_mn": 269.9,
+    "net_profit_growth_pct": -0.8,
+    "net_margin_pct": 4.3,
+    "ebitda_mn": 938.3,
+    "ebitda_margin_pct": 14.8,
+    "eps": 0.24
+  }
+}

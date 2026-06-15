@@ -1,0 +1,21 @@
+{
+  "ticker": "601899.SS",
+  "company": "Zijin Mining Group Company Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 349079.1,
+    "revenue_growth_pct": 15.0,
+    "net_profit_mn": 51777.3,
+    "net_profit_growth_pct": 61.5,
+    "net_margin_pct": 14.8,
+    "ebitda_mn": 100679.9,
+    "ebitda_margin_pct": 28.8,
+    "eps": 1.91
+  }
+}

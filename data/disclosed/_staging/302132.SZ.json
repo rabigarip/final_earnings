@@ -1,0 +1,21 @@
+{
+  "ticker": "302132.SZ",
+  "company": "AVIC Chengdu Aircraft Company Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 75359.0,
+    "revenue_growth_pct": 15.8,
+    "net_profit_mn": 3432.3,
+    "net_profit_growth_pct": 6.5,
+    "net_margin_pct": 4.6,
+    "ebitda_mn": 6233.2,
+    "ebitda_margin_pct": 8.3,
+    "eps": 1.284
+  }
+}

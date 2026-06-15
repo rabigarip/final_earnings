@@ -1,0 +1,21 @@
+{
+  "ticker": "2270.SR",
+  "company": "Saudia Dairy & Foodstuff Company",
+  "currency": "SAR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "SAR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 2999.4,
+    "revenue_growth_pct": 5.0,
+    "net_profit_mn": 477.4,
+    "net_profit_growth_pct": -1.3,
+    "net_margin_pct": 15.9,
+    "ebitda_mn": 636.0,
+    "ebitda_margin_pct": 21.2,
+    "eps": 14.92
+  }
+}

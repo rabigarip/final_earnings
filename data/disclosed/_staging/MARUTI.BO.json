@@ -1,0 +1,20 @@
+{
+  "ticker": "MARUTI.BO",
+  "company": "Maruti Suzuki India Limited",
+  "currency": "INR",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2026",
+    "reporting_currency": "INR",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 1803501.0,
+    "revenue_growth_pct": 19.8,
+    "net_profit_mn": 146795.0,
+    "net_profit_growth_pct": 1.2,
+    "net_margin_pct": 8.1,
+    "ebitda_mn": 260989.0,
+    "ebitda_margin_pct": 14.5
+  }
+}

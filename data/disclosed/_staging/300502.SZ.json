@@ -1,0 +1,21 @@
+{
+  "ticker": "300502.SZ",
+  "company": "Eoptolink Technology Inc., Ltd.",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 24841.9,
+    "revenue_growth_pct": 187.3,
+    "net_profit_mn": 9531.9,
+    "net_profit_growth_pct": 235.9,
+    "net_margin_pct": 38.4,
+    "ebitda_mn": 11241.4,
+    "ebitda_margin_pct": 45.3,
+    "eps": 9.57
+  }
+}

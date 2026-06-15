@@ -1,0 +1,20 @@
+{
+  "ticker": "1898.HK",
+  "company": "China Coal Energy Company Limited",
+  "currency": "CNY",
+  "units": "millions",
+  "_status": "auto_unverified",
+  "_source": "yahoo_income_stmt",
+  "fy_highlights": {
+    "period": "FY 2025",
+    "reporting_currency": "CNY",
+    "source": "Yahoo Finance annual income statement (auto-extracted, unverified)",
+    "revenue_mn": 148056.7,
+    "revenue_growth_pct": -21.8,
+    "net_profit_mn": 14497.1,
+    "net_profit_growth_pct": -20.0,
+    "net_margin_pct": 9.8,
+    "ebitda_mn": 35293.8,
+    "ebitda_margin_pct": 23.8
+  }
+}
