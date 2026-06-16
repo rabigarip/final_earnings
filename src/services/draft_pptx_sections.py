@@ -140,9 +140,11 @@ OUTPUT FORMAT:
    - S2: three company-specific operating drivers that support the stance.
    - S3: what is most likely to move the stock on the print (qualitative).
    - S4: the single most material uncertainty and how it could flip the narrative.
-- `what_to_watch`: array of EXACTLY 4 short bullets (each ≤ 6 words, no wrapping, no numbers). Operational items the print should clarify (e.g. "Volume mix and pricing power", "Margin trajectory through cycle").
-- `catalysts`: array of EXACTLY 3 short bullets (each ≤ 5 words, no wrapping, no numbers). Each MUST anchor on either (a) a direction line in the Context facts above, OR (b) a theme present in the Recent headlines block. Do not invent catalysts that aren't grounded in those inputs. If you cannot find three, return an empty array.
-- `risks`: array of EXACTLY 3 short bullets (each ≤ 5 words, no wrapping, no numbers). Same grounding rule as catalysts. Do not output generic placeholders like "Macro / demand downside" or "Execution risk" unless a direction line or headline supports them. If you cannot find three, return an empty array.
+- `what_to_watch`: array of EXACTLY 4 bullets. Each is a specific operational item the print should clarify — 5 to 9 words, ONE line, no numbers. Each bullet must cover a DISTINCT line item, KPI, or driver (no two on the same topic). Prefer concrete levers ("Deposit cost trajectory and funding mix", "Fee income momentum outside core lending") over vague headings ("Margins", "Growth").
+- `catalysts`: array of EXACTLY 3 bullets. Each is a SPECIFIC upside driver written as a substantive clause of 8 to 15 words (may wrap to two lines), no numbers. Each MUST anchor on either (a) a direction line in the Context facts above, OR (b) a theme in the Recent headlines block. Name the MECHANISM, not a label — write "Positive revenue-surprise track record sets a beatable bar into the print", NOT "Positive revenue surprise".
+- `risks`: array of EXACTLY 3 bullets, same length, format, and grounding rule as catalysts. CRITICAL — each risk must address a DIFFERENT mechanism than every catalyst. NEVER write a risk that is merely the negation of a catalyst: catalyst "margin expansion" + risk "margin compression" is FORBIDDEN; catalyst "stronger loan growth" + risk "slowing loan growth" is FORBIDDEN. Each risk must name its own distinct exposure — a cost lever, a tougher comparison, an asset-quality or funding channel, a competitive or regulatory pressure.
+
+SPECIFICITY BAR (applies to catalysts, risks, and what_to_watch): every bullet must be recognizably about {company_name}'s actual business and this specific setup — not a phrase that could be pasted onto any company. Reject bare two-to-four-word labels. If you cannot ground three substantive, non-overlapping catalysts or risks, return FEWER (or an empty array) rather than padding with generic or mirror-image filler.
 
 Output ONLY the JSON object — no preface, no trailing prose, no code fences.
 """
