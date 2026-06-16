@@ -15,10 +15,17 @@ Endpoints:
 
 from __future__ import annotations
 import os
+import logging
 from pathlib import Path
 from contextlib import asynccontextmanager
 
 import json
+
+# Module logger. The calendar auto-refresh path (get_calendar /
+# _kickoff_auto_refresh) logs via `log`; without this it raised NameError
+# and 500'd whenever the calendar DB was cold/sparse (i.e. every fresh
+# Render deploy, since the DB lives in ephemeral /tmp).
+log = logging.getLogger(__name__)
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
@@ -238,10 +245,38 @@ def v2_upcoming(horizon_days: int = 14, family: str | None = None,
     from src.services.ticker_registry import _registry_index
 
     today = _dt_l.utcnow().date()
-    start = today.isoformat()
-    end = (today + _td_l(days=max(1, horizon_days))).isoformat()
-    events = list_calendar_events(start=start, end=end,
-                                    countries=None, confirmed_only=False)
+    horizon_end = today + _td_l(days=max(1, horizon_days))
+
+    # Gauge DB health over a wider window (same as /api/calendar) — so a
+    # legitimately quiet horizon doesn't retrigger a refresh on every load,
+    # and a cold DB (fresh Render deploy → empty /tmp) self-heals: kick off
+    # the same background backfill the calendar uses, then return what's there.
+    broad = list_calendar_events(
+        start=(today - _td_l(days=14)).isoformat(),
+        end=(today + _td_l(days=46)).isoformat(),
+        countries=None, confirmed_only=False,
+    )
+    try:
+        if len(broad) < 20:
+            with _calendar_jobs_lock:
+                any_running = any(
+                    j.get("status") in ("queued", "running")
+                    for j in _calendar_jobs.values()
+                )
+            if not any_running:
+                _kickoff_auto_refresh()
+    except Exception as exc:
+        log.warning("upcoming auto-refresh trigger failed: %s", exc)
+
+    # Filter the broad set to the upcoming horizon [today, horizon_end].
+    events = []
+    for ev in broad:
+        try:
+            d = _dt_l.strptime(ev["event_date"], "%Y-%m-%d").date()
+        except Exception:
+            continue
+        if today <= d <= horizon_end:
+            events.append(ev)
 
     reg = _registry_index()
     # Existing decks on disk → recent_deck_exists flag.
