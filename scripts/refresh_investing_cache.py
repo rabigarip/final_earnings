@@ -27,10 +27,14 @@ from src.providers.probe_investing import (
 def _fetch_and_track(ticker: str) -> dict[str, bool]:
     """Pull every Investing page we use for `ticker` and commit a snapshot
     per kind under data/investing/. Returns a per-kind ok/error map."""
-    slug = _SLUGS.get(ticker.upper())
+    # Resolve via _slug() so auto-resolved slugs (data/investing_slugs.json,
+    # e.g. the Gulf/Oman names) are captured too — not just the hand-curated
+    # _SLUGS. Without this, every resolved-only ticker was silently skipped.
+    slug = _slug(ticker)
     out: dict[str, bool] = {}
     if not slug:
-        print(f"[skip] {ticker}: no slug in _SLUGS — add it first", file=sys.stderr)
+        print(f"[skip] {ticker}: no slug resolved — add it to _SLUGS or "
+              f"data/investing_slugs.json first", file=sys.stderr)
         return {"slug": False}
 
     # Equity page
