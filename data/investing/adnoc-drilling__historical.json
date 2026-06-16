@@ -1,10 +1,6 @@
 {
   "close_series": [
     {
-      "date": "2025-05-30",
-      "close": 5.25
-    },
-    {
       "date": "2025-06-02",
       "close": 5.26000022888184
     },
@@ -1029,10 +1025,10 @@
   "range_52w_high": 6.42999982833862,
   "perf_1d": 4.1,
   "perf_1w": 6.2827,
-  "perf_1m": -1.7742,
+  "perf_1m": -2.56,
   "perf_3m": 26.875,
   "perf_6m": 11.5385,
   "perf_ytd": 13.6194,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-06-13T13:00:13.587Z"
+  "perf_updated_at": "2026-06-14T13:00:10.629Z"
 }
