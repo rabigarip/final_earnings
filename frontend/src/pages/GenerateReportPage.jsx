@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import PanelDecks from "../components/PanelDecks";
 import BloombergUpload from "../components/BloombergUpload";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "";
@@ -66,10 +65,54 @@ function formatApiErrorDetail(detail) {
 
 function errorToUserMessage(e) {
   if (e == null) return "Unexpected error";
+  // Browser network failures surface as a bare "Failed to fetch" TypeError —
+  // translate to something the analyst can act on (it's almost always the
+  // server briefly redeploying or a transient network blip, not a real bug).
+  if (e instanceof TypeError && /fetch/i.test(e.message || "")) {
+    return "Could not reach the server (it may be redeploying). Please try again in a moment.";
+  }
   if (typeof e === "string") return e;
   if (e instanceof Error && typeof e.message === "string") return e.message;
   if (typeof e === "object" && typeof e.message === "string") return e.message;
   return toErrorText(e);
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// A bare fetch() throws "Failed to fetch" on any transient network drop
+// (Render swapping instances on deploy, a cold edge, a Wi-Fi blip). For a
+// 30–90s generate that's a jarring first impression. warmServer() pings
+// /health first so the common "server waking up" case fails fast and
+// recovers, and postJsonWithRetry() retries the actual call once on a
+// network-level error before giving up.
+async function warmServer() {
+  try {
+    await fetch(`${API_BASE}/health`, { cache: "no-store" });
+  } catch {
+    /* ignore — the real call below will surface any persistent outage */
+  }
+}
+
+async function postJsonWithRetry(url, body, { retries = 1, backoffMs = 2500, onRetry } = {}) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      return await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+    } catch (e) {
+      // Only retry network-level failures (TypeError). An HTTP error response
+      // resolves the promise (createRes.ok handles it) and never lands here.
+      lastErr = e;
+      if (attempt < retries) {
+        if (onRetry) onRetry(attempt + 1, retries);
+        await sleep(backoffMs);
+      }
+    }
+  }
+  throw lastErr;
 }
 
 export default function GenerateReportPage() {
@@ -146,16 +189,21 @@ export default function GenerateReportPage() {
 
   const generateAndDownload = async () => {
     setError("");
-    setStatus("Generating report...");
+    setStatus("Waking the server...");
     setLoading(true);
     setLastReport(null);
     try {
       const tk = ticker.trim().toUpperCase();
-      const createRes = await fetch(`${API_BASE}/api/reports`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ticker: tk, skip_llm: skipLlm }),
-      });
+      await warmServer();
+      setStatus("Generating report (30–90s)...");
+      const createRes = await postJsonWithRetry(
+        `${API_BASE}/api/reports`,
+        { ticker: tk, skip_llm: skipLlm },
+        {
+          onRetry: (n, total) =>
+            setStatus(`Network hiccup — retrying (${n}/${total})...`),
+        },
+      );
       if (!createRes.ok) {
         const err = await createRes.json().catch(() => ({}));
         const msg = toErrorText(
@@ -271,14 +319,13 @@ export default function GenerateReportPage() {
 
   return (
     <div className="min-h-[70vh] px-4">
-      <PanelDecks />
-      <BloombergUpload onUploaded={() => { /* PanelDecks reloads naturally on next render */ }} />
-      <div className="flex items-center justify-center pt-2 pb-8">
+      <BloombergUpload onUploaded={() => {}} />
+      <div className="flex items-center justify-center pt-6 pb-8">
         <div className="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h1 className="text-2xl font-semibold mb-2">Generate a custom report</h1>
+        <h1 className="text-2xl font-semibold mb-2">Generate a report</h1>
         <p className="text-sm text-slate-400 mb-6">
-          Off-panel ticker? Enter any symbol (e.g. AAPL, MSFT, 2222.SR) to
-          run an on-demand preview.
+          Enter any symbol (e.g. 1180.SR, BKMB.OM, 2222.SR) to run an
+          on-demand preview through the full provider stack (~30–90s).
         </p>
 
         <label className="block text-sm mb-2 text-slate-300" htmlFor="ticker-input">

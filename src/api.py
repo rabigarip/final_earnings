@@ -219,44 +219,90 @@ def _run_to_report_row(run: dict) -> dict:
 @app.get("/api/v2/upcoming")
 def v2_upcoming(horizon_days: int = 14, family: str | None = None,
                   country: str | None = None):
-    """Read data/calendar/upcoming.json and return the active set.
+    """Upcoming earnings in the next `horizon_days`, from the LIVE calendar
+    DB (reporting_calendar) — the same source as /api/calendar.
+
+    Previously this read a static data/calendar/upcoming.json that went
+    stale (and was empty on Render), so the dashboard always showed
+    "No earnings in the next 14 days" even when the calendar had events.
+    Now it queries the DB so the dashboard and calendar never disagree.
 
     Optional filters:
       family   — comma-separated template families (bank,energy,tech,...)
       country  — comma-separated ISO-2 codes (SA,OM,AE,IN,...)
 
-    Backs the dashboard's main "Upcoming Earnings" view. Each row
-    carries a `ticker` the analyst can click to generate a deck.
+    Each row carries a `ticker` the analyst can click to generate a deck.
     """
-    from pathlib import Path as _P
-    import json as _json
-    p = _P(__file__).resolve().parents[1] / "data" / "calendar" / "upcoming.json"
-    if not p.is_file():
-        return {"generated_at": None, "horizon_days": horizon_days,
-                "tickers": [], "warning": "upcoming.json not present — "
-                "run scripts/build_earnings_calendar.py"}
-    payload = _json.loads(p.read_text())
-    tickers = payload.get("tickers") or []
-    if family:
-        fams = {f.strip().lower() for f in family.split(",") if f.strip()}
-        tickers = [t for t in tickers if t.get("template_family", "").lower() in fams]
-    if country:
-        ccs = {c.strip().upper() for c in country.split(",") if c.strip()}
-        tickers = [t for t in tickers if t.get("exchange_country", "").upper() in ccs]
-    # Add a recent_deck_exists flag — analyst sees at a glance whether
-    # there's already a deck on disk for this ticker.
+    from datetime import datetime as _dt_l, timedelta as _td_l
+    from src.storage.db import list_calendar_events
+    from src.services.ticker_registry import _registry_index
+
+    today = _dt_l.utcnow().date()
+    start = today.isoformat()
+    end = (today + _td_l(days=max(1, horizon_days))).isoformat()
+    events = list_calendar_events(start=start, end=end,
+                                    countries=None, confirmed_only=False)
+
+    reg = _registry_index()
+    # Existing decks on disk → recent_deck_exists flag.
+    existing: set[str] = set()
     try:
         from src.config import report_output_dir
         out_dir = report_output_dir()
-        existing = {p.stem.split("_", 1)[0] for p in out_dir.glob("*.pptx")} if out_dir else set()
-        for t in tickers:
-            t["recent_deck_exists"] = (t["ticker"] in existing)
+        if out_dir:
+            existing = {p.stem.split("_", 1)[0] for p in out_dir.glob("*.pptx")}
     except Exception:
         pass
+
+    fams = {f.strip().lower() for f in family.split(",") if f.strip()} if family else None
+    ccs = {c.strip().upper() for c in country.split(",") if c.strip()} if country else None
+
+    # One row per ticker — keep the earliest upcoming event. Enrich with
+    # registry fields (template_family / exchange_country) the dashboard renders.
+    by_ticker: dict[str, dict] = {}
+    for ev in events:
+        tk = ev.get("ticker")
+        if not tk:
+            continue
+        r = reg.get(tk) or {}
+        fam = (r.get("template_family") or "other").lower()
+        cc = (r.get("exchange_country") or "").upper()
+        if fams and fam not in fams:
+            continue
+        if ccs and cc not in ccs:
+            continue
+        try:
+            ed = _dt_l.strptime(ev["event_date"], "%Y-%m-%d").date()
+            days_until = (ed - today).days
+        except Exception:
+            ed = None
+            days_until = None
+        row = {
+            "ticker": tk,
+            "company_name": ev.get("company_name") or r.get("company_name") or tk,
+            "earnings_date": ev.get("event_date"),
+            "days_until": days_until,
+            "next_quarter_label": ev.get("period_label") or "",
+            "template_family": fam,
+            "exchange_country": cc,
+            "confirmed": bool(ev.get("confirmed")),
+            "recent_deck_exists": tk in existing,
+        }
+        prev = by_ticker.get(tk)
+        if prev is None or (
+            days_until is not None
+            and (prev["days_until"] is None or days_until < prev["days_until"])
+        ):
+            by_ticker[tk] = row
+
+    rows = sorted(
+        by_ticker.values(),
+        key=lambda x: (x["days_until"] is None, x["days_until"] if x["days_until"] is not None else 0),
+    )
     return {
-        "generated_at": payload.get("generated_at"),
-        "horizon_days": payload.get("horizon_days", horizon_days),
-        "tickers": tickers,
+        "generated_at": _dt_l.utcnow().isoformat() + "Z",
+        "horizon_days": horizon_days,
+        "tickers": rows,
     }
 
 
