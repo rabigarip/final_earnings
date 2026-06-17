@@ -1391,6 +1391,23 @@ def build_valuation_data(ticker: str, *, analyst_name: str = "Jabal Research",
         if _vf_obs and isinstance(_vf_obs.value, dict):
             _ev_num = _vf_obs.value.get("enterprise_to_ebitda") or _vf_obs.value.get("enterpriseToEbitda")
 
+        # Fall back to the committed peer cache for P/B and EV/EBITDA when
+        # canonical lacks them — same reason the peer rows use it: Yahoo's
+        # .info (the source of these multiples) is rate-limited from Render's
+        # datacenter IP, so the subject's own P/B / EV/EBITDA otherwise render
+        # as "—" even though Yahoo has them. Refreshed by refresh_peer_cache.
+        if not isinstance(_pb_num, (int, float)) or not isinstance(_ev_num, (int, float)):
+            try:
+                from src.services.fetch_peers import _peer_row_from_committed_cache
+                _cached_self = _peer_row_from_committed_cache(ticker)
+            except Exception:
+                _cached_self = None
+            if _cached_self:
+                if not isinstance(_pb_num, (int, float)) and isinstance(_cached_self.get("pb"), (int, float)):
+                    _pb_num = _cached_self["pb"]
+                if not isinstance(_ev_num, (int, float)) and isinstance(_cached_self.get("ev_ebitda"), (int, float)):
+                    _ev_num = _cached_self["ev_ebitda"]
+
         # Dividend yield — already on slide 1 as a percent.
         _dy_obs = cv.get("dividend_yield")
         _dy_num = _dy_obs.value if _dy_obs and isinstance(_dy_obs.value, (int, float)) else None

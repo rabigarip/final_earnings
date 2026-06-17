@@ -93,7 +93,13 @@ def main() -> int:
     else:
         subjects = ([t.strip() for t in args.for_names.split(",") if t.strip()]
                     if args.for_names else _all_universe_tickers())
-        peers = _distinct_peer_set(subjects)
+        # Cache BOTH each name's peers AND the names themselves — the subject
+        # row on slide 3 also reads P/B / EV/EBITDA from this cache when
+        # canonical lacks them (Yahoo .info blocked from Render).
+        peers = sorted(
+            {s.strip().upper() for s in subjects if s.strip()}
+            | set(_distinct_peer_set(subjects))
+        )
 
     if not peers:
         print("No peers to fetch.")
