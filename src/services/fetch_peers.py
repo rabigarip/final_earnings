@@ -56,6 +56,54 @@ def _iso_now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+# ── Committed full-row peer cache (repo-tracked) ─────────────────
+#
+# Yahoo's `.info` (quoteSummary) endpoint — the source of peer P/E, P/B,
+# EV/EBITDA, div yield, 1Y return — is rate-limited from Render's datacenter
+# IP. Peers with no Investing snapshot (global/US names like NTR, MOS, CF,
+# YAR.OL) therefore come back EMPTY on Render and the slide-3 peer table
+# renders a row of dashes. Fix: pre-warm each peer's full row from a
+# non-blocked IP (local / GitHub Action) and commit data/peers_cache.json;
+# fetch_peer_rows() reads it as a last resort before emitting a blank row.
+# Refreshed via `python -m scripts.refresh_peer_cache`.
+
+_COMMITTED_PEER_CACHE: dict[str, dict] | None = None
+
+
+def _committed_peer_cache_path() -> Path:
+    from src.config import root
+    return root() / "data" / "peers_cache.json"
+
+
+def _committed_peer_rows() -> dict[str, dict]:
+    """Repo-tracked peer rows keyed by UPPER ticker. Read once per process."""
+    global _COMMITTED_PEER_CACHE
+    if _COMMITTED_PEER_CACHE is None:
+        try:
+            raw = json.loads(_committed_peer_cache_path().read_text(encoding="utf-8"))
+            _COMMITTED_PEER_CACHE = {k.upper(): v for k, v in raw.items()} if isinstance(raw, dict) else {}
+        except Exception:
+            _COMMITTED_PEER_CACHE = {}
+    return _COMMITTED_PEER_CACHE
+
+
+def _peer_row_from_committed_cache(ticker: str) -> dict | None:
+    """Return a committed-cache peer row (stripped of bookkeeping) when it
+    carries real data, else None."""
+    rec = _committed_peer_rows().get((ticker or "").upper())
+    if not rec:
+        return None
+    has_data = (rec.get("market_cap_usd") is not None
+                or rec.get("pe") is not None
+                or rec.get("pb") is not None)
+    if not has_data:
+        return None
+    row = {k: v for k, v in rec.items() if k != "as_of"}
+    row.setdefault("ticker", ticker)
+    row.setdefault("name", ticker)
+    return row
+
+
 def _derive_pb(info: dict, current_price: float | None) -> float | None:
     """Pull P/B from yfinance info with two derivations as fallback.
 
@@ -275,11 +323,16 @@ def fetch_peer_rows(peer_tickers: list[str]) -> list[dict]:
             logger.warning("peer fetch failed for %s: %s", tt, exc)
             info = {}
             tk = None
-        # If yfinance returned nothing usable, try Investing.com.
+        # If yfinance returned nothing usable (e.g. Yahoo .info blocked from
+        # Render's IP), try Investing.com, then the committed peer cache.
         if not (info.get("longName") or info.get("shortName") or info.get("marketCap")):
             inv_row = _peer_row_from_investing(tt)
+            cached_row = _peer_row_from_committed_cache(tt) if not inv_row else None
             if inv_row:
                 rows.append(inv_row)
+            elif cached_row:
+                logger.info("peer %s: live + Investing missed — using committed cache", tt)
+                rows.append(cached_row)
             else:
                 # Last resort: ticker-only row so the table layout doesn't break.
                 rows.append({
