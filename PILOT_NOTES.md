@@ -19,10 +19,12 @@ prose, or any ticker that errors **twice in a row**.
 - **Transient "retrying…":** the first click after an idle period or right
   after a deploy may briefly retry — it recovers on its own. If a generate ever
   errors, just click **Generate** again.
-- **Gulf history charts:** Yahoo-blind Gulf names (Oman `.OM`, some `.BH`/`.QA`)
-  produce full prose and headline numbers, but their slide-3 *history charts*
-  can be blank — that time-series data isn't reachable from the server's IP yet.
-  (Fast-follow fix planned.)
+- **Some non-Oman Gulf history charts:** Oman (`.OM`) names now render full
+  slide-3 charts (committed Investing snapshots). A few other Yahoo-blind names
+  in thinly-covered markets (some `.BH`/`.QA`/`.KW`/`.CA`/`.PS`) may still show
+  blank *history charts* where no snapshot exists yet — their prose and headline
+  numbers are unaffected. Note: the very first deck for any name right after a
+  deploy can be chart-light (cold cache); regenerating fills it.
 - **Calendar coverage:** reporting dates are most complete for India, China and
   Saudi names; Gulf/Oman dates are sparse (data-provider limitation), so the
   Calendar/Dashboard may look empty when filtered to those markets.
