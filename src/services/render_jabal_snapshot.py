@@ -1035,11 +1035,28 @@ def build_snapshot_data(ticker: str, *, analyst_name: str = "Jabal Research",
             return x
 
     # Format helpers
+    def _price_dp(v: float) -> int:
+        """Decimals scaled to price magnitude. Sub-1.0 prices (e.g. OMR names
+        ~0.45) need 3+ dp so the displayed last close, target, and the
+        upside% reconcile — at 2 dp a 0.5368 target shows '0.54' and the
+        upside (computed from the unrounded value) looks wrong vs the
+        displayed numbers."""
+        av = abs(v)
+        if av == 0 or av >= 1:
+            return 2
+        if av >= 0.1:
+            return 3
+        if av >= 0.01:
+            return 4
+        return 5
+
     def _money(x):
         if x is None:
             return "—"
         try:
-            return f"{currency} {_scale(float(x)):,.2f}" if currency else f"{_scale(float(x)):,.2f}"
+            v = _scale(float(x))
+            dp = _price_dp(v)
+            return f"{currency} {v:,.{dp}f}" if currency else f"{v:,.{dp}f}"
         except (TypeError, ValueError):
             return "—"
 
@@ -1275,9 +1292,11 @@ def build_snapshot_data(ticker: str, *, analyst_name: str = "Jabal Research",
     target_fmt = "—"
     try:
         if target_mean is not None:
+            _tv = float(target_mean)
+            _tdp = _price_dp(_tv)
             target_fmt = (
-                f"{currency} {float(target_mean):,.2f}" if currency
-                else f"{float(target_mean):,.2f}"
+                f"{currency} {_tv:,.{_tdp}f}" if currency
+                else f"{_tv:,.{_tdp}f}"
             )
     except (TypeError, ValueError):
         pass
