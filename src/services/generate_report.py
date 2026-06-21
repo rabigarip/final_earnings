@@ -16,6 +16,35 @@ from src.models.step_result import Status, StepResult, StepTimer
 STEP = "generate_report"
 
 
+def _omani_next_earnings(period_label: str, current: str) -> str:
+    """Omani MSX disclosure rule: listed companies have up to ~15 days after
+    quarter-end to release (unaudited) results. Yahoo/Investing estimated
+    dates for .OM names are unreliable (OQEP showed a Q2 print as "17 Aug",
+    weeks past the deadline). Return the regulatory window ("by <date>")
+    unless `current` is already a plausible date inside that window (i.e. a
+    real announcement). Falls back to `current` if the quarter can't be parsed."""
+    import re
+    from datetime import date, datetime, timedelta
+    m = re.search(r"Q([1-4])\s+(\d{4})", period_label or "")
+    if not m:
+        return current
+    q, y = int(m.group(1)), int(m.group(2))
+    mm, dd = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}[q]
+    qend = date(y, mm, dd)
+    deadline = qend + timedelta(days=15)
+    cur = (current or "").strip()
+    for fmt in ("%Y-%m-%d", "%d %b %Y", "%d %B %Y", "%m/%d/%Y", "%b %d, %Y"):
+        try:
+            d = datetime.strptime(cur, fmt).date()
+        except ValueError:
+            continue
+        # A date already in the plausible window is likely the real release.
+        if qend - timedelta(days=3) <= d <= deadline + timedelta(days=7):
+            return current
+        break
+    return "by " + deadline.strftime("%d %b %Y")
+
+
 def _write_jabal_preview(payload: ReportPayload, out_path: Path,
                           memo_data: dict | None) -> None:
     """Render the 3-slide Jabal deck via the new render_jabal_* modules,
@@ -186,6 +215,11 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
                 report_date = str(path)
                 break
         report_date = report_date or "TBA"
+
+    # Omani names: show the regulatory disclosure window instead of an
+    # unreliable hard estimate (results due within ~15 days of quarter-end).
+    if ticker.upper().endswith(".OM"):
+        report_date = _omani_next_earnings(period_label, report_date)
 
     # Load curated peer tickers (from company_master.peer_group) and
     # enrich them with yfinance — drives slide 3's peer table.
