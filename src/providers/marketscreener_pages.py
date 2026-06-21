@@ -233,13 +233,22 @@ def _read_snapshot(cache_slug: str) -> str | None:
         candidates.append(p)
     candidates.extend(_short_snapshot_paths(cache_slug))
     for path in candidates:
-        if path is None or not path.exists():
+        if path is None:
             continue
+        # Snapshots may be committed gzip-compressed (ms_*.html.gz) — raw MS
+        # HTML is ~0.5 MB each, so the China A-share set alone is ~250 MB
+        # uncompressed but ~25 MB gzipped. Transparently read either form.
+        gz = path.with_suffix(path.suffix + ".gz")
+        text = None
         try:
-            text = path.read_text(encoding="utf-8")
+            if path.exists():
+                text = path.read_text(encoding="utf-8")
+            elif gz.exists():
+                import gzip as _gzip
+                text = _gzip.decompress(gz.read_bytes()).decode("utf-8", "ignore")
         except Exception:
             continue
-        if _is_blocked_response(text):
+        if text is None or _is_blocked_response(text):
             continue
         return text
     return None
