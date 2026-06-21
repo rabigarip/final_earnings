@@ -152,8 +152,41 @@ def registry_peer_set(ticker: str) -> list[str]:
             return -99.0
         return -abs(math.log(mcap) - math.log(other_mcap))
 
-    same_industry: list[tuple[float, str]] = []
-    same_family: list[tuple[float, str]] = []
+    import re as _re
+
+    def _ind_tokens(s: str) -> set[str]:
+        return {w for w in _re.split(r"[^a-z]+", (s or "").lower()) if len(w) > 3}
+
+    # Coarse industry clusters so a thin-industry name tops up with ADJACENT
+    # industries (ZTE Hardware → Semiconductors) before distant ones (fintech
+    # / media), even when they share the same broad template_family.
+    _CLUSTERS = (
+        ("tech_hw", ("hardware", "semiconductor", "electronic", "communication equip",
+                     "technology hardware", "components")),
+        ("tech_sw", ("software", "internet", "interactive media", "it services", "fintech")),
+        ("financials", ("bank", "insurance", "capital markets", "diversified financ")),
+        ("energy", ("oil", "gas", "energy", "refin", "petro")),
+        ("materials", ("chemical", "metal", "mining", "steel", "fertil", "materials", "cement")),
+        ("consumer", ("food", "beverage", "retail", "consumer", "apparel", "auto")),
+        ("health", ("pharma", "health", "biotech", "medical")),
+        ("realestate", ("real estate", "reit", "property")),
+        ("telecom", ("telecom", "wireless", "communication services")),
+        ("utilities", ("utilit", "power", "electric")),
+    )
+
+    def _cluster(s: str) -> str | None:
+        il = (s or "").lower()
+        for name, keys in _CLUSTERS:
+            if any(k in il for k in keys):
+                return name
+        return None
+
+    subj_tokens = _ind_tokens(ind)
+    subj_cluster = _cluster(ind)
+
+    region_industry: list[tuple[float, str]] = []   # same region + same industry
+    global_industry: list[tuple[float, str]] = []   # any region + same industry
+    region_family: list[tuple[int, float, str]] = []  # same region + same family
     for t, r in _registry_index().items():
         if t == tkr_u:
             continue
@@ -164,19 +197,33 @@ def registry_peer_set(ticker: str) -> list[str]:
         # Skip the subject's own dual-listings (same company on another venue).
         if grp and (r.get("company_group") or "").strip() == grp:
             continue
-        if _region_group(r.get("exchange_country")) != region:
-            continue
+        same_region = _region_group(r.get("exchange_country")) == region
+        r_ind = (r.get("industry") or "").strip().lower()
         prox = _prox(r.get("market_cap_usd"))
-        if ind and (r.get("industry") or "").strip().lower() == ind:
-            same_industry.append((prox, t))
-        elif r.get("template_family") == fam:
-            same_family.append((prox, t))
+        if ind and r_ind == ind:
+            (region_industry if same_region else global_industry).append((prox, t))
+        elif same_region and r.get("template_family") == fam:
+            # Rank family top-ups by (same cluster, word overlap) so a
+            # hardware name pulls semiconductors/electronics before a
+            # fintech-software name (ZTE no longer lists RoyalFlush).
+            cl = _cluster(r_ind)
+            score = (2 if (subj_cluster and cl == subj_cluster) else 0) \
+                + len(subj_tokens & _ind_tokens(r_ind))
+            region_family.append((score, prox, t))
 
-    same_industry.sort(key=lambda c: -c[0])     # closest size first
-    same_family.sort(key=lambda c: -c[0])
-    chosen = [t for _, t in same_industry[:6]]
-    if len(chosen) < 5:                          # top up from the family pool
-        chosen += [t for _, t in same_family[: (6 - len(chosen))]]
+    region_industry.sort(key=lambda c: -c[0])
+    global_industry.sort(key=lambda c: -c[0])
+    region_family.sort(key=lambda c: (-c[0], -c[1]))  # relatedness desc, then size
+
+    chosen: list[str] = [t for _, t in region_industry]
+    for _, t in global_industry:                       # then same industry, any region
+        if len(chosen) >= 6:
+            break
+        chosen.append(t)
+    for _ov, _px, t in region_family:                  # then closest-industry family
+        if len(chosen) >= 5:
+            break
+        chosen.append(t)
     return chosen[:6]
 
 
