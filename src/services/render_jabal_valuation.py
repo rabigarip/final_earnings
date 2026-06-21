@@ -190,12 +190,26 @@ def _pe_range_chart(slide, left: float, top: float, width: float, height: float,
 
 # ── Peer table ────────────────────────────────────────────────
 
-def _peer_label(ticker: str, sector: str = "", industry: str = "") -> str:
-    """Derive a peer-table sub-label from the ticker's exchange suffix and
-    its sector/industry. Returns a phrase like 'GCC bank peers',
-    'India banking peers', 'China internet peers'. Falls back to
-    'Selected global peers'."""
+def _peer_region_of(ticker: str) -> str:
+    """Map a ticker's exchange suffix to a peer-region bucket."""
     suf = ticker.rsplit(".", 1)[-1].upper() if "." in ticker else ""
+    if suf in {"SR", "AE", "QA", "OM", "KW", "BH"}:
+        return "GCC"
+    if suf in {"NS", "BO"}:
+        return "India"
+    if suf == "HK":
+        return "China/HK"
+    if suf in {"SS", "SZ"}:
+        return "China"
+    return "Global"
+
+
+def _peer_label(ticker: str, sector: str = "", industry: str = "",
+                peer_tickers: list[str] | None = None) -> str:
+    """Derive a peer-table sub-label from sector/industry and the region of
+    the ACTUAL peers. A GCC name benchmarked against global comps (e.g.
+    SABIC vs NTR/MOS/CF, OQEP vs COP/EOG) is a 'Global ... peers' set, not
+    'GCC ...' — the label follows the peers, not just the subject's exchange."""
     s = (sector or "").lower()
     i = (industry or "").lower()
     text = f"{s} {i}"
@@ -206,17 +220,16 @@ def _peer_label(ticker: str, sector: str = "", industry: str = "") -> str:
     is_internet = any(k in text for k in ("internet", "interactive media", "software—internet"))
     is_auto = "auto" in text or "vehicle" in text
     is_metal = "steel" in text or "metal" in text or "mining" in text
-    gcc = {"SR","AE","QA","OM","KW","BH"}
-    india = {"NS","BO"}
-    china = {"HK","SS","SZ"}
-    if suf in gcc:
-        region = "GCC"
-    elif suf in india:
-        region = "India"
-    elif suf in china:
-        region = "China/HK" if suf == "HK" else "China"
-    else:
-        region = "Global"
+
+    subj_region = _peer_region_of(ticker)
+    region = subj_region
+    # When the comp set is supplied, label by where the PEERS actually sit:
+    # if fewer than half share the subject's region, it's a global comp set.
+    peers = [t for t in (peer_tickers or []) if t]
+    if peers:
+        same = sum(1 for t in peers if _peer_region_of(t) == subj_region)
+        if same * 2 < len(peers):
+            region = "Global"
     if is_bank:
         return f"{region} bank peers"
     if is_oil:
@@ -1150,7 +1163,10 @@ def build_valuation_data(ticker: str, *, analyst_name: str = "Jabal Research",
     # "Selected Global Peers" when sector/region can't be inferred.
     industry = (profile.value.get("industry") if profile and isinstance(profile.value, dict) else "") or ""
     sector   = (profile.value.get("sector")   if profile and isinstance(profile.value, dict) else "") or ""
-    peer_table_label = _peer_label(ticker, sector, industry)
+    peer_table_label = _peer_label(
+        ticker, sector, industry,
+        peer_tickers=[p.get("ticker") for p in peers if isinstance(p, dict) and p.get("ticker")],
+    )
 
     # is_bank from curated company_master; controls whether the peer table
     # third multiples column renders EV/EBITDA or P/TBV.
