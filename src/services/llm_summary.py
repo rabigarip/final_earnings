@@ -1247,14 +1247,19 @@ def _validate_llm_output(payload: dict, ctx: dict) -> dict:
     # at true sentence ends.
     thesis = payload.get("thesis_paragraph") or ""
     if thesis:
+        # Non-destructive (same policy as catalysts/risks below). Dropping a
+        # sentence whose number didn't trace used to amputate S2 — the
+        # REQUIRED company-figure sentence (e.g. "net profit growth of
+        # +13.3%") — leaving a generic ~38-word stub. The prompt already
+        # forces S2's figure to come from the data block; a near-miss on
+        # rounding shouldn't gut the Executive Summary. Keep the prose; the
+        # tier-3 QA flags any untraceable number instead of deleting it.
+        cleaned["thesis_paragraph"] = thesis.strip()
         sentences = _re.split(r"(?<=[.!?])\s+(?=[A-Z])", thesis.strip())
-        if not sentences:
-            sentences = [thesis]
-        kept = [s.strip() for s in sentences if _validate_sentence(s, allowed)]
-        cleaned["thesis_paragraph"] = " ".join(kept).strip()
-        dropped = len(sentences) - len(kept)
-        if dropped:
-            log.warning("Dropped %d thesis sentence(s) with ungrounded numbers", dropped)
+        ungrounded = [s for s in sentences if not _validate_sentence(s, allowed)]
+        if ungrounded:
+            log.info("[validate] %d thesis sentence(s) carry an ungrounded "
+                     "number (kept; flagged by QA)", len(ungrounded))
 
     # Highlights: number-trace + ≤20-word cap so the pill doesn't overflow.
     hl = payload.get("highlights") or []

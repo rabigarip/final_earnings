@@ -1641,21 +1641,28 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     #   2. generate_summary — standalone fallback (e.g. build_thesis_data
     #      called directly without a pipeline, or for back-compat).
     #   3. deterministic template — when the LLM is off/unavailable.
-    sections = (memo_data or {}).get("pptx_sections") or {}
+    # Prefer generate_summary — the figures-driven "Executive Summary" flow
+    # (focus → supporting company figure → what to watch → valuation) plus
+    # figure-rich catalysts/risks the research team approved (the May-31
+    # gold standard). It's cached per (ticker, context_hash) and slide 1
+    # already calls it for the highlights, so reusing it here is free. Fall
+    # back to the pipeline's draft_pptx_sections (qualitative, no numbers),
+    # then the deterministic template.
     llm = None
-    if isinstance(sections, dict) and (sections.get("investment_thesis") or "").strip():
-        llm = {
-            "thesis_paragraph": sections.get("investment_thesis"),
-            "catalysts": sections.get("catalysts") or [],
-            "risks": sections.get("risks") or [],
-            "watch_list": sections.get("what_to_watch") or [],
-        }
-    else:
-        try:
-            from src.services.llm_summary import generate_summary
-            llm = generate_summary(ticker)
-        except Exception:
-            llm = None
+    try:
+        from src.services.llm_summary import generate_summary
+        llm = generate_summary(ticker)
+    except Exception:
+        llm = None
+    if not (isinstance(llm, dict) and (llm.get("thesis_paragraph") or "").strip()):
+        sections = (memo_data or {}).get("pptx_sections") or {}
+        if isinstance(sections, dict) and (sections.get("investment_thesis") or "").strip():
+            llm = {
+                "thesis_paragraph": sections.get("investment_thesis"),
+                "catalysts": sections.get("catalysts") or [],
+                "risks": sections.get("risks") or [],
+                "watch_list": sections.get("what_to_watch") or [],
+            }
     summary = (llm or {}).get("thesis_paragraph") or _template_exec_summary(
         cv, commodities_obs, macro_obs, ticker=ticker)
     # Look up listing currency from company_master so the table can label
