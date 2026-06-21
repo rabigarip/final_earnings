@@ -90,8 +90,12 @@ def _qfmt_date(dt: datetime) -> str:
     return f"Q{q} '{str(dt.year)[-2:]}"
 
 
-def _fig_to_png(fig, dpi: int = 180) -> bytes:
-    """Render to PNG bytes; close the figure to free memory."""
+def _fig_to_png(fig, dpi: int = 230) -> bytes:
+    """Render to PNG bytes; close the figure to free memory.
+
+    DPI raised 180→230 for crisper lines/labels: PowerPoint scales the PNG
+    up into the slide placeholder, so a higher source resolution keeps the
+    52-week price and forward-P/E charts sharp instead of soft."""
     buf = BytesIO()
     fig.savefig(buf, format="png", dpi=dpi, bbox_inches="tight",
                 facecolor="white", edgecolor="none")
