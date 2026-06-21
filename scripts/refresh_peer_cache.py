@@ -85,6 +85,14 @@ def main() -> int:
                     help="Seconds between batches")
     args = ap.parse_args()
 
+    # Ensure the SQLite DB exists and is seeded from data/company_master.json.
+    # A fresh GitHub Actions runner has no boot step to seed it, so
+    # _all_universe_tickers()/_peers_for() would hit "no such table:
+    # company_master". init_db()+seed_companies() are idempotent.
+    from src.storage.db import init_db, seed_companies
+    init_db()
+    seed_companies()
+
     from src.services.fetch_peers import fetch_peer_rows
     from src.services.fetch_peers import _iso_now
 
