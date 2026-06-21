@@ -118,12 +118,57 @@ _REGION_GROUPS = {
 }
 
 
+# Some company_master rows store the full country name instead of the ISO
+# code (e.g. FAB/ENBD/DIB carry "United Arab Emirates", not "AE"), which left
+# them unable to find same-region peers — they came out with NO peers. Map
+# the full names back to the ISO the region groups use.
+_COUNTRY_TO_ISO = {
+    "UNITED ARAB EMIRATES": "AE", "SAUDI ARABIA": "SA", "QATAR": "QA",
+    "KUWAIT": "KW", "OMAN": "OM", "BAHRAIN": "BH",
+    "CHINA": "CN", "HONG KONG": "HK", "INDIA": "IN",
+    "BRAZIL": "BR", "SOUTH AFRICA": "ZA", "MEXICO": "MX",
+}
+
+
 def _region_group(country: str | None) -> str:
     c = (country or "").upper()
+    c = _COUNTRY_TO_ISO.get(c, c)
     for g, members in _REGION_GROUPS.items():
         if c in members:
             return g
     return c or "?"
+
+
+# Coarse industry clusters. Used to (a) top a thin same-industry peer pool up
+# with ADJACENT industries (Hardware → Semiconductors) before distant ones
+# (fintech/media), and (b) audit peer-set quality (scripts/audit_peers.py).
+_INDUSTRY_CLUSTERS = (
+    ("tech_hw", ("hardware", "semiconductor", "electronic", "communication equip",
+                 "technology hardware", "components")),
+    ("tech_sw", ("software", "internet", "interactive media", "it services", "fintech")),
+    ("financials", ("bank", "insurance", "capital markets", "diversified financ")),
+    ("energy", ("oil", "gas", "energy", "refin", "petro")),
+    ("materials", ("chemical", "metal", "mining", "steel", "fertil", "materials", "cement")),
+    ("consumer", ("food", "beverage", "retail", "consumer", "apparel", "auto", "tobacco",
+                  "personal product", "household")),
+    ("health", ("pharma", "health", "biotech", "medical", "life science")),
+    ("realestate", ("real estate", "reit", "property")),
+    ("telecom", ("telecom", "wireless", "communication services")),
+    ("utilities", ("utilit", "power", "electric", "water")),
+    ("industrials", ("capital goods", "machinery", "aerospace", "defense", "transport",
+                     "logistics", "airline", "commercial services", "industrial",
+                     "construction", "engineering", "building")),
+)
+
+
+def industry_cluster(industry: str | None) -> str | None:
+    """Map an industry string to a coarse peer cluster, or None when it doesn't
+    fit one (e.g. 'Diversified' conglomerates — genuinely unclusterable)."""
+    il = (industry or "").lower()
+    for name, keys in _INDUSTRY_CLUSTERS:
+        if any(k in il for k in keys):
+            return name
+    return None
 
 
 def registry_peer_set(ticker: str) -> list[str]:
@@ -157,30 +202,7 @@ def registry_peer_set(ticker: str) -> list[str]:
     def _ind_tokens(s: str) -> set[str]:
         return {w for w in _re.split(r"[^a-z]+", (s or "").lower()) if len(w) > 3}
 
-    # Coarse industry clusters so a thin-industry name tops up with ADJACENT
-    # industries (ZTE Hardware → Semiconductors) before distant ones (fintech
-    # / media), even when they share the same broad template_family.
-    _CLUSTERS = (
-        ("tech_hw", ("hardware", "semiconductor", "electronic", "communication equip",
-                     "technology hardware", "components")),
-        ("tech_sw", ("software", "internet", "interactive media", "it services", "fintech")),
-        ("financials", ("bank", "insurance", "capital markets", "diversified financ")),
-        ("energy", ("oil", "gas", "energy", "refin", "petro")),
-        ("materials", ("chemical", "metal", "mining", "steel", "fertil", "materials", "cement")),
-        ("consumer", ("food", "beverage", "retail", "consumer", "apparel", "auto")),
-        ("health", ("pharma", "health", "biotech", "medical")),
-        ("realestate", ("real estate", "reit", "property")),
-        ("telecom", ("telecom", "wireless", "communication services")),
-        ("utilities", ("utilit", "power", "electric")),
-    )
-
-    def _cluster(s: str) -> str | None:
-        il = (s or "").lower()
-        for name, keys in _CLUSTERS:
-            if any(k in il for k in keys):
-                return name
-        return None
-
+    _cluster = industry_cluster
     subj_tokens = _ind_tokens(ind)
     subj_cluster = _cluster(ind)
 
