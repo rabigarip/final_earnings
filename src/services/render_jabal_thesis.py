@@ -1948,10 +1948,25 @@ def build_thesis_data(ticker: str, *, analyst_name: str = "Jabal Research",
     _signal_bloomberg = bool(bloomberg_bundle
                               and isinstance(bloomberg_bundle, dict)
                               and (bloomberg_bundle.get("annuals") or []))
+    # Prefer the ANNUAL expectations table whenever MarketScreener carries a
+    # real multi-year annual forecast set. Otherwise a name that happens to
+    # also have a forward *quarterly* MS row (e.g. ZTE) renders a quarterly
+    # table — inconsistent with every other name, and it leaves the scraped
+    # FY forecasts (revenue 151B, NI 9.6B) unused while showing ~1/4-scale
+    # quarterly numbers. _build_annual_rows falls back to quarterly if these
+    # turn out not to be usable, so this is safe.
+    _signal_rich_annual = False
+    if isinstance(ms_annual_forecasts, dict):
+        _ann = ms_annual_forecasts.get("annual") or {}
+        _rev_fc = (_ann.get("net_sales") or _ann.get("revenue") or {}) if isinstance(_ann, dict) else {}
+        # ≥2 forecast periods of revenue → a genuine annual estimate strip.
+        _n_rev = len(_rev_fc) if isinstance(_rev_fc, (dict, list)) else 0
+        _signal_rich_annual = _n_rev >= 2
     _use_annual = (_signal_explicit_annual
                     or _signal_no_quarterly_fwd
                     or _signal_carry_forward
-                    or _signal_bloomberg)
+                    or _signal_bloomberg
+                    or _signal_rich_annual)
     annual_rows: list[dict] = []
     annual_fy_labels: list[str] = []
     annual_unit_suffix = ""
