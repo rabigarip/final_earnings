@@ -263,6 +263,13 @@ def _write_jabal_preview(payload: ReportPayload, out_path: Path,
                                        ms_price_performance=getattr(payload, "ms_price_performance", None),
                                        historical_override=historical_override,
                                        live_quote_record=(memo_data or {}).get("live_quote_record"))
+    # Expose the exact LAST CLOSE + UPSIDE the slide shows so the provenance
+    # .xlsx traces to the SAME numbers (the deck's price can differ from a
+    # re-read canonical price — live-quote timing — which made the Excel's
+    # last-close/upside disagree with the slide).
+    if isinstance(memo_data, dict):
+        memo_data["_deck_last_close"] = snap.last_close_value
+        memo_data["_deck_upside_pct"] = snap.upside_pct
     # Slide-2 heading must agree with slide-1 period_label. Strip the
     # trailing "Earnings Preview" / "Earnings Update" suffix and replace
     # with "Earnings Expectations" so the cover and the estimates section

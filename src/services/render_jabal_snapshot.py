@@ -420,6 +420,11 @@ class SnapshotData:
     # build_snapshot_data based on canonical_store cell timestamps +
     # the live-quote record (if applied).
     freshness_banner: str = ""
+    # Numeric price the deck displayed as LAST CLOSE (and computed UPSIDE
+    # from). The provenance reuses this so the .xlsx "Last close" and
+    # "Upside to target" trace to the SAME number the slide shows — not a
+    # separately re-read canonical price that may have drifted.
+    last_close_value: Optional[float] = None
 
 
 def render_snapshot_slide(prs, data: SnapshotData):
@@ -1314,6 +1319,7 @@ def build_snapshot_data(ticker: str, *, analyst_name: str = "Jabal Research",
         target_price_fmt=target_fmt,
         upside_pct=upside_pct,
         last_close_fmt=_money(current),
+        last_close_value=(float(current) if isinstance(current, (int, float)) else None),
         market_cap_fmt=_mc(mcap),
         report_date=_normalize_date(report_date),
         pe_fy_est_fmt=("—" if pe_fwd is None else f"{float(pe_fwd):.1f}x"),

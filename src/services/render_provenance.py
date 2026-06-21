@@ -302,6 +302,9 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
     #    plus per-sub-key explosion for dict-valued cells so every number
     #    on the deck is individually traceable.
     cv = get_all_fields(ticker)
+    # The deck's displayed LAST CLOSE (the series' latest close when canonical
+    # current_price lags) — trace this exact number, not the canonical value.
+    _deck_lc = (memo_data or {}).get("_deck_last_close")
     for field, c in sorted(cv.items()):
         slide, section, label = _FIELD_MAP.get(field, ("Other", "Other", field))
         period = _data_period_from_value(field, c.value)
@@ -309,9 +312,16 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
         src_url = _source_url(c.canonical_source, ticker)
         fetched_at = c.last_refreshed_at.strftime("%Y-%m-%d %H:%M UTC")
         notes = (c.notes or "").strip()
+        _emit_value = c.value
+        if (field == "current_price" and isinstance(_deck_lc, (int, float)) and _deck_lc > 0
+                and isinstance(c.value, (int, float))
+                and abs(float(_deck_lc) - float(c.value)) > 1e-6):
+            _emit_value = _deck_lc
+            notes = ((notes + " · ") if notes else "") + \
+                f"Displayed last close (price-series latest); canonical current_price was {c.value:g}"
         rows.append([
             slide, section, label,
-            _value_repr(c.value), src, src_url,
+            _value_repr(_emit_value), src, src_url,
             period, fetched_at, notes,
         ])
         # Dict explosion — one row per scalar sub-key. Keeps the analyst
@@ -369,6 +379,14 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
     #     The analyst opening the .xlsx expects to see every visible
     #     number traced. This section makes that contract complete.
     cv_current_price = (cv.get("current_price").value if cv.get("current_price") else None)
+    # Prefer the EXACT price the deck displayed as LAST CLOSE. build_snapshot_data
+    # may use the price series' latest close instead of canonical current_price
+    # when the canonical source lags — so the slide shows e.g. 37.22 while
+    # canonical still reads 37.89. Tracing the deck's own number keeps the
+    # .xlsx last-close and upside consistent with the slide.
+    _deck_lc = (memo_data or {}).get("_deck_last_close")
+    if isinstance(_deck_lc, (int, float)) and _deck_lc > 0:
+        cv_current_price = _deck_lc
     cv_target = (cv.get("target_price").value if cv.get("target_price") else None)
     cv_target_mean = (cv_target.get("mean") if isinstance(cv_target, dict) else None)
     cv_hist = (cv.get("historical_prices").value if cv.get("historical_prices") else None)
