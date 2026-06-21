@@ -561,12 +561,29 @@ def _llm_highlights_or_template(*, ticker: str, cv: dict, currency: str,
     WATCH, RISK. The template line is always computed so we can backfill
     any slot the LLM dropped.
     """
+    # Peer-set average P/E — the SAME peers/source the slide-3 table uses, so
+    # the VALUATION pill's comparator matches the table. fetch_peer_rows is
+    # memoized per process, so this reuses slide 3's fetch.
+    peer_pe_avg = None
+    try:
+        from src.storage.db import load_company
+        from src.services.ticker_registry import registry_peer_set
+        from src.services.fetch_peers import fetch_peer_rows
+        _peers = (load_company(ticker) or {}).get("peer_group") or registry_peer_set(ticker) or []
+        _rows = fetch_peer_rows(_peers) if _peers else []
+        _pes = [r["pe"] for r in _rows
+                if isinstance(r.get("pe"), (int, float)) and 0 < r["pe"] < 300]
+        if _pes:
+            peer_pe_avg = sum(_pes) / len(_pes)
+    except Exception:
+        peer_pe_avg = None
+
     template = _derive_highlights(
         cv=cv, currency=currency, current_price=current_price,
         mcap=mcap, target_mean=target_mean, upside_pct=upside_pct,
         pe_fwd=pe_fwd, div_yield=div_yield,
         range_low=range_low, range_high=range_high,
-        n_analysts=n_analysts, rs=rs,
+        n_analysts=n_analysts, rs=rs, peer_pe_avg=peer_pe_avg,
     )
     try:
         from src.services.llm_summary import generate_summary
@@ -591,7 +608,8 @@ def _llm_highlights_or_template(*, ticker: str, cv: dict, currency: str,
 def _derive_highlights(*, cv: dict, currency: str, current_price,
                          mcap, target_mean, upside_pct, pe_fwd,
                          div_yield, range_low, range_high,
-                         n_analysts: int, rs: dict) -> list[tuple[str, str]]:
+                         n_analysts: int, rs: dict,
+                         peer_pe_avg=None) -> list[tuple[str, str]]:
     """Derive 5 highlight pills from real numbers in canonical_store.
     Each row is anchored to a specific figure that also appears in the
     rest of the deck — keeps the slide internally consistent and avoids
@@ -615,9 +633,18 @@ def _derive_highlights(*, cv: dict, currency: str, current_price,
         rows.append(("EARNINGS",
             "The print tests whether the recent earnings trajectory can be sustained into the next quarter."))
 
-    # VALUATION — P/E (FY est) is the most universally available figure.
+    # VALUATION — lead with the live multiple, and (when available) the SAME
+    # peer-set average shown on the slide-3 table, so the pill always carries
+    # the comp the analyst asked for — even when the LLM highlight is rejected.
     if isinstance(pe_fwd, (int, float)) and pe_fwd > 0:
-        rows.append(("VALUATION", f"Forward P/E {float(pe_fwd):.1f}x — anchor for re-rate / de-rate debate."))
+        if isinstance(peer_pe_avg, (int, float)) and peer_pe_avg > 0:
+            _gap = (float(pe_fwd) / float(peer_pe_avg) - 1.0) * 100.0
+            _rel = "premium" if _gap >= 0 else "discount"
+            rows.append(("VALUATION",
+                f"Forward P/E {float(pe_fwd):.1f}x, a {abs(_gap):.0f}% {_rel} to the "
+                f"peer-set average of {float(peer_pe_avg):.1f}x."))
+        else:
+            rows.append(("VALUATION", f"Forward P/E {float(pe_fwd):.1f}x — anchor for re-rate / de-rate debate."))
     elif isinstance(mcap, (int, float)) and mcap > 0:
         # No P/E available — fall back to market-cap framing.
         if mcap >= 1e12:
