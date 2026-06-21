@@ -35,7 +35,7 @@ if str(ROOT) not in sys.path:
 _CM_PATH = ROOT / "data" / "company_master.json"
 
 
-def _verify(slug: str, isin: str) -> bool:
+def _verify(slug: str, isin: str, symbol: str = "") -> bool:
     """Identity + data check. The ISIN search can fall through to a trending
     sidebar link (e.g. SpaceX) when MS doesn't index an ISIN, so we REQUIRE
     the resolved page to actually carry the ISIN (authoritative identity) AND
@@ -49,7 +49,12 @@ def _verify(slug: str, isin: str) -> bool:
         return False
     if r.status_code != 200:
         return False
-    if isin not in r.text:                       # identity gate
+    # Identity gate: the page must carry the ISIN, OR (for A-shares whose
+    # ISIN MS doesn't index) the exchange symbol, e.g. "(000333)" in the
+    # title. Both are strong, unique identifiers.
+    has_isin = bool(isin) and isin in r.text
+    has_symbol = bool(symbol) and (f"({symbol})" in r.text or f"({symbol}." in r.text)
+    if not (has_isin or has_symbol):
         return False
     try:
         rf = creq.get(f"https://www.marketscreener.com/quote/stock/{slug}/finances/",
@@ -62,24 +67,34 @@ def _verify(slug: str, isin: str) -> bool:
 
 
 def _resolve_one(ticker: str, isin: str, company_name: str):
-    """Resolve a verified slug for one name: try ISIN first (authoritative),
-    then a name search; verify identity (ISIN on page) before accepting."""
+    """Resolve a verified slug: ISIN (authoritative) → exchange symbol →
+    company name. Verify identity (ISIN or symbol on page) before accepting."""
     from src.providers.marketscreener_pages import (
         resolve_marketscreener_by_isin, resolve_slug_from_search,
     )
+    symbol = ticker.split(".")[0].lstrip("0") or ticker.split(".")[0]
+    symbol_raw = ticker.split(".")[0]
     try:
         res = resolve_marketscreener_by_isin(isin)
         slug = res[0] if res else None
     except Exception:
         slug = None
-    if slug and _verify(slug, isin):
+    if slug and _verify(slug, isin, symbol_raw):
         return slug
-    # ISIN search missed (or returned a wrong trending link) — try by name.
+    # ISIN not indexed on MS — the numeric A-share code resolves these
+    # (000333 → Midea, 000338 → Weichai) where the ISIN search fell through.
+    try:
+        slug_s = resolve_slug_from_search(symbol_raw, company_name=company_name)
+    except Exception:
+        slug_s = None
+    if slug_s and _verify(slug_s, isin, symbol_raw):
+        return slug_s
+    # Finally, by name.
     try:
         slug2 = resolve_slug_from_search(ticker, company_name=company_name)
     except Exception:
         slug2 = None
-    if slug2 and _verify(slug2, isin):
+    if slug2 and _verify(slug2, isin, symbol_raw):
         return slug2
     return None
 
