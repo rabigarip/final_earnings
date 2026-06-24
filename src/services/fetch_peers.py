@@ -421,6 +421,12 @@ def fetch_peer_rows(peer_tickers: list[str]) -> list[dict]:
         })
     if cache_dirty:
         _write_peer_cache(pb_cache)
+    # Bound the per-process memo: it exists to share ONE fetch between the
+    # slide-3 table and the VALUATION pill within a single build. Past a few
+    # hundred distinct peer-sets it's just a slow leak in a long-lived worker,
+    # so drop the oldest entry once we exceed the cap (insertion-ordered dict).
+    if len(_PEER_ROWS_MEMO) >= 256:
+        _PEER_ROWS_MEMO.pop(next(iter(_PEER_ROWS_MEMO)), None)
     _PEER_ROWS_MEMO[_memo_key] = rows
     return rows
 

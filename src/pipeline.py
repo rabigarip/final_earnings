@@ -5,8 +5,10 @@ Outputs: one earnings preview .pptx per ticker.
 """
 
 from __future__ import annotations
+import gc
 import os
 import logging
+import threading
 import uuid
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -27,9 +29,46 @@ from src.storage.db import save_run
 
 logger = logging.getLogger(__name__)
 
+# Build serialization. A single deck build peaks at ~280-400MB (matplotlib +
+# pandas + yfinance + snapshot parsing). On Render's 512MB instance two builds
+# running at once (FastAPI runs sync routes in a threadpool, so concurrent
+# /api/preview requests build in parallel) blow past the limit and trigger an
+# OOM restart. This semaphore forces builds to run one-at-a-time; a second
+# concurrent request queues until the first finishes rather than OOM-ing the
+# whole instance. Override with EARNINGS_MAX_CONCURRENT_BUILDS if the instance
+# is later upsized.
+_MAX_CONCURRENT_BUILDS = max(1, int(os.environ.get("EARNINGS_MAX_CONCURRENT_BUILDS", "1")))
+_BUILD_SEMAPHORE = threading.BoundedSemaphore(_MAX_CONCURRENT_BUILDS)
+
 
 def run_preview(ticker: str, *, skip_llm: bool = False) -> tuple[str, list[StepResult]]:
-    """Returns (run_id, step_results)."""
+    """Returns (run_id, step_results).
+
+    Serialized via _BUILD_SEMAPHORE so concurrent requests don't stack their
+    peak memory in one process (see semaphore note above)."""
+    with _BUILD_SEMAPHORE:
+        try:
+            return _run_preview_inner(ticker, skip_llm=skip_llm)
+        finally:
+            # Sweep any matplotlib figures that escaped a chart error-path.
+            # pyplot holds every figure in a global registry until close(),
+            # so gc alone can't reclaim a figure that skipped its plt.close
+            # — close('all') frees them all. Guard on sys.modules so we never
+            # force-import matplotlib for a build that rendered no chart.
+            import sys as _sys
+            _plt = _sys.modules.get("matplotlib.pyplot")
+            if _plt is not None:
+                try:
+                    _plt.close("all")
+                except Exception:
+                    pass
+            # Release the build's transient allocations (chart buffers, parsed
+            # snapshots, dataframes) promptly so the next queued build starts
+            # from a low baseline instead of a ratcheted-up RSS.
+            gc.collect()
+
+
+def _run_preview_inner(ticker: str, *, skip_llm: bool = False) -> tuple[str, list[StepResult]]:
     run_id = uuid.uuid4().hex[:8]
     t0 = datetime.now(timezone.utc)
     results: list[StepResult] = []
