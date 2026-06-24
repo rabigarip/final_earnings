@@ -678,11 +678,15 @@ def _readiness_error_detail(results: list) -> dict | None:
 
 def _run_preview_and_response(ticker: str, skip_llm: bool = True, *, raise_on_readiness: bool = True) -> dict:
     """Run pipeline and return frontend-shaped response: report row + payload + steps."""
-    from src.pipeline import run_preview
+    from src.pipeline import run_preview, BuildRejectedError
     from src.models.step_result import Status
     from src.storage.db import load_company, load_run
 
-    run_id, results = run_preview(ticker, skip_llm=skip_llm)
+    try:
+        run_id, results = run_preview(ticker, skip_llm=skip_llm)
+    except BuildRejectedError as e:
+        raise HTTPException(status_code=503, detail=str(e),
+                            headers={"Retry-After": "30"})
     err = _readiness_error_detail(results)
     if err and raise_on_readiness:
         raise HTTPException(status_code=422, detail=err)
@@ -833,14 +837,18 @@ def rerun_report(run_id: str):
 
 @app.post("/api/preview", response_model=PreviewResponse)
 def run_preview_api(req: PreviewRequest):
-    from src.pipeline import run_preview
+    from src.pipeline import run_preview, BuildRejectedError
     from src.models.step_result import Status
 
     ticker = (req.ticker or "").strip().upper()
     if not ticker:
         raise HTTPException(status_code=400, detail="ticker is required")
 
-    run_id, results = run_preview(ticker, skip_llm=req.skip_llm)
+    try:
+        run_id, results = run_preview(ticker, skip_llm=req.skip_llm)
+    except BuildRejectedError as e:
+        raise HTTPException(status_code=503, detail=str(e),
+                            headers={"Retry-After": "30"})
     err = _readiness_error_detail(results)
     if err:
         raise HTTPException(status_code=422, detail=err)

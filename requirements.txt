@@ -27,4 +27,5 @@ playwright>=1.42.0
 # ── Web API (Render / frontend) ─────────────────────────────────
 fastapi>=0.110.0
 uvicorn[standard]>=0.27.0
+gunicorn>=21.2.0  # process manager: recycles the worker (--max-requests) to sweep memory drift
 python-multipart>=0.0.9  # required by FastAPI for UploadFile / Form (Bloomberg upload)

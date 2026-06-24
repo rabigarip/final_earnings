@@ -40,12 +40,51 @@ logger = logging.getLogger(__name__)
 _MAX_CONCURRENT_BUILDS = max(1, int(os.environ.get("EARNINGS_MAX_CONCURRENT_BUILDS", "1")))
 _BUILD_SEMAPHORE = threading.BoundedSemaphore(_MAX_CONCURRENT_BUILDS)
 
+# Hard backstop: refuse to START a build when the process is already near the
+# instance memory limit, rather than letting the build tip it over and trigger
+# an OOM restart that drops every in-flight request. The API maps this to a 503
+# "busy, retry shortly". During normal serialized operation RSS sits ~280MB so
+# this never trips; it only fires if memory is abnormally high (a leak we didn't
+# foresee, or one pathological build). It self-heals: once the in-flight build
+# finishes and frees memory, the next request goes through. Tune via
+# EARNINGS_RSS_LIMIT_MB; 0 disables the guard.
+_RSS_LIMIT_MB = float(os.environ.get("EARNINGS_RSS_LIMIT_MB", "460"))
+
+
+class BuildRejectedError(RuntimeError):
+    """Raised when a build is refused due to memory pressure (→ HTTP 503)."""
+
+
+def _process_rss_mb() -> float | None:
+    """Current resident-set size in MB, or None if it can't be read.
+
+    Reads /proc/self/statm (Linux/Render) with no extra dependency. Returns
+    None off-Linux (local macOS dev) so the guard is a no-op there."""
+    try:
+        with open("/proc/self/statm") as fh:
+            rss_pages = int(fh.read().split()[1])
+        return rss_pages * (os.sysconf("SC_PAGE_SIZE") / (1024 * 1024))
+    except Exception:
+        return None
+
+
+def _under_memory_pressure() -> bool:
+    if _RSS_LIMIT_MB <= 0:
+        return False
+    rss = _process_rss_mb()
+    return rss is not None and rss >= _RSS_LIMIT_MB
+
 
 def run_preview(ticker: str, *, skip_llm: bool = False) -> tuple[str, list[StepResult]]:
     """Returns (run_id, step_results).
 
     Serialized via _BUILD_SEMAPHORE so concurrent requests don't stack their
-    peak memory in one process (see semaphore note above)."""
+    peak memory in one process (see semaphore note above). Raises
+    BuildRejectedError when the process is already near the memory ceiling."""
+    if _under_memory_pressure():
+        raise BuildRejectedError(
+            f"Memory pressure high (RSS {_process_rss_mb():.0f}MB ≥ "
+            f"{_RSS_LIMIT_MB:.0f}MB limit); build deferred. Retry shortly.")
     with _BUILD_SEMAPHORE:
         try:
             return _run_preview_inner(ticker, skip_llm=skip_llm)

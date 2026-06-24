@@ -27,7 +27,12 @@ services:
     plan: starter            # paid: no 30s request cap (LLM path needs ~60-100s)
 
     buildCommand: chmod +x scripts/render_build.sh && bash scripts/render_build.sh
-    startCommand: uvicorn src.api:app --host 0.0.0.0 --port $PORT
+    # gunicorn manages a SINGLE uvicorn worker (>1 worker would duplicate the
+    # ~200MB heavy stack and OOM the 512MB box). --max-requests recycles that
+    # worker every ~200 reqs (+jitter) to sweep any residual memory drift with
+    # zero downtime. --timeout 180 is critical: a full LLM deck takes 60-100s,
+    # so the default 30s worker timeout would kill builds mid-flight.
+    startCommand: gunicorn src.api:app -k uvicorn.workers.UvicornWorker --workers 1 --timeout 180 --graceful-timeout 150 --max-requests 200 --max-requests-jitter 50 --bind 0.0.0.0:$PORT
     healthCheckPath: /health
 
     envVars:
