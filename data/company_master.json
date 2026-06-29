@@ -7706,6 +7706,22 @@
     "notes": ""
   },
   {
+    "ticker": "ADNOCLS.AE",
+    "company_name": "ADNOC Logistics & Services",
+    "company_name_long": "ADNOC Logistics & Services PLC",
+    "exchange": "ADX",
+    "country": "UAE",
+    "currency": "AED",
+    "isin": "AEE01268A239",
+    "marketscreener_id": "ADNOC-LOGISTICS-SERVICES--155249191",
+    "zawya_slug": "",
+    "sector": "Industrials",
+    "industry": "Marine Shipping",
+    "peer_group": ["4030.SR", "QGTS.QA", "QNNS.QA", "ADNOCDRILL.AE"],
+    "is_bank": false,
+    "notes": "Yahoo-blind (ADX). Estimates/consensus via MarketScreener; live price via Investing slug 'adnoc-logistics-services'."
+  },
+  {
     "ticker": "DU.AE",
     "company_name": "du (EITC)",
     "company_name_long": "Emirates Integrated Telecommunications Company PJSC",
