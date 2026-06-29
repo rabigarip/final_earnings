@@ -101,16 +101,23 @@ def main() -> int:
                     help="Seconds between tickers (be polite to Cloudflare)")
     args = ap.parse_args()
 
+    # Known slugs = hand-curated _SLUGS UNION the auto-resolved cache in
+    # data/investing_slugs.json. A name added via scripts/add_ticker.py lands
+    # in the JSON only, so without this union the cron would silently never
+    # refresh it and its snapshot would age forever.
+    from src.providers.probe_investing import _resolved_slugs
+    known_slugs = set(_SLUGS.keys()) | set(_resolved_slugs().keys())
+
     if args.tickers:
         tickers = [t.strip().upper() for t in args.tickers.split(",") if t.strip()]
     elif args.active_set:
         active = _active_set_from_calendar()
         # Intersect with tickers we have slugs for.
-        tickers = sorted(set(active) & set(_SLUGS.keys()))
+        tickers = sorted(set(active) & known_slugs)
         print(f"[active-set] {len(active)} tickers in calendar horizon, "
               f"{len(tickers)} have curated Investing slugs.")
     else:
-        tickers = sorted(_SLUGS.keys())
+        tickers = sorted(known_slugs)
 
     if not tickers:
         print("No tickers to refresh (empty active set / none with curated "
