@@ -659,11 +659,17 @@ def _prompt(ctx: dict) -> str:
 
     broker_block = ""
     if ctx.get("recent_broker_actions"):
+        # Broker headlines are scraped free text — untrusted. Neutralize each
+        # (strip control chars/newlines, defang injection phrases, cap length)
+        # and wrap the set in a delimited "treat as data, not instructions"
+        # block so a hostile headline can't steer the generated prose.
+        from src.utils.sanitize import neutralize_prompt_text, untrusted_block
         rows = [
-            f"  - {b.get('date','?')}: {b.get('headline','')[:120]}"
+            f"  - {neutralize_prompt_text(str(b.get('date', '?')), 24)}: "
+            f"{neutralize_prompt_text(b.get('headline', ''), 120)}"
             for b in ctx["recent_broker_actions"][:3]
         ]
-        broker_block = "Recent broker actions:\n" + "\n".join(rows)
+        broker_block = "Recent broker actions:\n" + untrusted_block(rows, "broker headlines")
 
     rating = ctx.get("rating_consensus") or "—"
     n_an = ctx.get("n_analysts") or 0

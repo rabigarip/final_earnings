@@ -156,7 +156,8 @@ def _get(url: str, *, timeout: float = 15.0) -> Optional[str]:
         return None
     if r.status_code != 200:
         return None
-    return r.text
+    from src.utils.sanitize import cap_text
+    return cap_text(r.text)  # bound untrusted body before JSON/regex parsing
 
 
 def _next_data(html: str) -> Optional[dict]:

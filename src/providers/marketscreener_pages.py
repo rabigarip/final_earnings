@@ -345,7 +345,8 @@ def _fetch_page(url: str, cache_slug: str) -> tuple[BeautifulSoup | None, list[s
                     errors.append(f"HTTP {resp.status_code} (curl_cffi)")
                     live_failed = True
                 else:
-                    text = resp.text
+                    from src.utils.sanitize import cap_text
+                    text = cap_text(resp.text)  # bound untrusted body (ReDoS/OOM guard)
                     if _is_blocked_response(text):
                         errors.append("Captcha (curl_cffi)")
                         live_failed = True
@@ -375,7 +376,8 @@ def _fetch_page(url: str, cache_slug: str) -> tuple[BeautifulSoup | None, list[s
                 errors.append(f"HTTP {resp.status_code}")
                 live_failed = True
             else:
-                text = resp.text
+                from src.utils.sanitize import cap_text
+                text = cap_text(resp.text)  # bound untrusted body (ReDoS/OOM guard)
                 if _is_blocked_response(text):
                     errors.append("Captcha or access denied")
                     live_failed = True

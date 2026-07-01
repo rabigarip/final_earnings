@@ -977,8 +977,13 @@ def write_provenance_xlsx(ticker: str, out_path: Path,
                 pass
         return (1, 0, r[1])
     rows.sort(key=_slide_sort)
+    # Formula-injection guard: any cell whose text starts with = + - @ (a
+    # scraped company name, source label, or note) would otherwise execute as a
+    # formula when a client opens this file. excel_cell() escapes those and
+    # strips control chars; numbers/dates pass through unchanged.
+    from src.utils.sanitize import excel_cell
     for r in rows:
-        ws.append(r)
+        ws.append([excel_cell(c) for c in r])
 
     # Column widths sized to typical content. openpyxl doesn't auto-fit.
     widths = [9, 32, 36, 32, 16, 48, 22, 22, 50]
