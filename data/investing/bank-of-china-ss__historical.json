@@ -1,10 +1,6 @@
 {
   "close_series": [
     {
-      "date": "2025-06-19",
-      "close": 4.46999979019165
-    },
-    {
       "date": "2025-06-20",
       "close": 4.53999996185303
     },
@@ -1034,5 +1030,5 @@
   "perf_6m": 6.181,
   "perf_ytd": 7.6063,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-07-03T11:02:07.71Z"
+  "perf_updated_at": "2026-07-03T07:50:42.261Z"
 }
