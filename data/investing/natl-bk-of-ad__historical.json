@@ -1031,12 +1031,12 @@
   ],
   "range_52w_low": 15.47999954223633,
   "range_52w_high": 20.70000076293945,
-  "perf_1d": 0.35,
-  "perf_1w": -0.1148,
-  "perf_1m": 6.0976,
-  "perf_3m": 0.2304,
-  "perf_6m": 0.6944,
-  "perf_ytd": -0.2294,
+  "perf_1d": 0.0,
+  "perf_1w": 3.4483,
+  "perf_1m": 3.0928,
+  "perf_3m": -3.2258,
+  "perf_6m": 1.9253,
+  "perf_ytd": 3.211,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-07-05T13:00:05.707Z"
+  "perf_updated_at": "2026-07-12T13:00:07.872Z"
 }
