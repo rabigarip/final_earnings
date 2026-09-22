@@ -1023,6 +1023,10 @@
     {
       "date": "2026-09-17",
       "close": 2.0
+    },
+    {
+      "date": "2026-09-20",
+      "close": 2.0
     }
   ],
   "range_52w_low": 1.39499998092651,
@@ -1034,5 +1038,5 @@
   "perf_6m": 25.0,
   "perf_ytd": 29.0323,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-09-17T12:00:22.468Z"
+  "perf_updated_at": "2026-09-20T12:00:15.858Z"
 }
