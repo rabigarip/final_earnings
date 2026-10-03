@@ -1,10 +1,6 @@
 {
   "close_series": [
     {
-      "date": "2025-09-17",
-      "close": 198.60000610351562
-    },
-    {
       "date": "2025-09-18",
       "close": 202.0
     },
@@ -1031,12 +1027,12 @@
   ],
   "range_52w_low": 155.39999389648438,
   "range_52w_high": 229.0,
-  "perf_1d": 0.56,
-  "perf_1w": 1.7874,
-  "perf_1m": -3.0466,
-  "perf_3m": 29.5808,
-  "perf_6m": 29.3485,
-  "perf_ytd": 17.3536,
+  "perf_1d": -5.86,
+  "perf_1w": -1.9409,
+  "perf_1m": -3.2817,
+  "perf_3m": 21.4654,
+  "perf_6m": 13.1733,
+  "perf_ytd": 15.0759,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-09-25T11:04:13.978Z"
+  "perf_updated_at": "2026-10-02T11:04:04.482Z"
 }
