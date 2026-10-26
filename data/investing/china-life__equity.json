@@ -133,7 +133,7 @@
       "mmt": 102,
       "type": "instrument.equities"
     },
-    "consentMode": "ccpa",
+    "consentMode": "other",
     "metas": {
       "canonical": [
         {
@@ -1005,7 +1005,7 @@
     ],
     "geoCountryCode": "US",
     "geoCountryOverridden": false,
-    "geoRegionCode": "VA",
+    "geoRegionCode": "AZ",
     "geoRegionOverridden": false,
     "cfIp": "",
     "cfCity": "",
@@ -2453,420 +2453,154 @@
   },
   "newsStore": {
     "_relatedPairs": {
-      "4970923": [
+      "4971284": [
         {
           "is_primary": 0,
-          "pair_change_numeric": "-39.75",
-          "pair_id": 166,
-          "pair_link": "/indices/us-spx-500",
-          "pair_type": "indice",
-          "stock_symbol": "US500",
-          "pair_name_export": "S&P 500",
-          "pair_name_export_trans": "S&P 500",
-          "pair_change_percent": "-0.52",
-          "pair_name_synonym": "S&P 500"
-        },
+          "pair_change_numeric": "14.76",
+          "pair_id": 20565,
+          "pair_link": "/equities/caci-international-inc",
+          "pair_type": "Equities",
+          "stock_symbol": "CACI",
+          "pair_name_export": "CACI International Inc",
+          "pair_name_export_trans": "CACI International Inc",
+          "pair_change_percent": "2.38",
+          "pair_name_synonym": "CACI International"
+        }
+      ],
+      "4971907": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "-0.69",
+          "pair_id": 15572,
+          "pair_link": "/equities/builders-firstsou",
+          "pair_type": "Equities",
+          "stock_symbol": "BLDR",
+          "pair_name_export": "Builders FirstSource Inc",
+          "pair_name_export_trans": "Builders FirstSource Inc",
+          "pair_change_percent": "-1.2",
+          "pair_name_synonym": "Builders FirstSource"
+        }
+      ],
+      "4971908": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "-0.55",
+          "pair_id": 41197,
+          "pair_link": "/equities/boise-cascad-llc",
+          "pair_type": "Equities",
+          "stock_symbol": "BCC",
+          "pair_name_export": "Boise Cascade Co",
+          "pair_name_export_trans": "Boise Cascade Co",
+          "pair_change_percent": "-0.7",
+          "pair_name_synonym": "Boise Cas"
+        }
+      ],
+      "4971915": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "2",
+          "pair_id": 13127,
+          "pair_link": "/equities/berkeley-group-holdings-plc",
+          "pair_type": "Equities",
+          "stock_symbol": "BKGH",
+          "pair_name_export": "The Berkeley Group Holdings plc",
+          "pair_name_export_trans": "The Berkeley Group Holdings plc",
+          "pair_change_percent": "0.06",
+          "pair_name_synonym": "Berkeley"
+        }
+      ],
+      "4971923": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "-0.25",
+          "pair_id": 46360,
+          "pair_link": "/etfs/db-crossover-5-y-short-tr",
+          "pair_type": "etf",
+          "stock_symbol": "XTC5",
+          "pair_name_export": "Xtrackers II iTraxx Crossover Short Daily Swap UCITS 1C ETF",
+          "pair_name_export_trans": "Xtrackers II iTraxx Crossover Short Daily Swap UCITS 1C ETF",
+          "pair_change_percent": "-0.85",
+          "pair_name_synonym": "db x-trackers II iTraxx Crossover 5y Short UCITS"
+        }
+      ],
+      "4971928": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "3.63",
+          "pair_id": 958233,
+          "pair_link": "/equities/lumentum-holdings-inc",
+          "pair_type": "Equities",
+          "stock_symbol": "LITE",
+          "pair_name_export": "Lumentum Holdings Inc",
+          "pair_name_export_trans": "Lumentum Holdings Inc",
+          "pair_change_percent": "0.48",
+          "pair_name_synonym": "Lumentum Holdings Inc"
+        }
+      ],
+      "4971929": [
         {
           "is_primary": 0,
           "pair_change_numeric": "1.47",
-          "pair_id": 251,
-          "pair_link": "/equities/intel-corp",
+          "pair_id": 15773,
+          "pair_link": "/equities/coherent",
           "pair_type": "Equities",
-          "stock_symbol": "INTC",
-          "pair_name_export": "Intel Corporation",
-          "pair_name_export_trans": "Intel Corporation",
-          "pair_change_percent": "1.72",
-          "pair_name_synonym": "Intel"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.5",
-          "pair_id": 6408,
-          "pair_link": "/equities/apple-computer-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "AAPL",
-          "pair_name_export": "Apple Inc",
-          "pair_name_export_trans": "Apple Inc",
-          "pair_change_percent": "-0.14",
-          "pair_name_synonym": "Apple"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.05",
-          "pair_id": 6445,
-          "pair_link": "/equities/lam-research-corp",
-          "pair_type": "Equities",
-          "stock_symbol": "LRCX",
-          "pair_name_export": "Lam Research Corp",
-          "pair_name_export_trans": "Lam Research Corp",
-          "pair_change_percent": "-0.02",
-          "pair_name_synonym": "Lam Research"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-2.36",
-          "pair_id": 13994,
-          "pair_link": "/equities/tesla-motors",
-          "pair_type": "Equities",
-          "stock_symbol": "TSLA",
-          "pair_name_export": "Tesla Inc",
-          "pair_name_export_trans": "Tesla Inc",
-          "pair_change_percent": "-0.63",
-          "pair_name_synonym": "Tesla"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.047",
-          "pair_id": 23701,
-          "pair_link": "/rates-bonds/u.s.-2-year-bond-yield",
-          "pair_type": "bond",
-          "stock_symbol": "US2YT",
-          "pair_name_export": "United States 2-Year",
-          "pair_name_export_trans": "United States 2-Year",
-          "pair_change_percent": "1.01",
-          "pair_name_synonym": "U.S. 2Y"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "2.74",
-          "pair_id": 1243846,
-          "pair_link": "/equities/spacex",
-          "pair_type": "Equities",
-          "stock_symbol": "SPCX",
-          "pair_name_export": "Space Exploration Technologies Corp",
-          "pair_name_export_trans": "Space Exploration Technologies Corp",
-          "pair_change_percent": "1.89",
-          "pair_name_synonym": "SpaceX"
-        }
-      ],
-      "4971027": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.6",
-          "pair_id": 351,
-          "pair_link": "/equities/volkswagen-ag",
-          "pair_type": "Equities",
-          "stock_symbol": "VOWG",
-          "pair_name_export": "Volkswagen AG",
-          "pair_name_export_trans": "Volkswagen AG",
-          "pair_change_percent": "-0.87",
-          "pair_name_synonym": "Volkswagen ST"
-        }
-      ],
-      "4971031": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.039",
-          "pair_id": 23703,
-          "pair_link": "/rates-bonds/u.s.-5-year-bond-yield",
-          "pair_type": "bond",
-          "stock_symbol": "US5YT",
-          "pair_name_export": "United States 5-Year",
-          "pair_name_export_trans": "United States 5-Year",
-          "pair_change_percent": "0.82",
-          "pair_name_synonym": "U.S. 5Y"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.035",
-          "pair_id": 23705,
-          "pair_link": "/rates-bonds/u.s.-10-year-bond-yield",
-          "pair_type": "bond",
-          "stock_symbol": "US10YT",
-          "pair_name_export": "United States 10-Year",
-          "pair_name_export_trans": "United States 10-Year",
+          "stock_symbol": "COHR",
+          "pair_name_export": "Coherent Inc",
+          "pair_name_export_trans": "Coherent Inc",
           "pair_change_percent": "0.71",
-          "pair_name_synonym": "U.S. 10Y"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.028",
-          "pair_id": 23706,
-          "pair_link": "/rates-bonds/u.s.-30-year-bond-yield",
-          "pair_type": "bond",
-          "stock_symbol": "US30YT",
-          "pair_name_export": "United States 30-Year",
-          "pair_name_export_trans": "United States 30-Year",
-          "pair_change_percent": "0.53",
-          "pair_name_synonym": "U.S. 30Y"
+          "pair_name_synonym": "Coherent"
         }
       ],
-      "4971035": [
+      "4971930": [
         {
           "is_primary": 0,
-          "pair_change_numeric": "0.21",
-          "pair_id": 8833,
-          "pair_link": "/commodities/brent-oil",
-          "pair_type": "futureCash",
-          "stock_symbol": "LCO",
-          "pair_name_export": "Brent Oil Futures",
-          "pair_name_export_trans": "Brent Oil Futures",
-          "pair_change_percent": "0.18",
-          "pair_name_synonym": "Brent Oil"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-539",
-          "pair_id": 945629,
-          "pair_link": "/crypto/bitcoin/btc-usd",
-          "pair_type": "currency",
-          "stock_symbol": "",
-          "pair_name_export": "Bitcoin US Dollar",
-          "pair_name_export_trans": "Bitcoin US Dollar",
-          "pair_change_percent": "-0.67",
-          "pair_name_synonym": "BTC/USD"
-        }
-      ],
-      "4971047": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-2.38",
-          "pair_id": 6435,
-          "pair_link": "/equities/amazon-com-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "AMZN",
-          "pair_name_export": "Amazon.com Inc",
-          "pair_name_export_trans": "Amazon.com Inc",
-          "pair_change_percent": "-0.95",
-          "pair_name_synonym": "Amazon.com"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-9.48",
-          "pair_id": 6449,
-          "pair_link": "/equities/expedia",
-          "pair_type": "Equities",
-          "stock_symbol": "EXPE",
-          "pair_name_export": "Expedia Inc",
-          "pair_name_export_trans": "Expedia Inc",
-          "pair_change_percent": "-3.18",
-          "pair_name_synonym": "Expedia"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-1.23",
-          "pair_id": 7997,
-          "pair_link": "/equities/wal-mart-stores",
-          "pair_type": "Equities",
-          "stock_symbol": "WMT",
-          "pair_name_export": "Walmart Inc",
-          "pair_name_export_trans": "Walmart Inc",
-          "pair_change_percent": "-1.02",
-          "pair_name_synonym": "Walmart"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-6.23",
-          "pair_id": 26490,
-          "pair_link": "/equities/facebook-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "META",
-          "pair_name_export": "Meta Platforms Inc",
-          "pair_name_export_trans": "Meta Platforms Inc",
-          "pair_change_percent": "-0.96",
-          "pair_name_synonym": "Meta Platforms"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.13",
-          "pair_id": 953524,
-          "pair_link": "/equities/shopify-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "SHOP",
-          "pair_name_export": "Shopify Inc",
-          "pair_name_export_trans": "Shopify Inc",
-          "pair_change_percent": "-0.08",
-          "pair_name_synonym": "Shopify Inc"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-2.37",
-          "pair_id": 1115848,
-          "pair_link": "/equities/uber-technologies-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "UBER",
-          "pair_name_export": "Uber Technologies Inc",
-          "pair_name_export_trans": "Uber Technologies Inc",
-          "pair_change_percent": "-3.43",
-          "pair_name_synonym": "Uber"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-6.56",
-          "pair_id": 1167745,
-          "pair_link": "/equities/doordash-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "DASH",
-          "pair_name_export": "DoorDash Inc",
-          "pair_name_export_trans": "DoorDash Inc",
-          "pair_change_percent": "-3.53",
-          "pair_name_synonym": "DoorDash"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "4.76",
-          "pair_id": 1206592,
-          "pair_link": "/equities/maplebear",
-          "pair_type": "Equities",
-          "stock_symbol": "CART",
-          "pair_name_export": "Maplebear Inc",
-          "pair_name_export_trans": "Maplebear Inc",
-          "pair_change_percent": "9.21",
-          "pair_name_synonym": "Maplebear"
-        }
-      ],
-      "4971057": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.21",
-          "pair_id": 8833,
-          "pair_link": "/commodities/brent-oil",
-          "pair_type": "futureCash",
-          "stock_symbol": "LCO",
-          "pair_name_export": "Brent Oil Futures",
-          "pair_name_export_trans": "Brent Oil Futures",
-          "pair_change_percent": "0.18",
-          "pair_name_synonym": "Brent Oil"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "3.97",
-          "pair_id": 8849,
-          "pair_link": "/commodities/crude-oil",
-          "pair_type": "futureCash",
-          "stock_symbol": "CL",
-          "pair_name_export": "Crude Oil WTI Futures",
-          "pair_name_export_trans": "Crude Oil WTI Futures",
-          "pair_change_percent": "3.99",
-          "pair_name_synonym": "Crude Oil WTI"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.17",
-          "pair_id": 8862,
-          "pair_link": "/commodities/natural-gas",
-          "pair_type": "futureCash",
-          "stock_symbol": "NG",
-          "pair_name_export": "Natural Gas Futures",
-          "pair_name_export_trans": "Natural Gas Futures",
-          "pair_change_percent": "-6.08",
-          "pair_name_synonym": "Natural Gas"
-        }
-      ],
-      "4971064": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0",
-          "pair_id": 102910,
-          "pair_link": "/equities/caretrust-inc",
-          "pair_type": "Equities",
-          "stock_symbol": "CTRE",
-          "pair_name_export": "CareTrust REIT, Inc",
-          "pair_name_export_trans": "CareTrust REIT, Inc",
-          "pair_change_percent": "0",
-          "pair_name_synonym": "CareTrust REIT"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.6",
-          "pair_id": 949203,
-          "pair_link": "/equities/target-healthcare-reit-ltd",
-          "pair_type": "Equities",
-          "stock_symbol": "THRLT",
-          "pair_name_export": "Target Healthcare REIT Ltd",
-          "pair_name_export_trans": "Target Healthcare REIT Ltd",
-          "pair_change_percent": "0.52",
-          "pair_name_synonym": "Target Healthcare REIT Ltd"
-        }
-      ],
-      "4971069": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-1.5",
-          "pair_id": 44157,
-          "pair_link": "/equities/honda-motor-co.,-ltd.",
-          "pair_type": "Equities",
-          "stock_symbol": "7267",
-          "pair_name_export": "Honda Motor Co Ltd",
-          "pair_name_export_trans": "Honda Motor Co Ltd",
-          "pair_change_percent": "-0.08",
-          "pair_name_synonym": "Honda Motor"
-        }
-      ],
-      "4971072": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.15",
-          "pair_id": 15716,
-          "pair_link": "/equities/china-natural",
-          "pair_type": "Equities",
-          "stock_symbol": "CHNR",
-          "pair_name_export": "China Natural Resources Inc",
-          "pair_name_export_trans": "China Natural Resources Inc",
-          "pair_change_percent": "-3.66",
-          "pair_name_synonym": "China Natural Resources"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "0.025",
-          "pair_id": 29227,
-          "pair_link": "/rates-bonds/china-10-year-bond-yield",
-          "pair_type": "bond",
-          "stock_symbol": "CN10YT",
-          "pair_name_export": "China 10-Year",
-          "pair_name_export_trans": "China 10-Year",
-          "pair_change_percent": "1.57",
-          "pair_name_synonym": "China 10Y"
-        },
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "-0.02",
-          "pair_id": 38143,
-          "pair_link": "/etfs/ishares-msci-china",
-          "pair_type": "etf",
-          "stock_symbol": "MCHI",
-          "pair_name_export": "iShares MSCI China ETF",
-          "pair_name_export_trans": "iShares MSCI China ETF",
-          "pair_change_percent": "-0.04",
-          "pair_name_synonym": "iShares MSCI China"
-        }
-      ],
-      "4971079": [
-        {
-          "is_primary": 0,
-          "pair_change_numeric": "16.53",
+          "pair_change_numeric": "-80.83",
           "pair_id": 37426,
           "pair_link": "/indices/kospi",
           "pair_type": "indice",
           "stock_symbol": "KS11",
           "pair_name_export": "KOSPI",
           "pair_name_export_trans": "KOSPI",
-          "pair_change_percent": "0.3",
+          "pair_change_percent": "-1.46",
           "pair_name_synonym": "KOSPI"
         },
         {
           "is_primary": 0,
-          "pair_change_numeric": "54000",
-          "pair_id": 43430,
-          "pair_link": "/equities/sk-hynix-inc",
+          "pair_change_numeric": "-1.13",
+          "pair_id": 943030,
+          "pair_link": "/indices/msci-ac-asia-pacific-x-jp",
+          "pair_type": "indice",
+          "stock_symbol": "MIPFJIN00PUS",
+          "pair_name_export": "MSCI AC Asia Pacific x JP",
+          "pair_name_export_trans": "MSCI AC Asia Pacific x JP",
+          "pair_change_percent": "-0.69",
+          "pair_name_synonym": "MSCI AC Asia Pacific x JP"
+        }
+      ],
+      "4971931": [
+        {
+          "is_primary": 0,
+          "pair_change_numeric": "1.66",
+          "pair_id": 8229,
+          "pair_link": "/equities/range-resources-corp",
           "pair_type": "Equities",
-          "stock_symbol": "000660",
-          "pair_name_export": "SK Hynix Inc",
-          "pair_name_export_trans": "SK Hynix Inc",
-          "pair_change_percent": "4.42",
-          "pair_name_synonym": "SK Hynix"
+          "stock_symbol": "RRC",
+          "pair_name_export": "Range Resources Corp",
+          "pair_name_export_trans": "Range Resources Corp",
+          "pair_change_percent": "3.78",
+          "pair_name_synonym": "Range Resources"
         },
         {
           "is_primary": 0,
-          "pair_change_numeric": "1000",
-          "pair_id": 43433,
-          "pair_link": "/equities/samsung-electronics-co-ltd",
+          "pair_change_numeric": "0.96",
+          "pair_id": 13841,
+          "pair_link": "/equities/eqt-corporation",
           "pair_type": "Equities",
-          "stock_symbol": "005930",
-          "pair_name_export": "Samsung Electronics Co Ltd",
-          "pair_name_export_trans": "Samsung Electronics Co Ltd",
-          "pair_change_percent": "0.47",
-          "pair_name_synonym": "Samsung Electronics"
+          "stock_symbol": "EQT",
+          "pair_name_export": "EQT Corporation",
+          "pair_name_export_trans": "EQT Corporation",
+          "pair_change_percent": "1.76",
+          "pair_name_synonym": "EQT"
         }
       ]
     },
@@ -2887,20 +2621,131 @@
       {
         "article_type": "news",
         "body": "",
-        "created_by": 277000282,
+        "created_by": -1,
         "editors_pick": false,
-        "id": 4971079,
+        "id": 4971933,
+        "important": true,
+        "link": "/news/economy-news/kremlin-seeks-continued-ties-with-serbia-after-vucic-defeat-93CH-4971933",
+        "metadata": {},
+        "newsType": "Investing.com AI",
+        "published_at": "2026-10-26T10:24:37Z",
+        "source_external_link": "",
+        "source_id": 93,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "Kremlin seeks continued ties with Serbia after Vucic defeat",
+        "updated_at": "2026-10-26T10:24:37Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:24:37",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Reuters",
+        "related_image_big": "https://content-media.investing.com/news/LYNXMPEM4J13A_1200_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:65:\"https://content-media.investing.com/news/LYNXMPEM4J13A_1200_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/LYNXMPEM4J13A_1200_L.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": 235660125,
+        "editors_pick": false,
+        "id": 4971931,
         "important": false,
-        "link": "/news/stock-market-news/goldman-sachs-cuts-kospi-target-by-25-amid-ai-stock-selloff-4971079",
+        "link": "/news/stock-market-news/eqt-to-acquire-range-resources-in-50-billion-allstock-deal-4971931",
         "metadata": {},
         "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T08:50:52Z",
+        "published_at": "2026-10-26T10:22:20Z",
         "source_external_link": "",
         "source_id": 10,
         "source_name": "Investing.com",
         "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Goldman Sachs cuts Kospi target by 25% amid AI stock selloff",
-        "updated_at": "2026-10-25T08:50:52Z",
+        "title": "EQT to acquire Range Resources in $50 billion all-stock deal",
+        "updated_at": "2026-10-26T10:22:20Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [
+          {
+            "stock_symbol": "RRC",
+            "pair_link": "/equities/range-resources-corp",
+            "pair_name": "Range Resources Corp",
+            "pair_name_synonym": "Range Resources",
+            "pair_change_percent": "3.78"
+          },
+          {
+            "stock_symbol": "EQT",
+            "pair_link": "/equities/eqt-corporation",
+            "pair_name": "EQT Corporation",
+            "pair_name_synonym": "EQT",
+            "pair_change_percent": "1.76"
+          }
+        ],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:22:20",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Reuters.",
+        "related_image_big": "https://content-media.investing.com/news/LYNXMPEDAF0IH_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEDAF0IH_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/LYNXMPEDAF0IH_L.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": 235678911,
+        "editors_pick": false,
+        "id": 4971930,
+        "important": false,
+        "link": "/news/stock-market-news/goldman-sachs-sees-60-kospi-upside-despite-cutting-target-to-9000-4971930",
+        "metadata": {},
+        "newsType": "AkapiAdmin",
+        "published_at": "2026-10-26T10:22:07Z",
+        "source_external_link": "",
+        "source_id": 10,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "Goldman Sachs sees 60% KOSPI upside despite cutting target to 9,000",
+        "updated_at": "2026-10-26T10:22:07Z",
         "commentsCount": 0,
         "category": "",
         "categoryLink": "",
@@ -2910,25 +2755,18 @@
             "pair_link": "/indices/kospi",
             "pair_name": "KOSPI",
             "pair_name_synonym": "KOSPI",
-            "pair_change_percent": "0.3"
+            "pair_change_percent": "-1.46"
           },
           {
-            "stock_symbol": "000660",
-            "pair_link": "/equities/sk-hynix-inc",
-            "pair_name": "SK Hynix Inc",
-            "pair_name_synonym": "SK Hynix",
-            "pair_change_percent": "4.42"
-          },
-          {
-            "stock_symbol": "005930",
-            "pair_link": "/equities/samsung-electronics-co-ltd",
-            "pair_name": "Samsung Electronics Co Ltd",
-            "pair_name_synonym": "Samsung Electronics",
-            "pair_change_percent": "0.47"
+            "stock_symbol": "MIPFJIN00PUS",
+            "pair_link": "/indices/msci-ac-asia-pacific-x-jp",
+            "pair_name": "MSCI AC Asia Pacific x JP",
+            "pair_name_synonym": "MSCI AC Asia Pacific x JP",
+            "pair_change_percent": "-0.69"
           }
         ],
         "provider": "Investing.com",
-        "date": "2026-10-25 08:50:52",
+        "date": "2026-10-26 10:22:07",
         "writerId": 0,
         "front_writer_name": "",
         "front_member_name": "",
@@ -2949,112 +2787,42 @@
         "editorLastName": "",
         "editorLink": "",
         "image_copyright": "&copy; Reuters",
-        "related_image_big": "https://content-media.investing.com/news/moved_LYNXNPEB7B0FP_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:66:\"https://content-media.investing.com/news/moved_LYNXNPEB7B0FP_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/moved_LYNXNPEB7B0FP_L.jpg",
+        "related_image_big": "https://content-media.investing.com/news/moved_LYNXMPEH1L0L7_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:66:\"https://content-media.investing.com/news/moved_LYNXMPEH1L0L7_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/moved_LYNXMPEH1L0L7_L.jpg",
         "sponsored": false
       },
       {
         "article_type": "news",
         "body": "",
-        "created_by": 277000282,
+        "created_by": -1,
         "editors_pick": false,
-        "id": 4971072,
-        "important": false,
-        "link": "/news/economy-news/north-koreas-kim-jong-un-makes-surprise-china-visit-as-ties-strengthen-4971072",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T08:17:00Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "North Korea\u2019s Kim Jong Un makes surprise China visit as ties strengthen",
-        "updated_at": "2026-10-25T08:17:00Z",
-        "commentsCount": 0,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "CHNR",
-            "pair_link": "/equities/china-natural",
-            "pair_name": "China Natural Resources Inc",
-            "pair_name_synonym": "China Natural Resources",
-            "pair_change_percent": "-3.66"
-          },
-          {
-            "stock_symbol": "CN10YT",
-            "pair_link": "/rates-bonds/china-10-year-bond-yield",
-            "pair_name": "China 10-Year",
-            "pair_name_synonym": "China 10Y",
-            "pair_change_percent": "1.57"
-          },
-          {
-            "stock_symbol": "MCHI",
-            "pair_link": "/etfs/ishares-msci-china",
-            "pair_name": "iShares MSCI China ETF",
-            "pair_name_synonym": "iShares MSCI China",
-            "pair_change_percent": "-0.04"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 08:17:00",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXMPEB080EQ_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEB080EQ_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXMPEB080EQ_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 236550687,
-        "editors_pick": false,
-        "id": 4971069,
+        "id": 4971928,
         "important": true,
-        "link": "/news/pro/goldman-sees-significant-humanoid-robotics-potential-for-this-automaker-432SI-4971069",
+        "link": "/news/pro/stonex-initiates-coverage-of-lumentum-holdings-inc-at-buy-with-a-price-target-of-120k-4971928",
         "metadata": {},
         "newsType": "InvestingPro",
-        "published_at": "2026-10-25T08:00:00Z",
-        "source_external_link": "https://www.streetinsider.com/",
-        "source_id": 80,
+        "published_at": "2026-10-26T10:20:55Z",
+        "source_external_link": "",
+        "source_id": 68,
         "source_name": "Investing.com",
         "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Goldman sees significant humanoid robotics potential for this automaker",
-        "updated_at": "2026-10-25T08:01:01Z",
+        "title": "Lumentum Holdings Inc receives Investment Bank Analyst Rating Update",
+        "updated_at": "2026-10-26T10:20:55Z",
         "commentsCount": 0,
         "category": "",
         "categoryLink": "",
         "pairs": [
           {
-            "stock_symbol": "7267",
-            "pair_link": "/equities/honda-motor-co.,-ltd.",
-            "pair_name": "Honda Motor Co Ltd",
-            "pair_name_synonym": "Honda Motor",
-            "pair_change_percent": "-0.08"
+            "stock_symbol": "LITE",
+            "pair_link": "/equities/lumentum-holdings-inc",
+            "pair_name": "Lumentum Holdings Inc",
+            "pair_name_synonym": "Lumentum Holdings Inc",
+            "pair_change_percent": "0.48"
           }
         ],
         "provider": "Investing.com",
-        "date": "2026-10-25 08:01:01",
+        "date": "2026-10-26 10:20:55",
         "writerId": 0,
         "front_writer_name": "",
         "front_member_name": "",
@@ -3074,456 +2842,43 @@
         "editorFirstName": "",
         "editorLastName": "",
         "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXNPEB8G03M_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXNPEB8G03M_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXNPEB8G03M_L.jpg",
+        "image_copyright": "&copy; Investing.com",
+        "related_image_big": "https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:72:\"https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg",
         "sponsored": false
       },
       {
         "article_type": "news",
         "body": "",
-        "created_by": 256370160,
+        "created_by": -1,
         "editors_pick": false,
-        "id": 4970923,
-        "important": false,
-        "link": "/news/stock-market-news/5-big-analyst-ai-moves-uniquely-catalystrich-months-ahead-for-spacex-4970923",
+        "id": 4971929,
+        "important": true,
+        "link": "/news/pro/stonex-initiates-coverage-of-coherent-at-buy-with-a-price-target-of-42500-4971929",
         "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-24T17:45:23Z",
+        "newsType": "InvestingPro",
+        "published_at": "2026-10-26T10:20:55Z",
         "source_external_link": "",
-        "source_id": 10,
+        "source_id": 68,
         "source_name": "Investing.com",
         "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "5 big analyst AI moves: \u2019Uniquely catalyst-rich\u2019 months ahead for SpaceX",
-        "updated_at": "2026-10-25T07:40:11Z",
+        "title": "Coherent receives Investment Bank Analyst Rating Update",
+        "updated_at": "2026-10-26T10:20:55Z",
         "commentsCount": 0,
         "category": "",
         "categoryLink": "",
         "pairs": [
           {
-            "stock_symbol": "US500",
-            "pair_link": "/indices/us-spx-500",
-            "pair_name": "S&P 500",
-            "pair_name_synonym": "S&P 500",
-            "pair_change_percent": "-0.52"
-          },
-          {
-            "stock_symbol": "INTC",
-            "pair_link": "/equities/intel-corp",
-            "pair_name": "Intel Corporation",
-            "pair_name_synonym": "Intel",
-            "pair_change_percent": "1.72"
-          },
-          {
-            "stock_symbol": "AAPL",
-            "pair_link": "/equities/apple-computer-inc",
-            "pair_name": "Apple Inc",
-            "pair_name_synonym": "Apple",
-            "pair_change_percent": "-0.14"
-          },
-          {
-            "stock_symbol": "LRCX",
-            "pair_link": "/equities/lam-research-corp",
-            "pair_name": "Lam Research Corp",
-            "pair_name_synonym": "Lam Research",
-            "pair_change_percent": "-0.02"
-          },
-          {
-            "stock_symbol": "TSLA",
-            "pair_link": "/equities/tesla-motors",
-            "pair_name": "Tesla Inc",
-            "pair_name_synonym": "Tesla",
-            "pair_change_percent": "-0.63"
-          },
-          {
-            "stock_symbol": "US2YT",
-            "pair_link": "/rates-bonds/u.s.-2-year-bond-yield",
-            "pair_name": "United States 2-Year",
-            "pair_name_synonym": "U.S. 2Y",
-            "pair_change_percent": "1.01"
-          },
-          {
-            "stock_symbol": "SPCX",
-            "pair_link": "/equities/spacex",
-            "pair_name": "Space Exploration Technologies Corp",
-            "pair_name_synonym": "SpaceX",
-            "pair_change_percent": "1.89"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 07:40:11",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters",
-        "related_image_big": "https://content-media.investing.com/news/moved_LYNXMPEM5A1IB_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:66:\"https://content-media.investing.com/news/moved_LYNXMPEM5A1IB_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/moved_LYNXMPEM5A1IB_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 277000282,
-        "editors_pick": false,
-        "id": 4971064,
-        "important": false,
-        "link": "/news/economy-news/uk-immigration-crackdown-threatens-15-billion-care-sector--bloomberg-4971064",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T07:23:43Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "UK immigration crackdown threatens \u00a315 billion care sector - Bloomberg",
-        "updated_at": "2026-10-25T07:23:43Z",
-        "commentsCount": 0,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "CTRE",
-            "pair_link": "/equities/caretrust-inc",
-            "pair_name": "CareTrust REIT, Inc",
-            "pair_name_synonym": "CareTrust REIT",
-            "pair_change_percent": "0"
-          },
-          {
-            "stock_symbol": "THRLT",
-            "pair_link": "/equities/target-healthcare-reit-ltd",
-            "pair_name": "Target Healthcare REIT Ltd",
-            "pair_name_synonym": "Target Healthcare REIT Ltd",
-            "pair_change_percent": "0.52"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 07:23:43",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXMPEE030R1_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEE030R1_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXMPEE030R1_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 277000282,
-        "editors_pick": false,
-        "id": 4971057,
-        "important": false,
-        "link": "/news/economy-news/uae-closes-more-beaches-as-gulf-oil-spill-raises-environmental-concerns-4971057",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T06:41:14Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "UAE closes more beaches as Gulf oil spill raises environmental concerns",
-        "updated_at": "2026-10-25T06:41:14Z",
-        "commentsCount": 3,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "LCO",
-            "pair_link": "/commodities/brent-oil",
-            "pair_name": "Brent Oil Futures",
-            "pair_name_synonym": "Brent Oil",
-            "pair_change_percent": "0.18"
-          },
-          {
-            "stock_symbol": "CL",
-            "pair_link": "/commodities/crude-oil",
-            "pair_name": "Crude Oil WTI Futures",
-            "pair_name_synonym": "Crude Oil WTI",
-            "pair_change_percent": "3.99"
-          },
-          {
-            "stock_symbol": "NG",
-            "pair_link": "/commodities/natural-gas",
-            "pair_name": "Natural Gas Futures",
-            "pair_name_synonym": "Natural Gas",
-            "pair_change_percent": "-6.08"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 06:41:14",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXMPEA5T0AF_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEA5T0AF_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXMPEA5T0AF_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 277000282,
-        "editors_pick": false,
-        "id": 4971047,
-        "important": false,
-        "link": "/news/economy-news/should-aggregators-block-ai-agents-4971047",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T06:00:53Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Should Aggregators block AI Agents?",
-        "updated_at": "2026-10-25T06:00:53Z",
-        "commentsCount": 0,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "AMZN",
-            "pair_link": "/equities/amazon-com-inc",
-            "pair_name": "Amazon.com Inc",
-            "pair_name_synonym": "Amazon.com",
-            "pair_change_percent": "-0.95"
-          },
-          {
-            "stock_symbol": "EXPE",
-            "pair_link": "/equities/expedia",
-            "pair_name": "Expedia Inc",
-            "pair_name_synonym": "Expedia",
-            "pair_change_percent": "-3.18"
-          },
-          {
-            "stock_symbol": "WMT",
-            "pair_link": "/equities/wal-mart-stores",
-            "pair_name": "Walmart Inc",
-            "pair_name_synonym": "Walmart",
-            "pair_change_percent": "-1.02"
-          },
-          {
-            "stock_symbol": "META",
-            "pair_link": "/equities/facebook-inc",
-            "pair_name": "Meta Platforms Inc",
-            "pair_name_synonym": "Meta Platforms",
-            "pair_change_percent": "-0.96"
-          },
-          {
-            "stock_symbol": "SHOP",
-            "pair_link": "/equities/shopify-inc",
-            "pair_name": "Shopify Inc",
-            "pair_name_synonym": "Shopify Inc",
-            "pair_change_percent": "-0.08"
-          },
-          {
-            "stock_symbol": "UBER",
-            "pair_link": "/equities/uber-technologies-inc",
-            "pair_name": "Uber Technologies Inc",
-            "pair_name_synonym": "Uber",
-            "pair_change_percent": "-3.43"
-          },
-          {
-            "stock_symbol": "DASH",
-            "pair_link": "/equities/doordash-inc",
-            "pair_name": "DoorDash Inc",
-            "pair_name_synonym": "DoorDash",
-            "pair_change_percent": "-3.53"
-          },
-          {
-            "stock_symbol": "CART",
-            "pair_link": "/equities/maplebear",
-            "pair_name": "Maplebear Inc",
-            "pair_name_synonym": "Maplebear",
-            "pair_change_percent": "9.21"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 06:00:53",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters",
-        "related_image_big": "https://content-media.investing.com/news/moved_LYNXMPEJ550HV_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:66:\"https://content-media.investing.com/news/moved_LYNXMPEJ550HV_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/moved_LYNXMPEJ550HV_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 277000282,
-        "editors_pick": false,
-        "id": 4971035,
-        "important": false,
-        "link": "/news/cryptocurrency-news/bitcoin-price-today-btc-recovers-to-80800-ahead-of-fed-meeting-4971035",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T04:54:18Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Bitcoin price today: BTC recovers to $80,800 ahead of Fed meeting",
-        "updated_at": "2026-10-25T04:54:18Z",
-        "commentsCount": 0,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "LCO",
-            "pair_link": "/commodities/brent-oil",
-            "pair_name": "Brent Oil Futures",
-            "pair_name_synonym": "Brent Oil",
-            "pair_change_percent": "0.18"
-          },
-          {
-            "stock_symbol": "",
-            "pair_link": "/crypto/bitcoin/btc-usd",
-            "pair_name": "Bitcoin US Dollar",
-            "pair_name_synonym": "BTC/USD",
-            "pair_change_percent": "-0.67"
-          }
-        ],
-        "provider": "Investing.com",
-        "date": "2026-10-25 04:54:18",
-        "writerId": 0,
-        "front_writer_name": "",
-        "front_member_name": "",
-        "front_writer_link": "",
-        "writerName": "",
-        "writerLink": "",
-        "writerImage": "",
-        "userFirstName": "",
-        "userLastName": "",
-        "writerArticleCount": 0,
-        "company_name": "",
-        "company_name_prepared": "",
-        "company_href": "",
-        "company_url": "",
-        "user_type": "",
-        "authorLink": "",
-        "editorFirstName": "",
-        "editorLastName": "",
-        "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/459eb40204b66dee321ef4b9b4c72fdc_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:79:\"https://content-media.investing.com/news/459eb40204b66dee321ef4b9b4c72fdc_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/459eb40204b66dee321ef4b9b4c72fdc_L.jpg",
-        "sponsored": false
-      },
-      {
-        "article_type": "news",
-        "body": "",
-        "created_by": 277000282,
-        "editors_pick": false,
-        "id": 4971031,
-        "important": false,
-        "link": "/news/economy-news/obama-attacks-trump-over-inflation-as-democrats-fight-for-michigan-senate-seat-4971031",
-        "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T04:07:10Z",
-        "source_external_link": "",
-        "source_id": 10,
-        "source_name": "Investing.com",
-        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Obama attacks Trump over inflation as Democrats fight for Michigan Senate seat",
-        "updated_at": "2026-10-25T04:07:10Z",
-        "commentsCount": 7,
-        "category": "",
-        "categoryLink": "",
-        "pairs": [
-          {
-            "stock_symbol": "US5YT",
-            "pair_link": "/rates-bonds/u.s.-5-year-bond-yield",
-            "pair_name": "United States 5-Year",
-            "pair_name_synonym": "U.S. 5Y",
-            "pair_change_percent": "0.82"
-          },
-          {
-            "stock_symbol": "US10YT",
-            "pair_link": "/rates-bonds/u.s.-10-year-bond-yield",
-            "pair_name": "United States 10-Year",
-            "pair_name_synonym": "U.S. 10Y",
+            "stock_symbol": "COHR",
+            "pair_link": "/equities/coherent",
+            "pair_name": "Coherent Inc",
+            "pair_name_synonym": "Coherent",
             "pair_change_percent": "0.71"
-          },
-          {
-            "stock_symbol": "US30YT",
-            "pair_link": "/rates-bonds/u.s.-30-year-bond-yield",
-            "pair_name": "United States 30-Year",
-            "pair_name_synonym": "U.S. 30Y",
-            "pair_change_percent": "0.53"
           }
         ],
         "provider": "Investing.com",
-        "date": "2026-10-25 04:07:10",
+        "date": "2026-10-26 10:20:55",
         "writerId": 0,
         "front_writer_name": "",
         "front_member_name": "",
@@ -3543,43 +2898,43 @@
         "editorFirstName": "",
         "editorLastName": "",
         "editorLink": "",
-        "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXNPEBAI0A8_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXNPEBAI0A8_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXNPEBAI0A8_L.jpg",
+        "image_copyright": "&copy; Reuters",
+        "related_image_big": "https://content-media.investing.com/news/LYNXMPEM350UD_1200_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:65:\"https://content-media.investing.com/news/LYNXMPEM350UD_1200_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/LYNXMPEM350UD_1200_L.jpg",
         "sponsored": false
       },
       {
         "article_type": "news",
         "body": "",
-        "created_by": 277000282,
+        "created_by": -1,
         "editors_pick": false,
-        "id": 4971027,
-        "important": false,
-        "link": "/news/economy-news/trump-touts-4-billion-audi-plant-in-georgia-as-he-defends-tariffs-4971027",
+        "id": 4971923,
+        "important": true,
+        "link": "/news/stock-market-news/bofa-sees-value-in-credit-tranches-amid-wider-spreads-93CH-4971923",
         "metadata": {},
-        "newsType": "AkapiAdmin",
-        "published_at": "2026-10-25T03:29:51Z",
+        "newsType": "Investing.com AI",
+        "published_at": "2026-10-26T10:17:21Z",
         "source_external_link": "",
-        "source_id": 10,
+        "source_id": 93,
         "source_name": "Investing.com",
         "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
-        "title": "Trump touts $4 billion Audi plant in Georgia as he defends tariffs",
-        "updated_at": "2026-10-25T03:29:51Z",
-        "commentsCount": 1,
+        "title": "BofA sees value in credit tranches amid wider spreads",
+        "updated_at": "2026-10-26T10:17:21Z",
+        "commentsCount": 0,
         "category": "",
         "categoryLink": "",
         "pairs": [
           {
-            "stock_symbol": "VOWG",
-            "pair_link": "/equities/volkswagen-ag",
-            "pair_name": "Volkswagen AG",
-            "pair_name_synonym": "Volkswagen ST",
-            "pair_change_percent": "-0.87"
+            "stock_symbol": "XTC5",
+            "pair_link": "/etfs/db-crossover-5-y-short-tr",
+            "pair_name": "Xtrackers II iTraxx Crossover Short Daily Swap UCITS 1C ETF",
+            "pair_name_synonym": "db x-trackers II iTraxx Crossover 5y Short UCITS",
+            "pair_change_percent": "-0.85"
           }
         ],
         "provider": "Investing.com",
-        "date": "2026-10-25 03:29:51",
+        "date": "2026-10-26 10:17:21",
         "writerId": 0,
         "front_writer_name": "",
         "front_member_name": "",
@@ -3600,9 +2955,233 @@
         "editorLastName": "",
         "editorLink": "",
         "image_copyright": "&copy; Reuters.",
-        "related_image_big": "https://content-media.investing.com/news/LYNXMPEB580P4_L.jpg",
-        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEB580P4_L.jpg\";s:5:\"width\";i:200;}}",
-        "imageHref": "https://content-media.investing.com/news/LYNXMPEB580P4_L.jpg",
+        "related_image_big": "https://content-media.investing.com/news/LYNXMPEC0409P_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXMPEC0409P_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/LYNXMPEC0409P_L.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": -1,
+        "editors_pick": false,
+        "id": 4971915,
+        "important": true,
+        "link": "/news/stock-market-news/berkeley-group-faces-pressure-from-new-home-scheme-price-cap-goldman-says-93CH-4971915",
+        "metadata": {},
+        "newsType": "Investing.com AI",
+        "published_at": "2026-10-26T10:13:40Z",
+        "source_external_link": "",
+        "source_id": 93,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "Berkeley Group faces pressure from new home scheme price cap, Goldman says",
+        "updated_at": "2026-10-26T10:13:40Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [
+          {
+            "stock_symbol": "BKGH",
+            "pair_link": "/equities/berkeley-group-holdings-plc",
+            "pair_name": "The Berkeley Group Holdings plc",
+            "pair_name_synonym": "Berkeley",
+            "pair_change_percent": "0.06"
+          }
+        ],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:13:40",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Reuters.",
+        "related_image_big": "https://content-media.investing.com/news/LYNXNPEB9M0BY_L.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:60:\"https://content-media.investing.com/news/LYNXNPEB9M0BY_L.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/LYNXNPEB9M0BY_L.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": 235832189,
+        "editors_pick": false,
+        "id": 4971284,
+        "important": true,
+        "link": "/news/pro/jefferies-upgrades-caci-international-to-buy-with-a-price-target-of-72500-4971284",
+        "metadata": {},
+        "newsType": "InvestingPro",
+        "published_at": "2026-10-26T10:06:00Z",
+        "source_external_link": "",
+        "source_id": 68,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "CACI International Inc receives Investment Bank Analyst Rating Update",
+        "updated_at": "2026-10-26T10:13:02Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [
+          {
+            "stock_symbol": "CACI",
+            "pair_link": "/equities/caci-international-inc",
+            "pair_name": "CACI International Inc",
+            "pair_name_synonym": "CACI International",
+            "pair_change_percent": "2.38"
+          }
+        ],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:13:02",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Investing.com",
+        "related_image_big": "https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:72:\"https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/1200_7_800x533_L_1783516530.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": -1,
+        "editors_pick": false,
+        "id": 4971908,
+        "important": true,
+        "link": "/news/pro/loop-capital-downgrades-boise-cas-to-hold-4971908",
+        "metadata": {},
+        "newsType": "InvestingPro",
+        "published_at": "2026-10-26T10:11:50Z",
+        "source_external_link": "",
+        "source_id": 68,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "Boise Cascad Llc receives Investment Bank Analyst Rating Update",
+        "updated_at": "2026-10-26T10:11:51Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [
+          {
+            "stock_symbol": "BCC",
+            "pair_link": "/equities/boise-cascad-llc",
+            "pair_name": "Boise Cascade Co",
+            "pair_name_synonym": "Boise Cas",
+            "pair_change_percent": "-0.7"
+          }
+        ],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:11:51",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Investing.com",
+        "related_image_big": "https://content-media.investing.com/news/1200_5_800x533_L_1783516456.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:72:\"https://content-media.investing.com/news/1200_5_800x533_L_1783516456.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/1200_5_800x533_L_1783516456.jpg",
+        "sponsored": false
+      },
+      {
+        "article_type": "news",
+        "body": "",
+        "created_by": -1,
+        "editors_pick": false,
+        "id": 4971907,
+        "important": true,
+        "link": "/news/pro/loop-capital-downgrades-builders-firstsource-to-hold-4971907",
+        "metadata": {},
+        "newsType": "InvestingPro",
+        "published_at": "2026-10-26T10:11:50Z",
+        "source_external_link": "",
+        "source_id": 68,
+        "source_name": "Investing.com",
+        "source_image": "https://content-media.investing.com/news/providers/investing-new.png",
+        "title": "Builders FirstSou receives Investment Bank Analyst Rating Update",
+        "updated_at": "2026-10-26T10:11:50Z",
+        "commentsCount": 0,
+        "category": "",
+        "categoryLink": "",
+        "pairs": [
+          {
+            "stock_symbol": "BLDR",
+            "pair_link": "/equities/builders-firstsou",
+            "pair_name": "Builders FirstSource Inc",
+            "pair_name_synonym": "Builders FirstSource",
+            "pair_change_percent": "-1.2"
+          }
+        ],
+        "provider": "Investing.com",
+        "date": "2026-10-26 10:11:50",
+        "writerId": 0,
+        "front_writer_name": "",
+        "front_member_name": "",
+        "front_writer_link": "",
+        "writerName": "",
+        "writerLink": "",
+        "writerImage": "",
+        "userFirstName": "",
+        "userLastName": "",
+        "writerArticleCount": 0,
+        "company_name": "",
+        "company_name_prepared": "",
+        "company_href": "",
+        "company_url": "",
+        "user_type": "",
+        "authorLink": "",
+        "editorFirstName": "",
+        "editorLastName": "",
+        "editorLink": "",
+        "image_copyright": "&copy; Investing.com",
+        "related_image_big": "https://content-media.investing.com/news/1200_2_800x533_L_1783516309.jpg",
+        "images_serialized": "a:1:{i:0;a:2:{s:3:\"src\";s:72:\"https://content-media.investing.com/news/1200_2_800x533_L_1783516309.jpg\";s:5:\"width\";i:200;}}",
+        "imageHref": "https://content-media.investing.com/news/1200_2_800x533_L_1783516309.jpg",
         "sponsored": false
       }
     ],
@@ -3611,7 +3190,7 @@
     "_page": 1,
     "_pagesNumber": 0,
     "nextBreakingNewsHeadlinesPageCursor": "",
-    "latestBreakingNewsDatetime": "2026-10-25T03:29:51Z",
+    "latestBreakingNewsDatetime": "2026-10-26T10:11:50Z",
     "_economicEventUnifiedArticles": [],
     "_currenciesUnifiedArticles": [],
     "_featuredSponsored": {
@@ -4011,7 +3590,6 @@
   "abTestingStore": {
     "tiktokWallVariant": null,
     "experiments": {
-      "adaptsearch": 1,
       "navbarcta": 1
     }
   },
@@ -4045,22 +3623,22 @@
         "parentName": "China Life Insurance Co Ltd"
       },
       "price": {
-        "last": 23.54,
+        "last": 23.32,
         "lastClose": 23.54,
-        "open": 22.76,
-        "changePcr": 4.07,
-        "change": 0.92,
+        "open": 23.4,
+        "changePcr": -0.93,
+        "change": -0.22,
         "showExtendedHours": "None",
-        "high": 23.94,
-        "low": 22.24,
+        "high": 23.46,
+        "low": 22.96,
         "currency": "HKD",
         "isDelayed": true,
-        "lastUpdateTime": "1792742399000",
+        "lastUpdateTime": "1793001599000",
         "fiftyTwoWeekHigh": 36.16,
         "fiftyTwoWeekLow": 22.24,
         "lastDecimalPrecision": 2,
         "changeDecimalPrecision": 2,
-        "volume": 94715641,
+        "volume": 64054477,
         "long_name": "China Life Insurance Co Ltd",
         "decimal_places": 2
       },
@@ -4079,12 +3657,12 @@
         "isEod": false
       },
       "volume": {
-        "average": 48987612,
-        "_turnover": 94715641
+        "average": 49148358,
+        "_turnover": 64054477
       },
       "bidding": {
-        "bid": 23.54,
-        "ask": 23.56
+        "bid": 23.32,
+        "ask": 23.32
       },
       "relatives": {
         "relatives": [
@@ -4098,13 +3676,13 @@
             "currency": "HKD",
             "delayed": "1",
             "isCfd": false,
-            "last": 23.54,
+            "last": 23.32,
             "lastDecimalPrecision": 2,
-            "bid": "23.54",
-            "ask": "23.56",
-            "volumeOneDay": 94715641,
-            "changeOneDayPercent": 4.07,
-            "lastUpdateTime": "1792742399000",
+            "bid": "23.32",
+            "ask": "23.32",
+            "volumeOneDay": 64054477,
+            "changeOneDayPercent": -0.93,
+            "lastUpdateTime": "1793001599000",
             "isOpen": false
           },
           {
@@ -4117,13 +3695,13 @@
             "currency": "CNY",
             "delayed": "1",
             "isCfd": false,
-            "last": 34.5,
+            "last": 35.1,
             "lastDecimalPrecision": 2,
-            "bid": "34.49",
-            "ask": "34.46",
-            "volumeOneDay": 25207468,
-            "changeOneDayPercent": 1.89,
-            "lastUpdateTime": "1792738799000",
+            "bid": "35.09",
+            "ask": "35.1",
+            "volumeOneDay": 24560436,
+            "changeOneDayPercent": 1.74,
+            "lastUpdateTime": "1792997999000",
             "isOpen": false
           },
           {
@@ -4155,14 +3733,14 @@
             "currency": "EUR",
             "delayed": "1",
             "isCfd": false,
-            "last": 2.605,
+            "last": 2.599,
             "lastDecimalPrecision": 3,
-            "bid": "2.603",
-            "ask": "2.72",
+            "bid": "2.601",
+            "ask": "2.69",
             "volumeOneDay": 0,
-            "changeOneDayPercent": 4.04,
-            "lastUpdateTime": "1792782059000",
-            "isOpen": false
+            "changeOneDayPercent": -0.21,
+            "lastUpdateTime": "1792998139000",
+            "isOpen": true
           },
           {
             "id": "963875",
@@ -4174,14 +3752,14 @@
             "currency": "EUR",
             "delayed": "1",
             "isCfd": false,
-            "last": 2.708,
+            "last": 2.675,
             "lastDecimalPrecision": 3,
-            "bid": "2.623",
-            "ask": "2.705",
-            "volumeOneDay": 8569,
-            "changeOneDayPercent": 3.4,
-            "lastUpdateTime": "1792789499000",
-            "isOpen": false
+            "bid": "2.621",
+            "ask": "2.675",
+            "volumeOneDay": 158,
+            "changeOneDayPercent": 0.41,
+            "lastUpdateTime": "1793006933000",
+            "isOpen": true
           },
           {
             "id": "963523",
@@ -4193,14 +3771,14 @@
             "currency": "EUR",
             "delayed": "1",
             "isCfd": false,
-            "last": 2.649,
+            "last": 2.621,
             "lastDecimalPrecision": 3,
-            "bid": "2.623",
-            "ask": "2.705",
+            "bid": "2.621",
+            "ask": "2.675",
             "volumeOneDay": 0,
-            "changeOneDayPercent": 4.17,
-            "lastUpdateTime": "1792780199000",
-            "isOpen": false
+            "changeOneDayPercent": -1.06,
+            "lastUpdateTime": "1793002201000",
+            "isOpen": true
           }
         ]
       },
@@ -4296,18 +3874,18 @@
     ],
     "priceChanges": {
       "pct_15min": null,
-      "pct_1d": 4.07,
+      "pct_1d": -0.93,
       "pct_1h": null,
-      "pct_1m": -20.0408,
-      "pct_1w": -0.3387,
-      "pct_1y": -5.3859,
+      "pct_1m": -18.4045,
+      "pct_1w": -1.2701,
+      "pct_1y": -6.2701,
       "pct_30min": null,
-      "pct_3m": -17.2293,
-      "pct_3y": 118.3673,
-      "pct_5y": 65.309,
-      "pct_6m": -13.3284,
-      "pct_all_time": -32.6081,
-      "pct_ytd": -13.899,
+      "pct_3m": -18.0028,
+      "pct_3y": 117.1322,
+      "pct_5y": 64.9222,
+      "pct_6m": -14.1384,
+      "pct_all_time": -33.2379,
+      "pct_ytd": -14.7037,
       "pip_15min": null,
       "pip_1d": null,
       "pip_1h": null,
@@ -4315,7 +3893,7 @@
       "pip_1w": null,
       "pip_3y": null,
       "pip_ytd": null,
-      "updated_at": "2026-10-24T20:14:59.343Z"
+      "updated_at": "2026-10-26T10:03:16.676Z"
     },
     "keyMetrics": {
       "instrument_type": "Equities",
@@ -4350,10 +3928,10 @@
               "last_pair_decimal": "1",
               "ticker": "",
               "volume": "0",
-              "Last": 52269,
-              "Chg": "-597.8",
-              "ChgPct": "-1.13",
-              "IsOpen": "0",
+              "Last": 52424.7,
+              "Chg": "210.1",
+              "ChgPct": "0.4",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4378,10 +3956,10 @@
               "last_pair_decimal": "1",
               "ticker": "",
               "volume": "0",
-              "Last": 7635.8,
-              "Chg": "-27.6",
-              "ChgPct": "-0.36",
-              "IsOpen": "0",
+              "Last": 7638.8,
+              "Chg": "15.2",
+              "ChgPct": "0.2",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4416,7 +3994,7 @@
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 52867.98,
+                  "price": 52215.16,
                   "volume": 0
                 }
               }
@@ -4451,7 +4029,7 @@
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 7663.43,
+                  "price": 7623.68,
                   "volume": 0
                 }
               }
@@ -4511,10 +4089,10 @@
               "last_pair_decimal": "2",
               "ticker": "",
               "volume": "0",
-              "Last": 19.45,
-              "Chg": "0.42",
-              "ChgPct": "2.21",
-              "IsOpen": "0",
+              "Last": 19.46,
+              "Chg": "0.01",
+              "ChgPct": "0.05",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4538,11 +4116,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "3",
               "ticker": "",
-              "volume": "11114",
-              "Last": 101.6,
-              "Chg": "-0.05",
-              "ChgPct": "-0.05",
-              "IsOpen": "0",
+              "volume": "3770",
+              "Last": 101.675,
+              "Chg": "0.027",
+              "ChgPct": "0.03",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4573,11 +4151,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "309751",
-              "Last": 103.44,
-              "Chg": "3.97",
-              "ChgPct": "3.99",
-              "IsOpen": "0",
+              "volume": "65572",
+              "Last": 101.26,
+              "Chg": "-2.01",
+              "ChgPct": "-1.95",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4601,11 +4179,11 @@
               "flag_hover_title": "United Kingdom",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "352858",
-              "Last": 116.93,
-              "Chg": "0.21",
-              "ChgPct": "0.18",
-              "IsOpen": "0",
+              "volume": "75423",
+              "Last": 110.15,
+              "Chg": "-1.55",
+              "ChgPct": "-1.39",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4629,11 +4207,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "3",
               "ticker": "",
-              "volume": "129202",
-              "Last": 2.63,
-              "Chg": "-0.17",
-              "ChgPct": "-6.08",
-              "IsOpen": "0",
+              "volume": "26024",
+              "Last": 3.004,
+              "Chg": "-0.046",
+              "ChgPct": "-1.51",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4657,11 +4235,11 @@
               "flag_hover_title": "",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "173280",
-              "Last": 4010,
-              "Chg": "-50.4",
-              "ChgPct": "-1.24",
-              "IsOpen": "0",
+              "volume": "44866",
+              "Last": 4029.97,
+              "Chg": "22.07",
+              "ChgPct": "0.55",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4685,11 +4263,11 @@
               "flag_hover_title": "",
               "last_pair_decimal": "3",
               "ticker": "",
-              "volume": "57273",
-              "Last": 53.96,
-              "Chg": "-1.05",
-              "ChgPct": "-1.9",
-              "IsOpen": "0",
+              "volume": "10787",
+              "Last": 54.035,
+              "Chg": "0.086",
+              "ChgPct": "0.16",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4713,11 +4291,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "4",
               "ticker": "",
-              "volume": "42983",
-              "Last": 6.5,
-              "Chg": "0.1",
-              "ChgPct": "1.56",
-              "IsOpen": "0",
+              "volume": "10201",
+              "Last": 6.5303,
+              "Chg": "0.0228",
+              "ChgPct": "0.35",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4741,11 +4319,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "135964",
-              "Last": 1257.5,
-              "Chg": "4.5",
-              "ChgPct": "0.36",
-              "IsOpen": "0",
+              "volume": "46898",
+              "Last": 1252.63,
+              "Chg": "-15.38",
+              "ChgPct": "-1.21",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4777,17 +4355,17 @@
               "last_pair_decimal": "3",
               "ticker": "",
               "volume": "0",
-              "Last": 4.988,
-              "Chg": "0.035",
-              "ChgPct": "0.71",
-              "IsOpen": "0",
+              "Last": 4.984,
+              "Chg": "-0.002",
+              "ChgPct": "-0.04",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None",
                 "premarket": {
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 4.976,
+                  "price": 4.965,
                   "volume": 0
                 }
               }
@@ -4812,17 +4390,17 @@
               "last_pair_decimal": "3",
               "ticker": "",
               "volume": "0",
-              "Last": 5.315,
-              "Chg": "0.028",
-              "ChgPct": "0.53",
-              "IsOpen": "0",
+              "Last": 5.31,
+              "Chg": "-0.005",
+              "ChgPct": "-0.09",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None",
                 "premarket": {
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 5.306,
+                  "price": 5.301,
                   "volume": 0
                 }
               }
@@ -4847,17 +4425,17 @@
               "last_pair_decimal": "3",
               "ticker": "",
               "volume": "0",
-              "Last": 4.807,
-              "Chg": "0.039",
-              "ChgPct": "0.82",
-              "IsOpen": "0",
+              "Last": 4.814,
+              "Chg": "0.007",
+              "ChgPct": "0.15",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None",
                 "premarket": {
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 4.8,
+                  "price": 4.79,
                   "volume": 0
                 }
               }
@@ -4882,17 +4460,17 @@
               "last_pair_decimal": "3",
               "ticker": "",
               "volume": "0",
-              "Last": 4.139,
-              "Chg": "0.009",
-              "ChgPct": "0.22",
-              "IsOpen": "0",
+              "Last": 4.146,
+              "Chg": "0.007",
+              "ChgPct": "0.17",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None",
                 "premarket": {
                   "change": 0,
                   "change_percent": 0,
                   "last_step_direction": "None",
-                  "price": 4.165,
+                  "price": 4.152,
                   "volume": 0
                 }
               }
@@ -4916,11 +4494,11 @@
               "flag_hover_title": "United States",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "2434738",
-              "Last": 106.16,
-              "Chg": "-0.25",
-              "ChgPct": "-0.23",
-              "IsOpen": "0",
+              "volume": "327153",
+              "Last": 106.11,
+              "Chg": "-0.05",
+              "ChgPct": "-0.04",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -4944,11 +4522,11 @@
               "flag_hover_title": "Germany",
               "last_pair_decimal": "2",
               "ticker": "",
-              "volume": "1251737",
-              "Last": 122.13,
-              "Chg": "-0.08",
-              "ChgPct": "-0.07",
-              "IsOpen": "0",
+              "volume": "295779",
+              "Last": 121.99,
+              "Chg": "-0.14",
+              "ChgPct": "-0.12",
+              "IsOpen": "1",
               "extended_session": {
                 "extended_period_type": "None"
               }
@@ -5021,21 +4599,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": -0.12,
-                  "change_percent": -0.03,
-                  "last_step_direction": "None",
-                  "price": 347.61,
-                  "shown_date_time": "2026-10-23T23:59:50.681Z",
+                  "change": -1.3,
+                  "change_percent": -0.37,
+                  "last_step_direction": "Up",
+                  "price": 346.43,
+                  "shown_date_time": "2026-10-26T07:59:43.165Z",
                   "volume": 2908702
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": 0.73,
-                  "change_percent": 0.21,
-                  "last_step_direction": "Up",
-                  "price": 348.95,
-                  "shown_date_time": "2026-10-23T13:28:03Z",
-                  "volume": 609840
+                  "change": -4.76,
+                  "change_percent": -1.37,
+                  "last_step_direction": "Down",
+                  "price": 342.97,
+                  "shown_date_time": "2026-10-26T10:24:55Z",
+                  "volume": 338530
                 }
               }
             },
@@ -5065,21 +4643,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": 0.22,
-                  "change_percent": 0.1,
-                  "last_step_direction": "Up",
-                  "price": 211.18,
-                  "shown_date_time": "2026-10-23T23:59:56.871Z",
+                  "change": 0.34,
+                  "change_percent": 0.16,
+                  "last_step_direction": "None",
+                  "price": 211.3,
+                  "shown_date_time": "2026-10-26T07:59:40.548Z",
                   "volume": 6725912
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": -1.28,
-                  "change_percent": -0.6,
-                  "last_step_direction": "Down",
-                  "price": 210.93,
-                  "shown_date_time": "2026-10-23T13:28:02Z",
-                  "volume": 2510000
+                  "change": 0.56,
+                  "change_percent": 0.27,
+                  "last_step_direction": "Up",
+                  "price": 211.52,
+                  "shown_date_time": "2026-10-26T10:24:58Z",
+                  "volume": 614670
                 }
               }
             },
@@ -5109,21 +4687,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": 0.94,
-                  "change_percent": 0.29,
-                  "last_step_direction": "None",
-                  "price": 321.15,
-                  "shown_date_time": "2026-10-23T23:59:56.806Z",
+                  "change": 0.26,
+                  "change_percent": 0.08,
+                  "last_step_direction": "Down",
+                  "price": 320.47,
+                  "shown_date_time": "2026-10-26T07:59:56.381Z",
                   "volume": 1176368
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": -3.63,
-                  "change_percent": -1.12,
-                  "last_step_direction": "Down",
-                  "price": 320.59,
-                  "shown_date_time": "2026-10-23T13:28:01Z",
-                  "volume": 452590
+                  "change": 1.8,
+                  "change_percent": 0.56,
+                  "last_step_direction": "Up",
+                  "price": 322.01,
+                  "shown_date_time": "2026-10-26T10:24:57Z",
+                  "volume": 139060
                 }
               }
             },
@@ -5153,21 +4731,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": 0.06,
-                  "change_percent": 0.02,
-                  "last_step_direction": "Up",
-                  "price": 372.28,
-                  "shown_date_time": "2026-10-23T23:59:57.29Z",
+                  "change": 3.36,
+                  "change_percent": 0.9,
+                  "last_step_direction": "None",
+                  "price": 375.58,
+                  "shown_date_time": "2026-10-26T07:59:32.302Z",
                   "volume": 742898
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": -1.99,
-                  "change_percent": -0.53,
-                  "last_step_direction": "Down",
-                  "price": 372.59,
-                  "shown_date_time": "2026-10-23T13:28:01Z",
-                  "volume": 861920
+                  "change": 7.96,
+                  "change_percent": 2.14,
+                  "last_step_direction": "Up",
+                  "price": 380.18,
+                  "shown_date_time": "2026-10-26T10:24:56Z",
+                  "volume": 499530
                 }
               }
             },
@@ -5197,21 +4775,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": 0.8,
-                  "change_percent": 0.32,
+                  "change": 0.67,
+                  "change_percent": 0.27,
                   "last_step_direction": "None",
-                  "price": 248.8,
-                  "shown_date_time": "2026-10-23T23:59:47.986Z",
+                  "price": 248.67,
+                  "shown_date_time": "2026-10-26T07:59:04.5Z",
                   "volume": 974695
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": -1.7,
-                  "change_percent": -0.68,
-                  "last_step_direction": "Down",
-                  "price": 248.68,
-                  "shown_date_time": "2026-10-23T13:28:01Z",
-                  "volume": 1280000
+                  "change": 1.54,
+                  "change_percent": 0.62,
+                  "last_step_direction": "Up",
+                  "price": 249.54,
+                  "shown_date_time": "2026-10-26T10:24:39Z",
+                  "volume": 163400
                 }
               }
             },
@@ -5241,21 +4819,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": -0.05,
-                  "change_percent": -0.08,
+                  "change": -0.07,
+                  "change_percent": -0.11,
                   "last_step_direction": "Up",
-                  "price": 65.8,
-                  "shown_date_time": "2026-10-23T23:59:47.258Z",
+                  "price": 65.78,
+                  "shown_date_time": "2026-10-26T07:57:54.482Z",
                   "volume": 3388731
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": 0.03,
-                  "change_percent": 0.04,
-                  "last_step_direction": "Up",
-                  "price": 67.08,
-                  "shown_date_time": "2026-10-23T13:28:01Z",
-                  "volume": 350690
+                  "change": -0.1,
+                  "change_percent": -0.15,
+                  "last_step_direction": "Down",
+                  "price": 65.75,
+                  "shown_date_time": "2026-10-26T10:21:33Z",
+                  "volume": 88320
                 }
               }
             },
@@ -5285,21 +4863,21 @@
               "IsOpen": "0",
               "extended_session": {
                 "aftermarket": {
-                  "change": -2.43,
-                  "change_percent": -0.38,
+                  "change": -2.8,
+                  "change_percent": -0.44,
                   "last_step_direction": "Down",
-                  "price": 640.19,
-                  "shown_date_time": "2026-10-23T23:59:58.565Z",
+                  "price": 639.82,
+                  "shown_date_time": "2026-10-26T07:59:50Z",
                   "volume": 918167
                 },
-                "extended_period_type": "Aftermarket",
+                "extended_period_type": "Premarket",
                 "premarket": {
-                  "change": -9.31,
-                  "change_percent": -1.43,
+                  "change": -1.32,
+                  "change_percent": -0.21,
                   "last_step_direction": "Down",
-                  "price": 639.54,
-                  "shown_date_time": "2026-10-23T13:28:00Z",
-                  "volume": 353830
+                  "price": 641.3,
+                  "shown_date_time": "2026-10-26T10:24:41Z",
+                  "volume": 99330
                 }
               }
             }
@@ -5724,6 +5302,68 @@
             },
             {
               "month": "",
+              "instrumentId": 1228090,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "CoreWeave",
+                "title": "CoreWeave Inc",
+                "derived": false,
+                "url": "/equities/coreweave"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "CRWV",
+              "ticker": "",
+              "exchangeId": "2",
+              "last": "54.24",
+              "high": "56.11",
+              "low": "54.01",
+              "change": "-1.37",
+              "changePercent": "-2.46",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "36559376",
+              "_liveVolume": 46947437,
+              "volume": "46.95M"
+            },
+            {
+              "month": "",
+              "instrumentId": 13999,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "Nebius Group",
+                "title": "Nebius Group NV",
+                "derived": false,
+                "url": "/equities/yandex-nv"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "NBIS",
+              "ticker": "",
+              "exchangeId": "2",
+              "last": "158.74",
+              "high": "162.99",
+              "low": "155.86",
+              "change": "-0.43",
+              "changePercent": "-0.27",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "21109288",
+              "_liveVolume": 13496767,
+              "volume": "13.50M"
+            },
+            {
+              "month": "",
               "instrumentId": 6408,
               "flag": {
                 "name": "United States",
@@ -5752,161 +5392,6 @@
               "avgVolume": "43915026",
               "_liveVolume": 39539690,
               "volume": "39.54M"
-            },
-            {
-              "month": "",
-              "instrumentId": 26490,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "Meta Platforms",
-                "title": "Meta Platforms Inc",
-                "derived": false,
-                "url": "/equities/facebook-inc"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "META",
-              "ticker": "",
-              "exchangeId": "2",
-              "last": "642.62",
-              "high": "648.04",
-              "low": "633.27",
-              "change": "-6.23",
-              "changePercent": "-0.96",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "19553043",
-              "_liveVolume": 14791603,
-              "volume": "14.79M"
-            },
-            {
-              "month": "",
-              "instrumentId": 1088195,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "Bloom Energy",
-                "title": "Bloom Energy Corp",
-                "derived": false,
-                "url": "/equities/bloom-energy-corp"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "BE",
-              "ticker": "",
-              "exchangeId": "1",
-              "last": "193.30",
-              "high": "206.00",
-              "low": "189.00",
-              "change": "-24.47",
-              "changePercent": "-11.24",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "16047702",
-              "_liveVolume": 36015903,
-              "volume": "36.02M"
-            },
-            {
-              "month": "",
-              "instrumentId": 13994,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "Tesla",
-                "title": "Tesla Inc",
-                "derived": false,
-                "url": "/equities/tesla-motors"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "TSLA",
-              "ticker": "",
-              "exchangeId": "2",
-              "last": "372.22",
-              "high": "377.32",
-              "low": "365.27",
-              "change": "-2.36",
-              "changePercent": "-0.63",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "37074163",
-              "_liveVolume": 34762967,
-              "volume": "34.76M"
-            },
-            {
-              "month": "",
-              "instrumentId": 6435,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "Amazon.com",
-                "title": "Amazon.com Inc",
-                "derived": false,
-                "url": "/equities/amazon-com-inc"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "AMZN",
-              "ticker": "",
-              "exchangeId": "2",
-              "last": "248.00",
-              "high": "250.01",
-              "low": "246.45",
-              "change": "-2.38",
-              "changePercent": "-0.95",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "38841991",
-              "_liveVolume": 25569043,
-              "volume": "25.57M"
-            },
-            {
-              "month": "",
-              "instrumentId": 252,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "Microsoft",
-                "title": "Microsoft Corporation",
-                "derived": false,
-                "url": "/equities/microsoft-corp"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "MSFT",
-              "ticker": "",
-              "exchangeId": "2",
-              "last": "524.51",
-              "high": "525.77",
-              "low": "515.70",
-              "change": "3.43",
-              "changePercent": "0.66",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "25944174",
-              "_liveVolume": 13681067,
-              "volume": "13.68M"
             },
             {
               "month": "",
@@ -5941,96 +5426,220 @@
             },
             {
               "month": "",
-              "instrumentId": 6369,
+              "instrumentId": 13994,
               "flag": {
                 "name": "United States",
                 "code": ""
               },
               "name": {
-                "label": "Alphabet A",
-                "title": "Alphabet Inc Class A",
+                "label": "Tesla",
+                "title": "Tesla Inc",
                 "derived": false,
-                "url": "/equities/google-inc"
+                "url": "/equities/tesla-motors"
               },
               "precision": {
                 "change": 2,
                 "changePercent": 2
               },
-              "symbol": "GOOGL",
+              "symbol": "TSLA",
               "ticker": "",
               "exchangeId": "2",
-              "last": "320.21",
-              "high": "324.53",
-              "low": "320.18",
-              "change": "-4.01",
-              "changePercent": "-1.24",
+              "last": "372.22",
+              "high": "377.32",
+              "low": "365.27",
+              "change": "-2.36",
+              "changePercent": "-0.63",
               "time": 1792785599,
               "isOpen": "0",
-              "avgVolume": "25652328",
-              "_liveVolume": 17569640,
-              "volume": "17.57M"
+              "avgVolume": "37074163",
+              "_liveVolume": 34762967,
+              "volume": "34.76M"
             },
             {
               "month": "",
-              "instrumentId": 1114321,
+              "instrumentId": 1179808,
               "flag": {
                 "name": "United States",
                 "code": ""
               },
               "name": {
-                "label": "Moderna",
-                "title": "Moderna Inc",
+                "label": "IREN Ltd",
+                "title": "IREN Ltd",
                 "derived": false,
-                "url": "/equities/moderna"
+                "url": "/equities/iris-energy"
               },
               "precision": {
-                "change": 2,
+                "change": 3,
                 "changePercent": 2
               },
-              "symbol": "MRNA",
+              "symbol": "IREN",
               "ticker": "",
               "exchangeId": "2",
-              "last": "200.10",
-              "high": "206.97",
-              "low": "183.00",
-              "change": "-2.53",
-              "changePercent": "-1.25",
+              "last": "24.905",
+              "high": "26.47",
+              "low": "24.88",
+              "change": "-0.605",
+              "changePercent": "-2.37",
               "time": 1792785599,
               "isOpen": "0",
-              "avgVolume": "20425466",
-              "_liveVolume": 21566921,
-              "volume": "21.57M"
+              "avgVolume": "45496549",
+              "_liveVolume": 39056462,
+              "volume": "39.06M"
             },
             {
               "month": "",
-              "instrumentId": 1228090,
+              "instrumentId": 26490,
               "flag": {
                 "name": "United States",
                 "code": ""
               },
               "name": {
-                "label": "CoreWeave",
-                "title": "CoreWeave Inc",
+                "label": "Meta Platforms",
+                "title": "Meta Platforms Inc",
                 "derived": false,
-                "url": "/equities/coreweave"
+                "url": "/equities/facebook-inc"
               },
               "precision": {
                 "change": 2,
                 "changePercent": 2
               },
-              "symbol": "CRWV",
+              "symbol": "META",
               "ticker": "",
               "exchangeId": "2",
-              "last": "54.24",
-              "high": "56.11",
-              "low": "54.01",
-              "change": "-1.37",
-              "changePercent": "-2.46",
+              "last": "642.62",
+              "high": "648.04",
+              "low": "633.27",
+              "change": "-6.23",
+              "changePercent": "-0.96",
               "time": 1792785599,
               "isOpen": "0",
-              "avgVolume": "36559376",
-              "_liveVolume": 46947437,
-              "volume": "46.95M"
+              "avgVolume": "19553043",
+              "_liveVolume": 14791603,
+              "volume": "14.79M"
+            },
+            {
+              "month": "",
+              "instrumentId": 251,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "Intel",
+                "title": "Intel Corporation",
+                "derived": false,
+                "url": "/equities/intel-corp"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "INTC",
+              "ticker": "",
+              "exchangeId": "2",
+              "last": "86.96",
+              "high": "87.87",
+              "low": "84.74",
+              "change": "1.47",
+              "changePercent": "1.72",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "106035235",
+              "_liveVolume": 72093680,
+              "volume": "72.09M"
+            },
+            {
+              "month": "",
+              "instrumentId": 6435,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "Amazon.com",
+                "title": "Amazon.com Inc",
+                "derived": false,
+                "url": "/equities/amazon-com-inc"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "AMZN",
+              "ticker": "",
+              "exchangeId": "2",
+              "last": "248.00",
+              "high": "250.01",
+              "low": "246.45",
+              "change": "-2.38",
+              "changePercent": "-0.95",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "38841991",
+              "_liveVolume": 25569043,
+              "volume": "25.57M"
+            },
+            {
+              "month": "",
+              "instrumentId": 1088195,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "Bloom Energy",
+                "title": "Bloom Energy Corp",
+                "derived": false,
+                "url": "/equities/bloom-energy-corp"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "BE",
+              "ticker": "",
+              "exchangeId": "1",
+              "last": "193.30",
+              "high": "206.00",
+              "low": "189.00",
+              "change": "-24.47",
+              "changePercent": "-11.24",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "16047702",
+              "_liveVolume": 36015903,
+              "volume": "36.02M"
+            },
+            {
+              "month": "",
+              "instrumentId": 252,
+              "flag": {
+                "name": "United States",
+                "code": ""
+              },
+              "name": {
+                "label": "Microsoft",
+                "title": "Microsoft Corporation",
+                "derived": false,
+                "url": "/equities/microsoft-corp"
+              },
+              "precision": {
+                "change": 2,
+                "changePercent": 2
+              },
+              "symbol": "MSFT",
+              "ticker": "",
+              "exchangeId": "2",
+              "last": "524.51",
+              "high": "525.77",
+              "low": "515.70",
+              "change": "3.43",
+              "changePercent": "0.66",
+              "time": 1792785599,
+              "isOpen": "0",
+              "avgVolume": "25944174",
+              "_liveVolume": 13681067,
+              "volume": "13.68M"
             },
             {
               "month": "",
@@ -6062,37 +5671,6 @@
               "avgVolume": "22245602",
               "_liveVolume": 15177935,
               "volume": "15.18M"
-            },
-            {
-              "month": "",
-              "instrumentId": 1131557,
-              "flag": {
-                "name": "United States",
-                "code": ""
-              },
-              "name": {
-                "label": "CrowdStrike Holdings",
-                "title": "CrowdStrike Holdings Inc",
-                "derived": false,
-                "url": "/equities/crowdstrike-holdings-inc"
-              },
-              "precision": {
-                "change": 2,
-                "changePercent": 2
-              },
-              "symbol": "CRWD",
-              "ticker": "",
-              "exchangeId": "2",
-              "last": "257.57",
-              "high": "257.91",
-              "low": "234.79",
-              "change": "19.63",
-              "changePercent": "8.25",
-              "time": 1792785599,
-              "isOpen": "0",
-              "avgVolume": "9668240",
-              "_liveVolume": 13400134,
-              "volume": "13.40M"
             }
           ]
         }
@@ -7024,9 +6602,20 @@
         "shortname_translated": "China Petroleum Chemical",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 4.46,
-        "daily_change": 0.02,
-        "daily_change_pct": 0.45
+        "current_price": 4.64,
+        "daily_change": 0.18,
+        "daily_change_pct": 4.04
+      },
+      {
+        "symbol": "0857",
+        "url": "/equities/petrochina",
+        "pair_id": 8569,
+        "shortname_translated": "PetroChina H",
+        "change_percentage_decimal_precision": "2",
+        "current_price_precision": "2",
+        "current_price": 10.16,
+        "daily_change": 0.56,
+        "daily_change_pct": 5.78
       },
       {
         "symbol": "3968",
@@ -7035,20 +6624,9 @@
         "shortname_translated": "China Merchants Bank",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 51.45,
-        "daily_change": -0.65,
-        "daily_change_pct": -1.25
-      },
-      {
-        "symbol": "0992",
-        "url": "/equities/lenovo-group-ltd",
-        "pair_id": 32500,
-        "shortname_translated": "Lenovo Group",
-        "change_percentage_decimal_precision": "2",
-        "current_price_precision": "2",
-        "current_price": 22.64,
-        "daily_change": -0.52,
-        "daily_change_pct": -2.25
+        "current_price": 52.15,
+        "daily_change": 0.7,
+        "daily_change_pct": 1.36
       },
       {
         "symbol": "3750",
@@ -7058,19 +6636,19 @@
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
         "current_price": 356.8,
-        "daily_change": 18.4,
-        "daily_change_pct": 5.44
+        "daily_change": 0,
+        "daily_change_pct": 0
       },
       {
-        "symbol": "0857",
-        "url": "/equities/petrochina",
-        "pair_id": 8569,
-        "shortname_translated": "PetroChina H",
+        "symbol": "0992",
+        "url": "/equities/lenovo-group-ltd",
+        "pair_id": 32500,
+        "shortname_translated": "Lenovo Group",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 9.61,
-        "daily_change": -0.09,
-        "daily_change_pct": -0.93
+        "current_price": 21.74,
+        "daily_change": -0.9,
+        "daily_change_pct": -3.98
       },
       {
         "symbol": "0001",
@@ -7079,9 +6657,9 @@
         "shortname_translated": "CK Hutchison",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 64.35,
-        "daily_change": -0.25,
-        "daily_change_pct": -0.39
+        "current_price": 65.35,
+        "daily_change": 1,
+        "daily_change_pct": 1.55
       },
       {
         "symbol": "2020",
@@ -7090,20 +6668,9 @@
         "shortname_translated": "ANTA Sports Products",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 75.3,
-        "daily_change": 2.3,
-        "daily_change_pct": 3.15
-      },
-      {
-        "symbol": "2388",
-        "url": "/equities/boc-hong-kong",
-        "pair_id": 8580,
-        "shortname_translated": "BOC Hong Kong",
-        "change_percentage_decimal_precision": "2",
-        "current_price_precision": "2",
-        "current_price": 48.88,
-        "daily_change": -0.78,
-        "daily_change_pct": -1.57
+        "current_price": 73.25,
+        "daily_change": -2.05,
+        "daily_change_pct": -2.72
       },
       {
         "symbol": "3308",
@@ -7112,20 +6679,31 @@
         "shortname_translated": "Zhongjiinnolight",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 754.5,
-        "daily_change": 30.5,
-        "daily_change_pct": 4.21
+        "current_price": 721.5,
+        "daily_change": -33,
+        "daily_change_pct": -4.37
       },
       {
-        "symbol": "2513",
-        "url": "/equities/knowledge-atlas-tech-joint-stock",
-        "pair_id": 1238131,
-        "shortname_translated": "Z.AI",
+        "symbol": "2388",
+        "url": "/equities/boc-hong-kong",
+        "pair_id": 8580,
+        "shortname_translated": "BOC Hong Kong",
         "change_percentage_decimal_precision": "2",
         "current_price_precision": "2",
-        "current_price": 499,
-        "daily_change": 38.2,
-        "daily_change_pct": 8.29
+        "current_price": 48.92,
+        "daily_change": 0.04,
+        "daily_change_pct": 0.08
+      },
+      {
+        "symbol": "2899",
+        "url": "/equities/zijin-mining-group",
+        "pair_id": 13893,
+        "shortname_translated": "Zijin Mining Group",
+        "change_percentage_decimal_precision": "2",
+        "current_price_precision": "2",
+        "current_price": 27.74,
+        "daily_change": -1.72,
+        "daily_change_pct": -5.84
       }
     ]
   },
@@ -7133,10 +6711,6 @@
   "signalsStore": {
     "activeAssetSignals": {
       "8581": [
-        {
-          "code": "Week52Low",
-          "values": {}
-        },
         {
           "code": "EarningsInXDays",
           "values": {}
@@ -7175,27 +6749,27 @@
       "market_data": {
         "low": 22.24,
         "high": 36.16,
-        "latest": 23.54
+        "latest": 23.32
       },
       "analyst_target": {
         "values_range": {
-          "low": 14.264608,
-          "high": 44.60056,
-          "median": 38.819485,
-          "mean": 36.30643
+          "low": 14.271334,
+          "high": 44.621586,
+          "median": 38.837784,
+          "mean": 36.323547
         },
         "targets_count": 15
       },
       "fair_value_models_aggregate": {
         "name": "_invpro_models",
-        "low": 11.111,
-        "high": 11.111,
-        "mean": 11.111
+        "low": 11.1111,
+        "high": 11.1111,
+        "mean": 11.1111
       },
       "fair_value_models": [
         {
           "name": "_invpro_dividends_multi_stage",
-          "price": 11.111,
+          "price": 11.1111,
           "upside": -1.1111,
           "metrics": [],
           "highlights": [],
@@ -7205,7 +6779,7 @@
       "locked": true,
       "pair_id": "8581",
       "meta": {
-        "CacheExpiration": "2026-10-25T09:23:59Z"
+        "CacheExpiration": "2026-10-26T10:32:35Z"
       }
     },
     "financialHealthData": {},
@@ -7510,9 +7084,9 @@
         "_collection": [
           {
             "id": "32383",
-            "name": "Aaaaaaaaaaaaaaaa",
-            "shortName": "Aaaaaaaaaaaa",
-            "symbol": "Aaaa",
+            "name": "A Aaaaaaaa",
+            "shortName": "A Aaaaaaaa",
+            "symbol": "A Aa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 10960000000,
@@ -7526,11 +7100,11 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaaaaaaaa",
+            "title": "A Aaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 176.6925048828125,
-            "fairValueUpside": 78.4600019454956,
+            "fairValue": 176.71730041503906,
+            "fairValueUpside": 78.47999930381775,
             "financialHealth": "GOOD",
             "locked": true,
             "lockedFields": [
@@ -7541,7 +7115,7 @@
             "financialGrowthHealth": "FAIR",
             "financialProfitabilityHealth": "EXCELLENT",
             "analystRatings": "NEUTRAL",
-            "evEbitda": 4.8245344161987305,
+            "evEbitda": 4.913235187530518,
             "epsGrowth5y": 0.25378260016441345,
             "last": 99.01,
             "high": 102.75,
@@ -7551,8 +7125,8 @@
           },
           {
             "id": "15722",
-            "name": "Aaaaa Aaa Aa",
-            "shortName": "Aaaaa Aaa Aa",
+            "name": "Aaaaaaaaaaaa",
+            "shortName": "Aaaaaaaaaaaa",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7567,11 +7141,11 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaa Aaa Aa",
+            "title": "Aaaaaaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 181.40269470214844,
-            "fairValueUpside": 67.0199990272522,
+            "fairValue": 188.67759704589844,
+            "fairValueUpside": 73.72000217437744,
             "financialHealth": "FAIR",
             "locked": true,
             "lockedFields": [
@@ -7582,7 +7156,7 @@
             "financialGrowthHealth": "FAIR",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "NEUTRAL",
-            "evEbitda": 5.214436054229736,
+            "evEbitda": 5.206566333770752,
             "epsGrowth5y": 0.20266854763031006,
             "last": 108.61,
             "high": 110.81,
@@ -7592,8 +7166,8 @@
           },
           {
             "id": "8042",
-            "name": "Aaaaaaaaaaaa A Aaa",
-            "shortName": "Aaaaaaaaaaaa",
+            "name": "Aaaaaaa Aa  Aaaa  A",
+            "shortName": "Aaaaaaa Aa  ",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7608,7 +7182,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaaaa A Aaa",
+            "title": "Aaaaaaa Aa  Aaaa  A",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 62.16939926147461,
@@ -7623,7 +7197,7 @@
             "financialGrowthHealth": "GOOD",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "BUY",
-            "evEbitda": 11.091251373291016,
+            "evEbitda": 11.313690185546875,
             "epsGrowth5y": 2.131632089614868,
             "last": 37.53,
             "high": 38.22,
@@ -7633,8 +7207,8 @@
           },
           {
             "id": "32341",
-            "name": "A Aaaaa Aaaa",
-            "shortName": "A Aaaaa Aaaa",
+            "name": "A Aaa Aaa Aaaa",
+            "shortName": "A Aaa Aaa Aa",
             "symbol": "A Aa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7649,7 +7223,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "A Aaaaa Aaaa",
+            "title": "A Aaa Aaa Aaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 224.11529541015625,
@@ -7664,7 +7238,7 @@
             "financialGrowthHealth": "FAIR",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "BUY",
-            "evEbitda": 7.5221991539001465,
+            "evEbitda": 8.484984397888184,
             "epsGrowth5y": 0.04701909422874451,
             "last": 136.25,
             "high": 137.67,
@@ -7674,9 +7248,9 @@
           },
           {
             "id": "8175",
-            "name": "Aaaaaaaaaaaaaaaaa",
-            "shortName": "Aaaaaaaaaaaa",
-            "symbol": "Aaaa",
+            "name": "A Aaaaaaa",
+            "shortName": "A Aaaaaaa",
+            "symbol": "A Aa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 135840000000,
@@ -7690,7 +7264,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaaaaaaaaa",
+            "title": "A Aaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 583.3892822265625,
@@ -7705,7 +7279,7 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "BUY",
-            "evEbitda": 11.206337928771973,
+            "evEbitda": 11.323837280273438,
             "epsGrowth5y": 0.22668418288230896,
             "last": 355.11,
             "high": 364.49,
@@ -7715,8 +7289,8 @@
           },
           {
             "id": "956170",
-            "name": "Aaaaaaaaa Aaaaaaaaaa",
-            "shortName": "Aaaaaaaaa Aa",
+            "name": "Aaaaaaaaa  Aaaaaaaaa",
+            "shortName": "Aaaaaaaaa  A",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7731,7 +7305,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaa Aaaaaaaaaa",
+            "title": "Aaaaaaaaa  Aaaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 92.58689880371094,
@@ -7746,7 +7320,7 @@
             "financialGrowthHealth": "GOOD",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "NEUTRAL",
-            "evEbitda": 7.351398944854736,
+            "evEbitda": 7.393800735473633,
             "epsGrowth5y": 0.16850893199443817,
             "last": 57.02,
             "high": 57.57,
@@ -7756,9 +7330,9 @@
           },
           {
             "id": "6370",
-            "name": "Aaaaaaaaaaaaaaaaaa",
-            "shortName": "Aaaaaaaaaaaa",
-            "symbol": "Aaaa",
+            "name": "Aa A Aa",
+            "shortName": "Aa A Aa",
+            "symbol": "Aa A",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 26510000000,
@@ -7772,12 +7346,12 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaaaaaaaaaa",
+            "title": "Aa A Aa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 80.58689880371094,
-            "fairValueUpside": 61.62999868392944,
-            "financialHealth": "FAIR",
+            "fairValue": 80.59140014648438,
+            "fairValueUpside": 61.640000343322754,
+            "financialHealth": "GOOD",
             "locked": true,
             "lockedFields": [
               "investingProName"
@@ -7787,7 +7361,7 @@
             "financialGrowthHealth": "FAIR",
             "financialProfitabilityHealth": "GOOD",
             "analystRatings": "NEUTRAL",
-            "evEbitda": 6.66780948638916,
+            "evEbitda": 6.82661771774292,
             "epsGrowth5y": 0.3674871623516083,
             "last": 49.86,
             "high": 50.5,
@@ -7796,50 +7370,9 @@
             "isActualOpen": false
           },
           {
-            "id": "6373",
-            "name": "Aaa Aaaaa",
-            "shortName": "Aaa Aaaaa",
-            "symbol": "Aaa ",
-            "lastPairDecimal": 2,
-            "exchangeId": 0,
-            "marketCap": 102680000000,
-            "peRatio": 14.760000228881836,
-            "dept": null,
-            "quickRatio": null,
-            "currentRatio": null,
-            "profitMargin": null,
-            "nextEarningsTime": null,
-            "analystRecommendation": null,
-            "analystPriceTargetUpside": null,
-            "flagCode": "US",
-            "flagName": "United States",
-            "title": "Aaa Aaaaa",
-            "url": "#",
-            "decimalPrecision": 2,
-            "fairValue": 423.1330871582031,
-            "fairValueUpside": 60.39000153541565,
-            "financialHealth": "GREAT",
-            "locked": true,
-            "lockedFields": [
-              "investingProName"
-            ],
-            "isCFD": false,
-            "financialCashFlowHealth": "GOOD",
-            "financialGrowthHealth": "GOOD",
-            "financialProfitabilityHealth": "EXCELLENT",
-            "analystRatings": "NEUTRAL",
-            "evEbitda": 9.738513946533203,
-            "epsGrowth5y": 0.09820009022951126,
-            "last": 263.82,
-            "high": 271.5,
-            "changeOneDayPercent": -2.49,
-            "lastUpdateTime": "2026-10-23T19:59:59.000Z",
-            "isActualOpen": false
-          },
-          {
             "id": "39152",
-            "name": "Aaaaaaaaaa",
-            "shortName": "Aaaaaaaaaa",
+            "name": "Aaaaa Aaa A",
+            "shortName": "Aaaaa Aaa A",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7854,11 +7387,11 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaa",
+            "title": "Aaaaa Aaa A",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 27.921499252319336,
-            "fairValueUpside": 60.280001163482666,
+            "fairValue": 27.928199768066406,
+            "fairValueUpside": 60.32000184059143,
             "financialHealth": "FAIR",
             "locked": true,
             "lockedFields": [
@@ -7869,7 +7402,7 @@
             "financialGrowthHealth": "WEAK",
             "financialProfitabilityHealth": "GOOD",
             "analystRatings": "BUY",
-            "evEbitda": 7.44279146194458,
+            "evEbitda": 6.575407028198242,
             "epsGrowth5y": 0.025781333446502686,
             "last": 17.42,
             "high": 18.29,
@@ -7879,8 +7412,8 @@
           },
           {
             "id": "6448",
-            "name": "Aaaaa  Aaaaaaaa",
-            "shortName": "Aaaaa  Aaaaa",
+            "name": "Aaaaa Aa A Aaaa",
+            "shortName": "Aaaaa Aa A A",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7895,11 +7428,11 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaa  Aaaaaaaa",
+            "title": "Aaaaa Aa A Aaaa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 539.0595703125,
-            "fairValueUpside": 56.98000192642212,
+            "fairValue": 539.1265869140625,
+            "fairValueUpside": 56.99999928474426,
             "financialHealth": "GREAT",
             "locked": true,
             "lockedFields": [
@@ -7910,11 +7443,52 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "EXCELLENT",
             "analystRatings": "BUY",
-            "evEbitda": 12.865058898925781,
+            "evEbitda": 13.576751708984375,
             "epsGrowth5y": 0.17855913937091827,
             "last": 343.39,
             "high": 356.11,
             "changeOneDayPercent": -3.24,
+            "lastUpdateTime": "2026-10-23T19:59:59.000Z",
+            "isActualOpen": false
+          },
+          {
+            "id": "32331",
+            "name": "Aa Aaaa",
+            "shortName": "Aa Aaaa",
+            "symbol": "Aa A",
+            "lastPairDecimal": 2,
+            "exchangeId": 0,
+            "marketCap": 8860000000,
+            "peRatio": 19.450000762939453,
+            "dept": null,
+            "quickRatio": null,
+            "currentRatio": null,
+            "profitMargin": null,
+            "nextEarningsTime": null,
+            "analystRecommendation": null,
+            "analystPriceTargetUpside": null,
+            "flagCode": "US",
+            "flagName": "United States",
+            "title": "Aa Aaaa",
+            "url": "#",
+            "decimalPrecision": 2,
+            "fairValue": 65.7332992553711,
+            "fairValueUpside": 53.97999882698059,
+            "financialHealth": "FAIR",
+            "locked": true,
+            "lockedFields": [
+              "investingProName"
+            ],
+            "isCFD": false,
+            "financialCashFlowHealth": "GOOD",
+            "financialGrowthHealth": "FAIR",
+            "financialProfitabilityHealth": "GREAT",
+            "analystRatings": "BUY",
+            "evEbitda": 3.855510950088501,
+            "epsGrowth5y": 0.8811425566673279,
+            "last": 42.69,
+            "high": 43.34,
+            "changeOneDayPercent": -2.56,
             "lastUpdateTime": "2026-10-23T19:59:59.000Z",
             "isActualOpen": false
           }
@@ -7924,8 +7498,8 @@
         "_collection": [
           {
             "id": "1131557",
-            "name": "Aaaa Aaa",
-            "shortName": "Aaaa Aaa",
+            "name": "Aaaaaa",
+            "shortName": "Aaaaaa",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -7940,7 +7514,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaa Aaa",
+            "title": "Aaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 143.28509521484375,
@@ -7955,7 +7529,7 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "WEAK",
             "analystRatings": "BUY",
-            "evEbitda": 2144.615966796875,
+            "evEbitda": 2434.41845703125,
             "epsGrowth5y": -0.057248782366514206,
             "last": 257.57,
             "high": 257.91,
@@ -7965,9 +7539,9 @@
           },
           {
             "id": "1169889",
-            "name": "A  Aaaaaaaa",
-            "shortName": "A  Aaaaaaaa",
-            "symbol": "A  A",
+            "name": "Aaaa Aa Aaaaaaa A",
+            "shortName": "Aaaa Aa Aaaa",
+            "symbol": "Aaaa",
             "lastPairDecimal": 3,
             "exchangeId": 0,
             "marketCap": 31480000000,
@@ -7981,11 +7555,11 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "A  Aaaaaaaa",
+            "title": "Aaaa Aa Aaaaaaa A",
             "url": "#",
             "decimalPrecision": 3,
-            "fairValue": 29.67259979248047,
-            "fairValueUpside": -43.59000027179718,
+            "fairValue": 29.676300048828125,
+            "fairValueUpside": -43.57999861240387,
             "financialHealth": "FAIR",
             "locked": true,
             "lockedFields": [
@@ -7996,7 +7570,7 @@
             "financialGrowthHealth": "GOOD",
             "financialProfitabilityHealth": "WEAK",
             "analystRatings": "BUY",
-            "evEbitda": -187.1619110107422,
+            "evEbitda": -194.15953063964844,
             "epsGrowth5y": 0.076006680727005,
             "last": 52.6,
             "high": 52.915,
@@ -8006,8 +7580,8 @@
           },
           {
             "id": "261",
-            "name": "Aaaaaaaaaaa",
-            "shortName": "Aaaaaaaaaaa",
+            "name": "Aaaaaaaaaaaa",
+            "shortName": "Aaaaaaaaaaaa",
             "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
@@ -8022,7 +7596,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaaaaaaaaaa",
+            "title": "Aaaaaaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 418.3912048339844,
@@ -8037,7 +7611,7 @@
             "financialGrowthHealth": "WEAK",
             "financialProfitabilityHealth": "GOOD",
             "analystRatings": "BUY",
-            "evEbitda": 26.831483840942383,
+            "evEbitda": 26.965984344482422,
             "epsGrowth5y": 0.15009038150310516,
             "last": 646.15,
             "high": 646.2,
@@ -8047,9 +7621,9 @@
           },
           {
             "id": "41268",
-            "name": "Aa Aa Aaaaaa",
-            "shortName": "Aa Aa Aaaaaa",
-            "symbol": "Aa A",
+            "name": "Aaaaaaa Aaaaa",
+            "shortName": "Aaaaaaa Aaaa",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 311290000000,
@@ -8063,12 +7637,12 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aa Aa Aaaaaa",
+            "title": "Aaaaaaa Aaaaa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 247.55670166015625,
-            "fairValueUpside": -34.950000047683716,
-            "financialHealth": "FAIR",
+            "fairValue": 247.58340454101562,
+            "fairValueUpside": -34.940001368522644,
+            "financialHealth": "GOOD",
             "locked": true,
             "lockedFields": [
               "investingProName"
@@ -8078,7 +7652,7 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "FAIR",
             "analystRatings": "BUY",
-            "evEbitda": 175.90834045410156,
+            "evEbitda": 196.12237548828125,
             "epsGrowth5y": 4.1195831298828125,
             "last": 380.55,
             "high": 381.49,
@@ -8088,9 +7662,9 @@
           },
           {
             "id": "1114321",
-            "name": "Aa Aaa",
-            "shortName": "Aa Aaa",
-            "symbol": "Aa A",
+            "name": "Aaaaaa Aaaaaaa",
+            "shortName": "Aaaaaa Aaaaa",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 79890000000,
@@ -8104,12 +7678,12 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aa Aaa",
+            "title": "Aaaaaa Aaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 134.1269989013672,
             "fairValueUpside": -32.96999931335449,
-            "financialHealth": "GOOD",
+            "financialHealth": "FAIR",
             "locked": true,
             "lockedFields": [
               "investingProName"
@@ -8119,7 +7693,7 @@
             "financialGrowthHealth": "WEAK",
             "financialProfitabilityHealth": "FAIR",
             "analystRatings": "NEUTRAL",
-            "evEbitda": -37.090850830078125,
+            "evEbitda": -33.83330535888672,
             "epsGrowth5y": 2.0102107524871826,
             "last": 200.1,
             "high": 206.97,
@@ -8129,9 +7703,9 @@
           },
           {
             "id": "13852",
-            "name": "Aa Aaaaaaaaaaa A",
-            "shortName": "Aa Aaaaaaaaa",
-            "symbol": "Aa A",
+            "name": "Aaaaaaa Aaa  Aa Aaaa",
+            "shortName": "Aaaaaaa Aaa ",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 32740000000,
@@ -8145,10 +7719,10 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aa Aaaaaaaaaaa A",
+            "title": "Aaaaaaa Aaa  Aa Aaaa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 75.5822982788086,
+            "fairValue": 75.58499908447266,
             "fairValueUpside": -31.259998679161072,
             "financialHealth": "GOOD",
             "locked": true,
@@ -8160,7 +7734,7 @@
             "financialGrowthHealth": "GOOD",
             "financialProfitabilityHealth": "GREAT",
             "analystRatings": "BUY",
-            "evEbitda": 21.021461486816406,
+            "evEbitda": 20.723876953125,
             "epsGrowth5y": 0.5431256890296936,
             "last": 109.96,
             "high": 111.67,
@@ -8170,9 +7744,9 @@
           },
           {
             "id": "251",
-            "name": "A  A  Aaaa A Aaaaaa",
-            "shortName": "A  A  Aaaa A",
-            "symbol": "A  A",
+            "name": "Aa Aaa Aaaaaaaa",
+            "shortName": "Aa Aaa Aaaaa",
+            "symbol": "Aa A",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 456930000000,
@@ -8186,7 +7760,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "A  A  Aaaa A Aaaaaa",
+            "title": "Aa Aaa Aaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 60.109500885009766,
@@ -8201,7 +7775,7 @@
             "financialGrowthHealth": "FAIR",
             "financialProfitabilityHealth": "FAIR",
             "analystRatings": "BUY",
-            "evEbitda": 29.683502197265625,
+            "evEbitda": 28.78174591064453,
             "epsGrowth5y": -2.235334873199463,
             "last": 86.96,
             "high": 87.87,
@@ -8211,9 +7785,9 @@
           },
           {
             "id": "13994",
-            "name": "Aa Aaaaaa Aa A Aa",
-            "shortName": "Aa Aaaaaa Aa",
-            "symbol": "Aa A",
+            "name": "Aaaa Aaa A Aa",
+            "shortName": "Aaaa Aaa A A",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 1470000000000,
@@ -8227,10 +7801,10 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aa Aaaaaa Aa A Aa",
+            "title": "Aaaa Aaa A Aa",
             "url": "#",
             "decimalPrecision": 2,
-            "fairValue": 257.8522033691406,
+            "fairValue": 257.8193054199219,
             "fairValueUpside": -30.730000138282776,
             "financialHealth": "FAIR",
             "locked": true,
@@ -8240,9 +7814,9 @@
             "isCFD": false,
             "financialCashFlowHealth": "GREAT",
             "financialGrowthHealth": "FAIR",
-            "financialProfitabilityHealth": "GOOD",
+            "financialProfitabilityHealth": "FAIR",
             "analystRatings": "BUY",
-            "evEbitda": 127.7731704711914,
+            "evEbitda": 146.68881225585938,
             "epsGrowth5y": 0.8673920035362244,
             "last": 372.22,
             "high": 377.32,
@@ -8252,9 +7826,9 @@
           },
           {
             "id": "13848",
-            "name": "Aaa  Aaaaa A",
-            "shortName": "Aaa  Aaaaa A",
-            "symbol": "Aaa ",
+            "name": "Aaaaaaa Aaaaaaaa",
+            "shortName": "Aaaaaaa Aaaa",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 171050000000,
@@ -8268,7 +7842,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aaa  Aaaaa A",
+            "title": "Aaaaaaa Aaaaaaaa",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 166.89649963378906,
@@ -8283,7 +7857,7 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "FAIR",
             "analystRatings": "BUY",
-            "evEbitda": 55.75925064086914,
+            "evEbitda": 56.29215621948242,
             "epsGrowth5y": 0.4022800624370575,
             "last": 237.32,
             "high": 240.65,
@@ -8293,9 +7867,9 @@
           },
           {
             "id": "1152784",
-            "name": "Aa A Aaaaaaaaaa",
-            "shortName": "Aa A Aaaaaaa",
-            "symbol": "Aa A",
+            "name": "Aaaaaaaaaa A",
+            "shortName": "Aaaaaaaaaa A",
+            "symbol": "Aaaa",
             "lastPairDecimal": 2,
             "exchangeId": 0,
             "marketCap": 96820000000,
@@ -8309,7 +7883,7 @@
             "analystPriceTargetUpside": null,
             "flagCode": "US",
             "flagName": "United States",
-            "title": "Aa A Aaaaaaaaaa",
+            "title": "Aaaaaaaaaa A",
             "url": "#",
             "decimalPrecision": 2,
             "fairValue": 199.5554962158203,
@@ -8324,7 +7898,7 @@
             "financialGrowthHealth": "GREAT",
             "financialProfitabilityHealth": "GOOD",
             "analystRatings": "STRONG_BUY",
-            "evEbitda": 1025.6510009765625,
+            "evEbitda": 1123.2847900390625,
             "epsGrowth5y": -5.280495643615723,
             "last": 269.65,
             "high": 273.42,
@@ -8358,7 +7932,7 @@
           "key": "pe_ltm",
           "company": "3.503357",
           "peers": "11.675282",
-          "sector": "9.165145",
+          "sector": "9.180562",
           "format": "x.x"
         },
         {
@@ -8379,20 +7953,20 @@
           "key": "price_to_sales_ltm",
           "company": "1.898649",
           "peers": "1.695484",
-          "sector": "2.760527",
+          "sector": "2.768350",
           "format": "x.x"
         },
         {
           "key": "analyst_target_upside",
           "company": "0.542329",
-          "peers": "0.263052",
-          "sector": "0.202119",
+          "peers": "0.267750",
+          "sector": "0.202750",
           "format": "%.%"
         },
         {
           "key": "fair_value_upside",
-          "peers": "0.130400",
-          "sector": "0.038417",
+          "peers": "0.134100",
+          "sector": "0.039811",
           "format": "%.%"
         }
       ],
@@ -8400,21 +7974,21 @@
         {
           "key": "marketcap",
           "company": "1019807.742418",
-          "peers": "353224.813775",
-          "sector": "631.489006",
+          "peers": "352680.227445",
+          "sector": "631.611417",
           "format": "kmb"
         },
         {
           "key": "asset_price_pct_high_52w",
           "peers": "0.820043",
-          "sector": "0.894760",
+          "sector": "0.894879",
           "format": "%.%"
         },
         {
           "key": "div_yield",
           "company": "0.047865",
-          "peers": "0.040348",
-          "sector": "0.000646",
+          "peers": "0.040006",
+          "sector": "0.000651",
           "format": "%.%"
         },
         {
@@ -8426,8 +8000,8 @@
         {
           "key": "asset_price_return_1y",
           "company": "-0.013837",
-          "peers": "0.187922",
-          "sector": "0.020723",
+          "peers": "0.216319",
+          "sector": "0.020387",
           "format": "%.%"
         },
         {
@@ -8442,33 +8016,33 @@
         {
           "key": "total_rev",
           "company": "527776.569316",
-          "peers": "203041.060320",
-          "sector": "530.145365",
+          "peers": "203057.628000",
+          "sector": "523.218136",
           "format": "kmb"
         },
         {
           "key": "oper_inc",
-          "peers": "62866.376347",
-          "sector": "91.896707",
+          "peers": "62871.506098",
+          "sector": "90.073546",
           "format": "kmb"
         },
         {
           "key": "ni_avail_excl",
-          "peers": "51146.270987",
-          "sector": "81.183470",
+          "peers": "51150.444404",
+          "sector": "79.986218",
           "format": "kmb"
         },
         {
           "key": "total_assets",
-          "peers": "3788080.372545",
-          "sector": "4173.215116",
+          "peers": "3788389.471125",
+          "sector": "4160.256298",
           "format": "kmb"
         },
         {
           "key": "total_debt",
           "company": "301450.151435",
-          "peers": "223903.264309",
-          "sector": "151.375664",
+          "peers": "223921.534297",
+          "sector": "146.838529",
           "format": "kmb"
         }
       ],
@@ -8476,31 +8050,31 @@
         {
           "key": "total_rev_growth",
           "peers": "0.087475",
-          "sector": "0.103407",
+          "sector": "0.103965",
           "format": "%.%"
         },
         {
           "key": "total_rev_cagr_5y",
           "peers": "-0.007527",
-          "sector": "0.097115",
+          "sector": "0.097129",
           "format": "%.%"
         },
         {
           "key": "ni_avail_excl_growth",
           "peers": "0.224417",
-          "sector": "0.163105",
+          "sector": "0.165472",
           "format": "%.%"
         },
         {
           "key": "ni_avail_excl_cagr_5y",
           "peers": "0.101074",
-          "sector": "0.129998",
+          "sector": "0.129969",
           "format": "%.%"
         },
         {
           "key": "revenue_proj_cagr_5y",
           "peers": "0.040477",
-          "sector": "0.048284",
+          "sector": "0.048303",
           "format": "%.%"
         },
         {
@@ -8513,40 +8087,40 @@
       "profit": [
         {
           "key": "gp",
-          "peers": "102990.746545",
-          "sector": "342.817983",
+          "peers": "102999.150352",
+          "sector": "339.286143",
           "format": "kmb"
         },
         {
           "key": "ni_avail_excl_margin",
           "peers": "0.188921",
-          "sector": "0.212909",
+          "sector": "0.213400",
           "format": "%.%"
         },
         {
           "key": "roic",
           "peers": "0.121135",
-          "sector": "0.046619",
+          "sector": "0.046745",
           "format": "%.%"
         },
         {
           "key": "roa",
           "company": "0.032581",
           "peers": "0.013181",
-          "sector": "0.013525",
+          "sector": "0.013550",
           "format": "%.%"
         },
         {
           "key": "roe",
           "company": "0.416958",
           "peers": "0.187650",
-          "sector": "0.087142",
+          "sector": "0.087193",
           "format": "%.%"
         },
         {
           "key": "roe_avg_5y",
           "peers": "0.125626",
-          "sector": "0.074282",
+          "sector": "0.074294",
           "format": "%.%"
         }
       ]
@@ -9058,14 +8632,14 @@
         "translated_label": "15 Minutes"
       },
       "30m": {
-        "as_of": "2026-10-23T08:31:12.272Z",
+        "as_of": "2026-10-26T08:30:12.286Z",
         "define": "_moving_avarge_tool_30_min",
         "interval": "pt30m",
         "locked": false,
         "moving_averages": {
-          "buy_count": 7,
+          "buy_count": 8,
           "neutral_count": 0,
-          "sell_count": 5,
+          "sell_count": 4,
           "verdict": {
             "define": "_technical_buy",
             "score": 1,
@@ -9074,55 +8648,55 @@
         },
         "pro": false,
         "summary": {
-          "verdict": {
-            "define": "_technical_strong_buy",
-            "score": 2,
-            "translated_label": "Strong Buy"
-          }
-        },
-        "technical_indicators": {
-          "buy_count": 10,
-          "neutral_count": 0,
-          "overbought_count": 1,
-          "oversold_count": 0,
-          "sell_count": 0,
-          "verdict": {
-            "define": "_technical_strong_buy",
-            "score": 2,
-            "translated_label": "Strong Buy"
-          }
-        },
-        "translated_label": "30 Minutes"
-      },
-      "1h": {
-        "as_of": "2026-10-23T08:31:12.272Z",
-        "define": "_moving_avarge_tool_1_hour",
-        "interval": "pt1h",
-        "locked": false,
-        "moving_averages": {
-          "buy_count": 6,
-          "neutral_count": 0,
-          "sell_count": 6,
           "verdict": {
             "define": "_technical_neutral",
             "score": 0,
             "translated_label": "Neutral"
           }
         },
+        "technical_indicators": {
+          "buy_count": 4,
+          "neutral_count": 3,
+          "overbought_count": 0,
+          "oversold_count": 0,
+          "sell_count": 4,
+          "verdict": {
+            "define": "_technical_neutral",
+            "score": 0,
+            "translated_label": "Neutral"
+          }
+        },
+        "translated_label": "30 Minutes"
+      },
+      "1h": {
+        "as_of": "2026-10-26T08:30:12.286Z",
+        "define": "_moving_avarge_tool_1_hour",
+        "interval": "pt1h",
+        "locked": false,
+        "moving_averages": {
+          "buy_count": 5,
+          "neutral_count": 0,
+          "sell_count": 7,
+          "verdict": {
+            "define": "_technical_sell",
+            "score": -1,
+            "translated_label": "Sell"
+          }
+        },
         "pro": false,
         "summary": {
           "verdict": {
-            "define": "_technical_buy",
-            "score": 1,
-            "translated_label": "Buy"
+            "define": "_technical_neutral",
+            "score": 0,
+            "translated_label": "Neutral"
           }
         },
         "technical_indicators": {
-          "buy_count": 7,
-          "neutral_count": 1,
-          "overbought_count": 2,
+          "buy_count": 6,
+          "neutral_count": 2,
+          "overbought_count": 1,
           "oversold_count": 0,
-          "sell_count": 1,
+          "sell_count": 2,
           "verdict": {
             "define": "_technical_strong_buy",
             "score": 2,
@@ -9132,7 +8706,7 @@
         "translated_label": "Hourly"
       },
       "5h": {
-        "as_of": "2026-10-23T09:30:12.282Z",
+        "as_of": "2026-10-26T07:58:12.152Z",
         "define": "_moving_avarge_tool_5_hrs",
         "interval": "pt5h",
         "locked": false,
@@ -9155,8 +8729,8 @@
           }
         },
         "technical_indicators": {
-          "buy_count": 2,
-          "neutral_count": 3,
+          "buy_count": 4,
+          "neutral_count": 1,
           "overbought_count": 1,
           "oversold_count": 0,
           "sell_count": 5,
@@ -9169,14 +8743,14 @@
         "translated_label": "5 Hours"
       },
       "1d": {
-        "as_of": "2026-10-24T00:33:12.17Z",
+        "as_of": "2026-10-26T08:02:12.152Z",
         "define": "_moving_avarge_tool_1_day",
         "interval": "p1d",
         "locked": false,
         "moving_averages": {
-          "buy_count": 2,
+          "buy_count": 1,
           "neutral_count": 0,
-          "sell_count": 10,
+          "sell_count": 11,
           "verdict": {
             "define": "_technical_sell",
             "score": -1,
@@ -9206,18 +8780,18 @@
         "translated_label": "Daily"
       },
       "1w": {
-        "as_of": "2026-10-25T00:35:12.175Z",
+        "as_of": "2026-10-26T08:02:12.152Z",
         "define": "_Weekly",
         "interval": "p1w",
         "locked": false,
         "moving_averages": {
-          "buy_count": 3,
+          "buy_count": 2,
           "neutral_count": 0,
-          "sell_count": 9,
+          "sell_count": 10,
           "verdict": {
-            "define": "_technical_sell",
-            "score": -1,
-            "translated_label": "Sell"
+            "define": "_technical_strong_sell",
+            "score": -2,
+            "translated_label": "Strong Sell"
           }
         },
         "pro": false,
@@ -9232,8 +8806,8 @@
           "buy_count": 0,
           "neutral_count": 1,
           "overbought_count": 0,
-          "oversold_count": 4,
-          "sell_count": 6,
+          "oversold_count": 3,
+          "sell_count": 7,
           "verdict": {
             "define": "_technical_strong_sell",
             "score": -2,
@@ -9243,7 +8817,7 @@
         "translated_label": "Weekly"
       },
       "1mo": {
-        "as_of": "2026-10-23T08:24:12.152Z",
+        "as_of": "2026-10-26T08:02:12.152Z",
         "define": "_moving_avarge_tool_1_month",
         "interval": "p1m",
         "locked": false,
@@ -9482,7 +9056,7 @@
       "indicators": {
         "asset_turnover_ttm": {
           "define": "_financials_ratios_asset_turnover_ttm",
-          "industry_value": 0.11588649,
+          "industry_value": 0.11225541,
           "name": "Asset Turnover TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9491,7 +9065,7 @@
         },
         "basic_eps_ann": {
           "define": "_financials_ratios_basic_eps_ann",
-          "industry_value": 4.40116149,
+          "industry_value": 4.47224618,
           "name": "Basic EPS ANN",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9500,7 +9074,7 @@
         },
         "beta": {
           "define": "_financials_ratios_beta",
-          "industry_value": 0.64970246,
+          "industry_value": 0.65025252,
           "name": "Beta",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9509,7 +9083,7 @@
         },
         "book_value_share_mrq": {
           "define": "_financials_ratios_book_value_share_mrq",
-          "industry_value": 28.55481117,
+          "industry_value": 28.79943957,
           "name": "Book Value/Share MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9518,7 +9092,7 @@
         },
         "cash_flow_share_ttm": {
           "define": "_financials_ratios_cash_flow_share_ttm",
-          "industry_value": 17.86208516,
+          "industry_value": 18.06621507,
           "name": "Cash Flow/Share TTM",
           "non_currency_indicator": true,
           "percent_indicator": false,
@@ -9527,7 +9101,7 @@
         },
         "cash_share_mrq": {
           "define": "_financials_ratios_cash_share_mrq",
-          "industry_value": 9.77678376,
+          "industry_value": 9.84154755,
           "name": "Cash/Share MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9536,7 +9110,7 @@
         },
         "current_ratio_mrq": {
           "define": "_financials_ratios_current_ratio_mrq",
-          "industry_value": 4.19844876,
+          "industry_value": 4.25740944,
           "name": "Current Ratio MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9545,7 +9119,7 @@
         },
         "diluted_eps_ann": {
           "define": "_financials_ratios_diluted_eps_ann",
-          "industry_value": 4.32564438,
+          "industry_value": 4.39806747,
           "name": "Diluted EPS ANN",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9554,7 +9128,7 @@
         },
         "dividend_growth_rate_ann": {
           "define": "_financials_ratios_dividend_growth_rate_ann",
-          "industry_value": 18.3844501,
+          "industry_value": 17.85296837,
           "name": "Dividend Growth Rate ANN",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9563,7 +9137,7 @@
         },
         "dividend_yield_5_year_avg_5ya": {
           "define": "_financials_ratios_dividend_yield_5_year_avg_5ya",
-          "industry_value": 3.30672721,
+          "industry_value": 3.28052652,
           "name": "Dividend Yield 5 Year Avg. 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9572,7 +9146,7 @@
         },
         "dividend_yield_ann": {
           "define": "_financials_ratios_dividend_yield_ann",
-          "industry_value": 3.87957003,
+          "industry_value": 3.85192383,
           "name": "Dividend Yield ANN",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9581,7 +9155,7 @@
         },
         "eps_mrq_vs_qtr_1_yr_ago_mrq": {
           "define": "_financials_ratios_eps_mrq_vs_qtr_1_yr_ago_mrq",
-          "industry_value": 180.05853982,
+          "industry_value": 181.29452714,
           "name": "EPS(MRQ) vs Qtr. 1 Yr. Ago MRQ",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9590,7 +9164,7 @@
         },
         "eps_ttm_vs_ttm_1_yr_ago_ttm": {
           "define": "_financials_ratios_eps_ttm_vs_ttm_1_yr_ago_ttm",
-          "industry_value": 45.39439334,
+          "industry_value": 45.84442578,
           "name": "EPS(TTM) vs TTM 1 Yr. Ago TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9599,7 +9173,7 @@
         },
         "five_year_capital_spending_growth_5ya": {
           "define": "_financials_ratios_five_year_capital_spending_growth_5ya",
-          "industry_value": -7.54628235,
+          "industry_value": -7.30308938,
           "name": "5 Year Capital Spending Growth 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9608,7 +9182,7 @@
         },
         "five_year_eps_growth_5ya": {
           "define": "_financials_ratios_five_year_eps_growth_5ya",
-          "industry_value": 8.4119204,
+          "industry_value": 8.40121657,
           "name": "5 Year EPS Growth 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9617,7 +9191,7 @@
         },
         "five_year_sales_growth_5ya": {
           "define": "_financials_ratios_five_year_sales_growth_5ya",
-          "industry_value": -9.44329784,
+          "industry_value": -9.68049187,
           "name": "5 Year Sales Growth 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9626,7 +9200,7 @@
         },
         "gross_margin_5ya": {
           "define": "_financials_ratios_gross_margin_5ya",
-          "industry_value": 32.20180635,
+          "industry_value": 32.53020419,
           "name": "Gross Margin 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9635,7 +9209,7 @@
         },
         "gross_margin_ttm": {
           "define": "_financials_ratios_gross_margin_ttm",
-          "industry_value": 42.74607824,
+          "industry_value": 43.25653598,
           "name": "Gross margin TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9644,7 +9218,7 @@
         },
         "inventory_turnover_ttm": {
           "define": "_financials_ratios_inventory_turnover_ttm",
-          "industry_value": 50.04018386,
+          "industry_value": 50.03840883,
           "name": "Inventory Turnover TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9653,7 +9227,7 @@
         },
         "lt_debt_to_equity_mrq": {
           "define": "_financials_ratios_lt_debt_to_equity_mrq",
-          "industry_value": 37.54317072,
+          "industry_value": 37.52931487,
           "name": "LT Debt to Equity MRQ",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9662,7 +9236,7 @@
         },
         "net_income_employee_ttm": {
           "define": "_financials_ratios_net_income_employee_ttm",
-          "industry_value": 0.9306531,
+          "industry_value": 0.95158801,
           "name": "Net Income/Employee TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9671,7 +9245,7 @@
         },
         "net_profit_margin_5ya": {
           "define": "_financials_ratios_net_profit_margin_5ya",
-          "industry_value": 15.82463126,
+          "industry_value": 16.0916393,
           "name": "Net Profit margin 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9680,7 +9254,7 @@
         },
         "net_profit_margin_ttm": {
           "define": "_financials_ratios_net_profit_margin_ttm",
-          "industry_value": 26.31075243,
+          "industry_value": 26.78431818,
           "name": "Net Profit margin TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9689,7 +9263,7 @@
         },
         "operating_margin_5ya": {
           "define": "_financials_ratios_operating_margin_5ya",
-          "industry_value": 22.23299746,
+          "industry_value": 22.52742143,
           "name": "Operating margin 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9698,7 +9272,7 @@
         },
         "operating_margin_ttm": {
           "define": "_financials_ratios_operating_margin_ttm",
-          "industry_value": 34.39944534,
+          "industry_value": 34.86479992,
           "name": "Operating margin TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9707,7 +9281,7 @@
         },
         "payout_ratio_ttm": {
           "define": "_financials_ratios_payout_ratio_ttm",
-          "industry_value": 27.31793857,
+          "industry_value": 27.41502903,
           "name": "Payout Ratio TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9716,7 +9290,7 @@
         },
         "pe_ratio_ttm": {
           "define": "_financials_ratios_pe_ratio_ttm",
-          "industry_value": 7.22326937,
+          "industry_value": 7.29128736,
           "name": "P/E Ratio TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9725,7 +9299,7 @@
         },
         "pretax_margin_5ya": {
           "define": "_financials_ratios_pretax_margin_5ya",
-          "industry_value": 19.16977647,
+          "industry_value": 19.41205021,
           "name": "Pretax margin 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9734,7 +9308,7 @@
         },
         "pretax_margin_ttm": {
           "define": "_financials_ratios_pretax_margin_ttm",
-          "industry_value": 33.05836366,
+          "industry_value": 33.53981452,
           "name": "Pretax margin TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9743,7 +9317,7 @@
         },
         "price_to_book_mrq": {
           "define": "_financials_ratios_price_to_book_mrq",
-          "industry_value": 1.40393788,
+          "industry_value": 1.42232124,
           "name": "Price to Book MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9752,7 +9326,7 @@
         },
         "price_to_cash_flow_mrq": {
           "define": "_financials_ratios_price_to_cash_flow_mrq",
-          "industry_value": 7.57881989,
+          "industry_value": 7.68032264,
           "name": "Price to Cash Flow MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9761,7 +9335,7 @@
         },
         "price_to_free_cash_flow_ttm": {
           "define": "_financials_ratios_price_to_free_cash_flow_ttm",
-          "industry_value": 8.19845001,
+          "industry_value": 8.4600549,
           "name": "Price to Free Cash Flow TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9770,7 +9344,7 @@
         },
         "price_to_sales_ttm": {
           "define": "_financials_ratios_price_to_sales_ttm",
-          "industry_value": 1.95978066,
+          "industry_value": 1.99265447,
           "name": "Price to Sales TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9779,7 +9353,7 @@
         },
         "price_to_tangible_book_mrq": {
           "define": "_financials_price_to_tangible_book_mrq",
-          "industry_value": 1.56229464,
+          "industry_value": 1.58300046,
           "name": "Price to Tangible Book MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9788,7 +9362,7 @@
         },
         "quick_ratio_mrq": {
           "define": "_financials_ratios_quick_ratio_mrq",
-          "industry_value": 1.9540372,
+          "industry_value": 1.97548428,
           "name": "Quick Ratio MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9797,7 +9371,7 @@
         },
         "receivable_turnover_ttm": {
           "define": "_financials_ratios_receivable_turnover_ttm",
-          "industry_value": 374.95753034,
+          "industry_value": 363.90938499,
           "name": "Receivable Turnover TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9806,7 +9380,7 @@
         },
         "return_on_assets_5ya": {
           "define": "_financials_ratios_return_on_assets_5ya",
-          "industry_value": 1.24877572,
+          "industry_value": 1.23677456,
           "name": "Return on Assets 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9815,7 +9389,7 @@
         },
         "return_on_assets_ttm": {
           "define": "_financials_ratios_return_on_assets_ttm",
-          "industry_value": 1.76764739,
+          "industry_value": 1.74696083,
           "name": "Return on Assets TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9824,7 +9398,7 @@
         },
         "return_on_equity_5ya": {
           "define": "_financials_ratios_return_on_equity_5ya",
-          "industry_value": 12.80747323,
+          "industry_value": 12.86012154,
           "name": "Return on Equity 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9833,7 +9407,7 @@
         },
         "return_on_equity_ttm": {
           "define": "_financials_ratios_return_on_equity_ttm",
-          "industry_value": 20.7742329,
+          "industry_value": 20.95359657,
           "name": "Return on Equity TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9842,7 +9416,7 @@
         },
         "return_on_investment_5ya": {
           "define": "_financials_ratios_return_on_investment_5ya",
-          "industry_value": 6.28653332,
+          "industry_value": 6.31271167,
           "name": "Return on Investment 5YA",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9851,7 +9425,7 @@
         },
         "return_on_investment_ttm": {
           "define": "_financials_ratios_return_on_investment_ttm",
-          "industry_value": 10.2885055,
+          "industry_value": 10.32727193,
           "name": "Return on Investment TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9860,7 +9434,7 @@
         },
         "revenue_employee_ttm": {
           "define": "_financials_ratios_revenue_employee_ttm",
-          "industry_value": 3.46407692,
+          "industry_value": 3.45883176,
           "name": "Revenue/Employee TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9869,7 +9443,7 @@
         },
         "revenue_share_ttm": {
           "define": "_financials_ratios_revenue_share_ttm",
-          "industry_value": 26.73668126,
+          "industry_value": 26.78267749,
           "name": "Revenue/Share TTM",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9878,7 +9452,7 @@
         },
         "sales_mrq_vs_qtr_1_yr_ago_mrq": {
           "define": "_financials_ratios_sales_mrq_vs_qtr_1_yr_ago_mrq",
-          "industry_value": 30.65667476,
+          "industry_value": 30.93967451,
           "name": "Sales (MRQ) vs Qtr. 1 Yr. Ago MRQ",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9887,7 +9461,7 @@
         },
         "sales_ttm_vs_ttm_1_yr_ago_ttm": {
           "define": "_financials_ratios_sales_ttm_vs_ttm_1_yr_ago_ttm",
-          "industry_value": 11.67997873,
+          "industry_value": 11.91360155,
           "name": "Sales (TTM) vs TTM 1 Yr. Ago TTM",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9896,7 +9470,7 @@
         },
         "tangible_book_value_share_mrq": {
           "define": "_financials_ratios_tangible_book_value_share_mrq",
-          "industry_value": 26.26016203,
+          "industry_value": 26.49409975,
           "name": "Tangible Book Value/Share MRQ",
           "non_currency_indicator": false,
           "percent_indicator": false,
@@ -9905,7 +9479,7 @@
         },
         "total_debt_to_equity_mrq": {
           "define": "_financials_ratios_total_debt_to_equity_mrq",
-          "industry_value": 68.22010415,
+          "industry_value": 68.49236387,
           "name": "Total Debt to Equity MRQ",
           "non_currency_indicator": true,
           "percent_indicator": true,
@@ -9933,6 +9507,12 @@
       "_collection": []
     },
     "relatedEtfs": []
+  },
+  "commentsStore": {
+    "counts": {},
+    "userReactions": {},
+    "targetId": "",
+    "title": ""
   },
   "brokersStore": {
     "ssrTradeCtaAvailable": null
@@ -10021,14 +9601,14 @@
     "forecast": {
       "instrument_id": 8581,
       "currency_id": 20,
-      "target_price_consensus_mean": 36.31099224,
-      "target_price_consensus_high": 44.60616036,
-      "target_price_consensus_low": 14.26640019,
+      "target_price_consensus_mean": 36.32807575,
+      "target_price_consensus_high": 44.62714655,
+      "target_price_consensus_low": 14.27311221,
       "number_of_estimates": 16,
       "number_of_analysts_buy": 14,
       "number_of_analysts_sell": 1,
       "number_of_analysts_hold": 1,
-      "upside_percent": 54.25230348,
+      "upside_percent": 55.7807708,
       "consensus_recommendation": "BUY",
       "last_rating_date": "2026-10-18"
     },
@@ -10050,7 +9630,7 @@
         "currency": "HK$",
         "market_cap": "1.02T",
         "market_cap_number": 1020000000000,
-        "upside_downside": 52.93,
+        "upside_downside": 54.37,
         "related_articles": [
           {
             "domain_id": 1,
@@ -10078,7 +9658,7 @@
         "currency": "HK$",
         "market_cap": "1.02T",
         "market_cap_number": 1020000000000,
-        "upside_downside": 61,
+        "upside_downside": 62.52,
         "related_articles": [
           {
             "domain_id": 1,
@@ -10106,7 +9686,7 @@
         "currency": "RMB",
         "market_cap": "1.02T",
         "market_cap_number": 1020000000000,
-        "upside_downside": 69.92,
+        "upside_downside": 71.53,
         "related_articles": [
           {
             "domain_id": 1,
@@ -10121,10 +9701,6 @@
   },
   "consensusEstimatesStore": {
     "actualHistoryPrices": [
-      {
-        "date": "2023-10-01",
-        "price": 11.76
-      },
       {
         "date": "2023-10-08",
         "price": 12.44
@@ -10760,6 +10336,10 @@
       {
         "date": "2026-10-18",
         "price": 23.54
+      },
+      {
+        "date": "2026-10-25",
+        "price": 23.32
       }
     ],
     "forecastHistoryPrices": [
@@ -11487,24 +11067,5 @@
       "dividendYield": null,
       "ebitda": null
     }
-  },
-  "commentsStore": {
-    "counts": {
-      "4971027": {
-        "target": 4971027,
-        "count": 1
-      },
-      "4971031": {
-        "target": 4971031,
-        "count": 7
-      },
-      "4971057": {
-        "target": 4971057,
-        "count": 3
-      }
-    },
-    "userReactions": {},
-    "targetId": "",
-    "title": ""
   }
 }
