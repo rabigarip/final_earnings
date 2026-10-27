@@ -1031,16 +1031,20 @@
     {
       "date": "2026-10-22",
       "close": 0.22300000488758
+    },
+    {
+      "date": "2026-10-25",
+      "close": 0.22499999403954
     }
   ],
   "range_52w_low": 0.14699999988079,
   "range_52w_high": 0.23000000417233,
-  "perf_1d": -0.45,
-  "perf_1w": -0.4464,
-  "perf_1m": 7.7295,
-  "perf_3m": -0.4464,
-  "perf_6m": 2.765,
-  "perf_ytd": 47.6821,
+  "perf_1d": 0.9,
+  "perf_1w": 0.0,
+  "perf_1m": 8.6957,
+  "perf_3m": 0.4464,
+  "perf_6m": 4.6512,
+  "perf_ytd": 49.0066,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-10-25T12:00:01.79Z"
+  "perf_updated_at": "2026-10-26T12:00:03.567Z"
 }
