@@ -1033,10 +1033,10 @@
   "range_52w_high": 89.4000015258789,
   "perf_1d": -0.45,
   "perf_1w": 6.4502,
-  "perf_1m": -12.6553,
-  "perf_3m": -28.1717,
-  "perf_6m": -34.5651,
+  "perf_1m": -10.6446,
+  "perf_3m": -31.4689,
+  "perf_6m": -32.1399,
   "perf_ytd": -32.0924,
   "perf_source": "investing_published",
-  "perf_updated_at": "2026-11-13T11:01:06.782Z"
+  "perf_updated_at": "2026-11-14T11:01:01.937Z"
 }
